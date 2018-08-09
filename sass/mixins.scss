@@ -1,0 +1,168 @@
+// -------------------------
+// = Mixins
+// -------------------------
+
+
+// Visually hide the text of an element (a11y ok)
+
+@mixin a11y-hide($percent: 150%) {
+	text-indent: $percent;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+// Visually hide an element (a11y ok)
+
+@mixin a11y-hidden($width: 1px, $height: 1px) {
+	position: absolute;
+	display: block; 
+	width: $width;
+	height: $height;
+	padding: 0;
+	margin: 0;
+	text-indent: 150%;
+	white-space: nowrap;
+	overflow: hidden;	
+}
+
+// CSS transition
+
+@mixin transition($property: all, $speed: .2s) {
+	transition: $property $speed ease-in-out;
+}
+
+// Extend the click area to the entire block 
+
+@mixin linkblock() {
+	content: '';
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 100;	
+}
+
+// Opacity effect on hovered images
+
+@mixin img-opacity($opacity: .5) {
+	a img {
+		transition: opacity .2s ease-in-out;
+	}
+	a:hover img,
+	a.focus-visible img {
+		opacity: $opacity;
+	}	
+}
+
+// Add a stroke before or after an elements
+
+@mixin pre-stroke() {
+	content: "–";
+	display: block;
+	margin-bottom: .25em;
+}
+
+// Add a pointer on ::before or ::after
+
+@mixin pointer($orientation:top, $width:10px) {
+	
+	content: '';
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-color: transparent; 
+	border-width: $width;
+	border-style: solid;
+
+	@if $orientation == top {
+		border-top-color: inherit;
+	}
+	@else if $orientation == bottom {
+		border-bottom-color: inherit;
+	}
+	@else if $orientation == left {
+		border-left-color: inherit;
+	}
+	@else if $orientation == right {
+		border-right-color: inherit;
+	}
+	@else {
+		border-top-color: inherit;
+	}
+	
+}
+
+
+
+
+
+// Mobile First Media Queries
+
+@mixin rwd($width) {
+	
+	@if $width == xwide {
+		@media only screen and (min-width: $width-xwide) {
+			@content;
+		}
+	}
+	@if $width == wide {
+		@media only screen and (min-width: $width-wide) {
+			@content;
+		}
+	}
+	@else if $width == large {
+		@media only screen and (min-width: $width-large) {
+			@content;
+		}
+	}
+	@else if $width == medium {
+		@media only screen and (min-width: $width-medium) {
+			@content;
+		}
+	}
+	@else if $width == small {
+		@media only screen and (min-width: $width-small) {
+			@content;
+		}
+	}
+	@else {
+		@media only screen and (min-width: $width) {
+			@content;
+		}
+	}
+}
+
+
+// Desktop First Media Queries
+
+@mixin desktop($width) {
+	
+	@if $width == xwide {
+		@media only screen and (max-width: $width-xwide) {
+			@content;
+		}
+	}
+	@if $width == wide {
+		@media only screen and (max-width: $width-wide) {
+			@content;
+		}
+	}
+	@else if $width == large {
+		@media only screen and (max-width: $width-large) {
+			@content;
+		}
+	}
+	@else if $width == medium {
+		@media only screen and (max-width: $width-medium) {
+			@content;
+		}
+	}
+	@else if $width == small {
+		@media only screen and (max-width: $width-small) {
+			@content;
+		}
+	}
+	@else {
+		@media only screen and (max-width: $width) {
+			@content;
+		}
+	}
+}

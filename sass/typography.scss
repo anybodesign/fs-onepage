@@ -1,0 +1,522 @@
+// ------------------------------
+//
+// = Typography & Markup Elements
+//
+// ------------------------------
+
+
+// Basics
+
+html {
+	font-size: .625em; 				// fallback IE8+
+	font-size: calc(1em * .625); 	// IE9-IE11 math fixing. See http://bit.ly/1g4X0bX
+}
+body {
+	font-size: 1.6em; 				// base font-size is equivalent "14px"
+    line-height: 1.5;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: none;
+}
+.js-focus-visible .focus-visible {
+	// Focus styles 
+}
+
+// Typography
+
+h1, h2, h3, h4, h5, h6,
+.h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
+	color: $text-color;
+	font-family: $font-title;
+	font-weight: normal;
+	margin-bottom: $grid-padding;
+	
+	b, strong {
+		font-weight: normal;
+	}
+	i, em {
+		font-style: normal;
+	}
+}
+
+h1, 
+.h1-like {
+    font-size: 3.4rem;
+    line-height: 1.2;  
+    text-transform: uppercase;
+}
+h2, 
+.h2-like {
+	font-size: 3rem;
+	line-height: 1.3;
+}
+h3, 
+.h3-like {
+    font-size: 2.6rem;
+	line-height: 1.2;
+}
+h4, 
+.h4-like {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+h5, 
+.h5-like {
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+h6, 
+.h6-like {
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+p, 
+ul, ol, dl, 
+blockquote, 
+pre, 
+td, th, 
+textarea,
+label, legend, figcaption, 
+hgroup, address,
+time, span,
+small {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin: 0 0 $grid-padding*2 0;
+	font-family: $font-regular;
+	color: $text-color;
+}
+span {
+	font-family: inherit;
+	color: inherit;
+	font-size: inherit;
+}
+
+b, strong {
+	font-family: $font-bold;
+	font-weight: normal;
+}
+i, em {
+	font-family: $font-italic;
+	font-style: normal;
+}
+em strong, strong em,
+i strong, strong i,
+em b, b em,
+i b, b i {
+	font-family: $font-bolditalic;
+	font-weight: normal;
+	font-style: normal;
+}
+
+li p,
+li ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+// Custom Tinymce styles
+
+p.text-intro {
+	font-size: 2rem;
+}
+p.text-mentions {
+	font-size: 1.3rem;
+}
+
+// White text, inside a .white-text class container
+
+.white-text {
+	
+	p, li, span, small, time,
+	h1, h2, h3, h4, h5, h6,
+	label, legend, address, figcaption {
+		color: #fff;
+	}
+	
+}
+
+// Links
+
+a {
+	color: inherit;
+	background-color: transparent;
+}
+a:hover {
+	text-decoration: none;
+}
+
+.content-area {
+	
+	p {
+		a:not([class*="action-btn"]) {
+			text-decoration: none;
+			color: $secondary-color;
+			border-bottom: $secondary-color 2px solid;
+			transition: .2s ease-in-out;
+			
+			&:hover {
+				border-bottom-width: 4px;
+			}
+			&.focus-visible {
+				background-color: $secondary-color;
+				color: #fff;
+			}
+			&:visited {
+				color: $text-color;
+				border-bottom-color: $text-color;
+				border-bottom-width: 1px;
+			}
+			&:active {
+				color: $secondary-color;
+				border-bottom-color: transparent;
+			}
+			
+		}
+	}
+	
+}
+
+
+
+// Max values
+
+img, td,
+blockquote, code, pre,
+textarea, input, video {
+	max-width: 100%;
+}
+
+
+// Lists
+
+ul, ol {
+	padding-left: $grid-padding*2;
+}
+
+ul {
+	list-style-type: disc;
+}
+ol {
+	list-style-type: decimal;
+}
+
+nav ul, 
+nav ol {
+	padding: 0; 
+	margin: 0; 
+	list-style-type: none;
+}
+
+li ul, 
+li ol {
+	margin-top: 0; 
+	margin-bottom: 0;
+}
+
+
+// Images
+
+img {
+	height: auto;
+	border: 0;
+	border-style: none;
+}
+
+figure {
+	position: relative;
+	max-width: 100%;
+	margin: 0 0 $grid-padding 0;
+	overflow: hidden;
+	
+	img {
+		display: block;
+		width: 100%; 
+		height: auto;
+	}
+	
+	// Youtube links
+	
+	a[href*="youtube.com"] {
+		display: block;
+		position: relative;
+		
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%; 
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 10;
+		}
+		&::before {
+			width: 80px;
+			height: 80px;
+			border-radius: 80px;
+			background-color: transparentize( $primary-color, .1 );
+			transition: .4s ease-in-out;
+		}
+		&::after {
+			width: 0; height: 0;
+			border-color: transparent;
+			border-left-color: #fff; 
+			border-width: 12px;
+			border-style: solid;
+			left: calc(50% + 6px);
+			transform: scaleX(1.4) translateX(-15%) translateY(-40%);
+		}
+		
+		&.focus-visible::before, &:hover::before {
+			transform: translateX(-50%) translateY(-50%) scale(1.2);
+			background-color: $primary-color;
+		}
+		& img {
+			transition: opacity .2s ease-in-out;
+		}
+		&.focus-visible img, &:hover img {
+			opacity: .7;
+		}
+		&:focus {
+			outline: none;
+		}
+		
+	}
+	
+}
+
+figcaption {
+	font-size: .85em; 
+	line-height: 1;
+	margin: $grid-padding 0;
+}
+
+
+// Quotes
+
+q,
+blockquote {
+	max-width: 75%;
+	padding: $grid-padding 0 $grid-padding $grid-padding*2;
+	border-left: $primary-color 2px solid;
+}
+q,
+blockquote,
+blockquote p {
+	font-family: $font-bolditalic;
+	font-style: normal;
+	font-size: 2rem;
+}
+blockquote p {
+	margin-bottom: 0;
+}
+cite {
+	display: block;
+	font-family: $font-italic;
+	margin-top: $grid-padding;
+	font-size: 85%;
+}
+
+
+// Misc
+
+hr {
+  box-sizing: content-box;
+  height: 0; 
+  overflow: visible;
+}
+
+iframe {
+	width: 100%;
+}
+
+small {
+  font-size: 75%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+
+// Tables (responsive)
+
+
+.table-container {  // Wrap the <table> inside this container
+	width: 100%; 
+	overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    margin-bottom: $grid-padding*2;
+}
+thead {
+	background-color: $primary-color;
+}
+th {
+	color: #fff;
+	font-weight: normal;
+	font-family: $font-bold;
+}
+td, th {
+	vertical-align: middle;
+	margin-bottom: 0;
+	padding: $grid-padding;
+	border: $primary-color 1px solid;
+	
+	thead &, 
+	tbody &, 
+	tfoot & {
+		border-top: 0;
+	}
+	tbody &:first-child,
+	thead & {
+		border-top: $primary-color 1px solid;
+	}
+	
+}
+
+
+// Code
+
+code, pre, samp, kbd {
+	white-space: pre-line; // IE fix
+	white-space: pre-wrap;
+	font-family: $font-mono;
+	font-size: 1.6rem;
+}
+
+kbd {
+	padding: 0 2px;
+	border: 1px solid $text-color;
+	border-radius : 2px;
+}
+
+code, pre {
+	background-color: #eee;
+	color: $text-color;
+}
+code {
+	padding: .5em;
+	
+	pre & {
+		background-color: transparent;
+	}
+}
+pre {
+	padding: $grid-padding;
+	border: $text-color 1px dashed;
+	white-space: pre-line;
+}
+
+mark {
+	padding: $grid-padding;
+	background: rgba(255, 255, 0, .9); // Transparent yellow
+}
+
+
+// If an error output is needed
+
+.error {
+	padding: $grid-padding;
+	background: red; 
+	color: #fff;
+}
+
+// WP Alignments
+
+
+.alignleft,
+.alignright {
+	display: inline; 
+}
+.alignleft {
+	float: left;
+	margin-right: $grid-padding*2;
+}
+.alignright {
+	float: right;
+	margin-left: $grid-padding*2;
+}
+.aligncenter {
+	display: block; 
+	clear: both; 
+	margin: 0 auto;
+}
+
+
+// Buttons
+
+// You can use the class .action-btn on <a>, <button> or <input> 
+
+.action-btn,
+button.action-btn,
+input[type=submit].action-btn {
+	display: inline-block;
+	padding: $grid-padding $grid-padding*2;
+	font-size: 1.6rem;
+	font-family: $font-bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color: $text-color;
+	color: #fff;
+	transition: background .2s linear;
+	
+	&.focus-visible, 
+	&:hover {
+		background-color: lighten($text-color, 10%);
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+// Variation example of .action-btn
+
+.white-btn,
+button.white-btn,
+input[type=submit].white-btn {
+	@extend .action-btn;
+	
+	background-color: #fff;
+	color: $text-color;
+
+	&.focus-visible, 
+	&:hover {
+		background-color: $text-color;
+		color: #fff;
+	}	
+}
+
+
+
+/* ------------------------------
+//
+//  Print
+// 
+// ------------------------------ */
+
+
+@media print {
+	
+	// @fix: FF print issue
+	
+	[class*="col-"] { 
+		display: block; 
+		float: left;
+	}   
+
+}	
