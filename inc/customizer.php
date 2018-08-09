@@ -14,15 +14,16 @@
 function fs_customize_register($wp_customize) {
 	 
 	// Create Some Sections
+	
 	$wp_customize->add_section('fs_color_section', array(
 		'title' 		=> __('Theme Colors', 'fs-porfolio'),
 		'description' 	=> __('Colors customisation', 'fs-porfolio'),
-		'priority'		=> 30,
-	));
-	$wp_customize->add_section('fs_pictures_section', array(
-		'title' 		=> __('Theme Pictures', 'fs-porfolio'),
-		'description' 	=> __('Pictures customisation', 'fs-porfolio'),
 		'priority'		=> 40,
+	));
+	$wp_customize->add_section('fs_options_section', array(
+		'title' 		=> __('Theme Options', 'fs-porfolio'),
+		'description' 	=> __('Theme customisation', 'fs-porfolio'),
+		'priority'		=> 30,
 	));
 	
 	
@@ -41,7 +42,6 @@ function fs_customize_register($wp_customize) {
 		'settings'	=> 'primary_color',
 	)));
 	
-	
 	// Secondary color
 	
 	$wp_customize->add_setting('secondary_color', array(
@@ -56,7 +56,46 @@ function fs_customize_register($wp_customize) {
 		'section'	=> 'colors',
 		'settings'	=> 'secondary_color',
 	)));
+
+		
+	// Site logo
 	
+	$wp_customize->add_setting('site_logo', array(
+		'default'				=> '',
+		'sanitize_callback'		=> 'esc_url_raw'
+	));
+	
+	$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo_ctrl', array(
+		'label'			=> __('Site Logo', 'fs-porfolio'),
+		'section'		=> 'title_tagline',
+		'settings'		=> 'site_logo',
+	)));	
+
+	// One Page Style
+	
+	$wp_customize->add_setting('onepage', array(
+		'default'	=> true,
+		'sanitize_callback'	=> 'fsc_customizer_sanitize_checkbox',				
+	));
+	$wp_customize->add_control('onepage_ctrl', array(
+		'type'			=> 'checkbox',
+		'label'			=> __('Make your website a one-page', 'fs-portfolio'),
+		'section'		=> 'fs_options_section',
+		'settings'		=> 'onepage',
+	));	
+
+	// Open News in Modals
+	
+	$wp_customize->add_setting('modals', array(
+		'default'	=> true,
+		'sanitize_callback'	=> 'fsc_customizer_sanitize_checkbox',				
+	));
+	$wp_customize->add_control('modals_ctrl', array(
+		'type'			=> 'checkbox',
+		'label'			=> __('Open your posts with Fancybox', 'fs-portfolio'),
+		'section'		=> 'fs_options_section',
+		'settings'		=> 'modals',
+	));	
 	
 	// Footer text
 	
@@ -67,7 +106,7 @@ function fs_customize_register($wp_customize) {
 	$wp_customize->add_control('footer_text_ctrl', array(
 		'label'			=> __('Custom footer text', 'fs-porfolio'),
 		'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-porfolio'),
-		'section'		=> 'title_tagline',
+		'section'		=> 'fs_options_section',
 		'settings'		=> 'footer_text',
 	));	
 	
@@ -81,25 +120,11 @@ function fs_customize_register($wp_customize) {
 	$wp_customize->add_control('display_wp_ctrl', array(
 		'type'			=> 'checkbox',
 		'label'			=> __('Display WordPress Link', 'fs-porfolio'),
-		'section'		=> 'title_tagline',
+		'section'		=> 'fs_options_section',
 		'settings'		=> 'display_wp',
 	));
-		
-	// Site logo
-	
-	$wp_customize->add_setting('site_logo', array(
-		'default'				=> '',
-		'sanitize_callback'		=> 'esc_url_raw'
-	));
-	
-	$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo_ctrl', array(
-		'label'			=> __('Site Logo', 'fs-porfolio'),
-		'section'		=> 'title_tagline',
-		'settings'		=> 'site_logo',
-	)));
-	
-	
-	
+
+
 	 
 }
 add_action('customize_register', 'fs_customize_register');
