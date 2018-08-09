@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Porfolio\n"
-"POT-Creation-Date: 2018-08-09 11:09+0200\n"
-"PO-Revision-Date: 2018-08-09 11:10+0200\n"
+"POT-Creation-Date: 2018-08-09 11:37+0200\n"
+"PO-Revision-Date: 2018-08-09 11:38+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -118,23 +118,23 @@ msgstr "Menu principal"
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/customizer.php:18
+#: inc/customizer.php:19
 msgid "Theme Colors"
 msgstr "Couleurs du thème"
 
-#: inc/customizer.php:19
+#: inc/customizer.php:20
 msgid "Colors customisation"
 msgstr "Personnalisation des couleurs"
 
-#: inc/customizer.php:23
-msgid "Theme Pictures"
-msgstr "Images du thème"
-
 #: inc/customizer.php:24
-msgid "Pictures customisation"
-msgstr "Personnalisation des images"
+msgid "Theme Options"
+msgstr "Options du thème"
 
-#: inc/customizer.php:39
+#: inc/customizer.php:25
+msgid "Theme customisation"
+msgstr "Personnalisation du thème"
+
+#: inc/customizer.php:40
 msgid "Primary color"
 msgstr "Couleur primaire"
 
@@ -157,6 +157,14 @@ msgstr "Afficher le lien WordPress"
 #: inc/customizer.php:96
 msgid "Site Logo"
 msgstr "Logo du site"
+
+#: inc/customizer.php:110
+msgid "Make your website a one-page"
+msgstr "Faites de votre site un one-page"
+
+#: inc/customizer.php:123
+msgid "Open your posts with Fancybox"
+msgstr "Ouvrez vos articles avec FancyBox"
 
 #: inc/fs-cpt.php:9
 msgctxt "Post Type General Name"
@@ -447,13 +455,14 @@ msgstr "Thomas Villain"
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
 
-#. Template Name of the plugin/theme
-msgid "Page builder"
-msgstr "Constructeur de Page"
+#~ msgid "Theme Pictures"
+#~ msgstr "Images du thème"
 
-#. Template Name of the plugin/theme
-msgid "Custom page template with Sidebar"
-msgstr "Page avec colonne latérale"
+#~ msgid "Page builder"
+#~ msgstr "Constructeur de Page"
+
+#~ msgid "Custom page template with Sidebar"
+#~ msgstr "Page avec colonne latérale"
 
 #~ msgid "A WordPress Starter Theme using Prid’x"
 #~ msgstr "Un starter thème WordPress utilisant Prid’x"
