@@ -265,7 +265,7 @@ function fs_porfolio_search_form( $form ) {
 add_filter( 'get_search_form', 'fs_porfolio_search_form' );
 
 
-
+/*
 // ------------------------
 // ACF
 // ------------------------
@@ -309,7 +309,7 @@ function wearewp_admin_css() {
 	wp_enqueue_style( 'admin-css', get_stylesheet_directory_uri() . '/css/admin.css' );
 	wp_enqueue_style( 'popup-acf-css', get_stylesheet_directory_uri() . '/css/popup-acf.css' );
 }
-
+*/
 
 
 // ------------------------
