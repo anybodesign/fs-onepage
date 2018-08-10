@@ -3,6 +3,8 @@
 // + + + + + + + + + + 
 
 
+// Columns 
+
 .wp-block-text-columns {
 	display: block;
 	
@@ -40,4 +42,11 @@
 			}
 		}
 	}
+}
+
+
+// Gallery
+
+.wp-block-gallery {
+	margin: 0;
 }
