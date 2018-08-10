@@ -35,7 +35,7 @@ $bg-color: #fff;
 // Fonts
 // Define your custom fonts :)
 
-$fontface-regular: url('fonts/Asap-Regular.woff2') format('woff2'), url('fonts/Asap-Regular.woff') format('woff');
+$fontface-regular: url('fonts/barlow-medium-webfont.woff2') format('woff2'), url('fonts/barlow-medium-webfont.woff') format('woff');
 @font-face {
 	font-family: 'Regular';
 	src: $fontface-regular;
@@ -43,7 +43,7 @@ $fontface-regular: url('fonts/Asap-Regular.woff2') format('woff2'), url('fonts/A
 	font-style: normal;
 }
 
-$fontface-italic: url('fonts/Asap-Italic.woff2') format('woff2'), url('fonts/Asap-Italic.woff') format('woff');;	
+$fontface-italic: url('fonts/barlow-mediumitalic-webfont.woff2') format('woff2'), url('fonts/barlow-mediumitalic-webfont.woff') format('woff');;	
 @font-face {
 	font-family: 'Italic';
 	src: $fontface-italic;
@@ -51,7 +51,7 @@ $fontface-italic: url('fonts/Asap-Italic.woff2') format('woff2'), url('fonts/Asa
 	font-style: normal;
 }
 
-$fontface-bold: url('fonts/Asap-Medium.woff2') format('woff2'), url('fonts/Asap-Medium.woff') format('woff');;
+$fontface-bold: url('fonts/barlow-bold-webfont.woff2') format('woff2'), url('fonts/barlow-bold-webfont.woff') format('woff');;
 @font-face {
 	font-family: 'Bold';
 	src: $fontface-bold;
@@ -59,7 +59,7 @@ $fontface-bold: url('fonts/Asap-Medium.woff2') format('woff2'), url('fonts/Asap-
 	font-style: normal;
 }
 
-$fontface-bolditalic: url('fonts/Asap-MediumItalic.woff2') format('woff2'), url('fonts/Asap-MediumItalic.woff') format('woff');;
+$fontface-bolditalic: url('fonts/barlow-bolditalic-webfont.woff2') format('woff2'), url('fonts/barlow-bolditalic-webfont.woff') format('woff');;
 @font-face {
 	font-family: 'BoldItalic';
 	src: $fontface-bolditalic;
