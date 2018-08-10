@@ -12,47 +12,44 @@
 
 get_header(); ?>
 
-				<div class="row inner">
+				<div class="row">
 					
-					<div class="col-12">
+					<div class="inner">
 	
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php 
+						while ( have_posts() ) : the_post();
+						
+							get_template_part( 'template-parts/page', 'frontpage' ); 
 		
-						<?php get_template_part( 'template-parts/page', 'content' ); ?>
-		
-					<?php endwhile; ?>
+						endwhile;
+					?>
 					
 					</div>
 					
 					
 					<?php 
-						
-						// Custom Post type Loop Example
-						
-						$args = array(
-							'posts_per_page' 	=> 4,
-							'post_type' 		=> 'your-post-type',
-							'meta_key'			=> 'your-meta-key',
-							'orderby'			=> 'meta_value',
-							'order'				=> 'DESC'
+						$pageargs = array(
+							'posts_per_page' 	=> -1,
+							'post_type' 		=> 'page'
 						);
-						$query = new WP_Query($args);
+						$onepage = new WP_Query($pageargs);
 					?>						
 				
-					<?php if ($query->have_posts()) : ?>
+					<?php if ($onepage->have_posts()) : ?>
 					
-					<div class="col-12">
+					<div class="inner">
 										
-						<?php while ($query->have_posts()) : $query->the_post(); ?>
+						<?php 
+							while ($onepage->have_posts()) : $onepage->the_post(); 
 					
-							<?php get_template_part( 'template-parts/post', 'content' ); ?>
+							get_template_part( 'template-parts/page', 'section' );
 
-						<?php endwhile; ?>
-					
+							endwhile; 
+							wp_reset_postdata(); 
+						?>
 					</div>
 					
 					<?php endif; ?>
-					<?php wp_reset_postdata(); ?>
 									
 				</div>
 
