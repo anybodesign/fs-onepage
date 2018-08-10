@@ -12,45 +12,39 @@
 
 get_header(); ?>
 
-				<div class="row">
+				<?php // Banner output
 					
-					<div class="inner">
+					while ( have_posts() ) : the_post();
+					
+						get_template_part( 'template-parts/page', 'frontpage' ); 
 	
-					<?php 
-						while ( have_posts() ) : the_post();
+					endwhile;
+				?>
+				
+				
+				<?php // One-page output
+					
+					if ( get_theme_mod('onepage') == true ) { 
+
+						$frontpage = get_the_id();
 						
-							get_template_part( 'template-parts/page', 'frontpage' ); 
-		
-						endwhile;
-					?>
-					
-					</div>
-					
-					
-					<?php 
 						$pageargs = array(
 							'posts_per_page' 	=> -1,
-							'post_type' 		=> 'page'
+							'post_type' 		=> 'page',
+							'post__not_in'		=> array($frontpage),
 						);
 						$onepage = new WP_Query($pageargs);
-					?>						
+			
+			
+					if ($onepage->have_posts()) :
+					while ($onepage->have_posts()) : $onepage->the_post(); 
 				
-					<?php if ($onepage->have_posts()) : ?>
-					
-					<div class="inner">
-										
-						<?php 
-							while ($onepage->have_posts()) : $onepage->the_post(); 
-					
-							get_template_part( 'template-parts/page', 'section' );
+						get_template_part( 'template-parts/page', 'section' );
 
-							endwhile; 
-							wp_reset_postdata(); 
-						?>
-					</div>
-					
-					<?php endif; ?>
+					endwhile; 
+					wp_reset_postdata(); 
+					endif;
+				
+				} ?>
 									
-				</div>
-
 <?php get_footer(); ?>
