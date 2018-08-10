@@ -183,6 +183,34 @@ include_once( dirname( __FILE__ ) . '/inc/fs-cpt.php' );
 include_once( dirname( __FILE__ ) . '/inc/fs-extended-search.php' );
 
 
+// Bg image
+
+function fs_bg_img() {
+	
+	if ( '' != get_the_post_thumbnail() ) {
+		$img_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large-hd' );
+		$bg = ' style="background-image: url('.$img_url[0].')"';
+	} else {
+		$bg = null;	
+	}
+	
+	echo $bg;
+}
+
+// The slug
+
+function the_slug($echo=true) {
+  
+  $slug = basename(get_permalink());
+  	do_action('before_slug', $slug);
+  
+  $slug = apply_filters('slug_filter', $slug);
+  	
+  	if( $echo ) echo $slug;
+  		do_action('after_slug', $slug);
+  	
+  return $slug;
+}
 
 // Image Sizes
 
