@@ -50,18 +50,20 @@ function fs_porfolio_setup() {
 	// Gutenberg support 
 	
 	add_theme_support( 'align-wide' );
+	
 	add_theme_support( 'editor-color-palette', array(
 	    array(
-	        'name' => esc_html__( 'very dark gray', 'fs-porfolio' ),
-	        'slug' => 'very-dark-gray',
-	        'color' => '#4a4a4a',
+	        'name' => esc_html__( 'Primary color', 'fs-porfolio' ),
+	        'slug' => 'primary-color',
+	        'color' => get_theme_mod('primary_color', '#9c0'),
 	    ),
 	    array(
-	        'name' => esc_html__( 'very light gray', 'fs-porfolio' ),
-	        'slug' => 'very-light-gray',
-	        'color' => '#e0e0e0',
-	    )
+	        'name' => esc_html__( 'Secondary color', 'fs-porfolio' ),
+	        'slug' => 'secondary-color',
+	        'color' => get_theme_mod('secondary_color', '#606060'),
+	    ),
 	));	
+	
 	add_theme_support( 'disable-custom-colors' );
 
 }
