@@ -2,8 +2,17 @@
 // -
 // + + + + + + + + + + 
 
-// Let's Rock :)
-
+.page-section {
+	position: relative;
+	padding: $grid-padding;
+	min-height: 100vh;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.front-page-section {
+	@extend .page-section;
+}
 
 // Builder Basics (If you use ACF)
 // -
