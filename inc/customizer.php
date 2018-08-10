@@ -15,17 +15,16 @@ function fs_customize_register($wp_customize) {
 	 
 	// Create Some Sections
 	
-	$wp_customize->add_section('fs_color_section', array(
-		'title' 		=> __('Theme Colors', 'fs-porfolio'),
-		'description' 	=> __('Colors customisation', 'fs-porfolio'),
-		'priority'		=> 40,
-	));
 	$wp_customize->add_section('fs_options_section', array(
 		'title' 		=> __('Theme Options', 'fs-porfolio'),
 		'description' 	=> __('Theme customisation', 'fs-porfolio'),
 		'priority'		=> 30,
 	));
-	
+	$wp_customize->add_section('fs_color_section', array(
+		'title' 		=> __('Theme Colors', 'fs-porfolio'),
+		'description' 	=> __('Colors customisation', 'fs-porfolio'),
+		'priority'		=> 40,
+	));
 	
 	// Primary color
 	
@@ -74,8 +73,8 @@ function fs_customize_register($wp_customize) {
 	// One Page Style
 	
 	$wp_customize->add_setting('onepage', array(
-		'default'	=> true,
-		'sanitize_callback'	=> 'fsc_customizer_sanitize_checkbox',				
+		'default'	=> false,
+		'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
 	));
 	$wp_customize->add_control('onepage_ctrl', array(
 		'type'			=> 'checkbox',
@@ -87,8 +86,8 @@ function fs_customize_register($wp_customize) {
 	// Open News in Modals
 	
 	$wp_customize->add_setting('modals', array(
-		'default'	=> true,
-		'sanitize_callback'	=> 'fsc_customizer_sanitize_checkbox',				
+		'default'	=> false,
+		'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
 	));
 	$wp_customize->add_control('modals_ctrl', array(
 		'type'			=> 'checkbox',
