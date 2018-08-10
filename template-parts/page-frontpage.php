@@ -10,18 +10,10 @@
  * @version 1.0
  */
 ?>
-					<div class="page-content">
+					<div class="front-page-section"<?php fs_bg_img(); ?>>
 						
-						<h1 class="page-title"><?php the_title(); ?></h1>
-						
-						<div class="post-content">
-							<?php the_content(); ?>
+						<div class="inner">
+							<?php get_template_part('template-parts/header', 'brand'); ?>							
 						</div>
 
-						<?php if ( '' != get_the_post_thumbnail() ) { ?>
-						<figure class="post-figure">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
-						</figure>
-						<?php } ?>
-												
 					</div>
