@@ -2,10 +2,17 @@
 // -
 // + + + + + + + + + + 
 
+// Excerpt
+
+p.wp-block-subhead {
+	@extend .text-intro;
+	font-style: normal;
+	opacity: 1;
+}
 
 // Columns 
 
-.wp-block-text-columns {
+.wp-block-columns {
 	display: block;
 	
 	.wp-block-column {
@@ -44,9 +51,28 @@
 	}
 }
 
-
 // Gallery
 
 .wp-block-gallery {
 	margin: 0;
+}
+
+// Images
+
+.wp-block-image {
+	
+	& img {
+		max-width: none;
+	}
+	
+	&.alignfull {
+		width: 100%;
+	}	
+}
+
+
+// Quotes
+
+.wp-block-quote {
+	margin-bottom: $grid-padding*2 !important;
 }
