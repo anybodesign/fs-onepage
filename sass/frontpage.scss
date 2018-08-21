@@ -1,3 +1,35 @@
 // ------------------------------
 // = Front page elements
 // ------------------------------
+
+.front-page-section {
+	@extend .page-section;
+	align-items: flex-start; 
+}
+.front-page-content {
+	display: inline-block;
+	padding: 2rem;
+	background-color: transparentize($primary-color, .1);
+	
+	@include rwd(medium) {
+		padding: 3rem 3rem 3rem 6rem;
+	}
+	
+	.site-title,
+	.site-desc {
+		color: #fff;
+	}
+}
+
+.scroll-down {
+	display: block;
+	padding: 1rem;
+	color: #fff;
+	background-color: transparent;
+	
+	&:hover,
+	&.focus-visible {
+		background-color: transparent;
+	}
+	
+}

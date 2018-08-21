@@ -4,15 +4,44 @@
 
 .page-section {
 	position: relative;
-	padding: $grid-padding;
 	min-height: 100vh;
+	
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	padding: 4rem 0;
+	
+	.admin-bar & {
+		
+		@include rwd(80rem) {
+			padding: 8rem 0;
+		}
+			
+	}
+	
+	.page-title {
+		width: 100%;		
+		@include center();
+	}
 }
-.front-page-section {
-	@extend .page-section;
+.page-title {
+	display: block;
+	padding: $grid-padding;	
 }
+.page-content {
+	
+	& > *:not([class*="alignfull"]) {
+		padding: $grid-padding;
+		@include center();
+	}
+}
+
+
 
 // Builder Basics (If you use ACF)
 // -
