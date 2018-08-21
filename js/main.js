@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
 	// Responsive Main Menu
 
 	$('#menu-toggle').click(function() {
-		$('.main-menu').slideToggle();
+		$('body').toggleClass('menu-visible');
 		$(this).toggleClass('menu-opened');
 			
 			if ($(this).hasClass('menu-opened')) {
@@ -73,7 +73,96 @@ jQuery(document).ready(function($) {
 		$(this).parent().removeClass('focus');
 	});
 	
+
+	// Scroll Down
+	
+	$('.scroll-down').on('click', function () {
+		var $height = $('html, body').height();
+		$('html, body').animate({scrollTop: $height}, 800);
+	});	
 		
+
+	// Sticky Menu
+	
+	$(window).scroll( function() {
+	    
+	    var topscreen = $(this).scrollTop();
+	    var screenheight = $(this).height();
+
+	    if ( topscreen >= screenheight ) {
+	        
+			$('body').addClass('fixed-nav');
+							
+	    } else {
+	        
+	        $('body').removeClass('fixed-nav');
+	    }
+	    
+	});
+
+	
+	// Smooth Scroll
+
+	var $offset = 0;
+
+	$('a[href*="#"]')
+	  .not('[href="#"]')
+	  .not('[href="#0"]')	  
+	  
+	  .click(function(event) {
+	    if ( location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname ) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+	      if (target.length) {
+	        event.preventDefault();
+	        
+	        $('html, body').animate({
+	          scrollTop: target.offset().top-$offset
+	        }, 1000, function() {
+	          var $target = $(target);
+	          $target.focus();
+	          
+	          if ($target.is(":focus")) { // Checking if the target was focused
+	            return false;
+	          } else {
+	            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+	            $target.focus(); // Set focus again
+	          }
+	        });
+	      }
+	    }
+	  });	
+
+
+	// Menu Class on Scroll
+		
+	function onScroll() {
+
+	    var scrollPos = $(document).scrollTop();
+	    
+	    $('.onepage-menu a').each(function () {
+	        
+	        var currLink = $(this);
+	        var refElement = $(currLink.attr("href"));
+	        
+	        if (refElement.position().top-$offset <= scrollPos && refElement.position().top-$offset + refElement.height() > scrollPos) {
+	           
+	            $('.onepage-menu a').parent().removeClass("active");
+	            currLink.parent().addClass("active");
+	            //window.location.hash = this.hash;
+	        
+	        } else {
+	           
+	            currLink.parent().removeClass("active");
+	            
+	        }
+	    });
+	}
+    $(document).on("scroll", onScroll);	
+
+	
+			
 
 	// Responsive Video Players (Youtube, Vimeo)
 			
