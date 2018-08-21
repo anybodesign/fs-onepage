@@ -45,20 +45,51 @@
 			} ?>
 			
 			<?php // The main menu location ?>
-			
-			<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
+
 			<nav class="site-nav" role="navigation" aria-label="<?php _e('Main menu', 'fs-porfolio'); ?>">
 				<button id="menu-toggle" type="button"><?php _e('Menu', 'fs-porfolio'); ?><span></span></button>
-				<?php wp_nav_menu( array(
-					'theme_location'	=> 	'main_menu',
-					'menu_class'		=>	'main-menu',
-					'container'			=>	false,
-					'walker'			=>	new fs_subnav_walker()
-					));
-				?>
-			</nav>
-			<?php endif; ?>
 
+				<?php 
+					
+					if ( get_theme_mod('onepage') == true ) { 
+						
+						$frontpage = get_the_id();
+						
+						$pageargs = array(
+							'posts_per_page' 	=> -1,
+							'post_type' 		=> 'page',
+							'post__not_in'		=> array($frontpage),
+						);
+						$onepage = new WP_Query($pageargs);
+			
+						if ($onepage->have_posts()) : ?>
+						
+						<ul class="main-menu onepage-menu">
+						<?php while ($onepage->have_posts()) : $onepage->the_post(); ?>
+					
+							<li><a href="#<?php the_slug(); ?>"><?php the_title(); ?></a></li>
+	
+						<?php endwhile; wp_reset_postdata(); ?>
+						</ul>
+						
+						<?php endif; ?>
+							
+					<?php 
+							
+					} else {
+						
+						if ( has_nav_menu( 'main_menu' ) ) {
+							wp_nav_menu( array(
+								'theme_location'	=> 	'main_menu',
+								'menu_class'		=>	'main-menu',
+								'container'			=>	false,
+								'walker'			=>	new fs_subnav_walker()
+							));
+						}
+					}
+				?>
+				
+			</nav>
 		</div>
 
 	</header>
