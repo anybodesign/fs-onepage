@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6,
 	color: $text-color;
 	font-family: $font-title;
 	font-weight: normal;
-	margin-bottom: $grid-padding;
+	margin: 0 0 $grid-padding 0;
 	
 	b, strong {
 		font-weight: normal;
@@ -233,7 +233,8 @@ figure {
 	
 	img {
 		display: block;
-		width: 100%; 
+		width: 100%;
+		max-width: none; 
 		height: auto;
 	}
 	
@@ -302,6 +303,7 @@ blockquote {
 	max-width: 75%;
 	padding: $grid-padding 0 $grid-padding $grid-padding*2;
 	border-left: $primary-color 2px solid;
+	margin-left: $grid-padding;
 }
 q,
 blockquote,
