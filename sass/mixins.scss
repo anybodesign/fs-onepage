@@ -2,6 +2,13 @@
 // = Mixins
 // -------------------------
 
+// Center mode
+
+@mixin center($width: $max-width, $x: 0) {
+	position: relative;
+	margin: $x auto;
+	max-width: $width;	
+}
 
 // Visually hide the text of an element (a11y ok)
 
@@ -166,3 +173,34 @@
 		}
 	}
 }
+
+
+
+// Animations
+
+@keyframes drop-in {
+	0% {
+		transform: translateY(-100%);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	75% {
+		transform: translateY(-10%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes fall-in {
+	from {
+		opacity: 0;
+		margin-top: -1.5rem;
+	}
+	to {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+
