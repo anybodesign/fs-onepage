@@ -40,12 +40,44 @@
 }
 
 .main-menu {
-	
 	display: none;
+	transition: .3s ease-in-out;
+	background-color: transparent;
+
+	.menu-visible & {
+		position: fixed;
+		padding: 2rem;
+		padding-top: 6rem;
+		display: flex;
+		flex-direction: column;
+		//justify-content: center;
+		//align-items: flex-start;
+		width: 100%;
+		height: 100%;
+		top: 0; 
+		left: 0;
+		background-color: rgba(0,0,0,.8);
+		z-index: 200;
+	}
+		
+	.admin-bar.menu-visible & {
+		padding-top: 10rem;
+	}
+	.admin-bar.menu-visible.fixed-nav & {
+		padding-top: 6rem;
+	}
+
 	
 	& > li {
 		position: relative;
 		display: block;
+		font-family: $font-bold;
+		text-transform: uppercase;
+		
+		.menu-visible & {
+			color: #fff;
+			animation: fall-in .25s ease-in-out;
+		}
 		
 		@include rwd(medium) {
 			display: inline-block;
@@ -53,9 +85,10 @@
 		}
 		
 		a {
-			
+			text-decoration: none;
 		}
-		a:hover, a.focus-visible,
+		a:hover, 
+		a.focus-visible,
 		&.current-menu-item a {
 			
 		}
@@ -199,9 +232,11 @@
 	position: relative;
 	border: 0; 
 	border-radius: 0;
+	background-color: transparent;
 	margin: 0; 
 	padding: 0;
 	cursor: pointer;
+	z-index: 300;
 	@include a11y-hide();
 
 	span,
@@ -234,22 +269,25 @@
 
 
 	&.menu-opened {
+		background-color: transparent;
+		
 		span {
 			border-color: transparent; 
 		}
 		span::after {
 			top: 0;
 			transform: rotate(45deg);
-			border-color: $secondary-color;
+			border-color: #fff;
 		}
 		span::before {
 			top: 0;
 			transform: rotate(-45deg);
-			border-color: $secondary-color;
+			border-color: #fff;
 		}
 	}
 
-	&:hover {
+	&:hover,
+	&.focus-visible {
 		background-color: transparent;
 	}	
 	

@@ -3,11 +3,38 @@
 /* ------------------------- */
 
 
-#site_head {
-	position: relative;
+#site_head {	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 100;
 	
+	.admin-bar & {
+		top: 46px;
+		
+		@include rwd(80rem) {
+			top: 32px;
+		}
+	}
+	
+	.fixed-nav & {
+		position: fixed;
+		top: 0;
+		animation: drop-in .6s ease-in-out;
+		border-bottom: $text-color 1px dashed;
+	}
+			
+	@include rwd(80rem) {	
+		.fixed-nav.admin-bar & {
+			top: 32px;
+		}
+	}
+
 	& > .row {
-		align-items: center;
+		//align-items: center;
+		//justify-content: center;
 	}
 }
 
