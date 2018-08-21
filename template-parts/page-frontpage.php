@@ -11,9 +11,17 @@
  */
 ?>
 					<div class="front-page-section"<?php fs_bg_img(); ?>>
-						
-						<div class="inner">
-							<?php get_template_part('template-parts/header', 'brand'); ?>							
-						</div>
+							
+						<div class="front-page-content">
+							<?php get_template_part('template-parts/header', 'brand'); ?>				
+							
+							<div class="front-content">
+								<?php the_content(); ?>
+							</div>
 
+							<button class="scroll-down">
+								<?php _e('Scroll Down', 'fs-portfolio'); ?>
+							</button>
+						</div>
+							
 					</div>
