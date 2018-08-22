@@ -29,7 +29,7 @@ function fs_customize_register($wp_customize) {
 	// Primary color
 	
 	$wp_customize->add_setting('primary_color', array(
-		'default'			=> '9c0',
+		'default'			=> '303030',
 		'sanitize_callback'	=> 'sanitize_hex_color',
 		'capability'		=> 'edit_theme_options',
 		'type'				=> 'theme_mod',
@@ -44,7 +44,7 @@ function fs_customize_register($wp_customize) {
 	// Secondary color
 	
 	$wp_customize->add_setting('secondary_color', array(
-		'default'			=> '606060',
+		'default'			=> '4682B4',
 		'sanitize_callback'	=> 'sanitize_hex_color',
 		'capability'		=> 'edit_theme_options',
 		'type'				=> 'theme_mod',
@@ -167,7 +167,8 @@ function fs_colors() {
 		
 		
 		.formfield-radio input[type="radio"] + label::after,
-		.formfield-radio input[type="radio"] + span::after {
+		.formfield-radio input[type="radio"] + span::after,
+		body::after {
 			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>
 		}
 		.formfield-checkbox input[type="checkbox"] + label::after,

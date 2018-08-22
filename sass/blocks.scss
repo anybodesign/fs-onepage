@@ -2,6 +2,7 @@
 // -
 // + + + + + + + + + + 
 
+
 // Excerpt
 
 p.wp-block-subhead {
@@ -55,6 +56,9 @@ p.wp-block-subhead {
 
 .wp-block-gallery {
 	margin: 0;
+}
+.blocks-gallery-item {
+	@include img-opacity(.7);
 }
 
 // Images

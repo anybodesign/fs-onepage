@@ -11,7 +11,20 @@ body,
 
 body {
 	text-size-adjust: none;
-	background-color: $bg-color;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0; 
+		left: 0;
+		background-color: $secondary-color;
+		opacity: .1;
+		z-index: -1;
+	}
+
 }
 
 .inner {
@@ -23,11 +36,3 @@ body {
 		width: 100%;
 	}
 }
-
-/* If you want to override the columns gutters 
-
-[class*="col-"] { 
-	padding: $grid-padding; 
-}
-
-*/

@@ -20,6 +20,10 @@
 		padding: 6rem 0;
 	}
 	
+	&:nth-child(odd) {
+		background-color: #fff;
+	}
+	
 	.admin-bar & {
 		
 		@include rwd(80rem) {
