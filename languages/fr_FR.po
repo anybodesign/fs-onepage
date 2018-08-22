@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Porfolio\n"
-"POT-Creation-Date: 2018-08-09 11:37+0200\n"
-"PO-Revision-Date: 2018-08-09 11:38+0200\n"
+"POT-Creation-Date: 2018-08-22 13:34+0200\n"
+"PO-Revision-Date: 2018-08-22 13:34+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -20,15 +20,17 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:21
+#: 404.php:17
 msgid "Oops! That page can&rsquo;t be found"
 msgstr "Oops! Page introuvable"
 
-#: 404.php:24
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr ""
-"Il semblerait que rien n’ai été trouvé à cette adresse. Essayez peut-être "
-"une recherche?"
+#: 404.php:19
+msgid "It looks like nothing was found at this location."
+msgstr "Il semblerait que rien n’ai été trouvé à cette adresse."
+
+#: 404.php:20 template-parts/header-brand.php:19
+msgid "Go to Home Page"
+msgstr "Retour à la page d'accueil"
 
 #: comments.php:19
 msgid "They talk about it"
@@ -54,117 +56,105 @@ msgstr "Propulsé par WordPress !"
 msgid "Footer menu"
 msgstr "Menu pied de page"
 
-#: functions.php:55
-msgid "very dark gray"
-msgstr "gris très foncé"
+#: functions.php:56 inc/customizer.php:39
+msgid "Primary color"
+msgstr "Couleur primaire"
 
-#: functions.php:60
-msgid "very light gray"
-msgstr "gris très clair"
+#: functions.php:61 inc/customizer.php:54
+msgid "Secondary color"
+msgstr "Couleur secondaire"
 
-#: functions.php:165
+#: functions.php:195
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:166
+#: functions.php:196
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:194
+#: functions.php:252
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:195
+#: functions.php:253
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:196
+#: functions.php:254
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:204
+#: functions.php:262
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:258
+#: functions.php:316
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:259
+#: functions.php:317
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:260
+#: functions.php:318
 msgid "Search"
 msgstr "Chercher"
 
-#: header.php:32
+#: header.php:33
 msgid "Go to main content"
 msgstr "Aller au contenu principal"
 
-#: header.php:33
+#: header.php:34
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
 #: header.php:50
-msgid "Go to Home Page"
-msgstr "Aller à la page d'accueil"
-
-#: header.php:67
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: header.php:68
+#: header.php:51
 msgid "Menu"
 msgstr "Menu"
 
 #: inc/customizer.php:19
-msgid "Theme Colors"
-msgstr "Couleurs du thème"
-
-#: inc/customizer.php:20
-msgid "Colors customisation"
-msgstr "Personnalisation des couleurs"
-
-#: inc/customizer.php:24
 msgid "Theme Options"
 msgstr "Options du thème"
 
-#: inc/customizer.php:25
+#: inc/customizer.php:20
 msgid "Theme customisation"
 msgstr "Personnalisation du thème"
 
-#: inc/customizer.php:40
-msgid "Primary color"
-msgstr "Couleur primaire"
+#: inc/customizer.php:24
+msgid "Theme Colors"
+msgstr "Couleurs du thème"
 
-#: inc/customizer.php:55
-msgid "Secondary color"
-msgstr "Couleur secondaire"
+#: inc/customizer.php:25
+msgid "Colors customisation"
+msgstr "Personnalisation des couleurs"
 
 #: inc/customizer.php:68
-msgid "Custom footer text"
-msgstr "Texte de pied de page personnalisé"
-
-#: inc/customizer.php:69
-msgid "Add a custom text instead of the year and blog name."
-msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
-
-#: inc/customizer.php:83
-msgid "Display WordPress Link"
-msgstr "Afficher le lien WordPress"
-
-#: inc/customizer.php:96
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:110
+#: inc/customizer.php:81
 msgid "Make your website a one-page"
 msgstr "Faites de votre site un one-page"
 
-#: inc/customizer.php:123
+#: inc/customizer.php:94
 msgid "Open your posts with Fancybox"
 msgstr "Ouvrez vos articles avec FancyBox"
+
+#: inc/customizer.php:106
+msgid "Custom footer text"
+msgstr "Texte de pied de page personnalisé"
+
+#: inc/customizer.php:107
+msgid "Add a custom text instead of the year and blog name."
+msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
+
+#: inc/customizer.php:121
+msgid "Display WordPress Link"
+msgstr "Afficher le lien WordPress"
 
 #: inc/fs-cpt.php:9
 msgctxt "Post Type General Name"
@@ -406,6 +396,10 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
+#: template-parts/page-frontpage.php:23
+msgid "Scroll Down"
+msgstr "Défiler vers le bas"
+
 #: template-parts/post-content.php:36
 #, php-format
 msgid "Continue reading %s"
@@ -454,6 +448,12 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#~ msgid "very dark gray"
+#~ msgstr "gris très foncé"
+
+#~ msgid "very light gray"
+#~ msgstr "gris très clair"
 
 #~ msgid "Theme Pictures"
 #~ msgstr "Images du thème"
