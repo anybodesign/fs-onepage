@@ -14,5 +14,5 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
-### 1.0 - 2018.08.09
-* First Launch
+### 1.0 - 2018.08.22
+* First Release
