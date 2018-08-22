@@ -30,8 +30,8 @@
 	<?php // The Skiplinks ?>
 	
 	<div class="skiplinks">
-		<a href="#site_content"><?php _e('Go to main content', 'fs-porfolio'); ?></a>
-		<a href="#site_nav"><?php _e('Go to main menu', 'fs-porfolio'); ?></a>
+		<a href="#site_content"><?php _e('Go to main content', 'fs-portfolio'); ?></a>
+		<a href="#site_nav"><?php _e('Go to main menu', 'fs-portfolio'); ?></a>
 	</div>
 	
 	
@@ -47,8 +47,8 @@
 			
 			<?php // The main menu location ?>
 
-			<nav class="site-nav" role="navigation" aria-label="<?php _e('Main menu', 'fs-porfolio'); ?>">
-				<button id="menu-toggle" type="button"><?php _e('Menu', 'fs-porfolio'); ?><span></span></button>
+			<nav class="site-nav" role="navigation" aria-label="<?php _e('Main menu', 'fs-portfolio'); ?>">
+				<button id="menu-toggle" type="button"><?php _e('Menu', 'fs-portfolio'); ?><span></span></button>
 
 				<?php 
 					

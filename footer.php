@@ -28,14 +28,14 @@
 						} ?>
 						
 						<?php if(get_theme_mod('display_wp') == true) { ?>
-						<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'fs-porfolio'); ?></a>
+						<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'fs-portfolio'); ?></a>
 						<?php } ?>
 					</p>
 					
 					<?php // The footer menu location ?>
 					
 					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
-					<nav class="footer-nav" aria-label="<?php _e('Footer menu', 'fs-porfolio'); ?>">
+					<nav class="footer-nav" aria-label="<?php _e('Footer menu', 'fs-portfolio'); ?>">
 					<?php wp_nav_menu( array(
 							'theme_location'	=> 	'footer_menu',
 							'menu_class'		=>	'footer-menu',
