@@ -96,7 +96,18 @@ function fs_porfolio_scripts_load() {
 		
 		wp_enqueue_script( 'jquery' );
 
-		
+
+		if ( get_theme_mod('onepage') == true ) {
+			
+			wp_enqueue_script(
+				'onepage-scroll', 
+				get_template_directory_uri() . '/js/onepage-scroll.js', 
+				array(), 
+				false, 
+				true
+			);
+			
+		}
 		
 		wp_enqueue_script(
 			'focus-visible', 
