@@ -26,11 +26,11 @@ $width-xwide: 90em;	 		// @note: 1440px
 
 
 $primary-color: #303030;
-$secondary-color: #8def12;
+$secondary-color: #4682B4; /* SteelBlue (web colors) */
 $third-color: #404040;
 $text-color: #303030;
-$bg-color: #fff;
-
+//$bg-color: #efefef;
+$bg-color: transparentize($secondary-color, .9);
 
 // Fonts
 // Define your custom fonts :)
