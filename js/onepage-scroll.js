@@ -1,9 +1,9 @@
 jQuery(document).ready(function($) {
 	
 	// Smooth Scroll
-
-	var $offset = 0;
-
+	
+	var $offset = 50;
+	
 	$('a[href*="#"]')
 	  .not('[href="#"]')
 	  .not('[href="#0"]')	  
@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 	        event.preventDefault();
 	        
 	        $('html, body').animate({
-	          scrollTop: target.offset().top-$offset
+	          scrollTop: target.offset().top
 	        }, 1000, function() {
 	          var $target = $(target);
 	          $target.focus();
@@ -35,9 +35,10 @@ jQuery(document).ready(function($) {
 
 
 	// Menu Class on Scroll
+	
 		
 	function onScroll() {
-
+		
 	    var scrollPos = $(document).scrollTop();
 	    
 	    $('.onepage-menu a').each(function () {
