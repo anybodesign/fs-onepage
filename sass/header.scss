@@ -23,7 +23,7 @@
 		position: fixed;
 		top: 0;
 		animation: drop-in .6s ease-in-out;
-		border-bottom: $text-color 1px dashed;
+		//border-bottom: $text-color 1px dashed;
 	}
 			
 	@include rwd(80rem) {	

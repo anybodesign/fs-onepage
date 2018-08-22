@@ -85,6 +85,11 @@ label, legend {
 	font-weight: normal;
 	margin: 0;
 }
+legend {
+	font-family: $font-bold;
+	text-transform: uppercase;
+	border-bottom: $primary-color 2px dotted;
+}
 
 button,
 input[type="button"],
@@ -212,7 +217,7 @@ input[type="submit"]:hover {
 .formfield-radio input[type="radio"] + span::after {
 	width: 6px; 
 	height: 6px;
-	background-color: $primary-color;
+	background-color: $secondary-color;
 	top: 9px; 
 	left: 6px;
 	border-radius: 100%;
@@ -231,7 +236,7 @@ input[type="submit"]:hover {
 	content: "L";
 	font-family: $font-bold;
 	font-size: 2.4rem;
-	color: $primary-color; 
+	color: $secondary-color; 
 	opacity: 0;
 	transform: scaleX(-1) rotate(-45deg);
 	transition: opacity .2s linear;
@@ -282,7 +287,7 @@ span.wpcf7-list-item {
 		width: 0; 
 		height: 0;
 		border-color: transparent;
-		border-top-color: $primary-color; 
+		border-top-color: $secondary-color; 
 		border-width: 6px;
 		border-style: solid;
 		pointer-events: none;

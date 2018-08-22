@@ -161,7 +161,8 @@ a:hover {
 				border-bottom-width: 4px;
 			}
 			&.focus-visible {
-				background-color: $secondary-color;
+				background-color: $text-color;
+				border-bottom-color: $text-color;
 				color: #fff;
 			}
 			&:visited {
@@ -194,6 +195,10 @@ textarea, input, video {
 
 ul, ol {
 	padding-left: $grid-padding*2;
+	
+	li {
+		margin-left: $grid-padding*2;
+	}
 }
 
 ul {
@@ -208,6 +213,10 @@ nav ol {
 	padding: 0; 
 	margin: 0; 
 	list-style-type: none;
+	
+	li {
+		margin-left: 0;
+	}
 }
 
 li ul, 
@@ -230,6 +239,13 @@ figure {
 	max-width: 100%;
 	margin: 0 0 $grid-padding 0;
 	overflow: hidden;
+	box-shadow: 0 0 0 1px #fff, 
+				0 0 1rem .5rem transparentize($text-color, .8); 
+	
+	&.alignfull,
+	.wp-block-gallery & {
+		box-shadow: none;
+	}
 	
 	img {
 		display: block;
@@ -292,7 +308,8 @@ figure {
 figcaption {
 	font-size: .85em; 
 	line-height: 1;
-	margin: $grid-padding 0;
+	margin: 0;
+	padding: $grid-padding;
 }
 
 
@@ -300,10 +317,21 @@ figcaption {
 
 q,
 blockquote {
+	position: relative;
 	max-width: 75%;
-	padding: $grid-padding 0 $grid-padding $grid-padding*2;
-	border-left: $primary-color 2px solid;
-	margin-left: $grid-padding;
+	padding: $grid-padding*2 6rem !important;
+	
+	&::before {
+		content: '';
+		display: block;
+		width: 45px;
+		height: 45px;
+		position: absolute;
+		top: $grid-padding;
+		left: $grid-padding/2;
+		background: url(img/icon-quote-black.svg) 0 0 no-repeat;
+		background-size: contain;
+	}
 }
 q,
 blockquote,
@@ -400,19 +428,17 @@ code, pre, samp, kbd {
 	font-family: $font-mono;
 	font-size: 1.6rem;
 }
-
 kbd {
 	padding: 0 2px;
 	border: 1px solid $text-color;
 	border-radius : 2px;
 }
-
 code, pre {
 	background-color: #eee;
 	color: $text-color;
 }
 code {
-	padding: .5em;
+	padding: $grid-padding/2;
 	
 	pre & {
 		background-color: transparent;
@@ -420,12 +446,12 @@ code {
 }
 pre {
 	padding: $grid-padding;
+	margin-bottom: $grid-padding !important;
 	border: $text-color 1px dashed;
 	white-space: pre-line;
 }
-
 mark {
-	padding: $grid-padding;
+	padding: $grid-padding/2;
 	background: rgba(255, 255, 0, .9); // Transparent yellow
 }
 

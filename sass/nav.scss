@@ -37,6 +37,10 @@
 
 .site-nav {
 	padding: $grid-padding;
+	
+	@include rwd(medium) {
+		padding: 0;
+	}
 }
 
 .main-menu {
@@ -85,15 +89,28 @@
 		}
 		
 		a {
+			display: block;
+			padding: $grid-padding;
 			text-decoration: none;
+			border-bottom: transparent .5rem solid;
+			transition: .3s ease-in-out;
 		}
 		a:hover, 
-		a.focus-visible,
-		&.current-menu-item a {
+		a.focus-visible {
+			border-bottom-color: #fff;
 			
+			@include rwd(medium) {
+				color: $secondary-color;
+				border-bottom-color: transparent;
+			}
 		}
-		a:focus {
+		
+		&.current-menu-item a {
+			border-bottom-color: #fff;
 			
+			@include rwd(medium) {
+				border-bottom-color: $text-color;
+			}	
 		}
 		
 		// If Menu item has children
