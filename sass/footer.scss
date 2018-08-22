@@ -3,12 +3,18 @@
 /* ------------------------- */
 
 
-#site_foot {}
+#site_foot {
+	background-color: #fff;
+}
+.footer-content {
+	padding: $grid-padding*2 $grid-padding;
+}
 
 .footer-nav, 
 .footer-copyright {
 	display: inline-block; 
 	vertical-align: baseline;
+	margin-bottom: 0;
 }
 
 .footer-menu {

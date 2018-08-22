@@ -35,7 +35,11 @@
 }
 .page-title {
 	display: block;
-	padding: $grid-padding;	
+	padding: $grid-padding;
+	
+	&::after {
+		@include pre-stroke();
+	}		
 }
 .page-content {
 	

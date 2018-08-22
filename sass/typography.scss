@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6,
 	font-family: $font-title;
 	font-weight: normal;
 	margin: 0 0 $grid-padding 0;
-	
+
 	b, strong {
 		font-weight: normal;
 	}
@@ -239,6 +239,7 @@ figure {
 	max-width: 100%;
 	margin: 0 0 $grid-padding 0;
 	overflow: hidden;
+	background-color: #fff;
 	box-shadow: 0 0 0 1px #fff, 
 				0 0 1rem .5rem transparentize($text-color, .8); 
 	
@@ -274,7 +275,7 @@ figure {
 			width: 80px;
 			height: 80px;
 			border-radius: 80px;
-			background-color: transparentize( $primary-color, .1 );
+			background-color: transparentize( $text-color, .1 );
 			transition: .4s ease-in-out;
 		}
 		&::after {
@@ -287,9 +288,10 @@ figure {
 			transform: scaleX(1.4) translateX(-15%) translateY(-40%);
 		}
 		
-		&.focus-visible::before, &:hover::before {
+		&.focus-visible::before, 
+		&:hover::before {
 			transform: translateX(-50%) translateY(-50%) scale(1.2);
-			background-color: $primary-color;
+			background-color: $text-color;
 		}
 		& img {
 			transition: opacity .2s ease-in-out;
@@ -392,6 +394,7 @@ sup {
 table {
     width: 100%;
     margin-bottom: $grid-padding*2;
+    background-color: #fff;
 }
 thead {
 	background-color: $primary-color;
@@ -405,18 +408,7 @@ td, th {
 	vertical-align: middle;
 	margin-bottom: 0;
 	padding: $grid-padding;
-	border: $primary-color 1px solid;
-	
-	thead &, 
-	tbody &, 
-	tfoot & {
-		border-top: 0;
-	}
-	tbody &:first-child,
-	thead & {
-		border-top: $primary-color 1px solid;
-	}
-	
+	border: $text-color 1px solid;
 }
 
 

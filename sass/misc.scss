@@ -4,6 +4,7 @@
 
 // Slick
 
+/*
 .slick-dots {
 	position: absolute;
 	bottom: -50px;
@@ -54,9 +55,38 @@
 
 	}
 }
+*/
 
 // Fancybox
 
+.fancybox-toolbar {
+	
+	.admin-bar & {
+		top: 32px;
+	}	
+}
+
+.fancybox-arrow {
+	
+	.fancybox-show-nav & {
+		opacity: 1;
+	}
+	
+	&::after {
+		background-color: $primary-color;
+		transition: opacity .3s ease-in-out;	
+	}
+		
+	&:hover,
+	&:focus,
+	&.focus-visible {
+		background-color: transparent;
+		
+		&::after {
+			opacity: .7;	
+		}
+	}	
+}
 
 /* ------------------------- */
 /* = Misc
