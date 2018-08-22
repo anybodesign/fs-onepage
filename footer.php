@@ -16,7 +16,7 @@
 		<footer role="contentinfo" id="site_foot">
 			
 			<div class="row inner">
-				<div class="col-12">				
+				<div class="footer-content">				
 					
 					<?php // The credit/copyright line, settings in the Customizer ?>
 					

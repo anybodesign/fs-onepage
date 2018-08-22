@@ -25,7 +25,8 @@
 
 <div id="wrapper">
 
-
+	<?php if ( get_theme_mod('onepage') == true && ! is_404()) { ?>
+	
 	<?php // The Skiplinks ?>
 	
 	<div class="skiplinks">
@@ -94,6 +95,6 @@
 
 	</header>
 	
-	
+	<?php } ?>	
 	
 		<main class="content-area" role="main" id="site_content">
