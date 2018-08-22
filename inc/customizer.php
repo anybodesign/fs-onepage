@@ -144,19 +144,46 @@ function fs_customizer_sanitize_checkbox( $input ) {
 function fs_colors() {
 	?>
 	<style>
+		.front-page-content,
+		.fancybox-arrow::after,
+		input[type="submit"],
+		thead { 
+			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?> 
+		}
+		input[type="submit"]:hover {
+			background-color: lighten(<?php echo get_theme_mod('primary_color', '#303030'); ?>, 15%) 
+		}
 		.something { 
-			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
+			color: <?php echo get_theme_mod('primary_color', '#303030'); ?> 
+		}
+		legend,
+		.formfield-radio input[type="radio"].focus-visible + span,
+		.formfield-radio input[type="checkbox"].focus-visible + span,
+		#menu-toggle span,
+		#menu-toggle span::before,
+		#menu-toggle span::after {
+			border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>
 		}
 		
-		.something { 
-			color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
-		}
 		
-		.something {
-			background-color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
+		.formfield-radio input[type="radio"] + label::after,
+		.formfield-radio input[type="radio"] + span::after {
+			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>
 		}
-		.something {
-			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
+		.formfield-checkbox input[type="checkbox"] + label::after,
+		.formfield-checkbox input[type="checkbox"] + span::after,
+		.main-menu li > a:hover, 
+		.main-menu li > a.focus-visible,
+		.content-area p a:not([class*="action-btn"]),
+		.content-area p a:not([class*="action-btn"]):active {
+			color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>
+		}
+		.formfield-select--container {
+			border-top-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>
+		}
+		legend,
+		.content-area p a:not([class*="action-btn"]) {
+			border-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>
 		}
 	</style>
 	<?php
