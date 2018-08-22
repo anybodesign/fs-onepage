@@ -12,21 +12,15 @@
 
 get_header(); ?>
 					
-				<div class="row inner">
-					<div class="col-12">
-	
-						<section class="error-404 not-found">
+				<div class="page-section error-404 not-found" id="<?php the_slug(); ?>"<?php fs_bg_img(); ?>>
+					<div class="page-content">
+						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found', 'fs-porfolio' ); ?></h1>
 							
-							<header class="page-header">
-								<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found', 'fs-porfolio' ); ?></h1>
-							</header>
-							
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'fs-porfolio' ); ?></p>
-							<?php get_search_form(); ?>		
-							
-						</section>
+						<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'fs-porfolio' ); ?></p>
+						<p><a class="action-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e('Go to Home Page', 'fs-porfolio'); ?></a></p>
+
+					</div>		
 												
-					</div>					
 				</div>
 
 <?php get_footer(); ?>
