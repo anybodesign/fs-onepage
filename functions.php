@@ -109,6 +109,26 @@ function fs_porfolio_scripts_load() {
 			
 		}
 		
+		// Fancybox
+		
+		wp_enqueue_script(
+			'fancybox', 
+			get_template_directory_uri() . '/js/jquery.fancybox.min.js', 
+			array('jquery'), 
+			false, 
+			true
+		);
+		wp_enqueue_script(
+			'fancybox-init', 
+			get_template_directory_uri() . '/js/fancybox-init.js', 
+			array('fancybox'), 
+			false, 
+			true
+		);
+		
+		
+		// Main
+		
 		wp_enqueue_script(
 			'focus-visible', 
 			get_template_directory_uri() . '/js/focus-visible.js', 
@@ -140,17 +160,14 @@ function fs_porfolio_scripts_load() {
 		
 		// CSS
 		
-		/* Enqueue your customl CSS here
-		
 		wp_enqueue_style( 
-			'your-css', 
-			get_template_directory_uri() . '/css/your.css',
+			'fancybox', 
+			get_template_directory_uri() . '/css/jquery.fancybox.min.css',
 			array(), 
-			'1.0', 
+			false, 
 			'screen' 
 		);
 		
-		*/
 		
 		
 		// Main stylesheet
