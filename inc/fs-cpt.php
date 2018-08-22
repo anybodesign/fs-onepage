@@ -6,33 +6,33 @@
 function fs_custom_posts() {
 	
 	$labels = array(
-		'name'					=> _x( 'Portfolio', 'Post Type General Name', 'fs-porfolio' ),
-		'singular_name'			=> _x( 'Portfolio', 'Post Type Singular Name', 'fs-porfolio' ),
-		'menu_name'				=> __( 'Portfolio', 'fs-porfolio' ),
-		'name_admin_bar'		=> __( 'Portfolio', 'fs-porfolio' ),
-		//'parent_item_colon'		=> __( 'Parent Creation:', 'fs-porfolio' ),
-		'all_items'				=> __( 'All Creations', 'fs-porfolio' ),
-		'add_new_item'			=> __( 'Add New Creation', 'fs-porfolio' ),
-		'new_item'				=> __( 'New Creation', 'fs-porfolio' ),
-		'edit_item'				=> __( 'Edit Creation', 'fs-porfolio' ),
-		'update_item'			=> __( 'Update Creation', 'fs-porfolio' ),
-		'view_item'				=> __( 'View Creation', 'fs-porfolio' ),
-		'search_items'			=> __( 'Search Creation', 'fs-porfolio' ),
-		'not_found'				=> __( 'No creations were found', 'fs-porfolio' ),
-		'featured_image'	 	=> __( 'Creation Picture', 'fs-porfolio' ),
-		'set_featured_image' 	=> __( 'Set Creation Picture', 'fs-porfolio' ),
-		'remove_featured_image' => __( 'Remove Creation Picture', 'fs-porfolio' ),
-		'use_featured_image' 	=> __( 'Use as Creation Picture', 'fs-porfolio' ),
+		'name'					=> _x( 'Portfolio', 'Post Type General Name', 'fs-portfolio' ),
+		'singular_name'			=> _x( 'Portfolio', 'Post Type Singular Name', 'fs-portfolio' ),
+		'menu_name'				=> __( 'Portfolio', 'fs-portfolio' ),
+		'name_admin_bar'		=> __( 'Portfolio', 'fs-portfolio' ),
+		//'parent_item_colon'		=> __( 'Parent Creation:', 'fs-portfolio' ),
+		'all_items'				=> __( 'All Creations', 'fs-portfolio' ),
+		'add_new_item'			=> __( 'Add New Creation', 'fs-portfolio' ),
+		'new_item'				=> __( 'New Creation', 'fs-portfolio' ),
+		'edit_item'				=> __( 'Edit Creation', 'fs-portfolio' ),
+		'update_item'			=> __( 'Update Creation', 'fs-portfolio' ),
+		'view_item'				=> __( 'View Creation', 'fs-portfolio' ),
+		'search_items'			=> __( 'Search Creation', 'fs-portfolio' ),
+		'not_found'				=> __( 'No creations were found', 'fs-portfolio' ),
+		'featured_image'	 	=> __( 'Creation Picture', 'fs-portfolio' ),
+		'set_featured_image' 	=> __( 'Set Creation Picture', 'fs-portfolio' ),
+		'remove_featured_image' => __( 'Remove Creation Picture', 'fs-portfolio' ),
+		'use_featured_image' 	=> __( 'Use as Creation Picture', 'fs-portfolio' ),
 	);
 	$rewrite = array(
-		'slug'					=> __( 'portfolio', 'fs-porfolio' ),
+		'slug'					=> __( 'portfolio', 'fs-portfolio' ),
 		'with_front'			=> true,
 		'pages'					=> true,
 		'feeds'					=> true,
 	);
 	$args = array(
-		'label'					=> __( 'Portfolio', 'fs-porfolio' ),
-		'description'			=> __( 'Anybodesign Portfolio', 'fs-porfolio' ),
+		'label'					=> __( 'Portfolio', 'fs-portfolio' ),
+		'description'			=> __( 'Anybodesign Portfolio', 'fs-portfolio' ),
 		'labels'				=> $labels,
 		'supports'				=> array( 'title', 'editor', 'thumbnail', 'revisions'),
 		'taxonomies'			=> array( 'type-creation' ),
@@ -72,20 +72,20 @@ add_action( 'after_switch_theme', function() {
 function fs_custom_taxonomies() {
 
 	$labels = array(
-		'name'							=> _x( 'Creation Categories', 'Taxonomy General Name', 'fs-porfolio' ),
-		'singular_name'					=> _x( 'Creation Category', 'Taxonomy Singular Name', 'fs-porfolio' ),
-		'menu_name'						=> __( 'Creation Category', 'fs-porfolio' ),
-		'all_items'						=> __( 'All Creation Categories', 'fs-porfolio' ),
-		'parent_item'					=> __( 'Parent Creation Category', 'fs-porfolio' ),
-		'parent_item_colon'				=> __( 'Parent Creation Category:', 'fs-porfolio' ),
-		'new_item_name'					=> __( 'New Creation Category', 'fs-porfolio' ),
-		'add_new_item'					=> __( 'Add New Creation Category', 'fs-porfolio' ),
-		'edit_item'						=> __( 'Edit Creation Category', 'fs-porfolio' ),
-		'update_item'					=> __( 'Update Creation Category', 'fs-porfolio' ),
-		'view_item'						=> __( 'View Creation Category', 'fs-porfolio' ),
-		'popular_items'					=> __( 'Popular Creation Category', 'fs-porfolio' ),
-		'search_items'					=> __( 'Search Creation Category', 'fs-porfolio' ),
-		'not_found'						=> __( 'No creation categories were found', 'fs-porfolio' ),
+		'name'							=> _x( 'Creation Categories', 'Taxonomy General Name', 'fs-portfolio' ),
+		'singular_name'					=> _x( 'Creation Category', 'Taxonomy Singular Name', 'fs-portfolio' ),
+		'menu_name'						=> __( 'Creation Category', 'fs-portfolio' ),
+		'all_items'						=> __( 'All Creation Categories', 'fs-portfolio' ),
+		'parent_item'					=> __( 'Parent Creation Category', 'fs-portfolio' ),
+		'parent_item_colon'				=> __( 'Parent Creation Category:', 'fs-portfolio' ),
+		'new_item_name'					=> __( 'New Creation Category', 'fs-portfolio' ),
+		'add_new_item'					=> __( 'Add New Creation Category', 'fs-portfolio' ),
+		'edit_item'						=> __( 'Edit Creation Category', 'fs-portfolio' ),
+		'update_item'					=> __( 'Update Creation Category', 'fs-portfolio' ),
+		'view_item'						=> __( 'View Creation Category', 'fs-portfolio' ),
+		'popular_items'					=> __( 'Popular Creation Category', 'fs-portfolio' ),
+		'search_items'					=> __( 'Search Creation Category', 'fs-portfolio' ),
+		'not_found'						=> __( 'No creation categories were found', 'fs-portfolio' ),
 	);
 	$args = array(
 		'labels'				=> $labels,
@@ -95,7 +95,7 @@ function fs_custom_taxonomies() {
 		'show_admin_column'		=> true,
 		'show_in_nav_menus'		=> true,
 		'show_tagcloud'			=> false,
-		'rewrite'				=> array( 'slug' => __( 'creations', 'fs-porfolio' ) ),		
+		'rewrite'				=> array( 'slug' => __( 'creations', 'fs-portfolio' ) ),		
 	);
 	register_taxonomy( 'type-creation', array( 'portfolio' ), $args );	
 
@@ -161,7 +161,7 @@ function fs_change_title_text( $title ) {
 	$screen = get_current_screen();
 
 	if  ( 'portfolio' == $screen->post_type ) {
-		$title = __( 'Enter the name of the creation', 'fs-porfolio' );
+		$title = __( 'Enter the name of the creation', 'fs-portfolio' );
 	}
 
 	return $title;
@@ -174,8 +174,8 @@ add_filter( 'enter_title_here', 'fs_change_title_text' );
 function fs_new_columns_portfolio( $wp_columns ) {
 	$column_before = array();
 	unset( $wp_columns['date'] );
-	$column_after['visuel'] = __( 'Picture', 'fs-porfolio');
-	$column_after['date'] = __( 'Date', 'fs-porfolio');
+	$column_after['visuel'] = __( 'Picture', 'fs-portfolio');
+	$column_after['date'] = __( 'Date', 'fs-portfolio');
 	$wp_columns = array_merge( $column_before, $wp_columns, $column_after );
 	
 	return $wp_columns;
