@@ -16,7 +16,7 @@
 				</h1>
 				<?php } else { ?>
 				<p class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'fs-porfolio'); ?>">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'fs-portfolio'); ?>">
 					<?php get_template_part('template-parts/header', 'logo'); ?>
 					</a>
 				</p>

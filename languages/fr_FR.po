@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Porfolio\n"
-"POT-Creation-Date: 2018-08-22 13:34+0200\n"
-"PO-Revision-Date: 2018-08-22 13:34+0200\n"
+"POT-Creation-Date: 2018-08-22 15:26+0200\n"
+"PO-Revision-Date: 2018-08-22 15:26+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -434,8 +434,8 @@ msgid "FS Porfolio"
 msgstr "FS Porfolio"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/anybodesign/fs-porfolio"
-msgstr "https://github.com/anybodesign/fs-porfolio"
+msgid "https://github.com/anybodesign/fs-portfolio"
+msgstr "https://github.com/anybodesign/fs-portfolio"
 
 #. Description of the plugin/theme
 msgid "A Gutenberg friendly Portfolio WordPress Theme"

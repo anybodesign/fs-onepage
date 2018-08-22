@@ -19,7 +19,7 @@
                 "58c6bfee6ec2e": {
                     "key": "58c6bfee6ec2e",
                     "name": "text",
-                    "label": "<img src=\"\/wp-content\/themes\/fs-porfolio\/img\/builder\/builder-text.png\"><span>Texte<\/span>",
+                    "label": "<img src=\"\/wp-content\/themes\/fs-portfolio\/img\/builder\/builder-text.png\"><span>Texte<\/span>",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -232,7 +232,7 @@
                 "5aef734ec6242": {
                     "key": "5aef734ec6242",
                     "name": "textimg",
-                    "label": "<img src=\"\/wp-content\/themes\/fs-porfolio\/img\/builder\/builder-textimg.png\"><span>Texte \/ Image<\/span>",
+                    "label": "<img src=\"\/wp-content\/themes\/fs-portfolio\/img\/builder\/builder-textimg.png\"><span>Texte \/ Image<\/span>",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -304,7 +304,7 @@
                 "58c6c0ee0e6bb": {
                     "key": "58c6c0ee0e6bb",
                     "name": "cta",
-                    "label": "<img src=\"\/wp-content\/themes\/fs-porfolio\/img\/builder\/builder-cta.png\"><span>Call to Action<\/span>",
+                    "label": "<img src=\"\/wp-content\/themes\/fs-portfolio\/img\/builder\/builder-cta.png\"><span>Call to Action<\/span>",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -442,7 +442,7 @@
                 "58c6c277e5a60": {
                     "key": "58c6c277e5a60",
                     "name": "gallery",
-                    "label": "<img src=\"\/wp-content\/themes\/fs-porfolio\/img\/builder\/builder-gallery.png\"><span>Galerie photos<\/span>",
+                    "label": "<img src=\"\/wp-content\/themes\/fs-portfolio\/img\/builder\/builder-gallery.png\"><span>Galerie photos<\/span>",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -547,7 +547,7 @@
                 "58c6c1e5e5a5d": {
                     "key": "58c6c1e5e5a5d",
                     "name": "content",
-                    "label": "<img src=\"\/wp-content\/themes\/fs-porfolio\/img\/builder\/builder-content.png\"><span>Galerie de contenus<\/span>",
+                    "label": "<img src=\"\/wp-content\/themes\/fs-portfolio\/img\/builder\/builder-content.png\"><span>Galerie de contenus<\/span>",
                     "display": "block",
                     "sub_fields": [
                         {

@@ -32,9 +32,9 @@ get_header(); ?>
 						<?php endwhile; ?>
 			
 						<?php the_posts_pagination(array(
-								'prev_text'          => __( 'Previous page', 'fs-porfolio' ),
-								'next_text'          => __( 'Next page', 'fs-porfolio' ),
-								'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fs-porfolio' ) . ' </span>',
+								'prev_text'          => __( 'Previous page', 'fs-portfolio' ),
+								'next_text'          => __( 'Next page', 'fs-portfolio' ),
+								'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fs-portfolio' ) . ' </span>',
 							)); ?>
 			
 					<?php else : ?>

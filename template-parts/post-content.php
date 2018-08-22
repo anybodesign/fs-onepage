@@ -33,7 +33,7 @@
 							<?php
 								the_content(sprintf(
 									
-									wp_kses( __( 'Continue reading %s', 'fs-porfolio' ), array( 'span' => array( 'class' => array() ) ) ),
+									wp_kses( __( 'Continue reading %s', 'fs-portfolio' ), array( 'span' => array( 'class' => array() ) ) ),
 									the_title( '<span class="screen-reader-text">"', '"</span>', false )
 								));
 							?>
@@ -42,14 +42,14 @@
 						<footer class="post-footer">
 							<?php $posttags = get_the_tags(); if ($posttags) { ?>
 							  	<div class="tag-links">
-									<p><?php _e( 'Tagged with:', 'fs-porfolio' ); ?></p>
+									<p><?php _e( 'Tagged with:', 'fs-portfolio' ); ?></p>
 									<?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
 							  	</div>
 							<?php } ?>					
 							
 							<?php 
 								wp_link_pages(array(
-									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fs-porfolio' ),
+									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fs-portfolio' ),
 									'after'  => '</div>',
 								));
 							?>

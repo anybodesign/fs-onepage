@@ -13,14 +13,14 @@
 
 							<div class="post-meta">
 								<p class="meta-infos">
-									<?php _e( 'Posted on&nbsp;', 'fs-porfolio' ); ?><?php echo the_time( get_option('date_format') ); ?>
-									<?php _e( 'by&nbsp;', 'fs-porfolio' ); ?><?php the_author(); ?>
-									<?php _e( 'in&nbsp;', 'fs-porfolio' ); ?><?php the_category(', '); ?>
+									<?php _e( 'Posted on&nbsp;', 'fs-portfolio' ); ?><?php echo the_time( get_option('date_format') ); ?>
+									<?php _e( 'by&nbsp;', 'fs-portfolio' ); ?><?php the_author(); ?>
+									<?php _e( 'in&nbsp;', 'fs-portfolio' ); ?><?php the_category(', '); ?>
 								</p>
 								
 								<?php if ( ! get_comments_number()==0 ) : ?>
 								<p class="meta-comments">
-									<a href="<?php the_permalink() ?>#comments"><?php comments_number('0', '1', '%'); ?> <?php _e( 'Comment(s)', 'fs-porfolio' ); ?></a>
+									<a href="<?php the_permalink() ?>#comments"><?php comments_number('0', '1', '%'); ?> <?php _e( 'Comment(s)', 'fs-portfolio' ); ?></a>
 								</p>
 		    					<?php endif; ?>
 							</div>

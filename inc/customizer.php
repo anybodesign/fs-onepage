@@ -16,13 +16,13 @@ function fs_customize_register($wp_customize) {
 	// Create Some Sections
 	
 	$wp_customize->add_section('fs_options_section', array(
-		'title' 		=> __('Theme Options', 'fs-porfolio'),
-		'description' 	=> __('Theme customisation', 'fs-porfolio'),
+		'title' 		=> __('Theme Options', 'fs-portfolio'),
+		'description' 	=> __('Theme customisation', 'fs-portfolio'),
 		'priority'		=> 30,
 	));
 	$wp_customize->add_section('fs_color_section', array(
-		'title' 		=> __('Theme Colors', 'fs-porfolio'),
-		'description' 	=> __('Colors customisation', 'fs-porfolio'),
+		'title' 		=> __('Theme Colors', 'fs-portfolio'),
+		'description' 	=> __('Colors customisation', 'fs-portfolio'),
 		'priority'		=> 40,
 	));
 	
@@ -36,7 +36,7 @@ function fs_customize_register($wp_customize) {
 		'transport'			=> 'refresh', 
 	));
 	$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'primary_color_ctrl', array(
-		'label'		=> __('Primary color', 'fs-porfolio'),
+		'label'		=> __('Primary color', 'fs-portfolio'),
 		'section'	=> 'colors',
 		'settings'	=> 'primary_color',
 	)));
@@ -51,7 +51,7 @@ function fs_customize_register($wp_customize) {
 		'transport'			=> 'refresh', 
 	));
 	$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'secondary_color_ctrl', array(
-		'label'		=> __('Secondary color', 'fs-porfolio'),
+		'label'		=> __('Secondary color', 'fs-portfolio'),
 		'section'	=> 'colors',
 		'settings'	=> 'secondary_color',
 	)));
@@ -65,7 +65,7 @@ function fs_customize_register($wp_customize) {
 	));
 	
 	$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo_ctrl', array(
-		'label'			=> __('Site Logo', 'fs-porfolio'),
+		'label'			=> __('Site Logo', 'fs-portfolio'),
 		'section'		=> 'title_tagline',
 		'settings'		=> 'site_logo',
 	)));	
@@ -103,8 +103,8 @@ function fs_customize_register($wp_customize) {
 		'sanitize_callback'		=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('footer_text_ctrl', array(
-		'label'			=> __('Custom footer text', 'fs-porfolio'),
-		'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-porfolio'),
+		'label'			=> __('Custom footer text', 'fs-portfolio'),
+		'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-portfolio'),
 		'section'		=> 'fs_options_section',
 		'settings'		=> 'footer_text',
 	));	
@@ -118,7 +118,7 @@ function fs_customize_register($wp_customize) {
 	
 	$wp_customize->add_control('display_wp_ctrl', array(
 		'type'			=> 'checkbox',
-		'label'			=> __('Display WordPress Link', 'fs-porfolio'),
+		'label'			=> __('Display WordPress Link', 'fs-portfolio'),
 		'section'		=> 'fs_options_section',
 		'settings'		=> 'display_wp',
 	));

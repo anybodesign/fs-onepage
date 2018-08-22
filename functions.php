@@ -8,14 +8,14 @@ if ( ! isset( $content_width ) )
 	$content_width = 2048;
 
 
-if ( ! function_exists( 'fs_porfolio_setup' ) ) :
+if ( ! function_exists( 'fs_portfolio_setup' ) ) :
 
-function fs_porfolio_setup() {
+function fs_portfolio_setup() {
 	
 	
 	// I18n
 	
-	load_theme_textdomain( 'fs-porfolio', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'fs-portfolio', get_template_directory() . '/languages' );
 	
 	
 	// Theme Support
@@ -53,12 +53,12 @@ function fs_porfolio_setup() {
 	
 	add_theme_support( 'editor-color-palette', array(
 	    array(
-	        'name' => esc_html__( 'Primary color', 'fs-porfolio' ),
+	        'name' => esc_html__( 'Primary color', 'fs-portfolio' ),
 	        'slug' => 'primary-color',
 	        'color' => get_theme_mod('primary_color', '#9c0'),
 	    ),
 	    array(
-	        'name' => esc_html__( 'Secondary color', 'fs-porfolio' ),
+	        'name' => esc_html__( 'Secondary color', 'fs-portfolio' ),
 	        'slug' => 'secondary-color',
 	        'color' => get_theme_mod('secondary_color', '#606060'),
 	    ),
@@ -68,28 +68,28 @@ function fs_porfolio_setup() {
 
 }
 endif;
-add_action( 'after_setup_theme', 'fs_porfolio_setup' );
+add_action( 'after_setup_theme', 'fs_portfolio_setup' );
 
 
 // Gutenberg editor styles
 
-function fs_porfolio_block_editor_styles() {
+function fs_portfolio_block_editor_styles() {
     wp_enqueue_style( 
-    	'fs_porfolio_block_editor_styles',
+    	'fs_portfolio_block_editor_styles',
     	get_theme_file_uri( '/block-editor-style.css' ), 
     	false, 
     	'1.0', 
     	'screen'
     );
 }
-add_action( 'enqueue_block_editor_assets', 'fs_porfolio_block_editor_styles' );
+add_action( 'enqueue_block_editor_assets', 'fs_portfolio_block_editor_styles' );
 
 
 // ------------------------
 // Enqueue JS & CSS
 // ------------------------
 
-function fs_porfolio_scripts_load() {
+function fs_portfolio_scripts_load() {
     if (!is_admin()) {
 
 		// JS 
@@ -138,7 +138,7 @@ function fs_porfolio_scripts_load() {
 		);
 		
 		wp_enqueue_script(
-			'fs-porfolio-skip-link-focus-fix', 
+			'fs-portfolio-skip-link-focus-fix', 
 			get_template_directory_uri() . '/js/skip-link-focus-fix.js', 
 			array(), 
 			false, 
@@ -172,11 +172,11 @@ function fs_porfolio_scripts_load() {
 		
 		// Main stylesheet
 		
-		wp_enqueue_style( 'fs-porfolio-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'fs-portfolio-style', get_stylesheet_uri() );
 
 	}
 }    
-add_action( 'wp_enqueue_scripts', 'fs_porfolio_scripts_load' );
+add_action( 'wp_enqueue_scripts', 'fs_portfolio_scripts_load' );
 
 
 // ------------------------
@@ -192,8 +192,8 @@ require get_template_directory() . '/inc/customizer.php';
 // Menus
 
 register_nav_menus( array(
-	'main_menu' =>  esc_html__( 'Main Menu', 'fs-porfolio' ),
-	'footer_menu' => esc_html__( 'Footer Menu', 'fs-porfolio' )
+	'main_menu' =>  esc_html__( 'Main Menu', 'fs-portfolio' ),
+	'footer_menu' => esc_html__( 'Footer Menu', 'fs-portfolio' )
 ));
 
 // Sub-menus Walker
@@ -246,20 +246,20 @@ add_image_size( 'thumbnail-hd', 320, 320, true );
 add_image_size( 'medium-hd', 640, 640, false );
 add_image_size( 'large-hd', 2048, 2048, false );
 
-add_filter( 'image_size_names_choose', 'fs_porfolio_custom_sizes' );
-function fs_porfolio_custom_sizes( $sizes ) {
+add_filter( 'image_size_names_choose', 'fs_portfolio_custom_sizes' );
+function fs_portfolio_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'thumbnail-hd'	=> __( 'Thumbnail High', 'fs-porfolio' ),
-        'medium-hd'		=> __( 'Medium High', 'fs-porfolio' ),
-        'large-hd'		=> __( 'Large High', 'fs-porfolio' ),
+        'thumbnail-hd'	=> __( 'Thumbnail High', 'fs-portfolio' ),
+        'medium-hd'		=> __( 'Medium High', 'fs-portfolio' ),
+        'large-hd'		=> __( 'Large High', 'fs-portfolio' ),
     ) );
 }
 
 // Widgets
 
-function fs_porfolio_widgets_init() {
+function fs_portfolio_widgets_init() {
 	register_sidebar(array(
-		'name'			=>	esc_html__( 'Primary Widgets Area', 'fs-porfolio' ),
+		'name'			=>	esc_html__( 'Primary Widgets Area', 'fs-portfolio' ),
 		'id'			=>	'widgets_area1',
 		'description' 	=> 	'',
 		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
@@ -268,18 +268,18 @@ function fs_porfolio_widgets_init() {
 		'after_title' 	=> 	'</p>',
 	));
 }
-add_action( 'widgets_init', 'fs_porfolio_widgets_init' );
+add_action( 'widgets_init', 'fs_portfolio_widgets_init' );
 
 
 // Tinymce class
 
-function fs_porfolio_mce_buttons_2($buttons) {
+function fs_portfolio_mce_buttons_2($buttons) {
     array_unshift($buttons, 'styleselect');
     return $buttons;
 }
-add_filter('mce_buttons_2', 'fs_porfolio_mce_buttons_2');
+add_filter('mce_buttons_2', 'fs_portfolio_mce_buttons_2');
 
-function fs_porfolio_tiny_formats($init_array) {
+function fs_portfolio_tiny_formats($init_array) {
 
     $style_formats = array(
 
@@ -306,12 +306,12 @@ function fs_porfolio_tiny_formats($init_array) {
     return $init_array;
 
 }
-add_filter('tiny_mce_before_init', 'fs_porfolio_tiny_formats');
+add_filter('tiny_mce_before_init', 'fs_portfolio_tiny_formats');
 
 
 // Custom search form
 
-function fs_porfolio_search_form( $form ) {
+function fs_portfolio_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
     <label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
     <input type="search" placeholder="' . __( 'Keywords' ) . '" value="' . get_search_query() . '" name="s" id="s">
@@ -320,7 +320,7 @@ function fs_porfolio_search_form( $form ) {
  
     return $form;
 }
-add_filter( 'get_search_form', 'fs_porfolio_search_form' );
+add_filter( 'get_search_form', 'fs_portfolio_search_form' );
 
 
 /*
@@ -342,15 +342,15 @@ include_once('inc/acf/popup-acf.php');
 
 // Front-End ACF Functions
 
-add_filter('acf/settings/save_json', 'fs_porfolio_acf_json_save_point');
-function fs_porfolio_acf_json_save_point( $path ) {
+add_filter('acf/settings/save_json', 'fs_portfolio_acf_json_save_point');
+function fs_portfolio_acf_json_save_point( $path ) {
     
     $path = get_stylesheet_directory() . '/inc/acf';
     
     return $path;
 }
-add_filter('acf/settings/load_json', 'fs_porfolio_acf_json_load_point');
-function fs_porfolio_acf_json_load_point( $paths ) {
+add_filter('acf/settings/load_json', 'fs_portfolio_acf_json_load_point');
+function fs_portfolio_acf_json_load_point( $paths ) {
     
     unset($paths[0]);
 

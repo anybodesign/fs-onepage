@@ -29,7 +29,7 @@
 						        <div class="gallery-item-<?php echo $cols; ?>">
 							        
 							        <figure class="builder-gallery-figure">
-							            <a href="<?php echo $image['url']; ?>" title="<?php _e('Enlarge picture', 'fs-porfolio'); ?>">
+							            <a href="<?php echo $image['url']; ?>" title="<?php _e('Enlarge picture', 'fs-portfolio'); ?>">
 								            <img src="<?php echo $image['sizes']['thumbnail-hd']; ?>" alt="<?php echo $image['alt']; ?>">
 											<?php if ( $image['caption'] ) { ?>
 											<figcaption class="builder-gallery-caption">
