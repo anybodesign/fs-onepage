@@ -48,7 +48,13 @@
 .page-content {
 	
 	& > [class*="wp-block-"]:not([class*="alignfull"]), 
-	& > p {
+	& > p,
+	& > ul,
+	& > ol,
+	& > h2,
+	& > h3,
+	& > h4,
+	& > .wpcf7 {
 		padding: $grid-padding;
 		@include center();
 	}
