@@ -1,9 +1,9 @@
 <?php defined('ABSPATH') or die();
 /**
- * FS Porfolio Customizer functionality
+ * FS Blocks Customizer functionality
  *
  * @package WordPress
- * @subpackage FS_Porfolio
+ * @subpackage FS_Blocks
  * @since 1.0
  * @version 1.0
  */
@@ -16,13 +16,13 @@ function fs_customize_register($wp_customize) {
 	// Create Some Sections
 	
 	$wp_customize->add_section('fs_options_section', array(
-		'title' 		=> __('Theme Options', 'fs-portfolio'),
-		'description' 	=> __('Theme customisation', 'fs-portfolio'),
+		'title' 		=> __('Theme Options', 'fs-blocks'),
+		'description' 	=> __('Theme customisation', 'fs-blocks'),
 		'priority'		=> 30,
 	));
 	$wp_customize->add_section('fs_color_section', array(
-		'title' 		=> __('Theme Colors', 'fs-portfolio'),
-		'description' 	=> __('Colors customisation', 'fs-portfolio'),
+		'title' 		=> __('Theme Colors', 'fs-blocks'),
+		'description' 	=> __('Colors customisation', 'fs-blocks'),
 		'priority'		=> 40,
 	));
 	
@@ -36,7 +36,7 @@ function fs_customize_register($wp_customize) {
 		'transport'			=> 'refresh', 
 	));
 	$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'primary_color_ctrl', array(
-		'label'		=> __('Primary color', 'fs-portfolio'),
+		'label'		=> __('Primary color', 'fs-blocks'),
 		'section'	=> 'colors',
 		'settings'	=> 'primary_color',
 	)));
@@ -51,7 +51,7 @@ function fs_customize_register($wp_customize) {
 		'transport'			=> 'refresh', 
 	));
 	$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'secondary_color_ctrl', array(
-		'label'		=> __('Secondary color', 'fs-portfolio'),
+		'label'		=> __('Secondary color', 'fs-blocks'),
 		'section'	=> 'colors',
 		'settings'	=> 'secondary_color',
 	)));
@@ -65,7 +65,7 @@ function fs_customize_register($wp_customize) {
 	));
 	
 	$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo_ctrl', array(
-		'label'			=> __('Site Logo', 'fs-portfolio'),
+		'label'			=> __('Site Logo', 'fs-blocks'),
 		'section'		=> 'title_tagline',
 		'settings'		=> 'site_logo',
 	)));	
@@ -78,7 +78,7 @@ function fs_customize_register($wp_customize) {
 	));
 	$wp_customize->add_control('onepage_ctrl', array(
 		'type'			=> 'checkbox',
-		'label'			=> __('Make your website a one-page', 'fs-portfolio'),
+		'label'			=> __('Make your website a one-page', 'fs-blocks'),
 		'section'		=> 'fs_options_section',
 		'settings'		=> 'onepage',
 	));	
@@ -91,7 +91,7 @@ function fs_customize_register($wp_customize) {
 	));
 	$wp_customize->add_control('modals_ctrl', array(
 		'type'			=> 'checkbox',
-		'label'			=> __('Open your posts with Fancybox', 'fs-portfolio'),
+		'label'			=> __('Open your posts with Fancybox', 'fs-blocks'),
 		'section'		=> 'fs_options_section',
 		'settings'		=> 'modals',
 	));	
@@ -103,8 +103,8 @@ function fs_customize_register($wp_customize) {
 		'sanitize_callback'		=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('footer_text_ctrl', array(
-		'label'			=> __('Custom footer text', 'fs-portfolio'),
-		'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-portfolio'),
+		'label'			=> __('Custom footer text', 'fs-blocks'),
+		'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-blocks'),
 		'section'		=> 'fs_options_section',
 		'settings'		=> 'footer_text',
 	));	
@@ -118,7 +118,7 @@ function fs_customize_register($wp_customize) {
 	
 	$wp_customize->add_control('display_wp_ctrl', array(
 		'type'			=> 'checkbox',
-		'label'			=> __('Display WordPress Link', 'fs-portfolio'),
+		'label'			=> __('Display WordPress Link', 'fs-blocks'),
 		'section'		=> 'fs_options_section',
 		'settings'		=> 'display_wp',
 	));

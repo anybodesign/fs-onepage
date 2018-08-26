@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage FS_Porfolio
+ * @subpackage FS_Blocks
  * @since 1.0
  * @version 1.0
  */
@@ -33,7 +33,7 @@
 							<?php
 								the_content(sprintf(
 									
-									wp_kses( __( 'Continue reading %s', 'fs-portfolio' ), array( 'span' => array( 'class' => array() ) ) ),
+									wp_kses( __( 'Continue reading %s', 'fs-blocks' ), array( 'span' => array( 'class' => array() ) ) ),
 									the_title( '<span class="screen-reader-text">"', '"</span>', false )
 								));
 							?>
@@ -42,14 +42,14 @@
 						<footer class="post-footer">
 							<?php $posttags = get_the_tags(); if ($posttags) { ?>
 							  	<div class="tag-links">
-									<p><?php _e( 'Tagged with:', 'fs-portfolio' ); ?></p>
+									<p><?php _e( 'Tagged with:', 'fs-blocks' ); ?></p>
 									<?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
 							  	</div>
 							<?php } ?>					
 							
 							<?php 
 								wp_link_pages(array(
-									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fs-portfolio' ),
+									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fs-blocks' ),
 									'after'  => '</div>',
 								));
 							?>

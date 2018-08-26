@@ -1,7 +1,7 @@
 <?php if ( !defined('ABSPATH') ) die();
 /**
  * @package WordPress
- * @subpackage FS_Porfolio
+ * @subpackage FS_Blocks
  * @since 1.0
  * @version 1.0
  */
@@ -29,7 +29,7 @@
 						        <div class="gallery-item-<?php echo $cols; ?>">
 							        
 							        <figure class="builder-gallery-figure">
-							            <a href="<?php echo $image['url']; ?>" title="<?php _e('Enlarge picture', 'fs-portfolio'); ?>">
+							            <a href="<?php echo $image['url']; ?>" title="<?php _e('Enlarge picture', 'fs-blocks'); ?>">
 								            <img src="<?php echo $image['sizes']['thumbnail-hd']; ?>" alt="<?php echo $image['alt']; ?>">
 											<?php if ( $image['caption'] ) { ?>
 											<figcaption class="builder-gallery-caption">

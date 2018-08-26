@@ -1,9 +1,9 @@
 <?php defined('ABSPATH') or die();
 /**
- * FS Porfolio Sub-navigation Walker for Main Menu
+ * FS Blocks Sub-navigation Walker for Main Menu
  *
  * @package WordPress
- * @subpackage FS_Porfolio
+ * @subpackage FS_Blocks
  * @since 1.0
  * @version 1.0
  */
@@ -17,7 +17,7 @@ class fs_subnav_walker extends Walker_Nav_Menu {
 
        if ( $item->is_dropdown ) {
 
-           $item_html = str_replace( '</a>', '</a> <button class="sub-menu-unfold" aria-expanded="false"><span>'.__("Unfold Sub-Menu","fs-portfolio").'</span></button>', $item_html );
+           $item_html = str_replace( '</a>', '</a> <button class="sub-menu-unfold" aria-expanded="false"><span>'.__("Unfold Sub-Menu","fs-blocks").'</span></button>', $item_html );
        
        }
        $output .= $item_html;

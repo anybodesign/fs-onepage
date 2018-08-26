@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: FS Porfolio\n"
-"POT-Creation-Date: 2018-08-22 15:26+0200\n"
-"PO-Revision-Date: 2018-08-22 15:26+0200\n"
+"Project-Id-Version: FS Blocks\n"
+"POT-Creation-Date: 2018-08-26 15:32+0200\n"
+"PO-Revision-Date: 2018-08-26 15:33+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -157,18 +157,24 @@ msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
 #: inc/fs-cpt.php:9
+#, fuzzy
+#| msgid "FS Blocks"
 msgctxt "Post Type General Name"
 msgid "Portfolio"
-msgstr "Portfolio"
+msgstr "FS Blocks"
 
 #: inc/fs-cpt.php:10
+#, fuzzy
+#| msgid "FS Blocks"
 msgctxt "Post Type Singular Name"
 msgid "Portfolio"
-msgstr "Portfolio"
+msgstr "FS Blocks"
 
 #: inc/fs-cpt.php:11 inc/fs-cpt.php:12 inc/fs-cpt.php:34
+#, fuzzy
+#| msgid "FS Blocks"
 msgid "Portfolio"
-msgstr "Portfolio"
+msgstr "FS Blocks"
 
 #: inc/fs-cpt.php:14
 msgid "All Creations"
@@ -219,12 +225,16 @@ msgid "Use as Creation Picture"
 msgstr "Utilisatier en tant qu’image de référence"
 
 #: inc/fs-cpt.php:28
+#, fuzzy
+#| msgid "FS Blocks"
 msgid "portfolio"
-msgstr "portfolio"
+msgstr "FS Blocks"
 
 #: inc/fs-cpt.php:35
+#, fuzzy
+#| msgid "Anybodesign Blocks"
 msgid "Anybodesign Portfolio"
-msgstr "Portfolio Anybodesign"
+msgstr "Blocks Anybodesign"
 
 #: inc/fs-cpt.php:75
 msgctxt "Taxonomy General Name"
@@ -430,16 +440,16 @@ msgid "Comment(s)"
 msgstr "Commentaire(s)"
 
 #. Theme Name of the plugin/theme
-msgid "FS Porfolio"
-msgstr "FS Porfolio"
+msgid "FS Blocks"
+msgstr "FS Blocks"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/anybodesign/fs-portfolio"
-msgstr "https://github.com/anybodesign/fs-portfolio"
+msgid "https://github.com/anybodesign/fs-blocks"
+msgstr "https://github.com/anybodesign/fs-blocks"
 
 #. Description of the plugin/theme
-msgid "A Gutenberg friendly Portfolio WordPress Theme"
-msgstr "Un thème WordPress Portfolio compatible Gutenberg"
+msgid "A Gutenberg friendly Blocks WordPress Theme"
+msgstr "Un thème WordPress Blocks compatible Gutenberg"
 
 #. Author of the plugin/theme
 msgid "Thomas Villain"
@@ -448,6 +458,17 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Blocks"
+#~ msgstr "Blocks"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Blocks"
+#~ msgstr "Blocks"
+
+#~ msgid "blocks"
+#~ msgstr "blocks"
 
 #~ msgid "very dark gray"
 #~ msgstr "gris très foncé"

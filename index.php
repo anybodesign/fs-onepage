@@ -5,7 +5,7 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage FS_Porfolio
+ * @subpackage FS_Blocks
  * @since 1.0
  * @version 1.0
  */
@@ -32,9 +32,9 @@ get_header(); ?>
 						<?php endwhile; ?>
 			
 						<?php the_posts_pagination(array(
-								'prev_text'          => __( 'Previous page', 'fs-portfolio' ),
-								'next_text'          => __( 'Next page', 'fs-portfolio' ),
-								'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fs-portfolio' ) . ' </span>',
+								'prev_text'          => __( 'Previous page', 'fs-blocks' ),
+								'next_text'          => __( 'Next page', 'fs-blocks' ),
+								'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fs-blocks' ) . ' </span>',
 							)); ?>
 			
 					<?php else : ?>

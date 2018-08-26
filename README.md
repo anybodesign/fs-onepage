@@ -1,12 +1,8 @@
-# FS Porfolio
+# FS Blocks
 
-A Gutenberg friendly Portfolio WordPress Theme by Thomas Villain @ anybodesign.com
+A Gutenberg friendly WordPress Theme by Thomas Villain @ anybodesign.com
 
 ## Instructions
-
-### Custom Post Type
-
-If you don’t need the portfolio custom post type, remove this line in the functions.php file: `include_once('inc/fs-cpt.php');`
 
 ### ACF Page Builder
 

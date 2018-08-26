@@ -20,7 +20,7 @@
 							</div>
 
 							<button class="scroll-down">
-								<?php _e('Scroll Down', 'fs-portfolio'); ?>
+								<?php _e('Scroll Down', 'fs-blocks'); ?>
 							</button>
 						</div>
 							

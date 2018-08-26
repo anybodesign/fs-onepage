@@ -1,7 +1,7 @@
 <?php if ( !defined('ABSPATH') ) die();
 /**
  * @package WordPress
- * @subpackage FS_Porfolio
+ * @subpackage FS_Blocks
  * @since 1.0
  * @version 1.0
  */
@@ -29,7 +29,7 @@
 						        <div class="gallery-item-<?php echo $cols; ?>">
 							        
 							        <figure class="builder-gallery-figure">
-							            <a href="<?php echo get_permalink( $c->ID ); ?>" title="<?php _e('Read ', 'fs-portfolio'); echo get_the_title( $c->ID ); ?>">
+							            <a href="<?php echo get_permalink( $c->ID ); ?>" title="<?php _e('Read ', 'fs-blocks'); echo get_the_title( $c->ID ); ?>">
 								            <?php 
 									            if ( has_post_thumbnail( $c->ID ) ) { 
 								            		echo get_the_post_thumbnail( $c->ID, 'thumbnail-hd'); 

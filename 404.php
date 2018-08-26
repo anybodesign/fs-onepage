@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
  * @package WordPress
- * @subpackage FS_Porfolio
+ * @subpackage FS_Blocks
  * @since 1.0
  * @version 1.0
  */
@@ -14,10 +14,10 @@ get_header(); ?>
 					
 				<div class="page-section error-404 not-found" id="<?php the_slug(); ?>"<?php fs_bg_img(); ?>>
 					<div class="page-content">
-						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found', 'fs-portfolio' ); ?></h1>
+						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found', 'fs-blocks' ); ?></h1>
 							
-						<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'fs-portfolio' ); ?></p>
-						<p><a class="action-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e('Go to Home Page', 'fs-portfolio'); ?></a></p>
+						<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'fs-blocks' ); ?></p>
+						<p><a class="action-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e('Go to Home Page', 'fs-blocks'); ?></a></p>
 
 					</div>		
 												
