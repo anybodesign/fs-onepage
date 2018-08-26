@@ -144,7 +144,7 @@ function fs_customizer_sanitize_checkbox( $input ) {
 function fs_colors() {
 	?>
 	<style>
-		.front-page-content,
+		.front-page-content::after,
 		.fancybox-arrow::after,
 		input[type="submit"],
 		thead { 
