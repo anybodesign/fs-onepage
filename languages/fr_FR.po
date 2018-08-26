@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Blocks\n"
-"POT-Creation-Date: 2018-08-26 15:32+0200\n"
-"PO-Revision-Date: 2018-08-26 15:33+0200\n"
+"POT-Creation-Date: 2018-08-26 15:39+0200\n"
+"PO-Revision-Date: 2018-08-26 15:39+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -32,21 +32,26 @@ msgstr "Il semblerait que rien n’ai été trouvé à cette adresse."
 msgid "Go to Home Page"
 msgstr "Retour à la page d'accueil"
 
-#: comments.php:19
+#: _trash/comments.php:19
 msgid "They talk about it"
 msgstr "Ils en parlent"
 
-#: comments.php:34
+#: _trash/comments.php:34
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: comments.php:41
+#: _trash/comments.php:41
 msgid "Do we talk about it?"
 msgstr "On en discute ?"
 
-#: comments.php:42
+#: _trash/comments.php:42
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
+
+#: _trash/search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats de la recherche pour : %s"
 
 #: footer.php:31
 msgid "Powered by WordPress!"
@@ -72,31 +77,31 @@ msgstr "Menu principal"
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:252
+#: functions.php:248
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:253
+#: functions.php:249
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:254
+#: functions.php:250
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:262
+#: functions.php:258
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:316
+#: functions.php:312
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:317
+#: functions.php:313
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:318
+#: functions.php:314
 msgid "Search"
 msgstr "Chercher"
 
@@ -156,160 +161,6 @@ msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/fs-cpt.php:9
-#, fuzzy
-#| msgid "FS Blocks"
-msgctxt "Post Type General Name"
-msgid "Portfolio"
-msgstr "FS Blocks"
-
-#: inc/fs-cpt.php:10
-#, fuzzy
-#| msgid "FS Blocks"
-msgctxt "Post Type Singular Name"
-msgid "Portfolio"
-msgstr "FS Blocks"
-
-#: inc/fs-cpt.php:11 inc/fs-cpt.php:12 inc/fs-cpt.php:34
-#, fuzzy
-#| msgid "FS Blocks"
-msgid "Portfolio"
-msgstr "FS Blocks"
-
-#: inc/fs-cpt.php:14
-msgid "All Creations"
-msgstr "Toutes les créations"
-
-#: inc/fs-cpt.php:15
-msgid "Add New Creation"
-msgstr "Ajouter une nouvelle création"
-
-#: inc/fs-cpt.php:16
-msgid "New Creation"
-msgstr "Nouvelle création"
-
-#: inc/fs-cpt.php:17
-msgid "Edit Creation"
-msgstr "Modifier la création"
-
-#: inc/fs-cpt.php:18
-msgid "Update Creation"
-msgstr "Mettre à jour la création"
-
-#: inc/fs-cpt.php:19
-msgid "View Creation"
-msgstr "Voir la création"
-
-#: inc/fs-cpt.php:20
-msgid "Search Creation"
-msgstr "Chercher une création"
-
-#: inc/fs-cpt.php:21
-msgid "No creations were found"
-msgstr "Aucune création trouvée"
-
-#: inc/fs-cpt.php:22
-msgid "Creation Picture"
-msgstr "Image de référence"
-
-#: inc/fs-cpt.php:23
-msgid "Set Creation Picture"
-msgstr "Choisir l'image de référence"
-
-#: inc/fs-cpt.php:24
-msgid "Remove Creation Picture"
-msgstr "Supprimer l'image de référence"
-
-#: inc/fs-cpt.php:25
-msgid "Use as Creation Picture"
-msgstr "Utilisatier en tant qu’image de référence"
-
-#: inc/fs-cpt.php:28
-#, fuzzy
-#| msgid "FS Blocks"
-msgid "portfolio"
-msgstr "FS Blocks"
-
-#: inc/fs-cpt.php:35
-#, fuzzy
-#| msgid "Anybodesign Blocks"
-msgid "Anybodesign Portfolio"
-msgstr "Blocks Anybodesign"
-
-#: inc/fs-cpt.php:75
-msgctxt "Taxonomy General Name"
-msgid "Creation Categories"
-msgstr "Types de créations"
-
-#: inc/fs-cpt.php:76
-msgctxt "Taxonomy Singular Name"
-msgid "Creation Category"
-msgstr "Type de création"
-
-#: inc/fs-cpt.php:77
-msgid "Creation Category"
-msgstr "Type de création"
-
-#: inc/fs-cpt.php:78
-msgid "All Creation Categories"
-msgstr "Tous les types de créations"
-
-#: inc/fs-cpt.php:79
-msgid "Parent Creation Category"
-msgstr "Type de création parent"
-
-#: inc/fs-cpt.php:80
-msgid "Parent Creation Category:"
-msgstr "Type de création parent :"
-
-#: inc/fs-cpt.php:81
-msgid "New Creation Category"
-msgstr "Nouveau type de création"
-
-#: inc/fs-cpt.php:82
-msgid "Add New Creation Category"
-msgstr "Ajouter un type de création"
-
-#: inc/fs-cpt.php:83
-msgid "Edit Creation Category"
-msgstr "Modifier le type de création"
-
-#: inc/fs-cpt.php:84
-msgid "Update Creation Category"
-msgstr "Mettre à jour le type de création"
-
-#: inc/fs-cpt.php:85
-msgid "View Creation Category"
-msgstr "Voir le type de création"
-
-#: inc/fs-cpt.php:86
-msgid "Popular Creation Category"
-msgstr "Type de création populaire"
-
-#: inc/fs-cpt.php:87
-msgid "Search Creation Category"
-msgstr "Chercher un type de création"
-
-#: inc/fs-cpt.php:88
-msgid "No creation categories were found"
-msgstr "Aucun type de création trouvé"
-
-#: inc/fs-cpt.php:98
-msgid "creations"
-msgstr "creations"
-
-#: inc/fs-cpt.php:164
-msgid "Enter the name of the creation"
-msgstr "Entrer le nom de la création"
-
-#: inc/fs-cpt.php:177
-msgid "Picture"
-msgstr "Image"
-
-#: inc/fs-cpt.php:178
-msgid "Date"
-msgstr "Date"
-
 #: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:395
 msgid "Check for updates"
 msgstr "Vérifier les mises à jour"
@@ -365,11 +216,6 @@ msgstr "Page suivante"
 #: index.php:37
 msgid "Page"
 msgstr "Page"
-
-#: search.php:19
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Résultats de la recherche pour : %s"
 
 #: template-parts/acf/builder-content.php:32
 msgid "Read "
@@ -458,6 +304,125 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#, fuzzy
+#~| msgid "FS Blocks"
+#~ msgctxt "Post Type General Name"
+#~ msgid "Portfolio"
+#~ msgstr "FS Blocks"
+
+#, fuzzy
+#~| msgid "FS Blocks"
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Portfolio"
+#~ msgstr "FS Blocks"
+
+#, fuzzy
+#~| msgid "FS Blocks"
+#~ msgid "Portfolio"
+#~ msgstr "FS Blocks"
+
+#~ msgid "All Creations"
+#~ msgstr "Toutes les créations"
+
+#~ msgid "Add New Creation"
+#~ msgstr "Ajouter une nouvelle création"
+
+#~ msgid "New Creation"
+#~ msgstr "Nouvelle création"
+
+#~ msgid "Edit Creation"
+#~ msgstr "Modifier la création"
+
+#~ msgid "Update Creation"
+#~ msgstr "Mettre à jour la création"
+
+#~ msgid "View Creation"
+#~ msgstr "Voir la création"
+
+#~ msgid "Search Creation"
+#~ msgstr "Chercher une création"
+
+#~ msgid "No creations were found"
+#~ msgstr "Aucune création trouvée"
+
+#~ msgid "Creation Picture"
+#~ msgstr "Image de référence"
+
+#~ msgid "Set Creation Picture"
+#~ msgstr "Choisir l'image de référence"
+
+#~ msgid "Remove Creation Picture"
+#~ msgstr "Supprimer l'image de référence"
+
+#~ msgid "Use as Creation Picture"
+#~ msgstr "Utilisatier en tant qu’image de référence"
+
+#, fuzzy
+#~| msgid "FS Blocks"
+#~ msgid "portfolio"
+#~ msgstr "FS Blocks"
+
+#, fuzzy
+#~| msgid "Anybodesign Blocks"
+#~ msgid "Anybodesign Portfolio"
+#~ msgstr "Blocks Anybodesign"
+
+#~ msgctxt "Taxonomy General Name"
+#~ msgid "Creation Categories"
+#~ msgstr "Types de créations"
+
+#~ msgctxt "Taxonomy Singular Name"
+#~ msgid "Creation Category"
+#~ msgstr "Type de création"
+
+#~ msgid "Creation Category"
+#~ msgstr "Type de création"
+
+#~ msgid "All Creation Categories"
+#~ msgstr "Tous les types de créations"
+
+#~ msgid "Parent Creation Category"
+#~ msgstr "Type de création parent"
+
+#~ msgid "Parent Creation Category:"
+#~ msgstr "Type de création parent :"
+
+#~ msgid "New Creation Category"
+#~ msgstr "Nouveau type de création"
+
+#~ msgid "Add New Creation Category"
+#~ msgstr "Ajouter un type de création"
+
+#~ msgid "Edit Creation Category"
+#~ msgstr "Modifier le type de création"
+
+#~ msgid "Update Creation Category"
+#~ msgstr "Mettre à jour le type de création"
+
+#~ msgid "View Creation Category"
+#~ msgstr "Voir le type de création"
+
+#~ msgid "Popular Creation Category"
+#~ msgstr "Type de création populaire"
+
+#~ msgid "Search Creation Category"
+#~ msgstr "Chercher un type de création"
+
+#~ msgid "No creation categories were found"
+#~ msgstr "Aucun type de création trouvé"
+
+#~ msgid "creations"
+#~ msgstr "creations"
+
+#~ msgid "Enter the name of the creation"
+#~ msgstr "Entrer le nom de la création"
+
+#~ msgid "Picture"
+#~ msgstr "Image"
+
+#~ msgid "Date"
+#~ msgstr "Date"
 
 #~ msgctxt "Post Type General Name"
 #~ msgid "Blocks"
