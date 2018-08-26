@@ -164,9 +164,7 @@ function fs_colors() {
 		
 		@media only screen and (min-width: 45em) {
 
-			.main-menu > li > a { 
-				color: <?php echo get_theme_mod('primary_color', '#303030'); ?> 
-			}			
+			
 			.main-menu > li > a:hover,
 			.main-menu > li > a.focus-visible, 
 			.main-menu > li.current-menu-item > a {
