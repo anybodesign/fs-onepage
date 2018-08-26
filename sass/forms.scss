@@ -85,6 +85,9 @@ label, legend {
 	font-weight: normal;
 	margin: 0;
 }
+label {
+	margin-bottom: $grid-padding/2;
+}
 legend {
 	font-family: $font-bold;
 	text-transform: uppercase;

@@ -98,7 +98,7 @@
 			transition: .3s ease-in-out;
 			
 			@include rwd(medium) {
-				color: $primary-color;
+				color: $text-color;
 				border-bottom-color: transparent;
 			}
 		}
@@ -108,8 +108,8 @@
 			border-bottom-color: #fff;
 			
 			@include rwd(medium) {
-				color: $text-color !important;
-				border-bottom-color: transparent;
+				color: $primary-color !important;
+				border-bottom-color: $primary-color;
 			}
 		}
 		
@@ -117,7 +117,7 @@
 			border-bottom-color: #fff;
 			
 			@include rwd(medium) {
-				border-bottom-color: $text-color;
+				border-bottom-color: $primary-color;
 			}	
 		}
 		
