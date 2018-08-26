@@ -91,16 +91,24 @@
 		a {
 			display: block;
 			padding: $grid-padding;
+			padding-bottom: $grid-padding - .5rem;
+			color: #fff;
 			text-decoration: none;
 			border-bottom: transparent .5rem solid;
 			transition: .3s ease-in-out;
+			
+			@include rwd(medium) {
+				color: $primary-color;
+				border-bottom-color: transparent;
+			}
 		}
 		a:hover, 
 		a.focus-visible {
+			color: #fff;
 			border-bottom-color: #fff;
 			
 			@include rwd(medium) {
-				color: $secondary-color;
+				color: $text-color !important;
 				border-bottom-color: transparent;
 			}
 		}

@@ -153,9 +153,6 @@ function fs_colors() {
 		input[type="submit"]:hover {
 			background-color: lighten(<?php echo get_theme_mod('primary_color', '#303030'); ?>, 15%) 
 		}
-		.something { 
-			color: <?php echo get_theme_mod('primary_color', '#303030'); ?> 
-		}
 		legend,
 		.formfield-radio input[type="radio"].focus-visible + span,
 		.formfield-radio input[type="checkbox"].focus-visible + span,
@@ -163,6 +160,18 @@ function fs_colors() {
 		#menu-toggle span::before,
 		#menu-toggle span::after {
 			border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>
+		}
+		
+		@media only screen and (min-width: 45em) {
+
+			.main-menu > li > a { 
+				color: <?php echo get_theme_mod('primary_color', '#303030'); ?> 
+			}			
+			.main-menu > li > a:hover,
+			.main-menu > li > a.focus-visible, 
+			.main-menu > li.current-menu-item > a {
+				border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>
+			}
 		}
 		
 		
@@ -173,8 +182,6 @@ function fs_colors() {
 		}
 		.formfield-checkbox input[type="checkbox"] + label::after,
 		.formfield-checkbox input[type="checkbox"] + span::after,
-		.main-menu li > a:hover, 
-		.main-menu li > a.focus-visible,
 		.content-area p a:not([class*="action-btn"]),
 		.content-area p a:not([class*="action-btn"]):active {
 			color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>
