@@ -10,6 +10,9 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 1.1.1 - 2018.08.26
+* Menu style
+
 ### 1.1 - 2018.08.26
 * New theme name
 * Blocks margins
