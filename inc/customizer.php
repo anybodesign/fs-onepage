@@ -148,10 +148,10 @@ function fs_colors() {
 		.fancybox-arrow::after,
 		input[type="submit"],
 		thead { 
-			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?> 
+			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
 		input[type="submit"]:hover {
-			background-color: lighten(<?php echo get_theme_mod('primary_color', '#303030'); ?>, 15%) 
+			background-color: lighten(<?php echo get_theme_mod('primary_color', '#303030'); ?>, 15%); 
 		}
 		legend,
 		.formfield-radio input[type="radio"].focus-visible + span,
@@ -159,16 +159,25 @@ function fs_colors() {
 		#menu-toggle span,
 		#menu-toggle span::before,
 		#menu-toggle span::after {
-			border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>
+			border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
+		}
+
+		.onepage-menu > li.current-menu-item > a {
+			border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
+		}
+		.onepage-menu > li > a:hover,
+		.onepage-menu > li > a.focus-visible {
+			color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
 		}
 		
 		@media only screen and (min-width: 45em) {
-
 			
-			.main-menu > li > a:hover,
-			.main-menu > li > a.focus-visible, 
 			.main-menu > li.current-menu-item > a {
-				border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>
+				border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
+			}
+			.main-menu > li > a:hover,
+			.main-menu > li > a.focus-visible {
+				color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
 			}
 		}
 		
@@ -176,7 +185,7 @@ function fs_colors() {
 		.formfield-radio input[type="radio"] + label::after,
 		.formfield-radio input[type="radio"] + span::after,
 		body::after {
-			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>
+			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
 		}
 		.formfield-checkbox input[type="checkbox"] + label::after,
 		.formfield-checkbox input[type="checkbox"] + span::after,
@@ -185,11 +194,11 @@ function fs_colors() {
 			color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>
 		}
 		.formfield-select--container {
-			border-top-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>
+			border-top-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
 		}
 		legend,
 		.content-area p a:not([class*="action-btn"]) {
-			border-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>
+			border-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
 		}
 	</style>
 	<?php

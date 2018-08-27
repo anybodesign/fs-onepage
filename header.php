@@ -47,8 +47,7 @@
 			
 			<?php // The main menu location ?>
 
-			<nav class="site-nav" role="navigation" aria-label="<?php _e('Main menu', 'fs-blocks'); ?>">
-				<button id="menu-toggle" type="button"><?php _e('Menu', 'fs-blocks'); ?><span></span></button>
+			<nav class="site-nav<?php if ( get_theme_mod('onepage') == true ) { echo ' onepage-nav'; } ?>" role="navigation" aria-label="<?php _e('Main menu', 'fs-blocks'); ?>">
 
 				<?php 
 					
@@ -65,7 +64,7 @@
 			
 						if ($onepage->have_posts()) : ?>
 						
-						<ul class="main-menu onepage-menu">
+						<ul class="onepage-menu">
 						<?php while ($onepage->have_posts()) : $onepage->the_post(); ?>
 					
 							<li><a href="#<?php the_slug(); ?>"><?php the_title(); ?></a></li>
@@ -77,9 +76,10 @@
 							
 					<?php 
 							
-					} else {
-						
-						if ( has_nav_menu( 'main_menu' ) ) {
+					} else { ?>
+
+				<button id="menu-toggle" type="button"><?php _e('Menu', 'fs-blocks'); ?><span></span></button>
+						<?php if ( has_nav_menu( 'main_menu' ) ) {
 							wp_nav_menu( array(
 								'theme_location'	=> 	'main_menu',
 								'menu_class'		=>	'main-menu',

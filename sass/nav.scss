@@ -34,19 +34,80 @@
 
 // Main nav
 
-
 .site-nav {
 	padding: $grid-padding;
 	
+	&.onepage-nav {
+		padding: 0;
+		overflow: hidden;
+		overflow-x: auto;
+	}
+
 	@include rwd(medium) {
 		padding: 0;
 	}
 }
 
-.main-menu {
-	display: none;
+.main-menu,
+.onepage-menu {
 	transition: .3s ease-in-out;
 	background-color: transparent;
+		
+	.admin-bar.menu-visible & {
+		padding-top: 10rem;
+	}
+	.admin-bar.menu-visible.fixed-nav & {
+		padding-top: 6rem;
+	}
+	
+	& > li {
+		position: relative;
+		display: inline-block;
+		margin-right: $grid-padding;		
+		font-family: $font-bold;
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		
+		a {
+			display: block;
+			padding: $grid-padding;
+			padding-bottom: $grid-padding - .4rem;
+			text-decoration: none;
+			border-bottom: transparent .4rem solid;
+			transition: .3s ease-in-out;
+			
+			@include rwd(medium) {
+				color: $text-color;
+				border-bottom-color: transparent;
+			}
+		}
+		a:hover, 
+		a.focus-visible {
+			color: $primary-color;
+		}
+		
+		&.current-menu-item a {
+			border-bottom-color: $primary-color;
+		}
+
+	}
+	
+}
+
+.onepage-menu {
+	white-space: nowrap;
+	
+	@include rwd(medium) {
+		white-space: normal;
+	}
+}
+
+
+
+// Regular main menu
+
+.main-menu {
+	display: none;
 
 	.menu-visible & {
 		position: fixed;
@@ -63,20 +124,11 @@
 		background-color: rgba(0,0,0,.8);
 		z-index: 200;
 	}
-		
-	.admin-bar.menu-visible & {
-		padding-top: 10rem;
-	}
-	.admin-bar.menu-visible.fixed-nav & {
-		padding-top: 6rem;
-	}
 
-	
 	& > li {
 		position: relative;
 		display: block;
-		font-family: $font-bold;
-		text-transform: uppercase;
+		font-size: 1.6rem;
 		
 		.menu-visible & {
 			color: #fff;
@@ -86,30 +138,18 @@
 		@include rwd(medium) {
 			display: inline-block;
 			margin-right: $grid-padding;
+			font-size: 1.4rem;
 		}
-		
+
 		a {
-			display: block;
-			padding: $grid-padding;
-			padding-bottom: $grid-padding - .5rem;
 			color: #fff;
-			text-decoration: none;
-			border-bottom: transparent .5rem solid;
-			transition: .3s ease-in-out;
-			
-			@include rwd(medium) {
-				color: $text-color;
-				border-bottom-color: transparent;
-			}
 		}
 		a:hover, 
 		a.focus-visible {
 			color: #fff;
-			border-bottom-color: #fff;
 			
 			@include rwd(medium) {
-				color: $primary-color !important;
-				border-bottom-color: $primary-color;
+				color: $primary-color;
 			}
 		}
 		
@@ -120,6 +160,8 @@
 				border-bottom-color: $primary-color;
 			}	
 		}
+
+
 		
 		// If Menu item has children
 		
@@ -177,6 +219,7 @@
 		}
 		
 	}
+	
 	
 	@include rwd(medium) {
 		display: block;
@@ -244,6 +287,7 @@
 		display: none;
 	}
 }
+
 
 
 
