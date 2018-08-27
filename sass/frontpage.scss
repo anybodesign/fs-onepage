@@ -31,10 +31,22 @@
 	}
 	
 	.site-title,
-	.site-desc {
+	.site-desc,
+	.front-content {
 		position: relative;
 		color: #fff;
 		z-index: 2;
+	}
+	
+	.site-desc {
+		font-size: 2.2rem;
+	}
+}
+.front-content {
+	padding: 0 $grid-padding;
+	
+	& > * {
+		color: #fff;
 	}
 }
 
