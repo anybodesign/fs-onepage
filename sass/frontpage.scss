@@ -11,6 +11,7 @@
 	display: inline-block;
 	padding: 2rem;
 	background-color: transparent !important;
+	max-width: 80%;
 
 	&::after {
 		content: '';
@@ -28,6 +29,7 @@
 	@include rwd(medium) {
 		$pad: calc( (100% - #{$max-width}) /2 );
 		padding: 3rem 3rem 3rem $pad;
+		max-width: none;
 	}
 	
 	.site-title,
@@ -35,6 +37,7 @@
 	.front-content {
 		position: relative;
 		color: #fff;
+		line-height: 1.2;
 		z-index: 2;
 	}
 	
