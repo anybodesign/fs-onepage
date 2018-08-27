@@ -147,7 +147,18 @@ function fs_colors() {
 		.front-page-content::after,
 		.fancybox-arrow::after,
 		input[type="submit"],
-		thead { 
+		thead,
+		input[type="text"].focus-visible, 
+		input[type="email"].focus-visible, 
+		input[type="tel"].focus-visible, 
+		input[type="url"].focus-visible,
+		input[type="date"].focus-visible,
+		input[type="password"].focus-visible,
+		input[type="file"].focus-visible,
+		input[type="number"].focus-visible,
+		input[type="search"].focus-visible,
+		textarea.focus-visible, 
+		select.focus-visible  { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
 		input[type="submit"]:hover {
