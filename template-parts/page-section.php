@@ -22,6 +22,44 @@
 
 						<div class="page-content">
 							<?php the_content(); ?>
-						</div>
 							
+							<?php
+								
+								// Check if it is the page for posts
+								
+								$id_page = get_the_id();	
+								$id_news = get_option('page_for_posts');
+								
+								if ( $id_page == $id_news ) { ?>
+							
+							<?php				
+								// Posts Loop 
+								
+								$args = array(
+									'posts_per_page' 	=> -1,
+									'post_type' 		=> 'post'
+								);
+								$query = new WP_Query($args);
+							?>						
+					
+							<?php if ($query->have_posts()) : ?>								
+							
+							<div class="the-posts">
+								
+								<?php while ($query->have_posts()) : $query->the_post(); ?>
+									
+								<div class="post">
+									<?php the_title(); ?>	
+								</div>
+									
+								<?php endwhile; wp_reset_postdata(); ?>
+		
+							<?php endif; ?>
+	
+							</div>
+							
+							<?php } ?>		
+							
+						</div>
+
 					</div>
