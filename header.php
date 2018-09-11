@@ -31,7 +31,9 @@
 	
 	<div class="skiplinks">
 		<a href="#site_content"><?php _e('Go to main content', 'fs-blocks'); ?></a>
+		<?php if ( has_nav_menu( 'main_menu' ) ) { ?>
 		<a href="#site_nav"><?php _e('Go to main menu', 'fs-blocks'); ?></a>
+		<?php } ?>
 	</div>
 	
 	
