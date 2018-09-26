@@ -1,5 +1,10 @@
 <?php if ( !defined('ABSPATH') ) die();
 
+
+define( 'FS_THEME_DIR', get_template_directory() );
+define( 'FS_THEME_URL', get_template_directory_uri() );
+
+
 // ------------------------
 // Theme Setup
 // ------------------------
@@ -15,7 +20,7 @@ function fs_blocks_setup() {
 	
 	// I18n
 	
-	load_theme_textdomain( 'fs-blocks', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'fs-blocks', FS_THEME_DIR . '/languages' );
 	
 	
 	// Theme Support
@@ -101,7 +106,7 @@ function fs_blocks_scripts_load() {
 			
 			wp_enqueue_script(
 				'onepage-scroll', 
-				get_template_directory_uri() . '/js/onepage-scroll.js', 
+				FS_THEME_URL . '/js/onepage-scroll.js', 
 				array(), 
 				false, 
 				true
@@ -113,14 +118,14 @@ function fs_blocks_scripts_load() {
 		
 		wp_enqueue_script(
 			'fancybox', 
-			get_template_directory_uri() . '/js/jquery.fancybox.min.js', 
+			FS_THEME_URL . '/js/jquery.fancybox.min.js', 
 			array('jquery'), 
 			false, 
 			true
 		);
 		wp_enqueue_script(
 			'fancybox-init', 
-			get_template_directory_uri() . '/js/fancybox-init.js', 
+			FS_THEME_URL . '/js/fancybox-init.js', 
 			array('fancybox'), 
 			false, 
 			true
@@ -131,7 +136,7 @@ function fs_blocks_scripts_load() {
 		
 		wp_enqueue_script(
 			'focus-visible', 
-			get_template_directory_uri() . '/js/focus-visible.js', 
+			FS_THEME_URL . '/js/focus-visible.js', 
 			array(), 
 			false, 
 			true
@@ -139,7 +144,7 @@ function fs_blocks_scripts_load() {
 		
 		wp_enqueue_script(
 			'fs-blocks-skip-link-focus-fix', 
-			get_template_directory_uri() . '/js/skip-link-focus-fix.js', 
+			FS_THEME_URL . '/js/skip-link-focus-fix.js', 
 			array(), 
 			false, 
 			true
@@ -147,7 +152,7 @@ function fs_blocks_scripts_load() {
 		
 	    wp_enqueue_script( 
 	    	'main', 
-	    	get_template_directory_uri() . '/js/main.js',
+	    	FS_THEME_URL . '/js/main.js',
 	    	array('jquery'), 
 	    	'1.0', 
 	    	true
@@ -162,7 +167,7 @@ function fs_blocks_scripts_load() {
 		
 		wp_enqueue_style( 
 			'fancybox', 
-			get_template_directory_uri() . '/css/jquery.fancybox.min.css',
+			FS_THEME_URL . '/css/jquery.fancybox.min.css',
 			array(), 
 			false, 
 			'screen' 
@@ -186,7 +191,7 @@ add_action( 'wp_enqueue_scripts', 'fs_blocks_scripts_load' );
 
 // Customizer
 
-require get_template_directory() . '/inc/customizer.php';
+require FS_THEME_DIR . '/inc/customizer.php';
 
 
 // Menus
@@ -319,51 +324,6 @@ function fs_blocks_search_form( $form ) {
 add_filter( 'get_search_form', 'fs_blocks_search_form' );
 
 
-/*
-// ------------------------
-// ACF
-// ------------------------
-
-
-// Remove the WP Custom Fields meta box
-
-add_filter('acf/settings/remove_wp_meta_box', '__return_true');
-
-
-// Custom ACF Functions
-
-include_once('inc/acf/acf-functions.php');
-include_once('inc/acf/popup-acf.php');
-
-
-// Front-End ACF Functions
-
-add_filter('acf/settings/save_json', 'fs_blocks_acf_json_save_point');
-function fs_blocks_acf_json_save_point( $path ) {
-    
-    $path = get_stylesheet_directory() . '/inc/acf';
-    
-    return $path;
-}
-add_filter('acf/settings/load_json', 'fs_blocks_acf_json_load_point');
-function fs_blocks_acf_json_load_point( $paths ) {
-    
-    unset($paths[0]);
-
-    $paths[] = get_stylesheet_directory() . '/inc/acf';
-    
-    return $paths;
-}
-
-
-//	Admin style and script
-
-add_action('admin_print_styles', 'wearewp_admin_css', 11 );
-function wearewp_admin_css() {
-	wp_enqueue_style( 'admin-css', get_stylesheet_directory_uri() . '/css/admin.css' );
-	wp_enqueue_style( 'popup-acf-css', get_stylesheet_directory_uri() . '/css/popup-acf.css' );
-}
-*/
 
 
 // ------------------------
