@@ -13,6 +13,7 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 ### 1.5 - 2018.…
 * Conditionnal skiplinks
 * Display the posts
+* Theme description typo
 * …
 
 ### 1.4 - 2018.08.27

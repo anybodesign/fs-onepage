@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Blocks\n"
-"POT-Creation-Date: 2018-08-26 15:39+0200\n"
-"PO-Revision-Date: 2018-08-26 15:39+0200\n"
+"POT-Creation-Date: 2018-09-25 19:05+0200\n"
+"PO-Revision-Date: 2018-09-25 19:05+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -109,15 +109,15 @@ msgstr "Chercher"
 msgid "Go to main content"
 msgstr "Aller au contenu principal"
 
-#: header.php:34
+#: header.php:35
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: header.php:50
+#: header.php:52
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: header.php:51
+#: header.php:83
 msgid "Menu"
 msgstr "Menu"
 
@@ -294,8 +294,8 @@ msgid "https://github.com/anybodesign/fs-blocks"
 msgstr "https://github.com/anybodesign/fs-blocks"
 
 #. Description of the plugin/theme
-msgid "A Gutenberg friendly Blocks WordPress Theme"
-msgstr "Un thème WordPress Blocks compatible Gutenberg"
+msgid "A Gutenberg friendly WordPress Theme"
+msgstr "Un thème WordPress compatible Gutenberg"
 
 #. Author of the plugin/theme
 msgid "Thomas Villain"
