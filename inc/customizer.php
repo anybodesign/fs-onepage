@@ -81,6 +81,19 @@ function fs_customize_register($wp_customize) {
 		'label'			=> __('Make your website a one-page', 'fs-blocks'),
 		'section'		=> 'fs_options_section',
 		'settings'		=> 'onepage',
+	));
+	
+	// Carousel for Posts
+	
+	$wp_customize->add_setting('carousel_posts', array(
+		'default'	=> false,
+		'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
+	));
+	$wp_customize->add_control('carousel_posts_ctrl', array(
+		'type'			=> 'checkbox',
+		'label'			=> __('Display your posts like a carousel', 'fs-blocks'),
+		'section'		=> 'fs_options_section',
+		'settings'		=> 'carousel_posts',
 	));	
 
 	// Open News in Modals
