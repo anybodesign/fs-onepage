@@ -97,9 +97,18 @@ add_action( 'enqueue_block_editor_assets', 'fs_blocks_block_editor_styles' );
 function fs_blocks_scripts_load() {
     if (!is_admin()) {
 
+		
 		// JS 
 		
-		wp_enqueue_script( 'jquery' );
+		wp_deregister_script( 'jquery' );
+
+		wp_enqueue_script(
+			'jquery', 
+			FS_THEME_URL . '/js/jquery-3.3.1.min.js', 
+			array(), 
+			'3.3.1', 
+			true
+		);
 
 
 		if ( get_theme_mod('onepage') == true ) {
@@ -113,6 +122,7 @@ function fs_blocks_scripts_load() {
 			);
 			
 		}
+
 		
 		// Fancybox
 		
@@ -130,7 +140,29 @@ function fs_blocks_scripts_load() {
 			false, 
 			true
 		);
+
 		
+		// Scroll-Out
+		
+		wp_enqueue_script(
+			'scrollout', 
+			FS_THEME_URL . '/js/scroll-out.min.js', 
+			array(), 
+			'2.2.3', 
+			true
+		);
+
+		function fs_scrollout_js() {
+			print '
+			<script>
+				ScrollOut({
+				  
+				});
+			</script>
+			';
+		}
+		add_action('wp_footer', 'fs_scrollout_js', 100);
+				
 		
 		// Main
 		
