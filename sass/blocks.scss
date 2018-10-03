@@ -3,7 +3,7 @@
 // + + + + + + + + + + 
 
 
-// Excerpt
+// Excerpt (deprecated)
 
 p.wp-block-subhead {
 	@extend .text-intro;
@@ -51,36 +51,6 @@ p.wp-block-subhead {
 		}
 	}
 }
-
-// Gallery
-
-/*
-.wp-block-gallery {
-	display: flex;
-	flex-wrap: wrap;    
-
-	.blocks-gallery-item {
-		display: flex;
-		flex-grow: 1;
-		flex-direction: column;
-		justify-content: center;
-		display: block;
-	
-		@include img-opacity(.7);
-	}
-	
-	figure {
-		display: flex;
-		align-items: flex-end;
-		display: block;
-		
-		a, img {
-			flex: 1;
-			display: block;
-		}
-	}
-}
-*/
 
 // Images
 

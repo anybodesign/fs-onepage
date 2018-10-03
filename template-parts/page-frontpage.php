@@ -12,14 +12,14 @@
 ?>
 					<div class="front-page-section"<?php fs_bg_img(); ?>>
 							
-						<div class="front-page-content">
+						<div class="front-page-content" data-scroll>
 							<?php get_template_part('template-parts/header', 'brand'); ?>				
 							
 							<div class="front-content">
 								<?php the_content(); ?>
 							</div>
 
-							<button class="scroll-down">
+							<button class="scroll-down" data-scroll>
 								<?php _e('Scroll Down', 'fs-blocks'); ?>
 							</button>
 						</div>

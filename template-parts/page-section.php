@@ -10,7 +10,7 @@
  * @version 1.0
  */
 ?>
-					<div class="page-section" id="<?php the_slug(); ?>"<?php fs_bg_img(); ?>>
+					<div class="page-section" id="<?php the_slug(); ?>"<?php fs_bg_img(); ?> data-scroll>
 							
 						<?php if ( get_theme_mod('onepage') == true ) {
 							$h = 'h2';
@@ -18,9 +18,9 @@
 							$h = 'h1';	
 						} ?>
 						
-						<<?php echo $h; ?> class="page-title"><?php the_title(); ?></<?php echo $h; ?>>
+						<<?php echo $h; ?> class="page-title" data-scroll><?php the_title(); ?></<?php echo $h; ?>>
 
-						<div class="page-content">
+						<div class="page-content" data-scroll>
 							<?php the_content(); ?>
 							
 							<?php
