@@ -4,10 +4,10 @@
 
 // Center mode
 
-@mixin center($width: $max-width, $x: 0) {
+@mixin center($top: 0, $bottom: 0) {
 	position: relative;
-	margin: $x auto;
-	max-width: $width;	
+	margin: $top auto $bottom auto;
+	max-width: $max-width;	
 }
 
 // Visually hide the text of an element (a11y ok)

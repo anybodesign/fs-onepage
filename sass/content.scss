@@ -47,17 +47,29 @@
 }
 .page-content {
 	
-	.the-posts,
-	& > [class*="wp-block-"]:not([class*="alignfull"]), 
+	& > [class*="wp-block-"], 
 	& > p,
 	& > ul,
 	& > ol,
 	& > h2,
 	& > h3,
 	& > h4,
-	& > .wpcf7 {
+	& > .wpcf7,
+	.the-posts	{
 		padding: $grid-padding;
 		@include center();
+	}
+	
+	& > [class*="wp-block-"].alignfull {
+		padding: 0;
+		margin: 0;
+		max-width: none;
+	}
+	
+	& > [class*="wp-block-gallery"],
+	& > [class*="wp-block-cover-image"],
+	& > [class*="wp-block-quote"] {
+		@include center(0, $grid-padding*2);
 	}
 }
 

@@ -26,6 +26,10 @@ p.wp-block-subhead {
 
 		.wp-block-column {
 			margin: 0 $grid-padding;
+			
+			& > p:last-child {
+				margin-bottom: 0;
+			}
 
 			&:first-child {
 				margin-left: 0;
@@ -69,7 +73,7 @@ p.wp-block-subhead {
 // Quotes
 
 .wp-block-quote {
-	margin-bottom: $grid-padding*2 !important;
+	
 }
 
 
@@ -80,8 +84,8 @@ p.wp-block-subhead {
 	flex-wrap: wrap;
 	list-style-type: none;
 	padding: 0 !important;
-	// allow gallery items to go edge to edge
-	margin: 0 -$grid-padding/2 0 -$grid-padding/2;
+		// allow gallery items to go edge to edge
+		//margin: 0 -$grid-padding/2 0 -$grid-padding/2; // useless when centering blocks
 
 	.blocks-gallery-image,
 	.blocks-gallery-item {
