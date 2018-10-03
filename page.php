@@ -9,26 +9,8 @@
  * @since 1.0
  * @version 1.0
  */
-get_header(); ?>
-
-				<div class="row inner">
-					<div class="col-12">
+get_header();
 	
-					<?php while ( have_posts() ) : the_post(); ?>
-		
-						<?php get_template_part( 'template-parts/page', 'content' ); ?>
-		
-					<?php endwhile; ?>
+		get_template_part('template-parts/page','wrap');
 
-						
-						<?php // Just for testing typographic styles, then remove this part ?>
-						<div class="page-content">
-							<?php get_template_part('template-parts/temp','typo'); ?>
-						</div>
-						
-					</div>					
-				</div>
-				
-				<?php //get_template_part('template-parts/acf/builder'); ?>	
-				
-<?php get_footer(); ?>
+get_footer(); ?>

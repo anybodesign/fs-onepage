@@ -7,4 +7,8 @@
  * @since 1.0
  * @version 1.0
  */
-get_template_part( 'page.php' ); ?>
+get_header();
+	
+		get_template_part('template-parts/page','wrap');
+
+get_footer(); ?>
