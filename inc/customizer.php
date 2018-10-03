@@ -172,8 +172,12 @@ function fs_colors() {
 		input[type="search"].focus-visible,
 		textarea.focus-visible, 
 		select.focus-visible,
-		a.focus-visible .post-title  { 
+		a.focus-visible .post-title { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
+		}
+		.wp-block-gallery .blocks-gallery-image figcaption, 
+		.wp-block-gallery .blocks-gallery-item figcaption  { 
+			background: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
 		legend,
 		.formfield-radio input[type="radio"].focus-visible + span,

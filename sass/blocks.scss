@@ -85,7 +85,7 @@ p.wp-block-subhead {
 	list-style-type: none;
 	padding: 0 !important;
 		// allow gallery items to go edge to edge
-		//margin: 0 -$grid-padding/2 0 -$grid-padding/2; // useless when centering blocks
+		//margin: 0 -$grid-padding/2 0 -$grid-padding/2; // useless when centering Gut Blocks on the page
 
 	.blocks-gallery-image,
 	.blocks-gallery-item {
@@ -125,13 +125,15 @@ p.wp-block-subhead {
 			width: 100%;
 			max-height: 100%;
 			overflow: auto;
-			padding: 40px 10px 5px;
+			padding: $grid-padding/2; // FS
 			color: #fff;
 			text-align: center;
-			background: linear-gradient(0deg, rgba(0,0,0,0.7) 0, rgba(0,0,0,0.3) 60%, transparent);
+			background: $primary-color; // FS
+			opacity: .9; // FS
+			font-family: $font-bold; // FS
 
 			img {
-				display: inline;
+				display: block; // FS
 			}
 		}
 	}

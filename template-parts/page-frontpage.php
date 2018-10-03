@@ -10,7 +10,7 @@
  * @version 1.0
  */
 ?>
-					<div class="front-page-section"<?php fs_bg_img(); ?>>
+					<div class="front-page-section"<?php fs_bg_img(); ?> data-scroll>
 							
 						<div class="front-page-content" data-scroll>
 							<?php get_template_part('template-parts/header', 'brand'); ?>				

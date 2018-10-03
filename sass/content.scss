@@ -77,9 +77,13 @@
 
 // Animations
 
-.page-section[data-scroll="in"],
-.post[data-scroll="in"] {
-	animation: anim-opacity 1s ease-in-out;	
+.page-section,
+.post,
+.front-page-section {
+	
+	&[data-scroll="in"] {
+		animation: anim-opacity 1s ease-in-out;		
+	}
 }
 .page-title[data-scroll="in"] {
 	animation: anim-from-below 1s ease-in-out;	
@@ -88,7 +92,7 @@
 	animation: anim-opacity 1.5s ease-in-out;	
 }
 .front-page-content[data-scroll="in"] {
-	animation: anim-from-left .8s ease-in-out;
+	animation: anim-from-below .8s ease-in-out;
 }
 
 @keyframes anim-opacity {
