@@ -43,7 +43,7 @@ $fontface-regular: url('fonts/barlow-medium-webfont.woff2') format('woff2'), url
 	font-style: normal;
 }
 
-$fontface-italic: url('fonts/barlow-mediumitalic-webfont.woff2') format('woff2'), url('fonts/barlow-mediumitalic-webfont.woff') format('woff');;	
+$fontface-italic: url('fonts/barlow-mediumitalic-webfont.woff2') format('woff2'), url('fonts/barlow-mediumitalic-webfont.woff') format('woff');	
 @font-face {
 	font-family: 'Italic';
 	src: $fontface-italic;
@@ -51,7 +51,7 @@ $fontface-italic: url('fonts/barlow-mediumitalic-webfont.woff2') format('woff2')
 	font-style: normal;
 }
 
-$fontface-bold: url('fonts/barlow-bold-webfont.woff2') format('woff2'), url('fonts/barlow-bold-webfont.woff') format('woff');;
+$fontface-bold: url('fonts/barlow-bold-webfont.woff2') format('woff2'), url('fonts/barlow-bold-webfont.woff') format('woff');
 @font-face {
 	font-family: 'Bold';
 	src: $fontface-bold;
@@ -59,7 +59,7 @@ $fontface-bold: url('fonts/barlow-bold-webfont.woff2') format('woff2'), url('fon
 	font-style: normal;
 }
 
-$fontface-bolditalic: url('fonts/barlow-bolditalic-webfont.woff2') format('woff2'), url('fonts/barlow-bolditalic-webfont.woff') format('woff');;
+$fontface-bolditalic: url('fonts/barlow-bolditalic-webfont.woff2') format('woff2'), url('fonts/barlow-bolditalic-webfont.woff') format('woff');
 @font-face {
 	font-family: 'BoldItalic';
 	src: $fontface-bolditalic;
@@ -67,7 +67,8 @@ $fontface-bolditalic: url('fonts/barlow-bolditalic-webfont.woff2') format('woff2
 	font-style: normal;
 }
 
-$fontface-title: url('fonts/Miriam-Libre-Bold.woff2') format('woff2'), url('fonts/Miriam-Libre-Bold.woff') format('woff');;
+//$fontface-title: url('fonts/Miriam-Libre-Bold.woff2') format('woff2'), url('fonts/Miriam-Libre-Bold.woff') format('woff');
+$fontface-title: url('fonts/barlowsemicondensed-bold-webfont.woff2') format('woff2'), url('fonts/barlowsemicondensed-bold-webfont.woff') format('woff');
 @font-face {
 	font-family: 'Title';
 	src: $fontface-title;
