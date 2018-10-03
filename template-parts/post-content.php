@@ -11,7 +11,7 @@
  */
 ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-scroll>
 						
 						<?php if ( '' != get_the_post_thumbnail() ) { ?>
 						<figure class="post-figure">
@@ -23,22 +23,21 @@
 							<?php if ( is_single() ) { ?>
 								<h1 class="post-title"><?php the_title(); ?></h1>
 							<?php } else { ?>
-								<h2 class="post-title"><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
+								<h3 class="post-title"><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h3>
 							<?php } ?>
 							
-							<?php get_template_part('template-parts/post', 'meta'); ?>							
+							<?php if ( is_single() ) { get_template_part('template-parts/post', 'meta'); } ?>							
 						</header>
 						
 						<div class="post-content">
-							<?php
-								the_content(sprintf(
-									
-									wp_kses( __( 'Continue reading %s', 'fs-blocks' ), array( 'span' => array( 'class' => array() ) ) ),
-									the_title( '<span class="screen-reader-text">"', '"</span>', false )
-								));
-							?>
+							<?php if ( is_single() ) { ?>
+								<?php the_content(); ?>
+							<?php } else { ?>
+								<?php the_excerpt(); ?>
+							<?php } ?>
 						</div>
 						
+						<?php if ( is_single() ) { ?>
 						<footer class="post-footer">
 							<?php $posttags = get_the_tags(); if ($posttags) { ?>
 							  	<div class="tag-links">
@@ -54,6 +53,6 @@
 								));
 							?>
 						</footer>
-						
-																		
+						<?php } ?>
+												
 					</article>

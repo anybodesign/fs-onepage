@@ -76,14 +76,15 @@
 
 // Animations
 
-.page-section[data-scroll="in"] {
+.page-section[data-scroll="in"],
+.post[data-scroll="in"] {
 	animation: anim-opacity 1s ease-in-out;	
 }
 .page-title[data-scroll="in"] {
 	animation: anim-from-below 1s ease-in-out;	
 }
 .page-content[data-scroll="in"] {
-	animation: anim-from-below 1.5s ease-in-out;	
+	animation: anim-opacity 1.5s ease-in-out;	
 }
 .front-page-content[data-scroll="in"] {
 	animation: anim-from-left .8s ease-in-out;
