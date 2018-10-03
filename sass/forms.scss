@@ -142,8 +142,12 @@ input[type="submit"].focus-visible {
 ::placeholder {
 	color: lighten($text-color, 20%);
 	font-family: $font-italic;
-	font-size: 1.4rem;
+	font-size: 1.4rem;	
 }
+.focus-visible::placeholder {
+	color: transparentize(#fff, .5);
+}
+
 
 // ------------------------------
 //
