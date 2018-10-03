@@ -32,6 +32,13 @@ get_header(); ?>
 							'posts_per_page' 	=> -1,
 							'post_type' 		=> 'page',
 							'post__not_in'		=> array($frontpage),
+							'meta_query'		=> array(
+								array(
+									'key'		=> '_wp_page_template',
+									'value'		=> 'pagecustom-standalone.php',
+									'compare'	=> '!='
+								)
+							),
 						);
 						$onepage = new WP_Query($pageargs);
 			
