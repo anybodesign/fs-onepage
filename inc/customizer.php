@@ -171,11 +171,9 @@ function fs_colors() {
 		input[type="number"].focus-visible,
 		input[type="search"].focus-visible,
 		textarea.focus-visible, 
-		select.focus-visible  { 
+		select.focus-visible,
+		a.focus-visible .post-title  { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
-		}
-		input[type="submit"]:hover {
-			background-color: lighten(<?php echo get_theme_mod('primary_color', '#303030'); ?>, 15%); 
 		}
 		legend,
 		.formfield-radio input[type="radio"].focus-visible + span,
@@ -208,7 +206,8 @@ function fs_colors() {
 		
 		.formfield-radio input[type="radio"] + label::after,
 		.formfield-radio input[type="radio"] + span::after,
-		body::after {
+		body::after,
+		input[type="submit"]:hover {
 			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
 		}
 		.formfield-checkbox input[type="checkbox"] + label::after,

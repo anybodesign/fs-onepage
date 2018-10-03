@@ -240,8 +240,7 @@ figure {
 	margin: 0 0 $grid-padding 0;
 	overflow: hidden;
 	background-color: #fff;
-	box-shadow: 0 0 0 1px #fff, 
-				0 0 1rem .5rem transparentize($text-color, .8); 
+	//box-shadow: 0 0 0 2px #fff, 0 0 1rem .5rem transparentize($text-color, .8); 
 	
 	&.alignfull,
 	.wp-block-gallery & {

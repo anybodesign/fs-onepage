@@ -244,6 +244,19 @@ include_once( dirname( __FILE__ ) . '/inc/subnav-walker.php' );
 include_once( dirname( __FILE__ ) . '/inc/fs-extended-search.php' );
 
 
+// Excerpt
+
+function fs_custom_excerpt( $length ) {
+    return 12;
+}
+add_filter( 'excerpt_length', 'fs_custom_excerpt', 999 );
+
+function fs_excerpt_more( $more ) {
+	return '… <br><a href="'. get_permalink( get_the_ID() ) . '">' . __('Continue reading', 'fs-blog') . '</a>';
+}
+add_filter( 'excerpt_more', 'fs_excerpt_more' );
+
+
 // Bg image
 
 function fs_bg_img() {

@@ -51,14 +51,16 @@
 									$carousel = 'the-regular-posts';
 								} ?>
 								
-							<div class="the-posts <?php echo $carousel; ?>">
+							<div class="<?php echo $carousel; ?>">
+								<div class="the-posts">
 								
 								<?php while ($query->have_posts()) : $query->the_post();
 									
 									get_template_part( 'template-parts/post', 'content' );
-									
+								
 								endwhile; wp_reset_postdata(); ?>
-		
+
+								</div>
 							</div>
 							
 							<?php endif; ?>

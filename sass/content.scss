@@ -55,7 +55,8 @@
 	& > h3,
 	& > h4,
 	& > .wpcf7,
-	.the-posts	{
+	.the-regular-posts,
+	.the-carousel-posts	{
 		padding: $grid-padding;
 		@include center();
 	}

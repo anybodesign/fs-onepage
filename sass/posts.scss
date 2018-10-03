@@ -1,3 +1,73 @@
+/* ------------------------- */
+/* = The Posts
+/* ------------------------- */
+
+.the-regular-posts {}
+.the-carousel-posts {}
+
+.the-posts {
+	position: relative;
+	margin-left: -$grid-padding;
+	margin-right: -$grid-padding;
+		
+	@include rwd(large) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.post-container {
+	padding: $grid-padding;
+	
+	@include rwd(large) {
+		display: flex;
+		flex-direction: column;
+		width: 33.3333%;
+	}
+}
+
+.post {
+	position: relative;
+	background-color: #fff;
+	
+	& > a {
+		display: block;
+		text-decoration: none;
+		outline: none;
+	}
+	
+	& .post-title,
+	& .post-content {
+		padding: $grid-padding $grid-padding*2;
+	}
+
+	@include rwd(large) {
+		flex: 1;
+		@include img-opacity(.7);
+	}	
+}
+.post-title {
+	transition: color .3s ease-in-out;
+	
+	a:hover & {
+		color: $secondary-color;	
+	}
+	a.focus-visible & {
+		background-color: $primary-color;
+		color: #fff;
+	}
+	
+}
+.post-figure {
+	margin-bottom: 0;
+}
+
+
+
+/* ------------------------- */
+/* = Common
+/* ------------------------- */
+
 .sticky {
 	display: block;
 }
