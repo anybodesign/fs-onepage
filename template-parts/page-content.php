@@ -14,7 +14,7 @@
 
 						<?php if ( '' != get_the_post_thumbnail() ) { ?>
 						<figure class="page-figure">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large-hd'); ?></a>
+							<?php the_post_thumbnail('large-hd'); ?>
 						</figure>
 						<?php } ?>
 						
