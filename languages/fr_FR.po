@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Blocks\n"
-"POT-Creation-Date: 2018-09-25 19:05+0200\n"
-"PO-Revision-Date: 2018-09-25 19:05+0200\n"
+"POT-Creation-Date: 2018-10-04 09:03+0200\n"
+"PO-Revision-Date: 2018-10-04 09:04+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -61,47 +61,51 @@ msgstr "Propulsé par WordPress !"
 msgid "Footer menu"
 msgstr "Menu pied de page"
 
-#: functions.php:56 inc/customizer.php:39
+#: functions.php:61 inc/customizer.php:39
 msgid "Primary color"
 msgstr "Couleur primaire"
 
-#: functions.php:61 inc/customizer.php:54
+#: functions.php:66 inc/customizer.php:54
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: functions.php:195
+#: functions.php:232
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:196
+#: functions.php:233
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:248
+#: functions.php:255
+msgid "Continue reading"
+msgstr "Continuer la lecture"
+
+#: functions.php:298
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:249
+#: functions.php:299
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:250
+#: functions.php:300
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:258
+#: functions.php:308
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:312
+#: functions.php:362
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:313
+#: functions.php:363
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:314
+#: functions.php:364
 msgid "Search"
 msgstr "Chercher"
 
@@ -117,7 +121,7 @@ msgstr "Aller au menu principal"
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: header.php:83
+#: header.php:90
 msgid "Menu"
 msgstr "Menu"
 
@@ -146,18 +150,22 @@ msgid "Make your website a one-page"
 msgstr "Faites de votre site un one-page"
 
 #: inc/customizer.php:94
+msgid "Display your posts like a carousel"
+msgstr "Affichez vos articles en carrousel"
+
+#: inc/customizer.php:107
 msgid "Open your posts with Fancybox"
 msgstr "Ouvrez vos articles avec FancyBox"
 
-#: inc/customizer.php:106
+#: inc/customizer.php:119
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:107
+#: inc/customizer.php:120
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:121
+#: inc/customizer.php:134
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
@@ -256,16 +264,11 @@ msgstr ""
 msgid "Scroll Down"
 msgstr "Défiler vers le bas"
 
-#: template-parts/post-content.php:36
-#, php-format
-msgid "Continue reading %s"
-msgstr "Lire la suite de l'article %s"
-
-#: template-parts/post-content.php:45
+#: template-parts/post-content.php:47
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/post-content.php:52
+#: template-parts/post-content.php:54
 msgid "Pages:"
 msgstr "Pages :"
 
@@ -304,6 +307,10 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#. Template Name of the plugin/theme
+msgid "Standalone Page"
+msgstr "Page autonome"
 
 #, fuzzy
 #~| msgid "FS Blocks"
