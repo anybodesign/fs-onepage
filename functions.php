@@ -25,8 +25,6 @@ function fs_blocks_setup() {
 	
 	// Theme Support
 	
-	add_editor_style( array('css/editor-style.css') );
-	
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
@@ -80,14 +78,15 @@ add_action( 'after_setup_theme', 'fs_blocks_setup' );
 
 function fs_blocks_block_editor_styles() {
     wp_enqueue_style( 
-    	'fs_blocks_block_editor_styles',
-    	get_theme_file_uri( '/block-editor-style.css' ), 
+    	'block_editor_styles',
+    	FS_THEME_URL . '/css/block-editor-style.css', 
     	false, 
     	'1.0', 
     	'screen'
     );
 }
 add_action( 'enqueue_block_editor_assets', 'fs_blocks_block_editor_styles' );
+
 
 
 // ------------------------

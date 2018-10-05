@@ -2,3 +2,17 @@
 Theme Name: FS Blocks
 Description: Have fun with Gutenberg style editor.
 */
+
+p.text-intro {
+	font-size: 22px !important;
+}
+p.text-mentions {
+	font-size: 13px !important;
+	line-height: 14px;
+	text-align: justify;
+}
+a.action-btn {
+	padding: 5px 10px;
+	background-color: #e4e4e4;
+	text-decoration: none !important;
+}
