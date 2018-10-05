@@ -10,7 +10,7 @@
  * @version 1.0
  */
 ?>
-					<div class="page-section" id="<?php the_slug(); ?>"<?php fs_bg_img(); ?> data-scroll>
+					<div class="page-section" id="<?php the_slug(); ?>"<?php fs_bg_img(); ?>>
 							
 						<?php if ( get_theme_mod('onepage') == true ) {
 							$h = 'h2';

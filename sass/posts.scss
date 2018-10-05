@@ -39,6 +39,7 @@
 	& .post-title,
 	& .post-content {
 		padding: $grid-padding $grid-padding*2;
+		margin-bottom: 0;
 	}
 
 	@include rwd(large) {

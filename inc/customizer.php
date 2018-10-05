@@ -192,7 +192,9 @@ function fs_colors() {
 			border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
 		}
 		.onepage-menu > li > a:hover,
-		.onepage-menu > li > a.focus-visible {
+		.onepage-menu > li > a.focus-visible,
+		.site-title a:hover,
+		.site-title a.focus-visible {
 			color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
 		}
 		

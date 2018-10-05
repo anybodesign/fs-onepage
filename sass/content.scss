@@ -1,6 +1,6 @@
-// Common Stuff
+// Common Stuff (One Page)
 // -
-// + + + + + + + + + + 
+// + + + + + + + + + + + +
 
 .page-section {
 	position: relative;
@@ -45,39 +45,45 @@
 		@include pre-stroke();
 	}		
 }
-.page-content {
+//.page-section {
 	
-	& > [class*="wp-block-"], 
-	& > p,
-	& > ul,
-	& > ol,
-	& > h2,
-	& > h3,
-	& > h4,
-	& > .wpcf7,
-	.the-regular-posts,
-	.the-carousel-posts	{
-		padding: $grid-padding;
-		@include center();
-	}
-	
-	& > [class*="wp-block-"].alignfull {
-		padding: 0;
-		margin: 0;
-		max-width: none;
-	}
-	
-	& > [class*="wp-block-gallery"],
-	& > [class*="wp-block-cover-image"],
-	& > [class*="wp-block-quote"] {
-		@include center(0, $grid-padding*2);
-	}
-}
+	.page-content {
+
+		& > [class*="wp-block-"], 
+		& > p,
+		& > ul,
+		& > ol,
+		& > h1,
+		& > h2,
+		& > h3,
+		& > h4,
+		& > h5,
+		& > h6,
+		& > .wpcf7,
+		.the-regular-posts,
+		.the-carousel-posts	{
+			padding: $grid-padding;
+			@include center();
+		}
+		
+		& > [class*="wp-block-"].alignfull,
+		& > .page-figure {
+			padding: 0;
+			margin: 0;
+			max-width: none;
+		}
+		
+		& > [class*="wp-block-gallery"],
+		& > [class*="wp-block-cover-image"],
+		& > [class*="wp-block-quote"] {
+			@include center(0, $grid-padding*2);
+		}		
+	}	
+//}
 
 
 // Animations
 
-.page-section,
 .post,
 .front-page-section {
 	
@@ -118,6 +124,26 @@
 	100% {
 		transform: translateY(0);
 	}
+}
+
+
+
+
+// Common Stuff
+// -
+// + + + + + + + + + + + + + + + + 
+
+
+.page-wrap {
+	padding-top: 0;
+	margin-bottom: $grid-padding*2;
+			
+	.one-page & {
+		padding-top: 6rem;
+	}
+}
+.page-figure {
+	//width: 100;
 }
 
 

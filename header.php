@@ -18,14 +18,19 @@
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
-	<?php wp_head(); ?>
+	<?php 
+		wp_head(); 
+		
+		$one = get_theme_mod('onepage') == true;
+		if ($one) { $oneclass = 'one-page '; } else { $oneclass = null; }	
+	?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class($oneclass); ?>>
 
 <div id="wrapper">
 
-	<?php if ( get_theme_mod('onepage') == true && ! is_404()) { ?>
+	<?php if ( $one && ! is_404() ) { ?>
 	
 	<?php // The Skiplinks ?>
 	
@@ -45,15 +50,23 @@
 			
 			<?php if (! is_front_page() ) { 
 				get_template_part('template-parts/header', 'brand'); 
-			} ?>
+			} ?>			
+			
 			
 			<?php // The main menu location ?>
 
-			<nav class="site-nav<?php if ( get_theme_mod('onepage') == true ) { echo ' onepage-nav'; } ?>" role="navigation" aria-label="<?php _e('Main menu', 'fs-blocks'); ?>">
+			<?php if ( $one && ! is_front_page() ) { ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="back-home" title="<?php _e('Go to Home Page', 'fs-blocks'); ?>">
+					<?php _e('Go to Home Page', 'fs-blocks'); ?>
+				</a>
+			<?php } ?>
 
-				<?php 
-					
-					if ( get_theme_mod('onepage') == true ) { 
+			
+			<?php if ( $one && is_front_page() || ! $one  ) { ?>
+				
+			<nav class="site-nav<?php if ( $one ) { echo ' onepage-nav'; } ?>" role="navigation" aria-label="<?php _e('Main menu', 'fs-blocks'); ?>">
+
+				<?php if ( $one && is_front_page() ) { 
 						
 						$frontpage = get_the_id();
 						
@@ -83,23 +96,26 @@
 						
 						<?php endif; ?>
 							
-					<?php 
-							
-					} else { ?>
+				<?php } ?>
+				
 
-				<button id="menu-toggle" type="button"><?php _e('Menu', 'fs-blocks'); ?><span></span></button>
-						<?php if ( has_nav_menu( 'main_menu' ) ) {
-							wp_nav_menu( array(
-								'theme_location'	=> 	'main_menu',
-								'menu_class'		=>	'main-menu',
-								'container'			=>	false,
-								'walker'			=>	new fs_subnav_walker()
-							));
-						}
-					}
-				?>
+
+				<?php if ( has_nav_menu( 'main_menu' ) && ! $one ) { ?>
+				
+				<button id="menu-toggle" type="button"><?php _e('Menu', 'fs-blocks'); ?><span></span></button>	
+					<?php wp_nav_menu( array(
+						'theme_location'	=> 	'main_menu',
+						'menu_class'		=>	'main-menu',
+						'container'			=>	false,
+						'walker'			=>	new fs_subnav_walker()
+					)); ?>
+					
+				<?php } ?>
 				
 			</nav>
+			
+			<?php } ?>
+			
 		</div>
 
 	</header>

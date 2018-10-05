@@ -10,18 +10,21 @@
  * @version 1.0
  */
 ?>
-					<div class="page-content">
+					<div class="page-wrap">
+
+						<?php if ( '' != get_the_post_thumbnail() ) { ?>
+						<figure class="page-figure">
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large-hd'); ?></a>
+						</figure>
+						<?php } ?>
 						
-						<h1 class="page-title"><?php the_title(); ?></h1>
-						
-						<div class="post-content">
+						<div class="page-content">
+							
+							<h1 class="page-title">
+								<?php the_title(); ?>
+							</h1>
+
 							<?php the_content(); ?>
 						</div>
 
-						<?php if ( '' != get_the_post_thumbnail() ) { ?>
-						<figure class="post-figure">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
-						</figure>
-						<?php } ?>
-												
 					</div>

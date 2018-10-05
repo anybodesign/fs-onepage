@@ -102,6 +102,24 @@
 	}
 }
 
+// Back Home
+
+.back-home {
+	display: block;
+	height: 3rem;
+	width: 2rem;
+	background: url(img/icon-arrow-black.svg) 0 0 no-repeat;
+	background-size: contain;
+	transform: rotate(90deg);
+	margin-right: $grid-padding;
+	
+	@include a11y-hide();
+	
+	&:hover,
+	&.focus-visible {
+		animation: go-back .4s ease-in-out;
+	}
+}
 
 
 // Regular main menu

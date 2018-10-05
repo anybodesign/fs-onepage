@@ -208,6 +208,21 @@
 	}
 }
 
+@keyframes go-back {
+	0% {
+		margin-right: 2.5rem;
+	}
+	50% {
+		margin-right: $grid-padding;
+	}
+	75% {
+		margin-right: 1.5rem;
+	}
+	100% {
+		margin-right: $grid-padding;
+	}
+}
+
 @keyframes fall-in {
 	from {
 		opacity: 0;

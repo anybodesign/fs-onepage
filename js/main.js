@@ -89,6 +89,7 @@ jQuery(document).ready(function($) {
 	    
 	    var topscreen = $(this).scrollTop();
 	    var screenheight = $(this).height();
+	    //var head = $('#site_head').height();
 
 	    if ( topscreen >= screenheight ) {
 	        

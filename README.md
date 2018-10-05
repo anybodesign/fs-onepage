@@ -10,9 +10,13 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 1.6 - 2018.…
+* Display the posts 
+* …
+
 ### 1.5 - 2018.10.03
 * Conditionnal skiplinks
-* Display the posts
+* Blocks centering optimization
 * Theme description typo
 * Scroll-out animations
 * jQuery 3
