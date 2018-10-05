@@ -160,6 +160,9 @@ function fs_colors() {
 		.front-page-content::after,
 		.fancybox-arrow::after,
 		input[type="submit"],
+		.action-btn,
+		button.action-btn,
+		input[type=submit].action-btn,
 		thead,
 		input[type="text"].focus-visible, 
 		input[type="email"].focus-visible, 
@@ -210,6 +213,12 @@ function fs_colors() {
 		}
 		
 		
+		.action-btn:hover,
+		button.action-btn:hover,
+		input[type=submit].action-btn:hover,
+		.action-btn.focus-visible,
+		button.action-btn.focus-visible,
+		input[type=submit].action-btn.focus-visible,
 		.formfield-radio input[type="radio"] + label::after,
 		.formfield-radio input[type="radio"] + span::after,
 		body::after,

@@ -491,13 +491,13 @@ input[type=submit].action-btn {
 	font-family: $font-bold;
 	text-transform: uppercase;
 	text-decoration: none;
-	background-color: $text-color;
+	background-color: $primary-color;
 	color: #fff;
 	transition: background .2s linear;
 	
 	&.focus-visible, 
 	&:hover {
-		background-color: lighten($text-color, 10%);
+		background-color: $secondary-color;
 	}
 	&:focus {
 		outline: none;
