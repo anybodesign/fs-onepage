@@ -117,24 +117,15 @@
 }
 @keyframes anim-from-below {
 	0% {
-		transform: translateY(3rem);
+		transform: translateY(4rem);
 	}
 	100% {
 		transform: translateY(0);
 	}
 }
-@keyframes anim-from-below-centered {
-	0% {
-		padding-top: 5rem;
-	}
-	100% {
-		padding-top: 0;
-	}
-}
 
 
-
-// Common Stuff
+// Common Stuff & Templates
 // -
 // + + + + + + + + + + + + + + + + 
 
@@ -162,22 +153,18 @@
 	}
 	
 	@include rwd(large) {
-				
-		.page-content {	
-			@include center();
-			padding-right: $max-width/2;
-		}
+		flex-direction: row;
+		flex-wrap: wrap;
 		
+		.page-content,
 		.page-figure {
-			position: absolute;
-			top: 50%;
-			right: 0;
-			transform: translateY(-50%);
 			width: 50%;
-			padding-left: $grid-padding;
 		}
-		.page-figure[data-scroll="in"] {
-			animation: anim-from-below-centered 1.5s ease-in-out;	
+		.page-content {
+			padding-left: calc( ( 100% - #{$max-width}) /2 );
+		}
+		.page-figure {
+			padding: $grid-padding 0 $grid-padding $grid-padding;
 		}
 	}
 	
