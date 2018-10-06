@@ -13,7 +13,7 @@
 					<div class="page-wrap">
 
 						<?php if ( '' != get_the_post_thumbnail() ) { ?>
-						<figure class="page-figure">
+						<figure class="page-figure" data-scroll>
 							<?php the_post_thumbnail('large-hd'); ?>
 						</figure>
 						<?php } ?>
