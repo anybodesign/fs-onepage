@@ -10,37 +10,21 @@
  * @version 1.0
  */
 ?>
-					<div class="post-container">
-						
+					<div class="post-single">
+
 						<article <?php post_class(); ?> id="post-<?php the_ID(); ?>" data-scroll>
 							
-							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<?php if ( '' != get_the_post_thumbnail() ) { ?>
-								<figure class="post-figure">
-									<?php the_post_thumbnail('large'); ?>
-								</figure>
-								<?php } ?>
-								
-								<header class="post-header">
-									<?php if ( is_single() ) { ?>
-										<h1 class="post-title"><?php the_title(); ?></h1>
-									<?php } else { ?>
-										<h3 class="post-title h4-like"><?php the_title(); ?></h3>
-									<?php } ?>
-									
-									<?php if ( is_single() ) { get_template_part('template-parts/post', 'meta'); } ?>							
-								</header>
-							</a>
+							<header class="post-header">
+								<h1 class="post-title">
+									<?php the_title(); ?>
+								</h1>
+								<?php get_template_part('template-parts/post', 'meta'); ?>							
+							</header>
 							
 							<div class="post-content">
-								<?php if ( is_single() ) { ?>
-									<?php the_content(); ?>
-								<?php } else { ?>
-									<?php the_excerpt(); ?>
-								<?php } ?>
+								<?php the_content(); ?>
 							</div>
 							
-							<?php if ( is_single() ) { ?>
 							<footer class="post-footer">
 								<?php $posttags = get_the_tags(); if ($posttags) { ?>
 								  	<div class="tag-links">
@@ -56,8 +40,14 @@
 									));
 								?>
 							</footer>
-							<?php } ?>
 													
 						</article>
 
-					</div>					
+					</div>						
+					
+					
+					<?php 
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+					?>

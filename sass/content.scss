@@ -131,6 +131,7 @@
 
 
 .page-wrap {
+	width: 100%;
 	padding-top: 0;
 	margin-bottom: $grid-padding*2;
 			
@@ -142,6 +143,11 @@
 
 	&[data-scroll="in"] {
 		animation: anim-opacity 1s ease-in-out;		
+	}
+	
+	img {
+		height: 50vh;
+		object-fit: cover;
 	}
 }
 
@@ -156,6 +162,10 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		
+		.page-title {
+			max-width: none;
+			padding-left: calc( (100% - #{$max-width}) /2 + #{$grid-padding} );
+		}
 		.page-content,
 		.page-figure {
 			width: 50%;

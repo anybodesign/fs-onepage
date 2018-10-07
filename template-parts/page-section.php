@@ -68,7 +68,7 @@
 									
 									<?php while ($query->have_posts()) : $query->the_post();
 										
-										get_template_part( 'template-parts/post', 'content' );
+										get_template_part( 'template-parts/post', 'block' );
 									
 									endwhile; wp_reset_postdata(); ?>
 	
