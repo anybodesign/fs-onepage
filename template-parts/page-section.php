@@ -85,7 +85,7 @@
 						
 						<?php if ($animated) { ?> 
 							<?php if ( '' != get_the_post_thumbnail() ) { ?>
-							<figure class="page-figure" data-scroll>
+							<figure class="animated-figure" data-scroll>
 								<?php the_post_thumbnail('large-hd'); ?>
 							</figure>
 							<?php } ?>

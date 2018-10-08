@@ -153,7 +153,7 @@
 
 .animated-image {
 
-	.page-figure[data-scroll="in"] {
+	.animated-figure[data-scroll="in"] {
 		background-color: transparent;
 		animation: anim-from-below 1.5s ease-in-out;		
 	}
@@ -161,19 +161,20 @@
 	@include rwd(large) {
 		flex-direction: row;
 		flex-wrap: wrap;
+		align-items: center;
 		
 		.page-title {
 			max-width: none;
 			padding-left: calc( (100% - #{$max-width}) /2 + #{$grid-padding} );
 		}
 		.page-content,
-		.page-figure {
+		.animated-figure {
 			width: 50%;
 		}
 		.page-content {
 			padding-left: calc( ( 100% - #{$max-width}) /2 );
 		}
-		.page-figure {
+		.animated-figure {
 			padding: $grid-padding 0 $grid-padding $grid-padding;
 		}
 
@@ -186,7 +187,7 @@
 				padding-left: $grid-padding;
 				padding-right: calc( ( 100% - #{$max-width}) /2 );
 			}
-			.page-figure {
+			.animated-figure {
 				padding: $grid-padding $grid-padding $grid-padding 0;
 			}
 
