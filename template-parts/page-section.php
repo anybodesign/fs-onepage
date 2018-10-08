@@ -20,10 +20,12 @@
 	
 	if ( $tpl == 'pagecustom-image.php' ) {
 		$animated = ' animated-image';
+	} else if ( $tpl == 'pagecustom-image-reverse.php' ) {
+		$animated = ' animated-image reverse';
 	} else {
 		$animated = null;
-	}	  
- 
+	}
+		
 ?>
 					<div class="page-section<?php echo $animated; ?>" id="<?php the_slug(); ?>"<?php if (! $animated) { fs_bg_img(); } ?>>
 							

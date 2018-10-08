@@ -176,6 +176,23 @@
 		.page-figure {
 			padding: $grid-padding 0 $grid-padding $grid-padding;
 		}
+
+		// Reverse order
+		
+		&.reverse {
+			flex-direction: row-reverse;
+
+			.page-content {
+				padding-left: $grid-padding;
+				padding-right: calc( ( 100% - #{$max-width}) /2 );
+			}
+			.page-figure {
+				padding: $grid-padding $grid-padding $grid-padding 0;
+			}
+
+		}
+		
+		
 	}
 	
 }

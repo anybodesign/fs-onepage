@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 /**
- * Template Name: Page with animated picture (Right)
+ * Template Name: Page with animated picture (Left)
  *
  * @package WordPress
  * @subpackage FS_Blocks

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Blocks\n"
-"POT-Creation-Date: 2018-10-04 09:03+0200\n"
-"PO-Revision-Date: 2018-10-04 09:04+0200\n"
+"POT-Creation-Date: 2018-10-08 11:44+0200\n"
+"PO-Revision-Date: 2018-10-08 11:45+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -28,30 +28,30 @@ msgstr "Oops! Page introuvable"
 msgid "It looks like nothing was found at this location."
 msgstr "Il semblerait que rien n’ai été trouvé à cette adresse."
 
-#: 404.php:20 template-parts/header-brand.php:19
+#: 404.php:20 header.php:59 header.php:60 template-parts/header-brand.php:19
 msgid "Go to Home Page"
 msgstr "Retour à la page d'accueil"
-
-#: _trash/comments.php:19
-msgid "They talk about it"
-msgstr "Ils en parlent"
-
-#: _trash/comments.php:34
-msgid "Comments are closed."
-msgstr "Les commentaires sont fermés."
-
-#: _trash/comments.php:41
-msgid "Do we talk about it?"
-msgstr "On en discute ?"
-
-#: _trash/comments.php:42
-msgid "Add my comment!"
-msgstr "Ajouter mon commentaire !"
 
 #: _trash/search.php:19
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de la recherche pour : %s"
+
+#: comments.php:19
+msgid "They talk about it"
+msgstr "Ils en parlent"
+
+#: comments.php:34
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: comments.php:41
+msgid "Do we talk about it?"
+msgstr "On en discute ?"
+
+#: comments.php:42
+msgid "Add my comment!"
+msgstr "Ajouter mon commentaire !"
 
 #: footer.php:31
 msgid "Powered by WordPress!"
@@ -61,67 +61,67 @@ msgstr "Propulsé par WordPress !"
 msgid "Footer menu"
 msgstr "Menu pied de page"
 
-#: functions.php:61 inc/customizer.php:39
+#: functions.php:59 inc/customizer.php:39
 msgid "Primary color"
 msgstr "Couleur primaire"
 
-#: functions.php:66 inc/customizer.php:54
+#: functions.php:64 inc/customizer.php:54
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: functions.php:232
+#: functions.php:231
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:233
+#: functions.php:232
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:255
+#: functions.php:254
 msgid "Continue reading"
 msgstr "Continuer la lecture"
 
-#: functions.php:298
+#: functions.php:297
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:299
+#: functions.php:298
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:300
+#: functions.php:299
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:308
+#: functions.php:307
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:362
+#: functions.php:361
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:363
+#: functions.php:362
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:364
+#: functions.php:363
 msgid "Search"
 msgstr "Chercher"
 
-#: header.php:33
+#: header.php:38
 msgid "Go to main content"
 msgstr "Aller au contenu principal"
 
-#: header.php:35
+#: header.php:40
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: header.php:52
+#: header.php:67
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: header.php:90
+#: header.php:105
 msgid "Menu"
 msgstr "Menu"
 
@@ -264,11 +264,11 @@ msgstr ""
 msgid "Scroll Down"
 msgstr "Défiler vers le bas"
 
-#: template-parts/post-content.php:47
+#: template-parts/post-content.php:31
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/post-content.php:54
+#: template-parts/post-content.php:38
 msgid "Pages:"
 msgstr "Pages :"
 
@@ -307,6 +307,14 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#. Template Name of the plugin/theme
+msgid "Page with animated picture (Left)"
+msgstr "Page avec image animée (à gauche)"
+
+#. Template Name of the plugin/theme
+msgid "Page with animated picture (Right)"
+msgstr "Page avec image animée (à droite)"
 
 #. Template Name of the plugin/theme
 msgid "Standalone Page"
