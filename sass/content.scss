@@ -139,6 +139,17 @@
 		padding-top: 6rem;
 	}
 }
+.archive-wrap {
+	@extend .page-wrap;
+	@include center(0, $grid-padding*2);
+	padding: $grid-padding;
+	
+	.page-title {
+		padding: $grid-padding*2 0;
+		margin-bottom: 0;
+	}
+}
+
 .page-figure {
 
 	&[data-scroll="in"] {
