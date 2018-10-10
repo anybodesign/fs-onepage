@@ -12,6 +12,9 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ### 1.6 - 2018.…
 * Display the posts 
+* Standalone Page Template
+* Animated Image Page Template
+* Single, Sidebar and Comments
 * …
 
 ### 1.5 - 2018.10.03

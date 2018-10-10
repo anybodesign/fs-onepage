@@ -37,7 +37,8 @@
 	}
 	
 	& .post-title,
-	& .post-content {
+	& .post-content,
+	& .post-meta {
 		padding: $grid-padding $grid-padding*2;
 		margin-bottom: 0;
 	}
@@ -64,10 +65,93 @@
 }
 
 
+/* ------------------------- */
+/* = Single Posts
+/* ------------------------- */
+
+.single-post {
+	
+	.post {
+		background-color: transparent;
+	}
+	.post-figure {
+		@extend .page-figure;
+	}
+}
+.post-single-content {
+	
+	@include rwd(large) {
+		display: flex;
+		flex-wrap: wrap;
+		@include center();
+		
+		.post-single {
+			width: 75%;
+		}
+		.post-sidebar {
+			width: 25%;
+		}
+		
+	}
+}
+.post-meta {
+	
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.post-sidebar {
+	padding: $grid-padding $grid-padding*2;
+	
+	.widget-title {
+		@extend h3;
+	}
+}
+
 
 /* ------------------------- */
 /* = Common
 /* ------------------------- */
+
+.widget-container {
+
+	ul {
+		padding: 0;
+		list-style: none;
+		
+		li {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			width: 100%;
+			margin-left: 0;
+			
+			a {
+				display: block;
+				width: 100%;
+				padding: $grid-padding 0;
+				border-bottom: $text-color 1px solid; 
+				text-decoration: none;
+				transition: .2s ease-in-out;
+				
+			}
+			&.current-cat a,
+			a:hover, 
+			a.focus-visible {
+				background-color: $primary-color;
+				color: #fff;
+				padding-left: $grid-padding;
+			}
+			
+			&.recentcomments {
+				padding: $grid-padding*2 0; 
+			}
+		}
+	}
+	
+}
+
 
 .sticky {
 	display: block;
@@ -93,8 +177,10 @@
 /* = Comments
 /* ------------------------- */
 
-.meta-comments {
-	
+.post-comments {
+	margin-top: $grid-padding;
+	padding: $grid-padding*2;
+	border-top: $text-color 1px dashed;
 }
 
 .bypostauthor {

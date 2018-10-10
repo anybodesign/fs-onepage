@@ -175,7 +175,10 @@ function fs_colors() {
 		input[type="search"].focus-visible,
 		textarea.focus-visible, 
 		select.focus-visible,
-		a.focus-visible .post-title { 
+		a.focus-visible .post-title,
+		.widget-container ul li.current-cat a,
+		.widget-container ul li a:hover, 
+		.widget-container ul li a.focus-visible { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
 		.wp-block-gallery .blocks-gallery-image figcaption, 
