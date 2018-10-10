@@ -10,12 +10,16 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
-### 1.6 - 2018.…
+### 1.7 - 2018....
+* Carousel of posts 
+* …
+
+### 1.6 - 2018.10.10
 * Display the posts 
 * Standalone Page Template
 * Animated Image Page Template
 * Single, Sidebar and Comments
-* …
+* Archive template
 
 ### 1.5 - 2018.10.03
 * Conditionnal skiplinks
