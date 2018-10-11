@@ -13,12 +13,20 @@ get_header(); ?>
 					
 				<div class="single-wrap">
 
-					<?php 
-						get_template_part( 'template-parts/post-content', get_post_format() ); 
-						get_sidebar();
-					?>
+					<?php if ( '' != get_the_post_thumbnail() ) { ?>
+					<figure class="post-figure">
+						<?php the_post_thumbnail('large'); ?>
+					</figure>
+					<?php } ?>
+
+					<div class="post-single-content">
+	
+						<?php 
+							get_sidebar();
+							get_template_part( 'template-parts/post-content', get_post_format() ); 
+						?>
 					
-					</div> <?php // End single-content ?>
+					</div>
 					
 				</div>
 				

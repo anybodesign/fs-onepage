@@ -10,7 +10,7 @@
  * @version 1.0
  */
 ?>
-				<aside class="post-sidebar" role="complementary">
+				<aside class="post-sidebar" role="complementary" data-scroll>
 					
 					<?php if ( is_active_sidebar( 'widgets_area1' ) ) { 
 						dynamic_sidebar( 'widgets_area1' ); 

@@ -98,10 +98,11 @@
 	}
 }
 .post-single-content {
-	
+
 	@include rwd(large) {
 		display: flex;
 		flex-wrap: wrap;
+		flex-direction: row-reverse;
 		@include center();
 		
 		.post-single {
@@ -124,6 +125,10 @@
 .post-sidebar {
 	padding: $grid-padding $grid-padding*2;
 	
+	&[data-scroll="in"] {
+		animation: anim-opacity .5s ease-in-out;
+	}
+	
 	.widget-title {
 		@extend h3;
 	}
@@ -135,26 +140,43 @@
 /* ------------------------- */
 
 .widget-container {
-
+	overflow: hidden;
+	overflow-x: auto;
+		
 	ul {
 		padding: 0;
 		list-style: none;
+		display: flex;
+		width: 100%;
+		
+		@include rwd(large) {
+			flex-direction: column;
+		}
 		
 		li {
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			width: 100%;
 			margin-left: 0;
+			
+			@include rwd(large) {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				width: 100%;
+				
+			}
 			
 			a {
 				display: block;
 				width: 100%;
-				padding: $grid-padding 0;
-				border-bottom: $text-color 1px solid; 
+				padding: $grid-padding;
+				border-bottom: $text-color 1px solid;
+				border-top: $text-color 1px solid; 
 				text-decoration: none;
 				transition: .2s ease-in-out;
 				
+				@include rwd(large) {
+					padding: $grid-padding 0;
+					border-top: 0;
+				}
 			}
 			&.current-cat a,
 			a:hover, 
