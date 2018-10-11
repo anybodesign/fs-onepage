@@ -1,40 +1,38 @@
 jQuery(document).ready(function($) {
-
-	$('.slicky-slider').slick({
+	
+	var sliderbtn = '<img src="'+theme_path+'/img/icon-arrow-slick.svg" alt="">';
+	
+	$('.the-carousel-posts .the-posts').slick({
 		autoplay: true,
 		autoplaySpeed: 1500,
 		speed: 2000,
   		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows: false,
-		dots: false,
+		arrows: true,
+		dots: true,
 		infinite: true,
 		pauseOnHover: true,
-		fade: true,
-		nextArrow: '<button type="button" class="slick-next slick-arrow" aria-label="Panneau suivant"> › </button>',
-		prevArrow: '<button type="button" class="slick-prev slick-arrow" aria-label="Panneau précédent"> ‹ </button>',
-		mobileFirst: true
+		nextArrow: '<button type="button" class="slick-next slick-arrow" aria-label="Panneau suivant">'+sliderbtn+'</button>',
+		prevArrow: '<button type="button" class="slick-prev slick-arrow" aria-label="Panneau précédent">'+sliderbtn+'</button>',
+		mobileFirst: true,
+		responsive: [
+		    {
+		      breakpoint: 640,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2,
+		      }
+		    },
+		    {
+		      breakpoint: 960,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3
+		      }
+		    }
+		]
 	});	
 
-
-	// Play/Pause
-	
-	$('.slicky-pause').on('click',function() {
-		var parent = $(this).closest('.slicky-options');
-		var target = parent.data('target');
-		
-		$('.' + target).slick('slickPause');
-		$(this).hide();
-		parent.find('.slicky-play').show();
-	});
-	$('.slicky-play').on('click',function() {
-		var parent = $(this).closest('.slicky-options');
-		var target = parent.data('target');
-		
-		$('.' + target).slick('slickPlay');
-		$(this).hide();
-		parent.find('.slicky-pause').show();
-	});
 	
 	
 	// A11Y Dots
@@ -43,15 +41,15 @@ jQuery(document).ready(function($) {
 
 
 	// Tab Index
-
+	/*
 	$(window).on('load',function() {
 		$('.slick-slide').removeAttr('tabindex');
 	});
 	
 	$(window).on('resize',function() {
-		if ($(window).width() > 720) {
+		if ($(window).width() > 960) {
 			$('.slick-slide').removeAttr('tabindex');
 		}
 	});	
-
+	*/
 });

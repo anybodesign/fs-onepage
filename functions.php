@@ -121,6 +121,26 @@ function fs_blocks_scripts_load() {
 			);
 			
 		}
+		
+		
+		if ( get_theme_mod('carousel_posts') == true ) {
+			
+			wp_enqueue_script(
+				'slick', 
+				FS_THEME_URL . '/js/slick.min.js', 
+				array('jquery'), 
+				false, 
+				true
+			);
+			wp_enqueue_script(
+				'slick-init', 
+				FS_THEME_URL . '/js/slick-init.js', 
+				array('slick'), 
+				false, 
+				true
+			);
+			
+		}
 
 		
 		// Fancybox
@@ -204,6 +224,18 @@ function fs_blocks_scripts_load() {
 			'screen' 
 		);
 		
+
+		if ( get_theme_mod('carousel_posts') == true ) {
+			
+			wp_enqueue_style( 
+				'slick-css', 
+				FS_THEME_URL . '/css/slick.css',
+				array(), 
+				false, 
+				'screen' 
+			);
+			
+		}
 		
 		
 		// Main stylesheet
