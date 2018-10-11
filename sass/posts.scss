@@ -11,8 +11,11 @@
 	margin-right: -$grid-padding;
 		
 	@include rwd(large) {
-		display: flex;
-		flex-wrap: wrap;
+			
+		.the-regular-posts & {
+			display: flex;
+			flex-wrap: wrap;			
+		}
 	}
 }
 
@@ -20,9 +23,12 @@
 	padding: $grid-padding;
 	
 	@include rwd(large) {
-		display: flex;
-		flex-direction: column;
-		width: 33.3333%;
+		
+		.the-regular-posts & {
+			display: flex;
+			flex-direction: column;
+			width: 33.3333%;
+		}
 	}
 }
 
@@ -44,8 +50,12 @@
 	}
 
 	@include rwd(large) {
-		flex: 1;
+
 		@include img-opacity(.7);
+
+		.the-regular-posts & {
+			flex: 1;			
+		}
 	}	
 }
 .post-title {

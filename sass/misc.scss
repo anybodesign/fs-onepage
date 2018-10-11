@@ -4,10 +4,84 @@
 
 // Slick
 
-/*
+.slick-list {
+    .slick-loading & {
+        background: #fff url(img/ajax-loader.gif) center center no-repeat;
+    }
+}
+.slick-slide {
+	outline: none;
+	display: flex !important;
+	justify-content: center;
+	padding: 6rem;
+	
+	@include rwd(large) {
+		padding: $grid-padding;
+	}
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: $grid-padding;
+    margin: 0;
+    background-color: transparent;
+    z-index: 100;
+    
+    img {
+	    width: 40px;
+	    height: 40px;
+		transition: transform .2s ease-in-out;
+    }
+	
+	&:hover, 
+	&:focus {
+       background-color: transparent;
+       
+       img {
+	       transform: scale(1.1);
+       }
+    }
+    &.slick-disabled {
+        opacity: .2 !important;
+        cursor: default;
+        
+        &:hover img, 
+		&:focus img,
+		&.focus-visible {
+			transform: none;
+		}
+    }
+}
+
+.slick-prev {
+	left: 0;
+	transform: translateY(-50%) scaleX(-1);
+	
+	@include rwd(large) {
+		left: -5.5rem;
+	}
+	@include rwd(wide) {
+		left: -10rem;
+	}
+}
+.slick-next {
+	right: 0;
+	
+	@include rwd(large) {
+		right: -5.5rem;
+	}
+	@include rwd(wide) {
+		right: -10rem;
+	}
+}
+
+
 .slick-dots {
 	position: absolute;
-	bottom: -50px;
+	bottom: auto;
 	left: 0;
 	width: 100%;
 	margin: 0;
@@ -27,27 +101,30 @@
 		button {
 			padding: 0;
 			display: block;
-			width: 16px; 
-			height: 16px;
+			width: 14px; 
+			height: 14px;
 			margin: 0 8px;
-			border-radius: 16px;
+			border-radius: 14px;
 			border: $primary-color 2px solid;
-			background-color: $secondary-color;
-			//outline: none !important;
+			background-color: transparent;
+			outline: none !important;
 			
 			@include a11y-hide();
 			transition: .2s ease-in-out;
 			
-			&:hover, &.focus-visible {
+			&:hover, 
+			&.focus-visible {
 				transform: scale(1.4);
 				background-color: $primary-color;
-				//outline: none;
+				border-color: transparent;
+				outline: none;
 			}
 		
 		}
 		
 		&.slick-active button {
-			background-color: $primary-color;
+			background-color: $text-color;
+			border-color: transparent;
 		}
 		&.slick-disabled {
 			visibility: hidden;
@@ -55,7 +132,6 @@
 
 	}
 }
-*/
 
 // Fancybox
 

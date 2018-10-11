@@ -24,6 +24,9 @@
 		$one = get_theme_mod('onepage') == true;
 		if ($one) { $oneclass = 'one-page '; } else { $oneclass = null; }	
 	?>
+	<script>
+		var theme_path = '<?= get_bloginfo('template_url'); ?>';
+	</script>
 </head>
 
 <body <?php body_class($oneclass); ?>>

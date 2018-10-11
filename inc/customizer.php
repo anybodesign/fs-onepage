@@ -178,7 +178,9 @@ function fs_colors() {
 		a.focus-visible .post-title,
 		.widget-container ul li.current-cat a,
 		.widget-container ul li a:hover, 
-		.widget-container ul li a.focus-visible { 
+		.widget-container ul li a.focus-visible,
+		.slick-dots li button:hover,
+		.slick-dots li button.focus-visible { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
 		.wp-block-gallery .blocks-gallery-image figcaption, 
@@ -190,11 +192,9 @@ function fs_colors() {
 		.formfield-radio input[type="checkbox"].focus-visible + span,
 		#menu-toggle span,
 		#menu-toggle span::before,
-		#menu-toggle span::after {
-			border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
-		}
-
-		.onepage-menu > li.current-menu-item > a {
+		#menu-toggle span::after,
+		.onepage-menu > li.current-menu-item > a,
+		.slick-dots li button {
 			border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
 		}
 		.onepage-menu > li > a:hover,
