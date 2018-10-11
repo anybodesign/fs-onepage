@@ -167,14 +167,16 @@ a:hover {
 			}
 			&:visited {
 				color: $text-color;
-				border-bottom-color: $text-color;
-				border-bottom-width: 1px;
+				border-bottom: $text-color 1px solid;
+				
+				&.focus-visible {
+					color: #fff;
+				}
 			}
 			&:active {
 				color: $secondary-color;
 				border-bottom-color: transparent;
 			}
-			
 		}
 	}
 	
