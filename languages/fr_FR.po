@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Blocks\n"
-"POT-Creation-Date: 2018-10-08 11:44+0200\n"
-"PO-Revision-Date: 2018-10-08 11:45+0200\n"
+"POT-Creation-Date: 2018-10-12 09:00+0200\n"
+"PO-Revision-Date: 2018-10-12 09:01+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -28,7 +28,7 @@ msgstr "Oops! Page introuvable"
 msgid "It looks like nothing was found at this location."
 msgstr "Il semblerait que rien n’ai été trouvé à cette adresse."
 
-#: 404.php:20 header.php:59 header.php:60 template-parts/header-brand.php:19
+#: 404.php:20 header.php:62 header.php:63 template-parts/header-brand.php:19
 msgid "Go to Home Page"
 msgstr "Retour à la page d'accueil"
 
@@ -53,11 +53,11 @@ msgstr "On en discute ?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: footer.php:31
+#: footer.php:38
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:38
+#: footer.php:45
 msgid "Footer menu"
 msgstr "Menu pied de page"
 
@@ -69,59 +69,63 @@ msgstr "Couleur primaire"
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: functions.php:231
+#: functions.php:275
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:232
+#: functions.php:276
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:254
+#: functions.php:298
 msgid "Continue reading"
 msgstr "Continuer la lecture"
 
-#: functions.php:297
+#: functions.php:341
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:298
+#: functions.php:342
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:299
+#: functions.php:343
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:307
-msgid "Primary Widgets Area"
-msgstr "Zone primaire Widgets"
+#: functions.php:351
+msgid "Categories Widgets Area"
+msgstr "Emplacement du widget catégories"
 
-#: functions.php:361
+#: functions.php:360
+msgid "Footer Widgets Area"
+msgstr "Emplacement des widgets du pied de page"
+
+#: functions.php:414
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:362
+#: functions.php:415
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:363
+#: functions.php:416
 msgid "Search"
 msgstr "Chercher"
 
-#: header.php:38
+#: header.php:41
 msgid "Go to main content"
 msgstr "Aller au contenu principal"
 
-#: header.php:40
+#: header.php:43
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: header.php:67
+#: header.php:70
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: header.php:105
+#: header.php:108
 msgid "Menu"
 msgstr "Menu"
 
@@ -264,11 +268,11 @@ msgstr ""
 msgid "Scroll Down"
 msgstr "Défiler vers le bas"
 
-#: template-parts/post-content.php:31
+#: template-parts/post-content.php:33
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/post-content.php:38
+#: template-parts/post-content.php:40
 msgid "Pages:"
 msgstr "Pages :"
 
