@@ -348,8 +348,17 @@ function fs_blocks_custom_sizes( $sizes ) {
 
 function fs_blocks_widgets_init() {
 	register_sidebar(array(
-		'name'			=>	esc_html__( 'Primary Widgets Area', 'fs-blocks' ),
+		'name'			=>	esc_html__( 'Categories Widgets Area', 'fs-blocks' ),
 		'id'			=>	'widgets_area1',
+		'description' 	=> 	'',
+		'before_widget' => 	'<div id="%1$s" class="categories-container %2$s">',
+		'after_widget' 	=> 	'</div>',
+		'before_title' 	=> 	'<p class="widget-title">',
+		'after_title' 	=> 	'</p>',
+	));
+	register_sidebar(array(
+		'name'			=>	esc_html__( 'Footer Widgets Area', 'fs-blocks' ),
+		'id'			=>	'widgets_area2',
 		'description' 	=> 	'',
 		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' 	=> 	'</div>',

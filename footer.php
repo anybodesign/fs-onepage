@@ -14,8 +14,15 @@
 		
 
 		<footer role="contentinfo" id="site_foot">
-			
-			<div class="row inner">
+			<div class="footer-wrap">
+				
+				<?php if ( is_active_sidebar( 'widgets_area2' ) ) { ?>
+				<div class="footer-widget-container">
+					<?php dynamic_sidebar( 'widgets_area2' ); ?>
+				</div>
+				<?php } ?>
+
+				
 				<div class="footer-content">				
 					
 					<?php // The credit/copyright line, settings in the Customizer ?>

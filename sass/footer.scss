@@ -6,7 +6,15 @@
 #site_foot {
 	background-color: #fff;
 }
+.footer-wrap {
+	padding: $grid-padding;
+	@include center();
+}
+.footer-widget-container {
+	width: 100%;
+}
 .footer-content {
+	width: 100%;
 	padding: $grid-padding*2 $grid-padding;
 }
 
