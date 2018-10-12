@@ -100,18 +100,20 @@
 .post-single-content {
 
 	@include rwd(large) {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row-reverse;
 		@include center();
 		
-		.post-single {
-			width: 75%;
+		.has-sidebar & {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row-reverse;
+			
+			.post-single {
+				width: 75%;
+			}
+			.post-sidebar {
+				width: 25%;
+			}
 		}
-		.post-sidebar {
-			width: 25%;
-		}
-		
 	}
 }
 .post-meta {
@@ -139,7 +141,7 @@
 /* = Common
 /* ------------------------- */
 
-.widget-container {
+.categories-container {
 	overflow: hidden;
 	overflow-x: auto;
 		

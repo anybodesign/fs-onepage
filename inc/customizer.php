@@ -176,9 +176,9 @@ function fs_colors() {
 		textarea.focus-visible, 
 		select.focus-visible,
 		a.focus-visible .post-title,
-		.widget-container ul li.current-cat a,
-		.widget-container ul li a:hover, 
-		.widget-container ul li a.focus-visible,
+		.categories-container ul li.current-cat a,
+		.categories-container ul li a:hover, 
+		.categories-container ul li a.focus-visible,
 		.slick-dots li button:hover,
 		.slick-dots li button.focus-visible,
 		.skiplinks a { 

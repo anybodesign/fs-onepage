@@ -9,9 +9,15 @@
  * @since 1.0
  * @version 1.0
  */
+ 
+ if ( is_active_sidebar( 'widgets_area1' ) ) { 
+	$sidebar = ' has-sidebar';	 
+ } else {
+	 $sidebar = null;
+ }
 get_header(); ?>
 					
-				<div class="single-wrap">
+				<div class="single-wrap<?php echo $sidebar; ?>">
 
 					<?php if ( '' != get_the_post_thumbnail() ) { ?>
 					<figure class="post-figure">
