@@ -180,7 +180,8 @@ function fs_colors() {
 		.widget-container ul li a:hover, 
 		.widget-container ul li a.focus-visible,
 		.slick-dots li button:hover,
-		.slick-dots li button.focus-visible { 
+		.slick-dots li button.focus-visible,
+		.skiplinks a { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
 		.wp-block-gallery .blocks-gallery-image figcaption, 

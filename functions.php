@@ -160,6 +160,18 @@ function fs_blocks_scripts_load() {
 			true
 		);
 
+		if ( get_theme_mod('modals') == true ) {
+			
+			wp_enqueue_script(
+				'fancybox-modals', 
+				FS_THEME_URL . '/js/fancybox-modals.js', 
+				array('fancybox'), 
+				false, 
+				true
+			);
+
+		}		
+
 		
 		// Scroll-Out
 		
