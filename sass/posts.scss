@@ -131,8 +131,15 @@
 		animation: anim-opacity .5s ease-in-out;
 	}
 	
-	.widget-title {
-		@extend h3;
+	.widget-container {
+		display: none;
+		
+		@include rwd(large) {
+			display: block;
+		}
+		&.widget_categories {
+			display: block;
+		}
 	}
 }
 
@@ -141,15 +148,21 @@
 /* = Common
 /* ------------------------- */
 
-.categories-container {
+.widget-title {
+	@extend h3;
+}
+
+.widget_categories,
+.widget_nav_menu {
 	overflow: hidden;
-	overflow-x: auto;
 		
 	ul {
 		padding: 0;
 		list-style: none;
 		display: flex;
 		width: 100%;
+		overflow: hidden;
+		overflow-x: auto;
 		
 		@include rwd(large) {
 			flex-direction: column;
@@ -157,13 +170,14 @@
 		
 		li {
 			margin-left: 0;
+			white-space: nowrap;
 			
 			@include rwd(large) {
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
 				width: 100%;
-				
+				white-space: normal;
 			}
 			
 			a {
