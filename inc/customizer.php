@@ -225,7 +225,8 @@ function fs_colors() {
 		.onepage-menu > li > a:hover,
 		.onepage-menu > li > a.focus-visible,
 		.site-title a:hover,
-		.site-title a.focus-visible {
+		.site-title a.focus-visible,
+		.has-text-color.has-primary-color-color {
 			color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
 		}
 		
@@ -263,7 +264,8 @@ function fs_colors() {
 		.formfield-checkbox input[type="checkbox"] + label::after,
 		.formfield-checkbox input[type="checkbox"] + span::after,
 		.content-area p a:not([class*="action-btn"]),
-		.content-area p a:not([class*="action-btn"]):active {
+		.content-area p a:not([class*="action-btn"]):active,
+		.has-text-color.has-secondary-color-color {
 			color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>
 		}
 		.formfield-select--container {
@@ -273,6 +275,14 @@ function fs_colors() {
 		.content-area p a:not([class*="action-btn"]) {
 			border-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
 		}
+		
+		.has-third-color-background-color {
+			background-color: <?php echo get_theme_mod('third_color', '#909090'); ?> !important; 			
+		}
+		.has-text-color.has-third-color-color {
+			color: <?php echo get_theme_mod('third_color', '#909090'); ?> !important; 			
+		}		
+		
 	</style>
 	<?php
 }

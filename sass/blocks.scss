@@ -11,6 +11,31 @@
 .has-secondary-color-background-color {
 	background-color: $secondary-color;
 }
+.has-third-color-background-color {
+	background-color: $third-color;
+}
+.has-white-color-background-color {
+	background-color: #fff;
+}
+.has-black-color-background-color {
+	background-color: #303030;
+}
+
+.has-text-color.has-primary-color-color {
+	color: $primary-color;
+}
+.has-text-color.has-secondary-color-color {
+	color: $secondary-color;
+}
+.has-text-color.has-third-color-color {
+	color: $third-color;
+}
+.has-text-color.has-white-color-color {
+	color: #fff;
+}
+.has-text-color.has-black-color-color {
+	color: #303030;
+}
 
 
 // Text
