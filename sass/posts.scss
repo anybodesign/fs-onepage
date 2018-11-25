@@ -29,6 +29,10 @@
 			flex-direction: column;
 			width: 33.3333%;
 		}
+		.blog .the-regular-posts &,
+		.archive .the-regular-posts & {
+			width: 50%;
+		}
 	}
 }
 
@@ -108,10 +112,10 @@
 			flex-direction: row-reverse;
 			
 			.post-single {
-				width: 75%;
+				width: 66.6667%;
 			}
 			.post-sidebar {
-				width: 25%;
+				width: 33.3333%;
 			}
 		}
 	}
@@ -125,7 +129,10 @@
 }
 
 .post-sidebar {
-	padding: $grid-padding $grid-padding*2;
+	
+	@include rwd(large) {
+		padding: $grid-padding $grid-padding*2;
+	}
 	
 	&[data-scroll="in"] {
 		animation: anim-opacity .5s ease-in-out;
@@ -143,6 +150,16 @@
 	}
 }
 
+/* ------------------------- */
+/* = Archves
+/* ------------------------- */
+
+.archive-posts {
+	@extend .post-single-content;
+}
+.archive-posts-content {
+	@extend .post-single;
+}
 
 /* ------------------------- */
 /* = Common

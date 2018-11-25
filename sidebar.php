@@ -13,14 +13,6 @@
 				<?php if ( is_active_sidebar( 'widgets_area1' ) ) { ?>
 				<aside class="post-sidebar" role="complementary" data-scroll>
 					
-<!--
-					<nav class="categories_nav">
-						<ul class="">
-							<?php wp_list_categories(); ?> 							
-						</ul>
-					</nav>
--->
-					
 					<?php dynamic_sidebar( 'widgets_area1' ); ?>
 					
 				</aside>

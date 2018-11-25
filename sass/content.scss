@@ -2,6 +2,16 @@
 // -
 // + + + + + + + + + + + +
 
+.content-area {
+	
+	.non-one-page & {
+		padding-top: 8rem;
+	}
+	.home.non-one-page & {
+		padding-top: 0;
+	}
+}
+
 .page-section {
 	position: relative;
 	min-height: 100vh;
@@ -51,7 +61,7 @@
 }
 
 .page-content {
-
+	
 	& > [class*="wp-block-"], 
 	& > p,
 	& > ul,

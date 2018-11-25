@@ -10,46 +10,53 @@
  * @version 1.0
  */
 get_header(); ?>
-				<div class="row inner">
-					
-					<div class="col-9">
-					
-					<?php // The Loop ?>
-					
-					<?php if ( have_posts() ) : ?>
-			
-						<?php if ( is_home() && ! is_front_page() ) { ?>
-							<header>
-								<h1 class="page-title"><?php single_post_title(); ?></h1>
-							</header>
-						<?php } ?>
-			
-			
-						<?php while ( have_posts() ) : the_post(); ?>
-			
-							<?php get_template_part( 'template-parts/post-content', get_post_format() ); ?>
-			
-						<?php endwhile; ?>
-			
-						<?php the_posts_pagination(array(
-								'prev_text'          => __( 'Previous page', 'fs-blocks' ),
-								'next_text'          => __( 'Next page', 'fs-blocks' ),
-								'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fs-blocks' ) . ' </span>',
-							)); ?>
-			
-					<?php else : ?>
-	
-						<?php get_template_part( 'template-parts/nothing' ); ?>
-				
-					<?php endif; ?>	
-						
-	
-					</div>
 
-					<div class="col-3">
-						<?php get_sidebar(); ?>
-					</div>
+					<div class="archive-wrap has-sidebar">
+		
+						<?php if ( have_posts() ) : ?>
+						
+						<div class="archive-posts">
+
+							<?php get_sidebar(); ?>
+							
+							<div class="archive-posts-content">
+							
+								<header class="page-header">
+									<?php if ( is_archive() ) { 
+										the_archive_title( '<h1 class="page-title">', '</h1>' ); 
+										the_archive_description( '<div class="taxonomy-desc">', '</div>' ); 
+									} else { 
+										single_post_title('<h1>','</h1>'); 
+									} ?>
+								</header>				
+	
+								<div class="the-regular-posts">
+									<div class="the-posts">
+									
+									<?php while (have_posts()) : the_post();
 										
-				</div>
+										get_template_part( 'template-parts/post', 'block' );
+									
+									endwhile; wp_reset_postdata(); ?>
+	
+									</div>
+								</div>
+					
+								<?php the_posts_navigation(); ?>
+								
+							</div>
+							
+						</div>
+						
+						<?php else : ?>
+						
+						<div class="archive-posts">
+							<?php get_template_part( 'template-parts/nothing' ); ?>
+						</div>
+						
+						<?php endif; ?>	
+											
+					</div>
+					
 
 <?php get_footer(); ?>
