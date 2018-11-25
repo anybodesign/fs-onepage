@@ -201,7 +201,10 @@ function fs_colors() {
 		.slick-dots li button.focus-visible,
 		.skiplinks a,
 		.wp-block-file a.wp-block-file__button,
-		.wp-block-button .wp-block-button__link { 
+		.wp-block-button .wp-block-button__link,
+		.sub-menu > li a:hover, 
+		.sub-menu > li a.focus-visible,
+		.sub-menu > li.current-menu-item a { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
 		.has-primary-color-background-color {

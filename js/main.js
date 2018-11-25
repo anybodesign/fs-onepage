@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
 	});
 
 		$(window).resize(function() {
-			if ($(window).width() > 720) {
+			if ($(window).width() > 959) {
 				$('body').removeClass('menu-visible');
 		    	$('.main-menu').show().removeAttr('style').removeAttr('aria-hidden');
 		    	$('.sub-menu').show().removeAttr('style');

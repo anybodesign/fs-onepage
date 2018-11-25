@@ -43,7 +43,7 @@
 		overflow-x: auto;
 	}
 
-	@include rwd(medium) {
+	@include rwd(large) {
 		padding: 0;
 	}
 }
@@ -68,7 +68,7 @@
 		font-size: 1.4rem;
 		text-transform: uppercase;
 		
-		a {
+		& > a {
 			display: block;
 			padding: $grid-padding;
 			padding-bottom: $grid-padding - .4rem;
@@ -76,17 +76,17 @@
 			border-bottom: transparent .4rem solid;
 			transition: .3s ease-in-out;
 			
-			@include rwd(medium) {
+			@include rwd(large) {
 				color: $text-color;
 				border-bottom-color: transparent;
 			}
 		}
-		a:hover, 
-		a.focus-visible {
+		& > a:hover, 
+		& > a.focus-visible {
 			color: $primary-color;
 		}
 		
-		&.current-menu-item a {
+		&.current-menu-item > a {
 			border-bottom-color: $primary-color;
 		}
 
@@ -97,7 +97,7 @@
 .onepage-menu {
 	white-space: nowrap;
 	
-	@include rwd(medium) {
+	@include rwd(large) {
 		white-space: normal;
 	}
 }
@@ -153,114 +153,125 @@
 			animation: fall-in .25s ease-in-out;
 		}
 		
-		@include rwd(medium) {
+		@include rwd(large) {
 			display: inline-block;
 			margin-right: $grid-padding;
 			font-size: 1.4rem;
 		}
 
-		a {
+		& > a {
 			color: #fff;
 			
-			@include rwd(medium) {
+			@include rwd(large) {
 				color: $primary-color;
 			}
 		}
-		a:hover, 
-		a.focus-visible {
+		& > a:hover, 
+		& > a.focus-visible {
 			color: #fff;
 			
-			@include rwd(medium) {
+			@include rwd(large) {
 				color: $primary-color;
 			}
 		}
 		
-		&.current-menu-item a {
+		&.current-menu-item > a {
 			border-bottom-color: #fff;
 			
-			@include rwd(medium) {
+			@include rwd(large) {
 				border-bottom-color: $primary-color;
 			}	
 		}
-
-
-		
-		// If Menu item has children
-		
-		&.menu-item-has-children {
-			padding-right: 20px;
-
-			@include rwd(wide) {
-				padding: 0;
-				
-				&:hover > .sub-menu,
-				&.focus > .sub-menu {
-					left: auto;
-					opacity: 1;
-				}
-			}
-				
-		}
-		
-		// Sub-Menus behaviors
-		
-		.sub-menu {
-			display: none;
-			position: relative;
-			
-			@include rwd(medium) {
-				position: absolute;
-				min-width: 100%;
-				z-index: 300;
-			}
-
-			@include rwd(wide) {
-				display: block;
-				left: -999em;
-				opacity: 0;
-				transition: opacity .2s ease-in-out;
-			}
-			
-			
-		
-			& > li {
-
-				a {
-					display: block;
-				}
-				a:hover, a.focus-visible,
-				&.current-menu-item a {
-					
-				}
-			}
-			
-			.current-menu-item &,
-			.current-menu-ancestor & {
-				
-			}			
-		}
-		
+	
 	}
 	
-	
-	@include rwd(medium) {
+	@include rwd(large) {
 		display: block;
 	}
 	
 }
 
+// If Menu item has children
+
+.menu-item-has-children {
+	padding-right: 20px;
+
+	@include rwd(wide) {
+		padding: 0;
+		
+		&:hover > .sub-menu,
+		&.focus > .sub-menu {
+			left: auto;
+			opacity: 1;
+		}
+	}
+		
+}
+
+// Sub-Menus behaviors
+
+.sub-menu {
+	display: none;
+	position: relative;
+	background-color: transparent;
+	
+	@include rwd(large) {
+		position: absolute;
+		min-width: 100%;
+		z-index: 300;
+		background-color: #fff;
+	}
+
+	@include rwd(wide) {
+		display: block;
+		left: -999em;
+		opacity: 0;
+		transition: opacity .2s ease-in-out;
+	}
+
+	& > li {
+		color: #fff;
+		text-transform: none;
+		font-size: 1.6rem;
+		border-top: transparentize(#fff, .7) 1px solid;
+		
+		@include rwd(large) {
+			color: $text-color;
+			border-top-color: transparentize($text-color, .7);
+		}
+		
+		a {
+			display: block;
+			padding: $grid-padding;
+			text-decoration: none;
+			transition: .2s ease-in-out;
+		}
+		a:hover, 
+		a.focus-visible,
+		&.current-menu-item a {
+			background-color: $primary-color;
+			color: #fff;
+		}
+	}
+	
+	.current-menu-item &,
+	.current-menu-ancestor & {
+		
+	}			
+}
+
 .sub-menu-unfold {
 	position: absolute;
-	top: 0; 
+	top: 1rem; 
 	right: 0;
 	display: block;
 	height: 24px; 
 	width: 24px;
-	margin-top: 0;
+	margin: 0;
 	border: 0; 
 	border-radius: 12px; 
 	padding: 0;
-	background: #ccc !important;
+	background: transparent !important;
 	
 	&::after, 
 	&::before {
@@ -271,8 +282,12 @@
 		left: 4px;
 		width: 16px; 
 		height: 3px;
-		background-color: #000;
+		background-color: #fff;
 		@include transition(transform);
+		
+		@include rwd(large) {
+			background-color: $text-color;
+		}
 	}
 	&::after {
 		transform: rotate(-90deg);
@@ -290,7 +305,7 @@
 		transform: rotate(-45deg);
 	}
 	
-	@include rwd(medium) {
+	@include rwd(large) {
 		height: 16px; 
 		width: 16px;
 		top: 50%; 
@@ -382,7 +397,7 @@
 		background-color: transparent;
 	}	
 	
-	@include rwd(medium) {
+	@include rwd(large) {
 		display: none;				
 	}
 }
