@@ -22,7 +22,7 @@
 		wp_head(); 
 		
 		$one = get_theme_mod('onepage') == true;
-		if ($one) { $oneclass = 'one-page '; } else { $oneclass = null; }	
+		if ($one) { $oneclass = 'one-page '; } else { $oneclass = 'non-one-page'; }	
 	?>
 	<script>
 		var theme_path = '<?= get_bloginfo('template_url'); ?>';
