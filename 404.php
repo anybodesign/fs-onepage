@@ -12,7 +12,7 @@
 
 get_header(); ?>
 					
-				<div class="page-section error-404 not-found" id="<?php the_slug(); ?>"<?php fs_bg_img(); ?>>
+				<div class="page-section error-404 not-found" id="<?php fs_slug(); ?>"<?php fs_bg_img(); ?>>
 					<div class="page-content">
 						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found', 'fs-blocks' ); ?></h1>
 							

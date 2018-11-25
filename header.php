@@ -33,7 +33,7 @@
 
 <div id="wrapper">
 
-	<?php if ( $one && ! is_404() ) { ?>
+	<?php //if ( $one && ! is_404() ) { ?>
 	
 	<?php // The Skiplinks ?>
 	
@@ -92,7 +92,7 @@
 						<ul class="onepage-menu">
 						<?php while ($onepage->have_posts()) : $onepage->the_post(); ?>
 					
-							<li><a href="#<?php the_slug(); ?>"><?php the_title(); ?></a></li>
+							<li><a href="#<?php fs_slug(); ?>"><?php the_title(); ?></a></li>
 	
 						<?php endwhile; wp_reset_postdata(); ?>
 						</ul>
@@ -123,6 +123,6 @@
 
 	</header>
 	
-	<?php } ?>	
+	<?php //} ?>	
 	
 		<main class="content-area" role="main" id="site_content">

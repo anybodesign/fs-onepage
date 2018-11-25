@@ -10,11 +10,9 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
-### 1.7 - 2018....
+### 1.6.5 - 2018.11.25
 * Carousel of posts 
-* Category nav in sidebar
 * Widget area in footer
-* …
 * Some CSS fix
 
 ### 1.6 - 2018.10.10

@@ -161,6 +161,10 @@
 
 		a {
 			color: #fff;
+			
+			@include rwd(medium) {
+				color: $primary-color;
+			}
 		}
 		a:hover, 
 		a.focus-visible {

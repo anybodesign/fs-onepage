@@ -76,7 +76,13 @@
 	& > [class*="wp-block-cover-image"],
 	& > [class*="wp-block-quote"] {
 		@include center(0, $grid-padding*2);
-	}		
+	}
+	& > [class*="wp-block-table"],
+	& > [class*="wp-block-verse"] {	
+		@include center($grid-padding*2, $grid-padding*2);
+		max-width: calc(#{$max-width} - #{$grid-padding}*2);
+	}
+			
 }
 
 

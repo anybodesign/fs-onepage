@@ -184,9 +184,15 @@ function fs_colors() {
 		.widget_nav_menu ul li a.focus-visible,
 		.slick-dots li button:hover,
 		.slick-dots li button.focus-visible,
-		.skiplinks a { 
+		.skiplinks a,
+		.wp-block-file a.wp-block-file__button,
+		.wp-block-button .wp-block-button__link { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
+		.has-primary-color-background-color {
+			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?> !important; 			
+		}
+		
 		.wp-block-gallery .blocks-gallery-image figcaption, 
 		.wp-block-gallery .blocks-gallery-item figcaption  { 
 			background: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
@@ -219,7 +225,6 @@ function fs_colors() {
 			}
 		}
 		
-		
 		.action-btn:hover,
 		button.action-btn:hover,
 		input[type=submit].action-btn:hover,
@@ -229,9 +234,17 @@ function fs_colors() {
 		.formfield-radio input[type="radio"] + label::after,
 		.formfield-radio input[type="radio"] + span::after,
 		body::after,
-		input[type="submit"]:hover {
+		input[type="submit"]:hover,
+		.wp-block-file a.wp-block-file__button:hover,
+		.wp-block-file a.wp-block-file__button.focus-visible,
+		.wp-block-button .wp-block-button__link:hover,
+		.wp-block-button .wp-block-button__link.focus-visible {
 			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
 		}
+		.has-secondary-color-background-color {
+			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?> !important;
+		}
+
 		.formfield-checkbox input[type="checkbox"] + label::after,
 		.formfield-checkbox input[type="checkbox"] + span::after,
 		.content-area p a:not([class*="action-btn"]),

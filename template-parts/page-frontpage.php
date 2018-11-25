@@ -18,10 +18,12 @@
 							<div class="front-content">
 								<?php the_content(); ?>
 							</div>
-
+							
+							<?php if ( get_theme_mod('onepage') == true ) { ?>
 							<button class="scroll-down" data-scroll>
 								<?php _e('Scroll Down', 'fs-blocks'); ?>
 							</button>
+							<?php } ?>
 						</div>
 							
 					</div>

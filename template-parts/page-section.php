@@ -27,7 +27,7 @@
 	}
 		
 ?>
-					<div class="page-section<?php echo $animated; ?>" id="<?php the_slug(); ?>"<?php if (! $animated) { fs_bg_img(); } ?>>
+					<div class="page-section<?php echo $animated; ?>" id="<?php fs_slug(); ?>"<?php if (! $animated) { fs_bg_img(); } ?>>
 							
 						<<?php echo $h; ?> class="page-title" data-scroll>
 							<?php the_title(); ?>

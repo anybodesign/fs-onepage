@@ -316,7 +316,7 @@ function fs_bg_img() {
 
 // The slug
 
-function the_slug($echo=true) {
+function fs_slug($echo=true) {
   
   $slug = basename(get_permalink());
   	do_action('before_slug', $slug);
@@ -421,53 +421,40 @@ function fs_blocks_search_form( $form ) {
 add_filter( 'get_search_form', 'fs_blocks_search_form' );
 
 
-// Page Taxonomies
+// ACF Blocks
 
-/*
-if ( get_theme_mod('onepage') == true ) {
+
+add_action('acf/init', 'my_acf_init');
+function my_acf_init() {
 	
-	function fs_page_taxonomies() {
-	
-		$labels = array(
-			'name'							=> _x( 'Categories', 'Taxonomy General Name', 'fs-blocks' ),
-			'singular_name'					=> _x( 'Category', 'Taxonomy Singular Name', 'fs-blocks' ),
-			'menu_name'						=> __( 'Categories', 'fs-blocks' ),
-			'all_items'						=> __( 'All Categories', 'fs-blocks' ),
-			'parent_item'					=> __( 'Parent Category', 'fs-blocks' ),
-			'parent_item_colon'				=> __( 'Parent Category:', 'fs-blocks' ),
-			'new_item_name'					=> __( 'New Category', 'fs-blocks' ),
-			'add_new_item'					=> __( 'Add New Category', 'fs-blocks' ),
-			'edit_item'						=> __( 'Edit Category', 'fs-blocks' ),
-			'update_item'					=> __( 'Update Category', 'fs-blocks' ),
-			'view_item'						=> __( 'View Category', 'fs-blocks' ),
-			'popular_items'					=> __( 'Popular Category', 'fs-blocks' ),
-			'search_items'					=> __( 'Search Category', 'fs-blocks' ),
-			'not_found'						=> __( 'No Category were found', 'fs-blocks' ),
-		);
-		$args = array(
-			'labels'				=> $labels,
-			'hierarchical'			=> false,
-			'public'				=> true,
-			'show_ui'				=> true,
-			'show_admin_column'		=> true,
-			'show_in_nav_menus'		=> true,
-			'show_tagcloud'			=> false,
-			'rewrite'				=> array( 'slug' => __( 'category', 'fs-blocks' ) ),		
-		);
-		register_taxonomy( 'category', array( 'page' ), $args );	
-	
+	// check function exists
+	if( function_exists('acf_register_block') ) {
+		
+		// register a testimonial block
+		acf_register_block(array(
+			'name'				=> 'testimonial',
+			'title'				=> __('Testimonial'),
+			'description'		=> __('A custom testimonial block.'),
+			'render_callback'	=> 'my_acf_bock_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'testimonial', 'quote' ),
+		));
 	}
-	add_action( 'init', 'fs_page_taxonomies', 0 );
-
-	// Flush Rewrite
-	
-	add_action( 'after_switch_theme', function() {
-	    fs_page_taxonomies();
-	    flush_rewrite_rules();
-	});
-	
 }
-*/
+
+function my_acf_bock_render_callback( $block ) {
+	
+	// convert name ("acf/testimonial") into path friendly slug ("testimonial")
+	$slug = str_replace('acf/', '', $block['name']);
+	
+	// include a template part from within the "template-parts/block" folder
+	if( file_exists(STYLESHEETPATH . "/template-parts/block/content-{$slug}.php") ) {
+		include( STYLESHEETPATH . "/template-parts/block/content-{$slug}.php" );
+	}
+}
+
+
 
 
 
