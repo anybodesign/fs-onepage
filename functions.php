@@ -65,6 +65,21 @@ function fs_blocks_setup() {
 	        'slug' => 'secondary-color',
 	        'color' => get_theme_mod('secondary_color', '#606060'),
 	    ),
+	    array(
+	        'name' => esc_html__( 'Contrast color', 'fs-blocks' ),
+	        'slug' => 'third-color',
+	        'color' => get_theme_mod('third_color', '#909090'),
+	    ),
+	    array(
+	        'name' => esc_html__( 'White', 'fs-blocks' ),
+	        'slug' => 'white-color',
+	        'color' => '#ffffff',
+	    ),
+	    array(
+	        'name' => esc_html__( 'Black', 'fs-blocks' ),
+	        'slug' => 'black-color',
+	        'color' => '#303030',
+	    ),
 	));	
 	
 	add_theme_support( 'disable-custom-colors' );
@@ -419,43 +434,6 @@ function fs_blocks_search_form( $form ) {
     return $form;
 }
 add_filter( 'get_search_form', 'fs_blocks_search_form' );
-
-
-// ACF Blocks
-
-
-add_action('acf/init', 'my_acf_init');
-function my_acf_init() {
-	
-	// check function exists
-	if( function_exists('acf_register_block') ) {
-		
-		// register a testimonial block
-		acf_register_block(array(
-			'name'				=> 'testimonial',
-			'title'				=> __('Testimonial'),
-			'description'		=> __('A custom testimonial block.'),
-			'render_callback'	=> 'my_acf_bock_render_callback',
-			'category'			=> 'formatting',
-			'icon'				=> 'admin-comments',
-			'keywords'			=> array( 'testimonial', 'quote' ),
-		));
-	}
-}
-
-function my_acf_bock_render_callback( $block ) {
-	
-	// convert name ("acf/testimonial") into path friendly slug ("testimonial")
-	$slug = str_replace('acf/', '', $block['name']);
-	
-	// include a template part from within the "template-parts/block" folder
-	if( file_exists(STYLESHEETPATH . "/template-parts/block/content-{$slug}.php") ) {
-		include( STYLESHEETPATH . "/template-parts/block/content-{$slug}.php" );
-	}
-}
-
-
-
 
 
 // ------------------------

@@ -10,6 +10,10 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 1.6.6 - 2018.11.25
+* Third color for contrast
+* White and Black colors
+
 ### 1.6.5 - 2018.11.25
 * Carousel of posts 
 * Widget area in footer

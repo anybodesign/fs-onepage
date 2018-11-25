@@ -55,6 +55,21 @@ function fs_customize_register($wp_customize) {
 		'section'	=> 'colors',
 		'settings'	=> 'secondary_color',
 	)));
+	
+	// Contrast color
+	
+	$wp_customize->add_setting('third_color', array(
+		'default'			=> '909090',
+		'sanitize_callback'	=> 'sanitize_hex_color',
+		'capability'		=> 'edit_theme_options',
+		'type'				=> 'theme_mod',
+		'transport'			=> 'refresh', 
+	));
+	$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'third_color_ctrl', array(
+		'label'		=> __('Contrast color', 'fs-blocks'),
+		'section'	=> 'colors',
+		'settings'	=> 'third_color',
+	)));
 
 		
 	// Site logo

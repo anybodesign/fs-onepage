@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Blocks\n"
-"POT-Creation-Date: 2018-10-12 09:00+0200\n"
-"PO-Revision-Date: 2018-10-12 09:01+0200\n"
+"POT-Creation-Date: 2018-11-25 16:06+0100\n"
+"PO-Revision-Date: 2018-11-25 16:07+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -69,47 +69,59 @@ msgstr "Couleur primaire"
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: functions.php:275
+#: functions.php:69 inc/customizer.php:69
+msgid "Contrast color"
+msgstr "Couleur de contraste"
+
+#: functions.php:74
+msgid "White"
+msgstr "Blanc"
+
+#: functions.php:79
+msgid "Black"
+msgstr "Noir"
+
+#: functions.php:290
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:276
+#: functions.php:291
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:298
+#: functions.php:313
 msgid "Continue reading"
 msgstr "Continuer la lecture"
 
-#: functions.php:341
+#: functions.php:356
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:342
+#: functions.php:357
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:343
+#: functions.php:358
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:351
+#: functions.php:366
 msgid "Categories Widgets Area"
 msgstr "Emplacement du widget catégories"
 
-#: functions.php:360
+#: functions.php:375
 msgid "Footer Widgets Area"
 msgstr "Emplacement des widgets du pied de page"
 
-#: functions.php:414
+#: functions.php:429
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:415
+#: functions.php:430
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:416
+#: functions.php:431
 msgid "Search"
 msgstr "Chercher"
 
@@ -145,31 +157,31 @@ msgstr "Couleurs du thème"
 msgid "Colors customisation"
 msgstr "Personnalisation des couleurs"
 
-#: inc/customizer.php:68
+#: inc/customizer.php:83
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:81
+#: inc/customizer.php:96
 msgid "Make your website a one-page"
 msgstr "Faites de votre site un one-page"
 
-#: inc/customizer.php:94
+#: inc/customizer.php:109
 msgid "Display your posts like a carousel"
 msgstr "Affichez vos articles en carrousel"
 
-#: inc/customizer.php:107
+#: inc/customizer.php:122
 msgid "Open your posts with Fancybox"
 msgstr "Ouvrez vos articles avec FancyBox"
 
-#: inc/customizer.php:119
+#: inc/customizer.php:134
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:120
+#: inc/customizer.php:135
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:134
+#: inc/customizer.php:149
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
@@ -264,7 +276,7 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/page-frontpage.php:23
+#: template-parts/page-frontpage.php:24
 msgid "Scroll Down"
 msgstr "Défiler vers le bas"
 
