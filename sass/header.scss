@@ -34,7 +34,10 @@
 
 	& > .row {
 		align-items: center;
-		//justify-content: center;
+		
+		.non-one-page & {
+			align-items: flex-end;
+		}
 	}
 }
 

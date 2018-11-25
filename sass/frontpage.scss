@@ -4,7 +4,11 @@
 
 .front-page-section {
 	@extend .page-section;
-	align-items: flex-start; 
+	align-items: flex-start;
+	
+	.non-one-page & {
+		min-height: 75vh;
+	} 
 }
 .front-page-content {
 	position: relative;

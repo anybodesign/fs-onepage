@@ -10,6 +10,11 @@ If you don’t need the ACF page builder, remove the ACF lines in the functions.
 
 ## Changelog
 
+### 1.7 - 2018.11.25
+* Customizer: colors output fix
+* Non one-page option completed
+* …
+
 ### 1.6.6 - 2018.11.25
 * Third color for contrast
 * White and Black colors

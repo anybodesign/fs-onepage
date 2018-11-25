@@ -24,6 +24,10 @@
 		background-color: #fff;
 	}
 	
+	.non-one-page & {
+		justify-content: flex-start;
+	}
+	
 	.admin-bar & {
 		
 		@include rwd(80rem) {
