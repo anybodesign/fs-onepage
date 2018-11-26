@@ -6,9 +6,11 @@ A Gutenberg friendly WordPress Theme by Thomas Villain @ anybodesign.com
 
 ### One-Page
 
-In the Customizer, you can make your website a one-page. Then, all your pages will be displayed on the front page and the main navigation menu will be automaticaly created. Menu items will scroll to their section.
+In the Customizer, you can make your website a one-page. Then, all your pages will be displayed on the front page and the main navigation menu will be automaticaly created. On click, menu items will scroll the page to their section.
+
 It is recommanded that you set a front page and a page for posts.
-You can sort your pages with the [Simple Custom Post Order] (https://wordpress.org/plugins/simple-custom-post-order/) plugin for example.
+
+You can sort your pages with the [Simple Custom Post Order](https://wordpress.org/plugins/simple-custom-post-order/) plugin for example.
 
 ### Carousel of posts
 
@@ -18,18 +20,19 @@ You can display all your posts as a carousel (only work when the one-page option
 
 You can set 3 different colors: 
 * The primary one should be dark enough to support white text. 
-* The secondary one will used as background color for sections (with a low opacity) and color for links. 
-* The contrast colors can be used for styling blocks in the new editor.
+* The secondary one will be used as background color for sections (with a low opacity) and color for links. 
+* The contrast color can be used to style blocks in the new editor.
 
 ### Page templates
 
-Some page templates can be useful.
+These page templates could be useful:
 * Animated image: the featured image is set to 50% of the screen width and is slightly animated.
 * Standalone page: with the one-page option set, this kind of page will not appear in the main navigation menu, but will link to another page.
 
 ## Menus
 
-There are two navigation menus locations: _main menu_ in the header and _footer menu_ in the footer :)
+There are two navigation menu locations: _main menu_ in the header and _footer menu_ in the footer :)
+
 When the one-page option is set, the main menu location is used to display your pages.
 
 ## Widgets
@@ -42,7 +45,6 @@ There are two widgets area: one for the sidebar and one for the footer.
 * Wigets styles
 * CSS refactor
 * Gutenberg gallery css
-
 
 ## Changelog
 
