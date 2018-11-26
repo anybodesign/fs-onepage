@@ -8,7 +8,7 @@ A Gutenberg friendly WordPress Theme by Thomas Villain @ anybodesign.com
 
 In the Customizer, you can make your website a one-page. Then, all your pages will be displayed on the front page and the main navigation menu will be automaticaly created. Menu items will scroll to their section.
 It is recommanded that you set a front page and a page for posts.
-You can sort your pages with the [Simple Custom Post Order] (https://wordpress.org/plugins/simple-custom-post-order/) plugin for example.
+You can sort your pages with the [Simple Custom Post Order](https://wordpress.org/plugins/simple-custom-post-order/) plugin for example.
 
 ### Carousel of posts
 
