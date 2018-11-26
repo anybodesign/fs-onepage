@@ -2,14 +2,15 @@
 // -
 // + + + + + + + + + + + +
 
-.content-area {
-	
+.page-wrap {
+
 	.non-one-page & {
 		padding-top: 8rem;
 	}
 	.home.non-one-page & {
-		padding-top: 0;
+		padding-top: $grid-padding*2;
 	}
+	
 }
 
 .page-section {
@@ -61,7 +62,7 @@
 }
 
 .page-content {
-	
+
 	& > [class*="wp-block-"], 
 	& > p,
 	& > ul,
@@ -165,7 +166,7 @@
 	padding: $grid-padding;
 	
 	.page-title {
-		padding: $grid-padding*2 0;
+		//padding: $grid-padding*2 0;
 		margin-bottom: 0;
 	}
 }

@@ -102,7 +102,8 @@
 	}
 }
 .post-single-content {
-
+	padding-top: $grid-padding*2;
+	
 	@include rwd(large) {
 		@include center();
 		

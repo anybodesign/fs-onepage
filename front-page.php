@@ -11,13 +11,20 @@
  */
 
 get_header(); ?>
+				
+			<?php if ( is_home() ) {
 
+				get_template_part('template-parts/page', 'frontpage-banner');
+				get_template_part( 'template-parts/post', 'frontpage' );
+				
+			} else { ?>
+				
 				<?php // Banner output
 					
 					while ( have_posts() ) : the_post();
 					
 						get_template_part( 'template-parts/page', 'frontpage' ); 
-	
+					
 					endwhile;
 				?>
 				
@@ -53,5 +60,8 @@ get_header(); ?>
 					endif;
 				
 				} ?>
+
+
+			<?php } ?>
 									
 <?php get_footer(); ?>
