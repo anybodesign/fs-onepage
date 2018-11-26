@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Blocks\n"
-"POT-Creation-Date: 2018-11-25 16:06+0100\n"
-"PO-Revision-Date: 2018-11-25 16:07+0100\n"
+"POT-Creation-Date: 2018-11-26 08:27+0100\n"
+"PO-Revision-Date: 2018-11-26 08:27+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -61,15 +61,15 @@ msgstr "Propulsé par WordPress !"
 msgid "Footer menu"
 msgstr "Menu pied de page"
 
-#: functions.php:59 inc/customizer.php:39
+#: functions.php:59 inc/customizer.php:44
 msgid "Primary color"
 msgstr "Couleur primaire"
 
-#: functions.php:64 inc/customizer.php:54
+#: functions.php:64 inc/customizer.php:59
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: functions.php:69 inc/customizer.php:69
+#: functions.php:69 inc/customizer.php:74
 msgid "Contrast color"
 msgstr "Couleur de contraste"
 
@@ -141,47 +141,48 @@ msgstr "Menu principal"
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/customizer.php:19
+#: inc/customizer.php:20
 msgid "Theme Options"
 msgstr "Options du thème"
 
-#: inc/customizer.php:20
+#: inc/customizer.php:21
 msgid "Theme customisation"
 msgstr "Personnalisation du thème"
 
-#: inc/customizer.php:24
+#: inc/customizer.php:25
 msgid "Theme Colors"
 msgstr "Couleurs du thème"
 
-#: inc/customizer.php:25
+#: inc/customizer.php:26
 msgid "Colors customisation"
 msgstr "Personnalisation des couleurs"
 
-#: inc/customizer.php:83
-msgid "Site Logo"
-msgstr "Logo du site"
-
-#: inc/customizer.php:96
+#: inc/customizer.php:91
 msgid "Make your website a one-page"
 msgstr "Faites de votre site un one-page"
 
-#: inc/customizer.php:109
-msgid "Display your posts like a carousel"
-msgstr "Affichez vos articles en carrousel"
+#: inc/customizer.php:104
+msgid "Display your posts like a carousel (one-page only)"
+msgstr "Affichez vos articles en carrousel (one-page seulement)"
 
-#: inc/customizer.php:122
-msgid "Open your posts with Fancybox"
-msgstr "Ouvrez vos articles avec FancyBox"
+#: inc/customizer.php:117
+msgid "Open your posts with Fancybox (available in a future release)"
+msgstr ""
+"Ouvrez vos articles avec FancyBox (disponible dans une prochaine version)"
 
 #: inc/customizer.php:134
+msgid "Site Logo"
+msgstr "Logo du site"
+
+#: inc/customizer.php:147
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:135
+#: inc/customizer.php:148
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:149
+#: inc/customizer.php:162
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
@@ -229,26 +230,6 @@ msgstr "Il n’y a aucun historique des mises à jour disponible."
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: index.php:35
-msgid "Previous page"
-msgstr "Page précédente"
-
-#: index.php:36
-msgid "Next page"
-msgstr "Page suivante"
-
-#: index.php:37
-msgid "Page"
-msgstr "Page"
-
-#: template-parts/acf/builder-content.php:32
-msgid "Read "
-msgstr "Lire "
-
-#: template-parts/acf/builder-gallery.php:32
-msgid "Enlarge picture"
-msgstr "Agrandir l'image"
-
 #: template-parts/nothing.php:14
 msgid "Nothing Found"
 msgstr "Aucun résultat"
@@ -276,7 +257,7 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/page-frontpage.php:24
+#: template-parts/page-frontpage.php:29
 msgid "Scroll Down"
 msgstr "Défiler vers le bas"
 
@@ -335,6 +316,21 @@ msgstr "Page avec image animée (à droite)"
 #. Template Name of the plugin/theme
 msgid "Standalone Page"
 msgstr "Page autonome"
+
+#~ msgid "Previous page"
+#~ msgstr "Page précédente"
+
+#~ msgid "Next page"
+#~ msgstr "Page suivante"
+
+#~ msgid "Page"
+#~ msgstr "Page"
+
+#~ msgid "Read "
+#~ msgstr "Lire "
+
+#~ msgid "Enlarge picture"
+#~ msgstr "Agrandir l'image"
 
 #, fuzzy
 #~| msgid "FS Blocks"

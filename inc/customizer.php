@@ -13,6 +13,7 @@
  
 function fs_customize_register($wp_customize) {
 	 
+	 
 	// Create Some Sections
 	
 	$wp_customize->add_section('fs_options_section', array(
@@ -26,132 +27,142 @@ function fs_customize_register($wp_customize) {
 		'priority'		=> 40,
 	));
 	
-	// Primary color
 	
-	$wp_customize->add_setting('primary_color', array(
-		'default'			=> '303030',
-		'sanitize_callback'	=> 'sanitize_hex_color',
-		'capability'		=> 'edit_theme_options',
-		'type'				=> 'theme_mod',
-		'transport'			=> 'refresh', 
-	));
-	$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'primary_color_ctrl', array(
-		'label'		=> __('Primary color', 'fs-blocks'),
-		'section'	=> 'colors',
-		'settings'	=> 'primary_color',
-	)));
+	// Theme Colors
 	
-	// Secondary color
 	
-	$wp_customize->add_setting('secondary_color', array(
-		'default'			=> '4682B4',
-		'sanitize_callback'	=> 'sanitize_hex_color',
-		'capability'		=> 'edit_theme_options',
-		'type'				=> 'theme_mod',
-		'transport'			=> 'refresh', 
-	));
-	$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'secondary_color_ctrl', array(
-		'label'		=> __('Secondary color', 'fs-blocks'),
-		'section'	=> 'colors',
-		'settings'	=> 'secondary_color',
-	)));
-	
-	// Contrast color
-	
-	$wp_customize->add_setting('third_color', array(
-		'default'			=> '909090',
-		'sanitize_callback'	=> 'sanitize_hex_color',
-		'capability'		=> 'edit_theme_options',
-		'type'				=> 'theme_mod',
-		'transport'			=> 'refresh', 
-	));
-	$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'third_color_ctrl', array(
-		'label'		=> __('Contrast color', 'fs-blocks'),
-		'section'	=> 'colors',
-		'settings'	=> 'third_color',
-	)));
+		// Primary color
+		
+		$wp_customize->add_setting('primary_color', array(
+			'default'			=> '303030',
+			'sanitize_callback'	=> 'sanitize_hex_color',
+			'capability'		=> 'edit_theme_options',
+			'type'				=> 'theme_mod',
+			'transport'			=> 'refresh', 
+		));
+		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'primary_color_ctrl', array(
+			'label'		=> __('Primary color', 'fs-blocks'),
+			'section'	=> 'colors',
+			'settings'	=> 'primary_color',
+		)));
+		
+		// Secondary color
+		
+		$wp_customize->add_setting('secondary_color', array(
+			'default'			=> '4682B4',
+			'sanitize_callback'	=> 'sanitize_hex_color',
+			'capability'		=> 'edit_theme_options',
+			'type'				=> 'theme_mod',
+			'transport'			=> 'refresh', 
+		));
+		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'secondary_color_ctrl', array(
+			'label'		=> __('Secondary color', 'fs-blocks'),
+			'section'	=> 'colors',
+			'settings'	=> 'secondary_color',
+		)));
+		
+		// Contrast color
+		
+		$wp_customize->add_setting('third_color', array(
+			'default'			=> '909090',
+			'sanitize_callback'	=> 'sanitize_hex_color',
+			'capability'		=> 'edit_theme_options',
+			'type'				=> 'theme_mod',
+			'transport'			=> 'refresh', 
+		));
+		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'third_color_ctrl', array(
+			'label'		=> __('Contrast color', 'fs-blocks'),
+			'section'	=> 'colors',
+			'settings'	=> 'third_color',
+		)));
 
 		
-	// Site logo
+	// Theme Options
 	
-	$wp_customize->add_setting('site_logo', array(
-		'default'				=> '',
-		'sanitize_callback'		=> 'esc_url_raw'
-	));
-	
-	$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo_ctrl', array(
-		'label'			=> __('Site Logo', 'fs-blocks'),
-		'section'		=> 'title_tagline',
-		'settings'		=> 'site_logo',
-	)));	
 
-	// One Page Style
+		// One Page Style
+		
+		$wp_customize->add_setting('onepage', array(
+			'default'	=> false,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
+		));
+		$wp_customize->add_control('onepage_ctrl', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Make your website a one-page', 'fs-blocks'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'onepage',
+		));
+		
+		// Carousel for Posts
+		
+		$wp_customize->add_setting('carousel_posts', array(
+			'default'	=> false,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
+		));
+		$wp_customize->add_control('carousel_posts_ctrl', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Display your posts like a carousel (one-page only)', 'fs-blocks'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'carousel_posts',
+		));	
 	
-	$wp_customize->add_setting('onepage', array(
-		'default'	=> false,
-		'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
-	));
-	$wp_customize->add_control('onepage_ctrl', array(
-		'type'			=> 'checkbox',
-		'label'			=> __('Make your website a one-page', 'fs-blocks'),
-		'section'		=> 'fs_options_section',
-		'settings'		=> 'onepage',
-	));
-	
-	// Carousel for Posts
-	
-	$wp_customize->add_setting('carousel_posts', array(
-		'default'	=> false,
-		'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
-	));
-	$wp_customize->add_control('carousel_posts_ctrl', array(
-		'type'			=> 'checkbox',
-		'label'			=> __('Display your posts like a carousel', 'fs-blocks'),
-		'section'		=> 'fs_options_section',
-		'settings'		=> 'carousel_posts',
-	));	
+		// Open News in Modals
+		
+		$wp_customize->add_setting('modals', array(
+			'default'	=> false,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
+		));
+		$wp_customize->add_control('modals_ctrl', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Open your posts with Fancybox (available in a future release)', 'fs-blocks'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'modals',
+		));	
 
-	// Open News in Modals
 	
-	$wp_customize->add_setting('modals', array(
-		'default'	=> false,
-		'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
-	));
-	$wp_customize->add_control('modals_ctrl', array(
-		'type'			=> 'checkbox',
-		'label'			=> __('Open your posts with Fancybox', 'fs-blocks'),
-		'section'		=> 'fs_options_section',
-		'settings'		=> 'modals',
-	));	
-	
-	// Footer text
-	
-	$wp_customize->add_setting('footer_text', array(
-		'default'				=> '',
-		'sanitize_callback'		=> 'sanitize_text_field'
-	));
-	$wp_customize->add_control('footer_text_ctrl', array(
-		'label'			=> __('Custom footer text', 'fs-blocks'),
-		'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-blocks'),
-		'section'		=> 'fs_options_section',
-		'settings'		=> 'footer_text',
-	));	
-	
-	// WP Credits
-	
-	$wp_customize->add_setting('display_wp', array(
-		'default'			=> false,
-		'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
-	));
-	
-	$wp_customize->add_control('display_wp_ctrl', array(
-		'type'			=> 'checkbox',
-		'label'			=> __('Display WordPress Link', 'fs-blocks'),
-		'section'		=> 'fs_options_section',
-		'settings'		=> 'display_wp',
-	));
+	// Theme settings
 
 
+		// Site logo
+		
+		$wp_customize->add_setting('site_logo', array(
+			'default'				=> '',
+			'sanitize_callback'		=> 'esc_url_raw'
+		));
+		
+		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo_ctrl', array(
+			'label'			=> __('Site Logo', 'fs-blocks'),
+			'section'		=> 'title_tagline',
+			'settings'		=> 'site_logo',
+		)));	
+		
+		
+		// Footer text
+		
+		$wp_customize->add_setting('footer_text', array(
+			'default'				=> '',
+			'sanitize_callback'		=> 'sanitize_text_field'
+		));
+		$wp_customize->add_control('footer_text_ctrl', array(
+			'label'			=> __('Custom footer text', 'fs-blocks'),
+			'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-blocks'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'footer_text',
+		));	
+		
+		// WP Credits
+		
+		$wp_customize->add_setting('display_wp', array(
+			'default'			=> false,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+		));
+		
+		$wp_customize->add_control('display_wp_ctrl', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Display WordPress Link', 'fs-blocks'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'display_wp',
+		));
 	 
 }
 add_action('customize_register', 'fs_customize_register');
