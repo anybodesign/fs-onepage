@@ -48,6 +48,9 @@ There are two widgets area: one for the sidebar and one for the footer.
 
 ## Changelog
 
+### 1.7.1 - 2018.12.14
+* Loop fix for WP 5.0 (Thanks to Loïc Blascos)
+
 ### 1.7 - 2018.11.25
 * Customizer: colors output fix
 * Non one-page nav completed

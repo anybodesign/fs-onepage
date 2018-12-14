@@ -78,12 +78,17 @@
 							'post_type' 		=> 'page',
 							'post__not_in'		=> array($frontpage),
 							'meta_query'		=> array(
+								'relation' 		=> 'OR',
 								array(
 									'key'		=> '_wp_page_template',
 									'value'		=> 'pagecustom-standalone.php',
-									'compare'	=> '!='
-								)
-							),							
+									'compare'	=> '!=',
+								),
+							    array(
+							        'key'       => '_wp_page_template',
+							        'compare'   => 'NOT EXISTS',
+							    ),
+							),
 						);
 						$onepage = new WP_Query($pageargs);
 			
