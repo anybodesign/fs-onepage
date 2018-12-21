@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Blocks\n"
-"POT-Creation-Date: 2018-11-26 08:27+0100\n"
-"PO-Revision-Date: 2018-11-26 08:27+0100\n"
+"POT-Creation-Date: 2018-12-21 11:33+0100\n"
+"PO-Revision-Date: 2018-12-21 11:33+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -81,47 +81,63 @@ msgstr "Blanc"
 msgid "Black"
 msgstr "Noir"
 
-#: functions.php:290
+#: functions.php:90
+msgid "Small"
+msgstr "Petite"
+
+#: functions.php:91
+msgid "S"
+msgstr "S"
+
+#: functions.php:96
+msgid "Large"
+msgstr "Grande"
+
+#: functions.php:97
+msgid "L"
+msgstr "L"
+
+#: functions.php:310
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:291
+#: functions.php:311
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:313
+#: functions.php:333
 msgid "Continue reading"
 msgstr "Continuer la lecture"
 
-#: functions.php:356
+#: functions.php:376
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:357
+#: functions.php:377
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:358
+#: functions.php:378
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:366
+#: functions.php:386
 msgid "Categories Widgets Area"
 msgstr "Emplacement du widget catégories"
 
-#: functions.php:375
+#: functions.php:395
 msgid "Footer Widgets Area"
 msgstr "Emplacement des widgets du pied de page"
 
-#: functions.php:429
+#: functions.php:449
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:430
+#: functions.php:450
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:431
+#: functions.php:451
 msgid "Search"
 msgstr "Chercher"
 
@@ -137,7 +153,7 @@ msgstr "Aller au menu principal"
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: header.php:108
+#: header.php:113
 msgid "Menu"
 msgstr "Menu"
 
@@ -257,7 +273,7 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/page-frontpage.php:29
+#: template-parts/page-frontpage-banner.php:25
 msgid "Scroll Down"
 msgstr "Défiler vers le bas"
 
@@ -316,6 +332,12 @@ msgstr "Page avec image animée (à droite)"
 #. Template Name of the plugin/theme
 msgid "Standalone Page"
 msgstr "Page autonome"
+
+#~ msgid "Regular"
+#~ msgstr "Normale"
+
+#~ msgid "M"
+#~ msgstr "M"
 
 #~ msgid "Previous page"
 #~ msgstr "Page précédente"
