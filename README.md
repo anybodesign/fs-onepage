@@ -44,9 +44,16 @@ There are two widgets area: one for the sidebar and one for the footer.
 * Comments styles
 * Wigets styles
 * CSS refactor
-* Gutenberg gallery css
+* Gutenberg gallery css (prefix?)
 
 ## Changelog
+
+### 1.7.2 - 2018.12.21
+* Custom CSS removed for gallery blocks
+* Defined font sizes
+* Disable custom font sizes
+* Responsive embeds
+
 
 ### 1.7.1 - 2018.12.14
 * Loop fix for WP 5.0 (Thanks to Loïc Blascos)
