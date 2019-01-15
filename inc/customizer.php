@@ -215,7 +215,8 @@ function fs_colors() {
 		.wp-block-button .wp-block-button__link,
 		.sub-menu > li a:hover, 
 		.sub-menu > li a.focus-visible,
-		.sub-menu > li.current-menu-item a { 
+		.sub-menu > li.current-menu-item a,
+		.acf-block-gallery-figure .acf-block-gallery-caption { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
 		.has-primary-color-background-color {
@@ -223,7 +224,7 @@ function fs_colors() {
 		}
 		
 		.wp-block-gallery .blocks-gallery-image figcaption, 
-		.wp-block-gallery .blocks-gallery-item figcaption  { 
+		.wp-block-gallery .blocks-gallery-item figcaption { 
 			background: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
 		legend,
