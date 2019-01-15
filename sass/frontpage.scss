@@ -4,10 +4,11 @@
 
 .front-page-section {
 	@extend .page-section;
+	height: 100vh; // IE 11
 	align-items: flex-start;
 	
 	.non-one-page & {
-		min-height: 75vh;
+		height: 75vh;
 		justify-content: center !important;
 	} 
 }

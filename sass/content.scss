@@ -63,6 +63,7 @@
 
 .page-content {
 
+	& > .ad-acf-block,
 	& > [class*="wp-block-"], 
 	& > p,
 	& > ul,
@@ -80,6 +81,7 @@
 		@include center();
 	}
 	
+	& > .ad-acf-block.alignfull,
 	& > [class*="wp-block-"].alignfull,
 	& > .page-figure {
 		padding: 0;

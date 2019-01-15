@@ -178,3 +178,23 @@
 
 
 // Gallery /Gut  ** backwards compatibility -webkit- prefix? **
+
+.wp-block-gallery {
+	
+	.blocks-gallery-image,
+	.blocks-gallery-item { 
+		figcaption {
+			padding: $grid-padding;
+		}
+	}
+	
+}  
+
+
+// Gallery ACF
+
+.acf-block-gallery-figure {
+	background-color: transparent;
+}
+
+
