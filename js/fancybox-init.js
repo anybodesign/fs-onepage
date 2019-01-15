@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 	
-	$('.blocks-gallery-item a').fancybox({
+	$('.blocks-gallery-item a, .fancyzoom').fancybox({
 		loop: true,
 		buttons : [
 			'close'
