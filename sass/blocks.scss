@@ -159,6 +159,15 @@
 	
 }
 
+// Separators 
+
+hr,
+.wp-block-separator {
+	max-width: 20rem !important;
+	margin-top: 2rem !important;
+	border: 0;
+	border-top: #444 1px solid;
+}
 
 // Quotes
 
