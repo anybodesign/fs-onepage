@@ -201,9 +201,11 @@
 			max-width: none;
 			padding-left: calc( (100% - #{$max-width}) /2 + #{$grid-padding} );
 		}
-		.page-content,
+		.page-content {
+			width: 60%;
+		}
 		.animated-figure {
-			width: 50%;
+			width: 40%;
 		}
 		.page-content {
 			padding-left: calc( ( 100% - #{$max-width}) /2 );
