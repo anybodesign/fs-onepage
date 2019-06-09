@@ -25,7 +25,7 @@
 		if ($one) { $oneclass = 'one-page '; } else { $oneclass = 'non-one-page'; }	
 	?>
 	<script>
-		var theme_path = '<?= get_bloginfo('template_url'); ?>';
+		var theme_path = '<?php echo get_template_directory_uri() ?>';
 	</script>
 </head>
 

@@ -48,6 +48,10 @@ There are two widgets area: one for the sidebar and one for the footer.
 
 ## Changelog
 
+### 1.7.3 - 2019.06.09
+* Page colums width change
+* WP block separator
+
 ### 1.7.2 - 2018.12.21
 * Custom CSS removed for gallery blocks
 * Defined font sizes

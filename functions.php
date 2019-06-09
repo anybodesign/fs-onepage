@@ -134,7 +134,7 @@ function fs_blocks_scripts_load() {
 		
 		// JS 
 		
-		wp_deregister_script( 'jquery' );
+		//wp_deregister_script( 'jquery' );
 
 		wp_enqueue_script(
 			'jquery', 
@@ -330,7 +330,7 @@ function fs_custom_excerpt( $length ) {
 add_filter( 'excerpt_length', 'fs_custom_excerpt', 999 );
 
 function fs_excerpt_more( $more ) {
-	return '… <br><a href="'. get_permalink( get_the_ID() ) . '">' . __('Continue reading', 'fs-blog') . '</a>';
+	return '… <br><a href="'. get_permalink( get_the_ID() ) . '">' . __('Continue reading', 'fs-blocks') . '</a>';
 }
 add_filter( 'excerpt_more', 'fs_excerpt_more' );
 
@@ -459,8 +459,6 @@ add_filter( 'get_search_form', 'fs_blocks_search_form' );
 // ------------------------
 // Auto-Updater
 // ------------------------
-
-// Remove these lines and dependencies for your theme
 
 require 'inc/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
