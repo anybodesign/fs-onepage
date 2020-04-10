@@ -14,6 +14,8 @@ html {
 body {
 	font-size: 1.6em; 				// base font-size is equivalent "14px"
     line-height: 1.5;
+	font-family: $font-regular;
+	color: $text-color;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -72,21 +74,8 @@ h6,
     line-height: 1.2;
 }
 
-p, 
-ul, ol, dl, 
-blockquote, 
-pre, 
-td, th, 
-textarea,
-label, legend, figcaption, 
-hgroup, address,
-time, span,
-small {
-    font-size: 1.6rem;
-    line-height: 1.5;
+p {
     margin: 0 0 $grid-padding*2 0;
-	font-family: $font-regular;
-	color: $text-color;
 }
 span {
 	font-family: inherit;
@@ -152,31 +141,7 @@ a:hover {
 	
 	p {
 		a:not([class*="action-btn"]) {
-			text-decoration: none;
-			color: $secondary-color;
-			border-bottom: $secondary-color 2px solid;
-			transition: .2s ease-in-out;
-			
-			&:hover {
-				border-bottom-width: 4px;
-			}
-			&.focus-visible {
-				background-color: $text-color;
-				border-bottom-color: $text-color;
-				color: #fff;
-			}
-			&:visited {
-				color: $text-color;
-				border-bottom: $text-color 1px solid;
-				
-				&.focus-visible {
-					color: #fff;
-				}
-			}
-			&:active {
-				color: $secondary-color;
-				border-bottom-color: transparent;
-			}
+			@include link-style();
 		}
 	}
 	
@@ -242,7 +207,6 @@ figure {
 	margin: 0 0 $grid-padding 0;
 	overflow: hidden;
 	background-color: #fff;
-	//box-shadow: 0 0 0 2px #fff, 0 0 1rem .5rem transparentize($text-color, .8); 
 	
 	&.alignfull,
 	.wp-block-gallery & {
@@ -499,7 +463,7 @@ input[type=submit].action-btn {
 	
 	&.focus-visible, 
 	&:hover {
-		background-color: $secondary-color;
+		background-color: $text-color;
 	}
 	&:focus {
 		outline: none;

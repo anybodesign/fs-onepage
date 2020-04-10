@@ -88,7 +88,7 @@ function fs_customize_register($wp_customize) {
 		));
 		$wp_customize->add_control('carousel_posts_ctrl', array(
 			'type'			=> 'checkbox',
-			'label'			=> __('Display your posts like a carousel (one-page only)', 'fs-onepage'),
+			'label'			=> __('Display your posts like a carousel', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'carousel_posts',
 		));	
@@ -243,16 +243,9 @@ function fs_colors() {
 			}
 		}
 		
-		.action-btn:hover,
-		button.action-btn:hover,
-		input[type=submit].action-btn:hover,
-		.action-btn.focus-visible,
-		button.action-btn.focus-visible,
-		input[type=submit].action-btn.focus-visible,
 		.formfield-radio input[type="radio"] + label::after,
 		.formfield-radio input[type="radio"] + span::after,
 		body::after,
-		input[type="submit"]:hover,
 		.wp-block-file a.wp-block-file__button:hover,
 		.wp-block-file a.wp-block-file__button.focus-visible,
 		.wp-block-button .wp-block-button__link:hover,
