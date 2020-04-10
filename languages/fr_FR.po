@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: FS Blocks\n"
-"POT-Creation-Date: 2019-02-07 18:47+0100\n"
-"PO-Revision-Date: 2019-02-07 18:47+0100\n"
+"Project-Id-Version: FS Onepage\n"
+"POT-Creation-Date: 2020-04-10 18:38+0200\n"
+"PO-Revision-Date: 2020-04-10 18:38+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -26,7 +26,7 @@ msgstr "Oops! Page introuvable"
 
 #: 404.php:19
 msgid "It looks like nothing was found at this location."
-msgstr "Il semblerait que rien n’ai été trouvé à cette adresse."
+msgstr "Il semblerait que rien n’ait été trouvé à cette adresse."
 
 #: 404.php:20 header.php:62 header.php:63 template-parts/header-brand.php:19
 msgid "Go to Home Page"
@@ -97,47 +97,47 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:310
+#: functions.php:302
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:311
+#: functions.php:303
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:333
+#: functions.php:325
 msgid "Continue reading"
 msgstr "Continuer la lecture"
 
-#: functions.php:376
+#: functions.php:368
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:377
+#: functions.php:369
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:378
+#: functions.php:370
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:386
+#: functions.php:378
 msgid "Categories Widgets Area"
 msgstr "Emplacement du widget catégories"
 
-#: functions.php:395
+#: functions.php:387
 msgid "Footer Widgets Area"
 msgstr "Emplacement des widgets du pied de page"
 
-#: functions.php:449
+#: functions.php:441
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:450
+#: functions.php:442
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:451
+#: functions.php:443
 msgid "Search"
 msgstr "Chercher"
 
@@ -174,31 +174,27 @@ msgid "Colors customisation"
 msgstr "Personnalisation des couleurs"
 
 #: inc/customizer.php:91
-msgid "Make your website a one-page"
-msgstr "Faites de votre site un one-page"
-
-#: inc/customizer.php:104
 msgid "Display your posts like a carousel (one-page only)"
 msgstr "Affichez vos articles en carrousel (one-page seulement)"
 
-#: inc/customizer.php:117
+#: inc/customizer.php:104
 msgid "Open your posts with Fancybox (available in a future release)"
 msgstr ""
 "Ouvrez vos articles avec FancyBox (disponible dans une prochaine version)"
 
-#: inc/customizer.php:134
+#: inc/customizer.php:121
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:147
+#: inc/customizer.php:134
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:148
+#: inc/customizer.php:135
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:162
+#: inc/customizer.php:149
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
@@ -302,12 +298,12 @@ msgid "Comment(s)"
 msgstr "Commentaire(s)"
 
 #. Theme Name of the plugin/theme
-msgid "FS Blocks"
-msgstr "FS Blocks"
+msgid "FS Onepage"
+msgstr "FS Onepage"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/anybodesign/fs-blocks"
-msgstr "https://github.com/anybodesign/fs-blocks"
+msgid "https://github.com/anybodesign/fs-onepage"
+msgstr "https://github.com/anybodesign/fs-onepage"
 
 #. Description of the plugin/theme
 msgid "A Gutenberg friendly WordPress Theme"
@@ -333,6 +329,9 @@ msgstr "Page avec image animée (à droite)"
 msgid "Standalone Page"
 msgstr "Page autonome"
 
+#~ msgid "Make your website a one-page"
+#~ msgstr "Faites de votre site un one-page"
+
 #~ msgid "Regular"
 #~ msgstr "Normale"
 
@@ -355,21 +354,21 @@ msgstr "Page autonome"
 #~ msgstr "Agrandir l'image"
 
 #, fuzzy
-#~| msgid "FS Blocks"
+#~| msgid "FS Onepage"
 #~ msgctxt "Post Type General Name"
 #~ msgid "Portfolio"
-#~ msgstr "FS Blocks"
+#~ msgstr "FS Onepage"
 
 #, fuzzy
-#~| msgid "FS Blocks"
+#~| msgid "FS Onepage"
 #~ msgctxt "Post Type Singular Name"
 #~ msgid "Portfolio"
-#~ msgstr "FS Blocks"
+#~ msgstr "FS Onepage"
 
 #, fuzzy
-#~| msgid "FS Blocks"
+#~| msgid "FS Onepage"
 #~ msgid "Portfolio"
-#~ msgstr "FS Blocks"
+#~ msgstr "FS Onepage"
 
 #~ msgid "All Creations"
 #~ msgstr "Toutes les créations"
@@ -408,9 +407,9 @@ msgstr "Page autonome"
 #~ msgstr "Utilisatier en tant qu’image de référence"
 
 #, fuzzy
-#~| msgid "FS Blocks"
+#~| msgid "FS Onepage"
 #~ msgid "portfolio"
-#~ msgstr "FS Blocks"
+#~ msgstr "FS Onepage"
 
 #, fuzzy
 #~| msgid "Anybodesign Blocks"
