@@ -1,7 +1,7 @@
 <?php if ( !defined('ABSPATH') ) die();
 /**
  * @package WordPress
- * @subpackage FS_Blocks
+ * @subpackage FS_Onepage
  * @since 1.0
  * @version 1.0
  */

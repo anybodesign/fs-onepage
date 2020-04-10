@@ -3,7 +3,7 @@
  * Template part for the site brand.
  *
  * @package WordPress
- * @subpackage FS_Blocks
+ * @subpackage FS_Onepage
  * @since 1.0
  * @version 1.0
  */
@@ -16,7 +16,7 @@
 				</h1>
 				<?php } else { ?>
 				<p class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'fs-blocks'); ?>">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'fs-onepage'); ?>">
 					<?php get_template_part('template-parts/header', 'logo'); ?>
 					</a>
 				</p>

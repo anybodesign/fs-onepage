@@ -1,9 +1,9 @@
 <?php defined('ABSPATH') or die();
 /**
- * FS Blocks Customizer functionality
+ * FS Onepage Customizer functionality
  *
  * @package WordPress
- * @subpackage FS_Blocks
+ * @subpackage FS_Onepage
  * @since 1.0
  * @version 1.0
  */
@@ -17,13 +17,13 @@ function fs_customize_register($wp_customize) {
 	// Create Some Sections
 	
 	$wp_customize->add_section('fs_options_section', array(
-		'title' 		=> __('Theme Options', 'fs-blocks'),
-		'description' 	=> __('Theme customisation', 'fs-blocks'),
+		'title' 		=> __('Theme Options', 'fs-onepage'),
+		'description' 	=> __('Theme customisation', 'fs-onepage'),
 		'priority'		=> 30,
 	));
 	$wp_customize->add_section('fs_color_section', array(
-		'title' 		=> __('Theme Colors', 'fs-blocks'),
-		'description' 	=> __('Colors customisation', 'fs-blocks'),
+		'title' 		=> __('Theme Colors', 'fs-onepage'),
+		'description' 	=> __('Colors customisation', 'fs-onepage'),
 		'priority'		=> 40,
 	));
 	
@@ -41,7 +41,7 @@ function fs_customize_register($wp_customize) {
 			'transport'			=> 'refresh', 
 		));
 		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'primary_color_ctrl', array(
-			'label'		=> __('Primary color', 'fs-blocks'),
+			'label'		=> __('Primary color', 'fs-onepage'),
 			'section'	=> 'colors',
 			'settings'	=> 'primary_color',
 		)));
@@ -56,7 +56,7 @@ function fs_customize_register($wp_customize) {
 			'transport'			=> 'refresh', 
 		));
 		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'secondary_color_ctrl', array(
-			'label'		=> __('Secondary color', 'fs-blocks'),
+			'label'		=> __('Secondary color', 'fs-onepage'),
 			'section'	=> 'colors',
 			'settings'	=> 'secondary_color',
 		)));
@@ -71,7 +71,7 @@ function fs_customize_register($wp_customize) {
 			'transport'			=> 'refresh', 
 		));
 		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'third_color_ctrl', array(
-			'label'		=> __('Contrast color', 'fs-blocks'),
+			'label'		=> __('Contrast color', 'fs-onepage'),
 			'section'	=> 'colors',
 			'settings'	=> 'third_color',
 		)));
@@ -80,19 +80,6 @@ function fs_customize_register($wp_customize) {
 	// Theme Options
 	
 
-		// One Page Style
-		
-		$wp_customize->add_setting('onepage', array(
-			'default'	=> false,
-			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
-		));
-		$wp_customize->add_control('onepage_ctrl', array(
-			'type'			=> 'checkbox',
-			'label'			=> __('Make your website a one-page', 'fs-blocks'),
-			'section'		=> 'fs_options_section',
-			'settings'		=> 'onepage',
-		));
-		
 		// Carousel for Posts
 		
 		$wp_customize->add_setting('carousel_posts', array(
@@ -101,7 +88,7 @@ function fs_customize_register($wp_customize) {
 		));
 		$wp_customize->add_control('carousel_posts_ctrl', array(
 			'type'			=> 'checkbox',
-			'label'			=> __('Display your posts like a carousel (one-page only)', 'fs-blocks'),
+			'label'			=> __('Display your posts like a carousel (one-page only)', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'carousel_posts',
 		));	
@@ -114,7 +101,7 @@ function fs_customize_register($wp_customize) {
 		));
 		$wp_customize->add_control('modals_ctrl', array(
 			'type'			=> 'checkbox',
-			'label'			=> __('Open your posts with Fancybox (available in a future release)', 'fs-blocks'),
+			'label'			=> __('Open your posts with Fancybox (available in a future release)', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'modals',
 		));	
@@ -131,7 +118,7 @@ function fs_customize_register($wp_customize) {
 		));
 		
 		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo_ctrl', array(
-			'label'			=> __('Site Logo', 'fs-blocks'),
+			'label'			=> __('Site Logo', 'fs-onepage'),
 			'section'		=> 'title_tagline',
 			'settings'		=> 'site_logo',
 		)));	
@@ -144,8 +131,8 @@ function fs_customize_register($wp_customize) {
 			'sanitize_callback'		=> 'sanitize_text_field'
 		));
 		$wp_customize->add_control('footer_text_ctrl', array(
-			'label'			=> __('Custom footer text', 'fs-blocks'),
-			'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-blocks'),
+			'label'			=> __('Custom footer text', 'fs-onepage'),
+			'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'footer_text',
 		));	
@@ -159,7 +146,7 @@ function fs_customize_register($wp_customize) {
 		
 		$wp_customize->add_control('display_wp_ctrl', array(
 			'type'			=> 'checkbox',
-			'label'			=> __('Display WordPress Link', 'fs-blocks'),
+			'label'			=> __('Display WordPress Link', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'display_wp',
 		));

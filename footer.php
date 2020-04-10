@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage FS_Blocks
+ * @subpackage FS_Onepage
  * @since 1.0
  * @version 1.0
  */
@@ -35,14 +35,14 @@
 						} ?>
 						
 						<?php if(get_theme_mod('display_wp') == true) { ?>
-						<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'fs-blocks'); ?></a>
+						<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'fs-onepage'); ?></a>
 						<?php } ?>
 					</p>
 					
 					<?php // The footer menu location ?>
 					
 					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
-					<nav class="footer-nav" aria-label="<?php _e('Footer menu', 'fs-blocks'); ?>">
+					<nav class="footer-nav" aria-label="<?php _e('Footer menu', 'fs-onepage'); ?>">
 					<?php wp_nav_menu( array(
 							'theme_location'	=> 	'footer_menu',
 							'menu_class'		=>	'footer-menu',

@@ -1,20 +1,20 @@
-# FS Blocks
+# FS Onepage
 
 A Gutenberg friendly WordPress Theme by Thomas Villain @ anybodesign.com
 
 ## Theme Options
 
-### One-Page
+### One Page
 
-In the Customizer, you can make your website a one-page. Then, all your pages will be displayed on the front page and the main navigation menu will be automaticaly created. On click, menu items will scroll the page to their section.
+All your pages will be displayed on the front page and the main navigation menu will be automaticaly created. On click, menu items will scroll the page to their section.
 
 It is recommanded that you set a front page and a page for posts.
 
-You can sort your pages with the [Simple Custom Post Order](https://wordpress.org/plugins/simple-custom-post-order/) plugin for example.
+You can sort your pages with the [Simple Custom Post Order](https://wordpress.org/plugins/simple-custom-post-order/) plugin for example, or another one if you prefer.
 
 ### Carousel of posts
 
-You can display all your posts as a carousel (only work when the one-page option is set).
+You can display all your posts as a carousel.
 
 ### Colors
 
@@ -42,11 +42,18 @@ There are two widgets area: one for the sidebar and one for the footer.
 ## To-Do
 
 * Comments styles
-* Wigets styles
+* Widgets styles
 * CSS refactor
 * Gutenberg gallery css (prefix?)
 
 ## Changelog
+
+### 1.8 - 2020.———
+* Theme renamed: FS Onepage
+* Pridx removed
+* Custom jQuery version removed
+* Removed Onepage option
+* …
 
 ### 1.7.3 - 2019.06.09
 * Page colums width change

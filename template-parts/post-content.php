@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage FS_Blocks
+ * @subpackage FS_Onepage
  * @since 1.0
  * @version 1.0
  */
@@ -30,14 +30,14 @@
 							<footer class="post-footer">
 								<?php $posttags = get_the_tags(); if ($posttags) { ?>
 								  	<div class="tag-links">
-										<p><?php _e( 'Tagged with:', 'fs-blocks' ); ?></p>
+										<p><?php _e( 'Tagged with:', 'fs-onepage' ); ?></p>
 										<?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
 								  	</div>
 								<?php } ?>					
 								
 								<?php 
 									wp_link_pages(array(
-										'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fs-blocks' ),
+										'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fs-onepage' ),
 										'after'  => '</div>',
 									));
 								?>

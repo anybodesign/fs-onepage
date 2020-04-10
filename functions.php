@@ -13,14 +13,14 @@ if ( ! isset( $content_width ) )
 	$content_width = 2048;
 
 
-if ( ! function_exists( 'fs_blocks_setup' ) ) :
+if ( ! function_exists( 'fs_setup' ) ) :
 
-function fs_blocks_setup() {
+function fs_setup() {
 	
 	
 	// I18n
 	
-	load_theme_textdomain( 'fs-blocks', FS_THEME_DIR . '/languages' );
+	load_theme_textdomain( 'fs-onepage', FS_THEME_DIR . '/languages' );
 	
 	
 	// Theme Support
@@ -56,27 +56,27 @@ function fs_blocks_setup() {
 	
 	add_theme_support( 'editor-color-palette', array(
 	    array(
-	        'name' => esc_html__( 'Primary color', 'fs-blocks' ),
+	        'name' => esc_html__( 'Primary color', 'fs-onepage' ),
 	        'slug' => 'primary-color',
 	        'color' => get_theme_mod('primary_color', '#9c0'),
 	    ),
 	    array(
-	        'name' => esc_html__( 'Secondary color', 'fs-blocks' ),
+	        'name' => esc_html__( 'Secondary color', 'fs-onepage' ),
 	        'slug' => 'secondary-color',
 	        'color' => get_theme_mod('secondary_color', '#606060'),
 	    ),
 	    array(
-	        'name' => esc_html__( 'Contrast color', 'fs-blocks' ),
+	        'name' => esc_html__( 'Contrast color', 'fs-onepage' ),
 	        'slug' => 'third-color',
 	        'color' => get_theme_mod('third_color', '#909090'),
 	    ),
 	    array(
-	        'name' => esc_html__( 'White', 'fs-blocks' ),
+	        'name' => esc_html__( 'White', 'fs-onepage' ),
 	        'slug' => 'white-color',
 	        'color' => '#ffffff',
 	    ),
 	    array(
-	        'name' => esc_html__( 'Black', 'fs-blocks' ),
+	        'name' => esc_html__( 'Black', 'fs-onepage' ),
 	        'slug' => 'black-color',
 	        'color' => '#303030',
 	    ),
@@ -87,14 +87,14 @@ function fs_blocks_setup() {
 	
 	add_theme_support( 'editor-font-sizes', array(
 	    array(
-	        'name' => __( 'Small', 'fs-blocks' ),
-	        'shortName' => __( 'S', 'fs-blocks' ),
+	        'name' => __( 'Small', 'fs-onepage' ),
+	        'shortName' => __( 'S', 'fs-onepage' ),
 	        'size' => 14,
 	        'slug' => 'small'
 	    ),
 	    array(
-	        'name' => __( 'Large', 'fs-blocks' ),
-	        'shortName' => __( 'L', 'fs-blocks' ),
+	        'name' => __( 'Large', 'fs-onepage' ),
+	        'shortName' => __( 'L', 'fs-onepage' ),
 	        'size' => 22,
 	        'slug' => 'large'
 	    ),
@@ -106,12 +106,12 @@ function fs_blocks_setup() {
 
 }
 endif;
-add_action( 'after_setup_theme', 'fs_blocks_setup' );
+add_action( 'after_setup_theme', 'fs_setup' );
 
 
 // Gutenberg editor styles
 
-function fs_blocks_block_editor_styles() {
+function fs_block_editor_styles() {
     wp_enqueue_style( 
     	'block_editor_styles',
     	FS_THEME_URL . '/css/block-editor-style.css', 
@@ -120,7 +120,7 @@ function fs_blocks_block_editor_styles() {
     	'screen'
     );
 }
-add_action( 'enqueue_block_editor_assets', 'fs_blocks_block_editor_styles' );
+add_action( 'enqueue_block_editor_assets', 'fs_block_editor_styles' );
 
 
 
@@ -128,21 +128,13 @@ add_action( 'enqueue_block_editor_assets', 'fs_blocks_block_editor_styles' );
 // Enqueue JS & CSS
 // ------------------------
 
-function fs_blocks_scripts_load() {
+function fs_scripts_load() {
     if (!is_admin()) {
 
 		
 		// JS 
 		
-		//wp_deregister_script( 'jquery' );
-
-		wp_enqueue_script(
-			'jquery', 
-			FS_THEME_URL . '/js/jquery-3.3.1.min.js', 
-			array(), 
-			'3.3.1', 
-			true
-		);
+		wp_enqueue_script( 'jquery' );
 
 
 		if ( get_theme_mod('onepage') == true ) {
@@ -241,7 +233,7 @@ function fs_blocks_scripts_load() {
 		);
 		
 		wp_enqueue_script(
-			'fs-blocks-skip-link-focus-fix', 
+			'fs-onepage-skip-link-focus-fix', 
 			FS_THEME_URL . '/js/skip-link-focus-fix.js', 
 			array(), 
 			false, 
@@ -249,11 +241,11 @@ function fs_blocks_scripts_load() {
 		);
 		
 	    wp_enqueue_script( 
-	    	'main', 
-	    	FS_THEME_URL . '/js/main.js',
-	    	array('jquery'), 
-	    	'1.0', 
-	    	true
+		    	'main', 
+		    	FS_THEME_URL . '/js/main.js',
+		    	array('jquery'), 
+		    	'1.0', 
+		    	true
 	    );
 	    
 	    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -287,11 +279,11 @@ function fs_blocks_scripts_load() {
 		
 		// Main stylesheet
 		
-		wp_enqueue_style( 'fs-blocks-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'fs-onepage-style', get_stylesheet_uri() );
 
 	}
 }    
-add_action( 'wp_enqueue_scripts', 'fs_blocks_scripts_load' );
+add_action( 'wp_enqueue_scripts', 'fs_scripts_load' );
 
 
 // ------------------------
@@ -307,8 +299,8 @@ require FS_THEME_DIR . '/inc/customizer.php';
 // Menus
 
 register_nav_menus( array(
-	'main_menu' =>  esc_html__( 'Main Menu', 'fs-blocks' ),
-	'footer_menu' => esc_html__( 'Footer Menu', 'fs-blocks' )
+	'main_menu' =>  esc_html__( 'Main Menu', 'fs-onepage' ),
+	'footer_menu' => esc_html__( 'Footer Menu', 'fs-onepage' )
 ));
 
 
@@ -330,7 +322,7 @@ function fs_custom_excerpt( $length ) {
 add_filter( 'excerpt_length', 'fs_custom_excerpt', 999 );
 
 function fs_excerpt_more( $more ) {
-	return '… <br><a href="'. get_permalink( get_the_ID() ) . '">' . __('Continue reading', 'fs-blocks') . '</a>';
+	return '… <br><a href="'. get_permalink( get_the_ID() ) . '">' . __('Continue reading', 'fs-onepage') . '</a>';
 }
 add_filter( 'excerpt_more', 'fs_excerpt_more' );
 
@@ -370,20 +362,20 @@ add_image_size( 'thumbnail-hd', 320, 320, true );
 add_image_size( 'medium-hd', 640, 640, false );
 add_image_size( 'large-hd', 2048, 2048, false );
 
-add_filter( 'image_size_names_choose', 'fs_blocks_custom_sizes' );
-function fs_blocks_custom_sizes( $sizes ) {
+add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
+function fs_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'thumbnail-hd'	=> __( 'Thumbnail High', 'fs-blocks' ),
-        'medium-hd'		=> __( 'Medium High', 'fs-blocks' ),
-        'large-hd'		=> __( 'Large High', 'fs-blocks' ),
+        'thumbnail-hd'	=> __( 'Thumbnail High', 'fs-onepage' ),
+        'medium-hd'		=> __( 'Medium High', 'fs-onepage' ),
+        'large-hd'		=> __( 'Large High', 'fs-onepage' ),
     ) );
 }
 
 // Widgets
 
-function fs_blocks_widgets_init() {
+function fs_widgets_init() {
 	register_sidebar(array(
-		'name'			=>	esc_html__( 'Categories Widgets Area', 'fs-blocks' ),
+		'name'			=>	esc_html__( 'Categories Widgets Area', 'fs-onepage' ),
 		'id'			=>	'widgets_area1',
 		'description' 	=> 	'',
 		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
@@ -392,7 +384,7 @@ function fs_blocks_widgets_init() {
 		'after_title' 	=> 	'</p>',
 	));
 	register_sidebar(array(
-		'name'			=>	esc_html__( 'Footer Widgets Area', 'fs-blocks' ),
+		'name'			=>	esc_html__( 'Footer Widgets Area', 'fs-onepage' ),
 		'id'			=>	'widgets_area2',
 		'description' 	=> 	'',
 		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
@@ -401,18 +393,18 @@ function fs_blocks_widgets_init() {
 		'after_title' 	=> 	'</p>',
 	));
 }
-add_action( 'widgets_init', 'fs_blocks_widgets_init' );
+add_action( 'widgets_init', 'fs_widgets_init' );
 
 
 // Tinymce class
 
-function fs_blocks_mce_buttons_2($buttons) {
+function fs_mce_buttons_2($buttons) {
     array_unshift($buttons, 'styleselect');
     return $buttons;
 }
-add_filter('mce_buttons_2', 'fs_blocks_mce_buttons_2');
+add_filter('mce_buttons_2', 'fs_mce_buttons_2');
 
-function fs_blocks_tiny_formats($init_array) {
+function fs_tiny_formats($init_array) {
 
     $style_formats = array(
 
@@ -439,12 +431,12 @@ function fs_blocks_tiny_formats($init_array) {
     return $init_array;
 
 }
-add_filter('tiny_mce_before_init', 'fs_blocks_tiny_formats');
+add_filter('tiny_mce_before_init', 'fs_tiny_formats');
 
 
 // Custom search form
 
-function fs_blocks_search_form( $form ) {
+function fs_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
     <label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
     <input type="search" placeholder="' . __( 'Keywords' ) . '" value="' . get_search_query() . '" name="s" id="s">
@@ -453,7 +445,7 @@ function fs_blocks_search_form( $form ) {
  
     return $form;
 }
-add_filter( 'get_search_form', 'fs_blocks_search_form' );
+add_filter( 'get_search_form', 'fs_search_form' );
 
 
 // ------------------------
@@ -462,8 +454,8 @@ add_filter( 'get_search_form', 'fs_blocks_search_form' );
 
 require 'inc/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/anybodesign/fs-blocks',
+	'https://github.com/anybodesign/fs-onepage',
 	__FILE__,
-	'fs-blocks'
+	'fs-onepage'
 );
 $myUpdateChecker->setBranch('master');

@@ -3,7 +3,7 @@
  * Template Name: Standalone Page
  *
  * @package WordPress
- * @subpackage FS_Blocks
+ * @subpackage FS_Onepage
  * @since 1.0
  * @version 1.0
  */

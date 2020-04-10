@@ -1,7 +1,7 @@
 <?php if ( !defined('ABSPATH') ) die();
 /**
  * @package WordPress
- * @subpackage FS_Blocks
+ * @subpackage FS_Onepage
  * @since 1.0
  * @version 1.0
  */
@@ -22,7 +22,7 @@
 							
 							<?php if ( $one ) { ?>
 							<button class="scroll-down" data-scroll>
-								<?php _e('Scroll Down', 'fs-blocks'); ?>
+								<?php _e('Scroll Down', 'fs-onepage'); ?>
 							</button>
 							<?php } ?>
 						</div>
