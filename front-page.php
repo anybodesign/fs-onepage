@@ -29,31 +29,27 @@ get_header(); ?>
 				?>
 				
 				
-				<?php // One-page output
+				<?php  
+					$frontpage = get_the_id();
 					
-					if ( get_theme_mod('onepage') == true ) { 
-
-						$frontpage = get_the_id();
-						
-						$pageargs = array(
-							'posts_per_page' 	=> -1,
-							'post_type' 		=> 'page',
-							'post__not_in'		=> array($frontpage),
-							'meta_query'		=> array(
-								'relation' 		=> 'OR',
-								array(
-									'key'		=> '_wp_page_template',
-									'value'		=> 'pagecustom-standalone.php',
-									'compare'	=> '!=',
-								),
-							    array(
-							        'key'       => '_wp_page_template',
-							        'compare'   => 'NOT EXISTS',
-							    ),
+					$pageargs = array(
+						'posts_per_page' 	=> -1,
+						'post_type' 		=> 'page',
+						'post__not_in'		=> array($frontpage),
+						'meta_query'		=> array(
+							'relation' 		=> 'OR',
+							array(
+								'key'		=> '_wp_page_template',
+								'value'		=> 'pagecustom-standalone.php',
+								'compare'	=> '!=',
 							),
-						);
-						$onepage = new WP_Query($pageargs);
-			
+						    array(
+						        'key'       => '_wp_page_template',
+						        'compare'   => 'NOT EXISTS',
+						    ),
+						),
+					);
+					$onepage = new WP_Query($pageargs);
 			
 					if ($onepage->have_posts()) :
 					while ($onepage->have_posts()) : $onepage->the_post(); 
@@ -65,8 +61,5 @@ get_header(); ?>
 					endif;
 				
 				} ?>
-
-
-			<?php } ?>
 									
 <?php get_footer(); ?>

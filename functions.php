@@ -136,19 +136,13 @@ function fs_scripts_load() {
 		
 		wp_enqueue_script( 'jquery' );
 
-
-		if ( get_theme_mod('onepage') == true ) {
-			
-			wp_enqueue_script(
-				'onepage-scroll', 
-				FS_THEME_URL . '/js/onepage-scroll.js', 
-				array(), 
-				false, 
-				true
-			);
-			
-		}
-		
+		wp_enqueue_script(
+			'onepage-scroll', 
+			FS_THEME_URL . '/js/onepage-scroll.js', 
+			array(), 
+			false, 
+			true
+		);
 		
 		if ( get_theme_mod('carousel_posts') == true ) {
 			
@@ -166,7 +160,6 @@ function fs_scripts_load() {
 				false, 
 				true
 			);
-			
 		}
 
 		

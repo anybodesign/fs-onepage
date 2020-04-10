@@ -18,23 +18,16 @@
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
-	<?php 
-		wp_head(); 
-		
-		$one = get_theme_mod('onepage') == true;
-		if ($one) { $oneclass = 'one-page '; } else { $oneclass = 'non-one-page'; }	
-	?>
+	<?php wp_head(); ?>
 	<script>
 		var theme_path = '<?php echo get_template_directory_uri() ?>';
 	</script>
 </head>
 
-<body <?php body_class($oneclass); ?>>
+<body <?php body_class(); ?>>
 
 <div id="wrapper">
 
-	<?php //if ( $one && ! is_404() ) { ?>
-	
 	<?php // The Skiplinks ?>
 	
 	<div class="skiplinks">
@@ -58,18 +51,18 @@
 			
 			<?php // The main menu location ?>
 
-			<?php if ( $one && ! is_front_page() ) { ?>
+			<?php if ( ! is_front_page() ) { ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="back-home" title="<?php _e('Go to Home Page', 'fs-onepage'); ?>">
 					<?php _e('Go to Home Page', 'fs-onepage'); ?>
 				</a>
 			<?php } ?>
 
 			
-			<?php if ( $one && is_front_page() || ! $one  ) { ?>
+			<?php if ( is_front_page()  ) { ?>
 				
-			<nav class="site-nav<?php if ( $one ) { echo ' onepage-nav'; } ?>" role="navigation" aria-label="<?php _e('Main menu', 'fs-onepage'); ?>">
+			<nav class="site-nav onepage-nav" role="navigation" aria-label="<?php _e('Main menu', 'fs-onepage'); ?>">
 
-				<?php if ( $one && is_front_page() ) { 
+				<?php if ( is_front_page() ) { 
 						
 						$frontpage = get_the_id();
 						
@@ -105,21 +98,7 @@
 						<?php endif; ?>
 							
 				<?php } ?>
-				
 
-
-				<?php if ( has_nav_menu( 'main_menu' ) && ! $one ) { ?>
-				
-				<button id="menu-toggle" type="button"><?php _e('Menu', 'fs-onepage'); ?><span></span></button>	
-					<?php wp_nav_menu( array(
-						'theme_location'	=> 	'main_menu',
-						'menu_class'		=>	'main-menu',
-						'container'			=>	false,
-						'walker'			=>	new fs_subnav_walker()
-					)); ?>
-					
-				<?php } ?>
-				
 			</nav>
 			
 			<?php } ?>
@@ -127,7 +106,5 @@
 		</div>
 
 	</header>
-	
-	<?php //} ?>	
-	
+
 		<main class="content-area" role="main" id="site_content">

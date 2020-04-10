@@ -9,13 +9,7 @@
  * @since 1.0
  * @version 1.0
  */ 
- 
-	if ( get_theme_mod('onepage') == true ) {
-		$h = 'h2';
-	} else {
-		$h = 'h1';	
-	}
-	
+
 	$tpl = get_page_template_slug( $post->ID );
 	
 	if ( $tpl == 'pagecustom-image.php' ) {
@@ -25,13 +19,12 @@
 	} else {
 		$animated = null;
 	}
-		
 ?>
 					<div class="page-section<?php echo $animated; ?>" id="<?php fs_slug(); ?>"<?php if (! $animated) { fs_bg_img(); } ?>>
 							
-						<<?php echo $h; ?> class="page-title" data-scroll>
+						<h2 class="page-title" data-scroll>
 							<?php the_title(); ?>
-						</<?php echo $h; ?>>
+						</h2>
 
 
 						<div class="page-content" data-scroll>
