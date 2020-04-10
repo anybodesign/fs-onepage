@@ -2,20 +2,11 @@
 // -
 // + + + + + + + + + + + +
 
-.page-wrap {
-
-	.non-one-page & {
-		padding-top: 8rem;
-	}
-	.home.non-one-page & {
-		padding-top: $grid-padding*2;
-	}
-	
-}
+.page-wrap {}
 
 .page-section {
 	position: relative;
-	min-height: 100vh;
+	//min-height: 100vh;
 	
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -34,11 +25,7 @@
 	&:nth-child(odd) {
 		background-color: #fff;
 	}
-	
-	.non-one-page & {
-		justify-content: flex-start;
-	}
-	
+
 	.admin-bar & {
 		
 		@include rwd(80rem) {
@@ -155,12 +142,8 @@
 
 .page-wrap {
 	width: 100%;
-	padding-top: 0;
+	padding-top: 6rem;
 	margin-bottom: $grid-padding*2;
-			
-	.one-page & {
-		padding-top: 6rem;
-	}
 }
 .archive-wrap {
 	@extend .page-wrap;

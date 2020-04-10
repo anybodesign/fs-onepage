@@ -6,11 +6,6 @@
 	@extend .page-section;
 	height: 100vh; // IE 11
 	align-items: flex-start;
-	
-	.non-one-page & {
-		height: 75vh;
-		justify-content: center !important;
-	} 
 }
 .front-page-content {
 	position: relative;

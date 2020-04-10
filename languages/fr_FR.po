@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Onepage\n"
-"POT-Creation-Date: 2020-04-10 18:38+0200\n"
-"PO-Revision-Date: 2020-04-10 18:38+0200\n"
+"POT-Creation-Date: 2020-04-10 20:13+0200\n"
+"PO-Revision-Date: 2020-04-10 20:14+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -28,7 +28,7 @@ msgstr "Oops! Page introuvable"
 msgid "It looks like nothing was found at this location."
 msgstr "Il semblerait que rien n’ait été trouvé à cette adresse."
 
-#: 404.php:20 header.php:62 header.php:63 template-parts/header-brand.php:19
+#: 404.php:20 header.php:55 header.php:56 template-parts/header-brand.php:19
 msgid "Go to Home Page"
 msgstr "Retour à la page d'accueil"
 
@@ -97,65 +97,61 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:302
+#: functions.php:295
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:303
+#: functions.php:296
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:325
+#: functions.php:318
 msgid "Continue reading"
 msgstr "Continuer la lecture"
 
-#: functions.php:368
+#: functions.php:361
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:369
+#: functions.php:362
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:370
+#: functions.php:363
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:378
+#: functions.php:371
 msgid "Categories Widgets Area"
 msgstr "Emplacement du widget catégories"
 
-#: functions.php:387
+#: functions.php:380
 msgid "Footer Widgets Area"
 msgstr "Emplacement des widgets du pied de page"
 
-#: functions.php:441
+#: functions.php:434
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:442
+#: functions.php:435
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:443
+#: functions.php:436
 msgid "Search"
 msgstr "Chercher"
 
-#: header.php:41
+#: header.php:34
 msgid "Go to main content"
 msgstr "Aller au contenu principal"
 
-#: header.php:43
+#: header.php:36
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: header.php:70
+#: header.php:63
 msgid "Main menu"
 msgstr "Menu principal"
-
-#: header.php:113
-msgid "Menu"
-msgstr "Menu"
 
 #: inc/customizer.php:20
 msgid "Theme Options"
@@ -174,8 +170,8 @@ msgid "Colors customisation"
 msgstr "Personnalisation des couleurs"
 
 #: inc/customizer.php:91
-msgid "Display your posts like a carousel (one-page only)"
-msgstr "Affichez vos articles en carrousel (one-page seulement)"
+msgid "Display your posts like a carousel"
+msgstr "Affichez vos articles en carrousel"
 
 #: inc/customizer.php:104
 msgid "Open your posts with Fancybox (available in a future release)"
@@ -269,7 +265,7 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/page-frontpage-banner.php:25
+#: template-parts/page-frontpage-banner.php:18
 msgid "Scroll Down"
 msgstr "Défiler vers le bas"
 
@@ -328,6 +324,9 @@ msgstr "Page avec image animée (à droite)"
 #. Template Name of the plugin/theme
 msgid "Standalone Page"
 msgstr "Page autonome"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
 
 #~ msgid "Make your website a one-page"
 #~ msgstr "Faites de votre site un one-page"
