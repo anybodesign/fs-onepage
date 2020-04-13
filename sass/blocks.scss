@@ -5,36 +5,49 @@
 
 // Colors
 
-.has-primary-color-background-color {
-	background-color: $primary-color;
-}
-.has-secondary-color-background-color {
-	background-color: $secondary-color;
-}
-.has-third-color-background-color {
-	background-color: $third-color;
-}
-.has-white-color-background-color {
-	background-color: #fff;
-}
-.has-black-color-background-color {
-	background-color: #303030;
+*,
+.wp-block-button__link {
+	
+	.has-primary-color-background-color {
+		background-color: $primary-color;
+	}
+	.has-secondary-color-background-color {
+		background-color: $secondary-color;
+	}
+	.has-third-color-background-color {
+		background-color: $third-color;
+	}
+	.has-white-color-background-color {
+		background-color: #fff;
+	}
+	.has-black-color-background-color {
+		background-color: $text-color;
+	}
+	
+	.has-text-color.has-primary-color-color {
+		color: $primary-color;
+	}
+	.has-text-color.has-secondary-color-color {
+		color: $secondary-color;
+	}
+	.has-text-color.has-third-color-color {
+		color: $third-color;
+	}
+	.has-text-color.has-white-color-color {
+		color: #fff;
+	}
+	.has-text-color.has-black-color-color {
+		color: $text-color;
+	}
 }
 
-.has-text-color.has-primary-color-color {
-	color: $primary-color;
-}
-.has-text-color.has-secondary-color-color {
-	color: $secondary-color;
-}
-.has-text-color.has-third-color-color {
-	color: $third-color;
-}
-.has-text-color.has-white-color-color {
-	color: #fff;
-}
-.has-text-color.has-black-color-color {
-	color: #303030;
+// Links / Button
+
+.wp-block-button {}
+	
+.wp-block-button__link {
+	@extend .action-btn;
+	border-radius: 0;
 }
 
 
@@ -107,6 +120,15 @@
 	}	
 }
 
+// Quotes
+
+.wp-block-quote {
+	margin-bottom: $grid-padding*2 !important;
+	
+	cite {
+		
+	}
+}
 
 // Links / Button
 
@@ -186,7 +208,7 @@ hr,
 }
 
 
-// Gallery /Gut  ** backwards compatibility -webkit- prefix? **
+// Gallery
 
 .wp-block-gallery {
 	
@@ -200,10 +222,48 @@ hr,
 }  
 
 
-// Gallery ACF
+// ACF Blocks Stuff
+// -
+// + + + + + + + + + + 
 
-.acf-block-gallery-figure {
-	background-color: transparent;
+
+[class*=acf-block--] {
+
+	.acf-block-container {
+		width: 100%;
+		
+		&.center-max {
+			padding: $grid-padding;
+			margin: 0 auto;
+			max-width: $max-width;
+		}
+	}
 }
+
+// Text 
+
+.acf-block--text {}
+
+
+// Text+Img
+
+.acf-block--textimg {}
+
+
+// Gallery 
+
+.acf-block--gallery {}
+
+
+// CTA
+
+.acf-block--cta {}
+
+
+// Posts
+
+.acf-block---post {}
+.acf-block-post-item {}
+
 
 

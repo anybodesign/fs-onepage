@@ -206,13 +206,14 @@ figure {
 	max-width: 100%;
 	margin: 0 0 $grid-padding 0;
 	overflow: hidden;
-	background-color: #fff;
 	
+/*
 	&.alignfull,
 	.wp-block-gallery & {
 		box-shadow: none;
 		background-color: transparent;
 	}
+*/
 	
 	img {
 		display: block;
@@ -274,10 +275,11 @@ figure {
 }
 
 figcaption {
-	font-size: .85em; 
-	line-height: 1;
+	font-size: 1.4rem; 
+	line-height: 1.1;
 	margin: 0;
-	padding: $grid-padding;
+	padding: $grid-padding 0;
+	border-bottom: $text-color 1px solid;
 }
 
 
@@ -486,22 +488,3 @@ input[type=submit].white-btn {
 		color: #fff;
 	}	
 }
-
-
-/* ------------------------------
-//
-//  Print
-// 
-// ------------------------------ */
-
-
-@media print {
-	
-	// @fix: FF print issue
-	
-	[class*="col-"] { 
-		display: block; 
-		float: left;
-	}   
-
-}	
