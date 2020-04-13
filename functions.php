@@ -291,10 +291,15 @@ require FS_THEME_DIR . '/inc/customizer.php';
 
 // Menus
 
-register_nav_menus( array(
-	'main_menu' =>  esc_html__( 'Main Menu', 'fs-onepage' ),
-	'footer_menu' => esc_html__( 'Footer Menu', 'fs-onepage' )
-));
+function fs_custom_nav_menus() {
+
+	$locations = array(
+		'footer_menu' => esc_html__( 'Footer Menu', 'fs-onepage' )
+	);
+	register_nav_menus( $locations );
+
+}
+add_action( 'init', 'fs_custom_nav_menus' );
 
 
 // Sub-menus Walker
