@@ -35,6 +35,11 @@
 	& > .row {
 		align-items: center;
 	}
+	
+	.error404 &,
+	.page-template-pagecustom-standalone & {
+		position: relative;
+	}
 }
 
 .site-title {

@@ -2,12 +2,8 @@
 // -
 // + + + + + + + + + + + +
 
-.page-wrap {}
-
 .page-section {
 	position: relative;
-	//min-height: 100vh;
-	
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -39,6 +35,7 @@
 		@include center();
 	}
 }
+
 .page-title {
 	display: block;
 	padding: $grid-padding;
@@ -50,41 +47,49 @@
 
 .page-content {
 
-	& > .ad-acf-block,
-	& > [class*="wp-block-"], 
-	& > p,
-	& > ul,
-	& > ol,
-	& > h1,
-	& > h2,
-	& > h3,
-	& > h4,
-	& > h5,
-	& > h6,
-	& > .wpcf7,
-	.the-regular-posts,
-	.the-carousel-posts	{
+	// Centering Blocks and content
+	
+	& > * {
+		width: 100%;
 		padding: $grid-padding;
 		@include center();
 	}
 	
-	& > .ad-acf-block.alignfull,
-	& > [class*="wp-block-"].alignfull,
-	& > .page-figure {
-		padding: 0;
-		margin: 0;
+	& > *.alignwide {
+		max-width: $max-width;
+	}
+	& > *.alignfull {
+		margin-left: 0;
+		margin-right: 0;
 		max-width: none;
+	}
+	
+	& > [class*="wp-block-image"] {
+
+		figcaption {
+			margin: 0;
+		}
+		&.alignfull {
+			padding: 0;
+		}
 	}
 	
 	& > [class*="wp-block-gallery"],
 	& > [class*="wp-block-cover-image"],
 	& > [class*="wp-block-quote"] {
-		@include center(0, $grid-padding*2);
+		@include center();
+		margin-bottom: $grid-padding*2;
 	}
 	& > [class*="wp-block-table"],
 	& > [class*="wp-block-verse"] {	
-		@include center($grid-padding*2, $grid-padding*2);
+		position: relative;
+		margin: $grid-padding*2 auto;
 		max-width: calc(#{$max-width} - #{$grid-padding}*2);
+	}
+	
+	& > span {
+		display: block;
+	    margin-bottom: 1.5em;
 	}
 			
 }
@@ -144,6 +149,11 @@
 	width: 100%;
 	padding-top: 6rem;
 	margin-bottom: $grid-padding*2;
+
+	.error404 &,
+	.page-template-pagecustom-standalone & {
+		padding: 0;
+	}	
 }
 .archive-wrap {
 	@extend .page-wrap;
