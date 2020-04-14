@@ -241,16 +241,16 @@
 
 @keyframes go-back {
 	0% {
-		margin-right: 2.5rem;
+		transform: translateX(2.5rem);
 	}
 	50% {
-		margin-right: $grid-padding;
+		transform: translateX(1rem);
 	}
 	75% {
-		margin-right: 1.5rem;
+		transform: translateX(1.5rem);
 	}
 	100% {
-		margin-right: $grid-padding;
+		transform: translateX(1rem);
 	}
 }
 

@@ -23,7 +23,6 @@
 		position: fixed;
 		top: 0;
 		animation: drop-in .6s ease-in-out;
-		//border-bottom: $text-color 1px dashed;
 	}
 			
 	@include rwd(80rem) {	
@@ -40,6 +39,7 @@
 	.single-post &,
 	.page-template-pagecustom-standalone & {
 		position: relative;
+		top: 0;
 	}
 }
 
