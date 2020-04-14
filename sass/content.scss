@@ -166,14 +166,14 @@
 	}
 }
 
-.page-figure {
+.page-banner {
 
 	&[data-scroll="in"] {
 		animation: anim-opacity 1s ease-in-out;		
 	}
 	
 	img {
-		height: 50vh;
+		height: 35vh;
 		object-fit: cover;
 	}
 }

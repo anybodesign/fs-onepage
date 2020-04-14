@@ -94,8 +94,8 @@
 	.post {
 		background-color: transparent;
 	}
-	.post-figure {
-		@extend .page-figure;
+	.post-banner {
+		@extend .page-banner;
 	}
 	.post-title {
 		@extend .page-title;

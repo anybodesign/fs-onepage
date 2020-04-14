@@ -20,18 +20,16 @@ get_header(); ?>
 				<div class="single-wrap<?php echo $sidebar; ?>">
 
 					<?php if ( '' != get_the_post_thumbnail() ) { ?>
-					<figure class="post-figure">
+					<div class="post-banner">
 						<?php the_post_thumbnail('large'); ?>
-					</figure>
+					</div>
 					<?php } ?>
 
 					<div class="post-single-content">
-	
 						<?php 
 							get_sidebar();
 							get_template_part( 'template-parts/post-content', get_post_format() ); 
 						?>
-					
 					</div>
 					
 				</div>
