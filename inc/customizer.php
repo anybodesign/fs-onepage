@@ -40,7 +40,7 @@ function fs_customize_register($wp_customize) {
 			'type'				=> 'theme_mod',
 			'transport'			=> 'refresh', 
 		));
-		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'primary_color_ctrl', array(
+		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'primary_color', array(
 			'label'		=> __('Primary color', 'fs-onepage'),
 			'section'	=> 'colors',
 			'settings'	=> 'primary_color',
@@ -55,7 +55,7 @@ function fs_customize_register($wp_customize) {
 			'type'				=> 'theme_mod',
 			'transport'			=> 'refresh', 
 		));
-		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'secondary_color_ctrl', array(
+		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'secondary_color', array(
 			'label'		=> __('Secondary color', 'fs-onepage'),
 			'section'	=> 'colors',
 			'settings'	=> 'secondary_color',
@@ -70,7 +70,7 @@ function fs_customize_register($wp_customize) {
 			'type'				=> 'theme_mod',
 			'transport'			=> 'refresh', 
 		));
-		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'third_color_ctrl', array(
+		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'third_color', array(
 			'label'		=> __('Contrast color', 'fs-onepage'),
 			'section'	=> 'colors',
 			'settings'	=> 'third_color',
@@ -79,14 +79,25 @@ function fs_customize_register($wp_customize) {
 		
 	// Theme Options
 	
-
+		// Number of posts
+		
+		$wp_customize->add_setting('posts_nb', array(
+			'default'				=> 6,
+			'sanitize_callback'		=> 'sanitize_text_field'
+		));
+		$wp_customize->add_control('posts_nb', array(
+			'label'			=> __('Number of posts to show on the front page', 'fs-onepage'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'posts_nb',
+		));	
+		
 		// Carousel for Posts
 		
 		$wp_customize->add_setting('carousel_posts', array(
 			'default'	=> false,
 			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
 		));
-		$wp_customize->add_control('carousel_posts_ctrl', array(
+		$wp_customize->add_control('carousel_posts', array(
 			'type'			=> 'checkbox',
 			'label'			=> __('Display your posts like a carousel', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
@@ -99,7 +110,7 @@ function fs_customize_register($wp_customize) {
 			'default'	=> false,
 			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
 		));
-		$wp_customize->add_control('modals_ctrl', array(
+		$wp_customize->add_control('modals', array(
 			'type'			=> 'checkbox',
 			'label'			=> __('Open your posts with Fancybox (available in a future release)', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
@@ -117,20 +128,30 @@ function fs_customize_register($wp_customize) {
 			'sanitize_callback'		=> 'esc_url_raw'
 		));
 		
-		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo_ctrl', array(
+		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo', array(
 			'label'			=> __('Site Logo', 'fs-onepage'),
 			'section'		=> 'title_tagline',
 			'settings'		=> 'site_logo',
 		)));	
+
+		// Site logo white
 		
+		$wp_customize->add_setting('site_logo_white');
 		
+		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo_white', array(
+			'label'			=> __('Site White Logo', 'fs-onepage'),
+			'description'	=> __('White version of your logo for the home page.', 'fs-onepage'),		
+			'section'		=> 'title_tagline',
+			'settings'		=> 'site_logo_white',
+		)));		
+			
 		// Footer text
 		
 		$wp_customize->add_setting('footer_text', array(
 			'default'				=> '',
 			'sanitize_callback'		=> 'sanitize_text_field'
 		));
-		$wp_customize->add_control('footer_text_ctrl', array(
+		$wp_customize->add_control('footer_text', array(
 			'label'			=> __('Custom footer text', 'fs-onepage'),
 			'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
@@ -144,13 +165,22 @@ function fs_customize_register($wp_customize) {
 			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 		));
 		
-		$wp_customize->add_control('display_wp_ctrl', array(
+		$wp_customize->add_control('display_wp', array(
 			'type'			=> 'checkbox',
 			'label'			=> __('Display WordPress Link', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'display_wp',
 		));
-	 
+
+		// Blog picture
+		
+		$wp_customize->add_setting('blog_picture');
+		
+		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'blog_picture', array(
+			'label'			=> __('Page for posts banner picture', 'fs-onepage'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'blog_picture',
+		)));		 
 }
 add_action('customize_register', 'fs_customize_register');
 
