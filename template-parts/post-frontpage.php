@@ -5,26 +5,26 @@
  * @since 1.0
  * @version 1.0
  */
+ 
+ if ( is_active_sidebar( 'widgets_area1' ) ) { 
+	$sidebar = ' has-sidebar';	 
+ } else {
+	 $sidebar = null;
+ } 
+
 ?>
-					<div class="archive-wrap has-sidebar">
+					<div class="archive-wrap<?php echo $sidebar; ?>">
 		
 						<?php if ( have_posts() ) : ?>
 						
 						<div class="archive-posts">
 
-							<?php get_sidebar(); ?>
+							<?php if ( is_active_sidebar( 'widgets_area1' ) ) {
+								get_sidebar(); 
+							} ?>
 							
 							<div class="archive-posts-content">
-							
-								<header class="page-header">
-									<?php if ( is_archive() ) { 
-										the_archive_title( '<h1 class="page-title">', '</h1>' ); 
-										the_archive_description( '<div class="taxonomy-desc">', '</div>' ); 
-									} else { 
-										single_post_title('<h1>','</h1>'); 
-									} ?>
-								</header>				
-	
+
 								<div class="the-regular-posts">
 									<div class="the-posts">
 									
