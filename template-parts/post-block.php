@@ -22,9 +22,14 @@
 								<?php } ?>
 								
 								<header class="post-header">
-									<h3 class="post-title h4-like">
+									<?php if ( is_front_page() && ! is_home() ) { 
+										$h = 'h3';
+									} else {
+										$h = 'h2';
+									} ?>
+									<<?php echo $h; ?> class="post-title h4-like">
 										<?php the_title(); ?>
-									</h3>
+									</<?php echo $h; ?>>
 								</header>
 							</a>
 							
