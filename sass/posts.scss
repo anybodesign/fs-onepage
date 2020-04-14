@@ -129,8 +129,9 @@
 		margin-bottom: 0;
 		font-size: 1.4rem;
 	}
-	a {
-		color: #fff;
+	p a {
+		color: #fff !important;
+		border-bottom-color: #fff !important;
 	}
 }
 
@@ -174,9 +175,7 @@
 .widget-title {
 	@extend h3;
 }
-
-.widget_categories,
-.widget_nav_menu {
+.widget-container {
 	overflow: hidden;
 		
 	ul {
