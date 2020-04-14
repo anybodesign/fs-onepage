@@ -43,8 +43,10 @@
 							<?php				
 								// Posts Loop 
 								
+								$nb = get_theme_mod('posts_nb');
+								
 								$args = array(
-									'posts_per_page' 	=> -1,
+									'posts_per_page' 	=> $nb,
 									'post_type' 		=> 'post'
 								);
 								$query = new WP_Query($args);
