@@ -323,8 +323,13 @@ add_filter( 'excerpt_more', 'fs_excerpt_more' );
 // Bg image
 
 function fs_bg_img() {
-	
-	if ( '' != get_the_post_thumbnail() ) {
+
+	$img_blog = get_theme_mod('blog_picture');
+
+	if ( is_home() && $img_blog && ! is_front_page() ) {
+		$bg = ' style="background-image: url('.get_theme_mod('blog_picture', 'none').')"';
+	}
+	else if ( '' != get_the_post_thumbnail() ) {
 		$img_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large-hd' );
 		$bg = ' style="background-image: url('.$img_url[0].')"';
 	} else {
