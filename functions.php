@@ -302,11 +302,6 @@ function fs_custom_nav_menus() {
 add_action( 'init', 'fs_custom_nav_menus' );
 
 
-// Sub-menus Walker
-
-include_once( dirname( __FILE__ ) . '/inc/subnav-walker.php' );
-
-
 // Extended Search
 
 include_once( dirname( __FILE__ ) . '/inc/fs-extended-search.php' );
