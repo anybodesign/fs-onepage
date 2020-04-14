@@ -14,8 +14,7 @@
 		$template = null;
 	}
 ?>
-				
-				
+
 				<div class="row<?php echo $template; ?>">
 		
 					<?php while ( have_posts() ) : the_post(); ?>

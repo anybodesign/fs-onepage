@@ -19,11 +19,7 @@ get_header(); ?>
 					
 				<div class="single-wrap<?php echo $sidebar; ?>">
 
-					<?php if ( '' != get_the_post_thumbnail() ) { ?>
-					<div class="post-banner">
-						<?php the_post_thumbnail('large'); ?>
-					</div>
-					<?php } ?>
+					<?php get_template_part( 'template-parts/page', 'banner' ); ?>
 
 					<div class="post-single-content">
 						<?php 

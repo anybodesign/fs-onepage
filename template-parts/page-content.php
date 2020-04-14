@@ -11,19 +11,10 @@
  */
 ?>
 					<div class="page-wrap">
-
-						<?php if ( '' != get_the_post_thumbnail() ) { ?>
-						<div class="page-banner" data-scroll>
-							<?php the_post_thumbnail('large-hd'); ?>
-						</div>
-						<?php } ?>
 						
-						<div class="page-content">
-							
-							<h1 class="page-title">
-								<?php the_title(); ?>
-							</h1>
+						<?php get_template_part( 'template-parts/page', 'banner' ); ?>
 
+						<div class="page-content">
 							<?php the_content(); ?>
 						</div>
 
