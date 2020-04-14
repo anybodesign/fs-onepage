@@ -5,14 +5,16 @@
 
 // Grid Padding & Max Width
 
+$grid-padding: 1rem; 					// @note: The padding gutter! equiv. 10px
 
-$grid-padding: 1rem;	// @note: The padding gutter! equiv. 10px
-$max-width: 80rem;		// @note: 800px
+$max-width: 80rem;						// @note: 800px
+$max-width-large: $max-width*1.3;		// @note: 1040px
+$max-width-small: $max-width*0.675;		// @note: 540px
 
+$half-space: calc( (100% - #{$max-width}) /2 + #{$grid-padding} );  // Half the viewport
 
 
 // Break-Points
-
 
 $width-small: 30em; 		// @note: 480px
 $width-medium: 45em;		// @note: 720px
@@ -21,9 +23,7 @@ $width-wide: 75em;	 		// @note: 1200px
 $width-xwide: 90em;	 		// @note: 1440px
 
 
-
 // Colors
-
 
 $primary-color: #303030;		
 $secondary-color: #4682B4; /* SteelBlue (web colors) */
@@ -32,7 +32,6 @@ $text-color: #303030;
 
 
 // Fonts
-// Define your custom fonts :)
 
 $fontface-regular: url('fonts/barlow-medium-webfont.woff2') format('woff2'), url('fonts/barlow-medium-webfont.woff') format('woff');
 @font-face {
