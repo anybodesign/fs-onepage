@@ -150,7 +150,9 @@
 	padding-top: 6rem;
 	margin-bottom: $grid-padding*2;
 
+	.blog &,
 	.error404 &,
+	.single-post &,
 	.page-template-pagecustom-standalone & {
 		padding: 0;
 	}	

@@ -12,54 +12,52 @@
 
 get_header(); ?>
 				
-			<?php if ( is_home() ) {
+			<?php // Full banner 
+			
+			if ( is_home() ) { // Case latest posts
 
 				get_template_part('template-parts/page', 'frontpage-banner');
 				get_template_part( 'template-parts/post', 'frontpage' );
-				
-			} else { ?>
-				
-				<?php // Banner output
-					
-					while ( have_posts() ) : the_post();
-					
-						get_template_part( 'template-parts/page', 'frontpage' ); 
-					
-					endwhile;
-				?>
-				
-				
-				<?php  
-					$frontpage = get_the_id();
-					
-					$pageargs = array(
-						'posts_per_page' 	=> -1,
-						'post_type' 		=> 'page',
-						'post__not_in'		=> array($frontpage),
-						'meta_query'		=> array(
-							'relation' 		=> 'OR',
-							array(
-								'key'		=> '_wp_page_template',
-								'value'		=> 'pagecustom-standalone.php',
-								'compare'	=> '!=',
-							),
-						    array(
-						        'key'       => '_wp_page_template',
-						        'compare'   => 'NOT EXISTS',
-						    ),
-						),
-					);
-					$onepage = new WP_Query($pageargs);
 			
-					if ($onepage->have_posts()) :
-					while ($onepage->have_posts()) : $onepage->the_post(); 
+			} else { // Case frontpage
+			
+				while ( have_posts() ) : the_post();
+					get_template_part('template-parts/page', 'frontpage-banner');
+				endwhile;
+			?>
 				
-						get_template_part( 'template-parts/page', 'section' );
+			<?php // Frontpage sections
+				
+				$frontpage = get_the_id();
+				
+				$pageargs = array(
+					'posts_per_page' 	=> -1,
+					'post_type' 		=> 'page',
+					'post__not_in'		=> array($frontpage),
+					'meta_query'		=> array(
+						'relation' 		=> 'OR',
+						array(
+							'key'		=> '_wp_page_template',
+							'value'		=> 'pagecustom-standalone.php',
+							'compare'	=> '!=',
+						),
+					    array(
+					        'key'       => '_wp_page_template',
+					        'compare'   => 'NOT EXISTS',
+					    ),
+					),
+				);
+				$onepage = new WP_Query($pageargs);
+		
+				if ($onepage->have_posts()) :
+				while ($onepage->have_posts()) : $onepage->the_post(); 
+			
+					get_template_part( 'template-parts/page', 'section' );
 
-					endwhile; 
-					wp_reset_postdata(); 
-					endif;
-				
-				} ?>
+				endwhile; 
+				wp_reset_postdata(); 
+				endif;
+			
+			} ?>
 									
 <?php get_footer(); ?>
