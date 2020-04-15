@@ -359,6 +359,8 @@ function fs_slug($echo=true) {
 add_image_size( 'thumbnail-hd', 320, 320, true );
 add_image_size( 'medium-hd', 640, 640, false );
 add_image_size( 'large-hd', 2048, 2048, false );
+add_image_size( 'post-md', 512, 340, true );
+add_image_size( 'post-hd', 1024, 680, true );
 
 add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
 function fs_custom_sizes( $sizes ) {
@@ -366,6 +368,8 @@ function fs_custom_sizes( $sizes ) {
         'thumbnail-hd'	=> __( 'Thumbnail High', 'fs-onepage' ),
         'medium-hd'		=> __( 'Medium High', 'fs-onepage' ),
         'large-hd'		=> __( 'Large High', 'fs-onepage' ),
+        'post-md'		=> __( 'Post Medium', 'fs-onepage' ),
+        'post-hd'		=> __( 'Post High', 'fs-onepage' ),
     ) );
 }
 
