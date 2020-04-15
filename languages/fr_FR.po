@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Onepage\n"
-"POT-Creation-Date: 2020-04-15 15:52+0200\n"
-"PO-Revision-Date: 2020-04-15 15:53+0200\n"
+"POT-Creation-Date: 2020-04-15 16:15+0200\n"
+"PO-Revision-Date: 2020-04-15 16:16+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -173,44 +173,48 @@ msgstr "Couleurs du thème"
 msgid "Colors customisation"
 msgstr "Personnalisation des couleurs"
 
-#: inc/customizer.php:89
+#: inc/customizer.php:90
 msgid "Number of posts to show on the front page"
 msgstr "Nombre d’articles à afficher sur la page d’accueil"
 
-#: inc/customizer.php:102
+#: inc/customizer.php:103
+msgid "Display Show All Posts button"
+msgstr "Afficher le bouton Tous les articles"
+
+#: inc/customizer.php:116
 msgid "Display your posts like a carousel"
 msgstr "Affichez vos articles en carrousel"
 
-#: inc/customizer.php:115
+#: inc/customizer.php:129
 msgid "Open your posts with Fancybox (available in a future release)"
 msgstr ""
 "Ouvrez vos articles avec FancyBox (disponible dans une prochaine version)"
 
-#: inc/customizer.php:132
+#: inc/customizer.php:145
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:142
+#: inc/customizer.php:157
 msgid "Site White Logo"
 msgstr "Logo blanc du site"
 
-#: inc/customizer.php:143
+#: inc/customizer.php:158
 msgid "White version of your logo for the home page."
 msgstr "Version blanche de votre logo pour la page d'accueil."
 
-#: inc/customizer.php:155
+#: inc/customizer.php:170
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:156
+#: inc/customizer.php:171
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:170
+#: inc/customizer.php:184
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:180
+#: inc/customizer.php:196
 msgid "Page for posts banner picture"
 msgstr "Image d’en-tête pour la page des articles"
 
@@ -284,6 +288,10 @@ msgstr ""
 #: template-parts/page-frontpage-banner.php:18
 msgid "Scroll Down"
 msgstr "Défiler vers le bas"
+
+#: template-parts/page-section.php:78
+msgid "Show All Posts"
+msgstr "Tous les articles"
 
 #: template-parts/post-content.php:26
 msgid "Tagged with:"
