@@ -90,7 +90,20 @@ function fs_customize_register($wp_customize) {
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'posts_nb',
 		));	
+
+		// Show all button
 		
+		$wp_customize->add_setting('show_all', array(
+			'default'			=> false,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+		));
+		$wp_customize->add_control('show_all', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Display Show All Posts button', 'fs-onepage'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'show_all',
+		));
+				
 		// Carousel for Posts
 		
 		$wp_customize->add_setting('carousel_posts', array(
@@ -127,7 +140,6 @@ function fs_customize_register($wp_customize) {
 			'default'				=> '',
 			'sanitize_callback'		=> 'esc_url_raw'
 		));
-		
 		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo', array(
 			'label'			=> __('Site Logo', 'fs-onepage'),
 			'section'		=> 'title_tagline',
@@ -136,8 +148,10 @@ function fs_customize_register($wp_customize) {
 
 		// Site logo white
 		
-		$wp_customize->add_setting('site_logo_white');
-		
+		$wp_customize->add_setting('site_logo_white', array(
+			'default'				=> '',
+			'sanitize_callback'		=> 'esc_url_raw'
+		));
 		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo_white', array(
 			'label'			=> __('Site White Logo', 'fs-onepage'),
 			'description'	=> __('White version of your logo for the home page.', 'fs-onepage'),		
@@ -164,7 +178,6 @@ function fs_customize_register($wp_customize) {
 			'default'			=> false,
 			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 		));
-		
 		$wp_customize->add_control('display_wp', array(
 			'type'			=> 'checkbox',
 			'label'			=> __('Display WordPress Link', 'fs-onepage'),
@@ -174,8 +187,10 @@ function fs_customize_register($wp_customize) {
 
 		// Blog picture
 		
-		$wp_customize->add_setting('blog_picture');
-		
+		$wp_customize->add_setting('blog_picture', array(
+			'default'				=> '',
+			'sanitize_callback'		=> 'esc_url_raw'
+		));
 		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'blog_picture', array(
 			'label'			=> __('Page for posts banner picture', 'fs-onepage'),
 			'section'		=> 'fs_options_section',

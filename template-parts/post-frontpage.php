@@ -40,7 +40,7 @@
 								<?php the_posts_navigation(); ?>
 								
 							</div>
-							
+
 						</div>
 						
 						<?php else : ?>

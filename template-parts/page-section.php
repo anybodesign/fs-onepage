@@ -70,6 +70,16 @@
 									endwhile; wp_reset_postdata(); ?>
 	
 									</div>
+
+									<?php if (get_theme_mod('show_all') != false) { ?>
+			
+									<div class="the-posts-link">
+										<a href="<?php echo get_permalink($post = $id_news); ?>" class="action-btn">
+											<?php _e('Show All Posts', 'fs-onepage'); ?>
+										</a>
+									</div>
+									<?php } ?>
+									
 								</div>
 							
 							<?php endif; ?>
