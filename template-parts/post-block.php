@@ -17,7 +17,7 @@
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<?php if ( '' != get_the_post_thumbnail() ) { ?>
 								<div class="post-figure">
-									<?php the_post_thumbnail('large'); ?>
+									<?php the_post_thumbnail('post-md'); ?>
 								</div>
 								<?php } ?>
 								
