@@ -11,8 +11,17 @@
  */
 ?>
 
-					<?php if ( get_theme_mod('site_logo') ) { ?>
-					<img class="logo" src="<?php echo(get_theme_mod('site_logo', 'none')); ?>" alt="<?php echo esc_url(bloginfo('name')); ?>">
+					<?php if ( get_theme_mod('site_logo_white') && is_front_page() ) { ?>
+						
+						<img class="logo-white" src="<?php echo(get_theme_mod('site_logo_white', 'none')); ?>" alt="<?php echo esc_url(bloginfo('name')); ?>">
+					
+					<?php } else if ( get_theme_mod('site_logo') && ! is_front_page() ) { ?>
+						
+						<img class="logo" src="<?php echo(get_theme_mod('site_logo', 'none')); ?>" alt="<?php echo esc_url(bloginfo('name')); ?>">
+					
 					<?php } else {
-						echo esc_url(bloginfo('name')); 
+						
+						echo esc_url(bloginfo('name'));
+					
 					} ?>
+					

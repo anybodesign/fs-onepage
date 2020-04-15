@@ -88,6 +88,18 @@
 		}	
 	}
 }
+.logo,
+.logo-white {
+	display: block;
+	height: 5rem;
+	width: auto;
+	margin-bottom: $grid-padding/2;
+	
+	.home & {
+		height: 10rem;
+		margin-bottom: $grid-padding;
+	}
+}
 
 .site-desc {
 	display: block;
