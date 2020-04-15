@@ -11,16 +11,18 @@
  */
 
 get_header(); ?>
-					
-				<div class="page-section error-404 not-found" id="<?php fs_slug(); ?>"<?php fs_bg_img(); ?>>
-					<div class="page-content">
-						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found', 'fs-onepage' ); ?></h1>
-							
-						<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'fs-onepage' ); ?></p>
-						<p><a class="action-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e('Go to Home Page', 'fs-onepage'); ?></a></p>
 
-					</div>		
-												
-				</div>
+				<div class="page-wrap">
+					
+					<?php get_template_part( 'template-parts/page', 'banner' ); ?>
+
+					<div class="page-content error-404 not-found">
+						<div class="page-content">
+							<p class="text-intro"><?php esc_html_e( 'It looks like nothing was found at this location.', 'fs-onepage' ); ?></p>
+							<p><a class="action-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e('Go to Home Page', 'fs-onepage'); ?></a></p>
+						</div>		
+					</div>
+
+				</div>					
 
 <?php get_footer(); ?>

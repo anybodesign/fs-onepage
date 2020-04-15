@@ -196,6 +196,18 @@ function fs_customize_register($wp_customize) {
 			'label'			=> __('Page for posts banner picture', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'blog_picture',
+		)));
+		
+		// 404 picture
+		
+		$wp_customize->add_setting('error_picture', array(
+			'default'				=> '',
+			'sanitize_callback'		=> 'esc_url_raw'
+		));
+		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'error_picture', array(
+			'label'			=> __('404 banner picture', 'fs-onepage'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'error_picture',
 		)));		 
 }
 add_action('customize_register', 'fs_customize_register');
