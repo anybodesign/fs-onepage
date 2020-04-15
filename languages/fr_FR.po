@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Onepage\n"
-"POT-Creation-Date: 2020-04-10 20:13+0200\n"
-"PO-Revision-Date: 2020-04-10 20:14+0200\n"
+"POT-Creation-Date: 2020-04-15 15:52+0200\n"
+"PO-Revision-Date: 2020-04-15 15:53+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:17
+#: 404.php:17 template-parts/page-banner.php:19
 msgid "Oops! That page can&rsquo;t be found"
 msgstr "Oops! Page introuvable"
 
@@ -28,11 +28,11 @@ msgstr "Oops! Page introuvable"
 msgid "It looks like nothing was found at this location."
 msgstr "Il semblerait que rien n’ait été trouvé à cette adresse."
 
-#: 404.php:20 header.php:55 header.php:56 template-parts/header-brand.php:19
+#: 404.php:20 header.php:46 template-parts/header-brand.php:19
 msgid "Go to Home Page"
 msgstr "Retour à la page d'accueil"
 
-#: _trash/search.php:19
+#: _trash/search.php:19 template-parts/page-banner.php:17
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de la recherche pour : %s"
@@ -97,11 +97,7 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:295
-msgid "Main Menu"
-msgstr "Menu principal"
-
-#: functions.php:296
+#: functions.php:297
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -109,35 +105,43 @@ msgstr "Menu pied de page"
 msgid "Continue reading"
 msgstr "Continuer la lecture"
 
-#: functions.php:361
+#: functions.php:368
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:362
+#: functions.php:369
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:363
+#: functions.php:370
 msgid "Large High"
 msgstr "Grande (x2)"
 
 #: functions.php:371
+msgid "Post Medium"
+msgstr "Article Medium"
+
+#: functions.php:372
+msgid "Post High"
+msgstr "Article High"
+
+#: functions.php:380
 msgid "Categories Widgets Area"
 msgstr "Emplacement du widget catégories"
 
-#: functions.php:380
+#: functions.php:389
 msgid "Footer Widgets Area"
 msgstr "Emplacement des widgets du pied de page"
 
-#: functions.php:434
+#: functions.php:443
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:435
+#: functions.php:444
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:436
+#: functions.php:445
 msgid "Search"
 msgstr "Chercher"
 
@@ -149,7 +153,7 @@ msgstr "Aller au contenu principal"
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: header.php:63
+#: header.php:53
 msgid "Main menu"
 msgstr "Menu principal"
 
@@ -169,30 +173,46 @@ msgstr "Couleurs du thème"
 msgid "Colors customisation"
 msgstr "Personnalisation des couleurs"
 
-#: inc/customizer.php:91
+#: inc/customizer.php:89
+msgid "Number of posts to show on the front page"
+msgstr "Nombre d’articles à afficher sur la page d’accueil"
+
+#: inc/customizer.php:102
 msgid "Display your posts like a carousel"
 msgstr "Affichez vos articles en carrousel"
 
-#: inc/customizer.php:104
+#: inc/customizer.php:115
 msgid "Open your posts with Fancybox (available in a future release)"
 msgstr ""
 "Ouvrez vos articles avec FancyBox (disponible dans une prochaine version)"
 
-#: inc/customizer.php:121
+#: inc/customizer.php:132
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:134
+#: inc/customizer.php:142
+msgid "Site White Logo"
+msgstr "Logo blanc du site"
+
+#: inc/customizer.php:143
+msgid "White version of your logo for the home page."
+msgstr "Version blanche de votre logo pour la page d'accueil."
+
+#: inc/customizer.php:155
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:135
+#: inc/customizer.php:156
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:149
+#: inc/customizer.php:170
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
+
+#: inc/customizer.php:180
+msgid "Page for posts banner picture"
+msgstr "Image d’en-tête pour la page des articles"
 
 #: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:395
 msgid "Check for updates"
@@ -234,10 +254,6 @@ msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
-#: inc/subnav-walker.php:20
-msgid "Unfold Sub-Menu"
-msgstr "Déplier le sous-menu"
-
 #: template-parts/nothing.php:14
 msgid "Nothing Found"
 msgstr "Aucun résultat"
@@ -269,11 +285,11 @@ msgstr ""
 msgid "Scroll Down"
 msgstr "Défiler vers le bas"
 
-#: template-parts/post-content.php:33
+#: template-parts/post-content.php:26
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/post-content.php:40
+#: template-parts/post-content.php:33
 msgid "Pages:"
 msgstr "Pages :"
 
@@ -302,8 +318,8 @@ msgid "https://github.com/anybodesign/fs-onepage"
 msgstr "https://github.com/anybodesign/fs-onepage"
 
 #. Description of the plugin/theme
-msgid "A Gutenberg friendly WordPress Theme"
-msgstr "Un thème WordPress compatible Gutenberg"
+msgid "A WordPress Theme for your One page site"
+msgstr "Un thème WordPress pour votre site One Page"
 
 #. Author of the plugin/theme
 msgid "Thomas Villain"
@@ -324,6 +340,15 @@ msgstr "Page avec image animée (à droite)"
 #. Template Name of the plugin/theme
 msgid "Standalone Page"
 msgstr "Page autonome"
+
+#~ msgid "Main Menu"
+#~ msgstr "Menu principal"
+
+#~ msgid "Unfold Sub-Menu"
+#~ msgstr "Déplier le sous-menu"
+
+#~ msgid "A Gutenberg friendly WordPress Theme"
+#~ msgstr "Un thème WordPress compatible Gutenberg"
 
 #~ msgid "Menu"
 #~ msgstr "Menu"
