@@ -17,11 +17,11 @@
  }
 get_header(); ?>
 					
-				<div class="single-wrap<?php echo $sidebar; ?>">
+				<div class="page-wrap">
 
 					<?php get_template_part( 'template-parts/page', 'banner' ); ?>
 
-					<div class="post-single-content">
+					<div class="archive-wrap<?php echo $sidebar; ?>">
 						<?php 
 							get_sidebar();
 							get_template_part( 'template-parts/post-content', get_post_format() ); 

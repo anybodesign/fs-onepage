@@ -4,29 +4,31 @@
 
 
 #site_head {	
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
 	background-color: #fff;
 	z-index: 100;
-	
-	.admin-bar & {
+
+	.home & {
+		position: absolute;
+	}
+	.home.admin-bar & {
 		top: 46px;
 		
 		@include rwd(80rem) {
 			top: 32px;
 		}
 	}
-	
-	.fixed-nav & {
+	.home.fixed-nav & {
 		position: fixed;
 		top: 0;
 		animation: drop-in .6s ease-in-out;
 	}
-			
+	
 	@include rwd(80rem) {	
-		.fixed-nav.admin-bar & {
+		.home.fixed-nav.admin-bar & {
 			top: 32px;
 		}
 	}
@@ -35,14 +37,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	}
-	
-	.blog &,
-	.error404 &,
-	.single-post &,
-	.page-template-pagecustom-standalone & {
-		position: relative;
-		top: 0;
 	}
 }
 
@@ -53,7 +47,7 @@
 	height: 3rem;
 	width: 2rem;
 	padding: 0;
-	margin: 0;
+	margin: 0 $grid-padding*2 0 0;
 	
 	img {
 		height: auto;

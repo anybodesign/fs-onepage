@@ -12,7 +12,7 @@
 ?>
 					<?php while (have_posts()) : the_post(); ?>
 					
-					<div class="post-single">
+					<div class="post-container">
 
 						<article <?php post_class(); ?> id="post-<?php the_ID(); ?>" data-scroll>
 							

@@ -10,7 +10,7 @@
 	margin-left: -$grid-padding;
 	margin-right: -$grid-padding;
 		
-	@include rwd(large) {
+	@include rwd(medium) {
 			
 		.the-regular-posts & {
 			display: flex;
@@ -23,24 +23,7 @@
 	text-align: center;
 }
 
-.post-container {
-	padding: $grid-padding;
-	
-	@include rwd(large) {
-		
-		.the-regular-posts & {
-			display: flex;
-			flex-direction: column;
-			width: 33.3333%;
-		}
-		.blog .the-regular-posts &,
-		.archive .the-regular-posts & {
-			width: 50%;
-		}
-	}
-}
-
-.post {
+.post-block {
 	position: relative;
 	background-color: #fff;
 	
@@ -86,7 +69,66 @@
 }
 .post-figure {
 	margin-bottom: 0;
+	overflow: hidden;
+	
+	img {
+		width: 100%;
+		height: auto;
+		max-width: none;
+	}
 }
+
+/* ------------------------- */
+/* = Archives
+/* ------------------------- */
+
+.archive-wrap {
+	width: 100%;
+	@include center();
+
+	@include rwd(large) {
+		
+		&.has-sidebar {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row-reverse;
+			
+			.post-container {
+				width: 66.6667%;
+			}
+			.post-sidebar {
+				width: 33.3333%;
+			}
+		}
+	}
+
+}
+
+
+.post-container {
+	padding: $grid-padding;
+	
+	@include rwd(medium) {
+		
+		.the-regular-posts & {
+			display: flex;
+			flex-direction: column;
+			width: 50%;
+		}
+		.blog .the-regular-posts &,
+		.archive .the-regular-posts &,
+		.search .the-regular-posts & {
+			width: 50%;
+		}
+	}
+	@include rwd(large) {
+		
+		.the-regular-posts & {
+			width: 33.3333%;
+		}
+	}
+}
+
 
 
 /* ------------------------- */
@@ -105,26 +147,7 @@
 		@extend .page-title;
 	}
 }
-.post-single-content {
-	padding-top: $grid-padding*2;
-	
-	@include rwd(large) {
-		@include center();
-		
-		.has-sidebar & {
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row-reverse;
-			
-			.post-single {
-				width: 66.6667%;
-			}
-			.post-sidebar {
-				width: 33.3333%;
-			}
-		}
-	}
-}
+
 .post-meta {
 	padding: 0 $grid-padding;
 	
@@ -140,6 +163,7 @@
 }
 
 .post-sidebar {
+	padding: $grid-padding;
 	
 	@include rwd(large) {
 		padding: $grid-padding $grid-padding*2;
@@ -159,17 +183,6 @@
 			display: block;
 		}
 	}
-}
-
-/* ------------------------- */
-/* = Archives
-/* ------------------------- */
-
-.archive-posts {
-	@extend .post-single-content;
-}
-.archive-posts-content {
-	@extend .post-single;
 }
 
 /* ------------------------- */

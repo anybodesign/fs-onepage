@@ -15,40 +15,35 @@
 ?>
 					<div class="archive-wrap<?php echo $sidebar; ?>">
 		
-						<?php if ( have_posts() ) : ?>
-						
-						<div class="archive-posts">
-
-							<?php if ( is_active_sidebar( 'widgets_area1' ) ) {
-								get_sidebar(); 
-							} ?>
-							
-							<div class="archive-posts-content">
-
-								<div class="the-regular-posts">
-									<div class="the-posts">
-									
-									<?php while (have_posts()) : the_post();
-										
-										get_template_part( 'template-parts/post', 'block' );
-									
-									endwhile; wp_reset_postdata(); ?>
-	
-									</div>
-								</div>
+					<?php if ( have_posts() ) : ?>
 					
-								<?php the_posts_navigation(); ?>
-								
-							</div>
+						<?php if ( is_active_sidebar( 'widgets_area1' ) ) {
+							get_sidebar(); 
+						} ?>
+						
+						<div class="post-container">
 
+							<div class="the-regular-posts">
+								<div class="the-posts">
+								
+								<?php while (have_posts()) : the_post();
+									
+									get_template_part( 'template-parts/post', 'block' );
+								
+								endwhile; wp_reset_postdata(); ?>
+
+								</div>
+							</div>
+				
+							<?php the_posts_navigation(); ?>
+							
 						</div>
-						
-						<?php else : ?>
-						
-						<div class="archive-posts">
-							<?php get_template_part( 'template-parts/nothing' ); ?>
-						</div>
-						
-						<?php endif; ?>	
-											
+
+					
+					<?php else : ?>
+					
+						<?php get_template_part( 'template-parts/nothing' ); ?>
+					
+					<?php endif; ?>	
+										
 					</div>

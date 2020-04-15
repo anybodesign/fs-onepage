@@ -46,7 +46,11 @@
 }
 
 .page-content {
-
+	
+	.page-banner + & {
+		padding-top: $grid-padding*2;
+	}
+	
 	// Centering Blocks and content
 	
 	& > * {
@@ -147,24 +151,7 @@
 
 .page-wrap {
 	width: 100%;
-	padding-top: 6rem;
 	margin-bottom: $grid-padding*2;
-
-	.blog &,
-	.error404 &,
-	.single-post &,
-	.page-template-pagecustom-standalone & {
-		padding: 0;
-	}	
-}
-.archive-wrap {
-	@extend .page-wrap;
-	@include center(0, $grid-padding*2);
-	padding: $grid-padding;
-	
-	.page-title {
-		margin-bottom: 0;
-	}
 }
 
 .page-banner {

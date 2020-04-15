@@ -12,7 +12,7 @@
 ?>
 					<div class="post-container">
 						
-						<article <?php post_class(); ?> id="post-<?php the_ID(); ?>" data-scroll>
+						<article <?php post_class('post-block'); ?> id="post-<?php the_ID(); ?>" data-scroll>
 							
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<?php if ( '' != get_the_post_thumbnail() ) { ?>

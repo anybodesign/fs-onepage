@@ -7,20 +7,10 @@
  * @since 1.0
  * @version 1.0
  */
- 
- 	if ( is_page_template('pagecustom-image.php') ) {
-		$template = ' animated-image';
-	} else {
-		$template = null;
-	}
 ?>
 
-				<div class="row<?php echo $template; ?>">
-		
-					<?php while ( have_posts() ) : the_post(); ?>
-		
-						<?php get_template_part( 'template-parts/page', 'content' ); ?>
-		
-					<?php endwhile; ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 	
-				</div>
+					<?php get_template_part( 'template-parts/page', 'content' ); ?>
+	
+				<?php endwhile; ?>
