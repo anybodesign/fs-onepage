@@ -86,6 +86,7 @@ function fs_customize_register($wp_customize) {
 			'sanitize_callback'		=> 'sanitize_text_field'
 		));
 		$wp_customize->add_control('posts_nb', array(
+			'type'			=> 'number',
 			'label'			=> __('Number of posts to show on the front page', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'posts_nb',
