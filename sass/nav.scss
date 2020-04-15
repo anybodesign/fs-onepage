@@ -97,22 +97,3 @@
 	}
 	
 }
-
-// Back Home
-
-.back-home {
-	display: inline-block;
-	padding: 0 $grid-padding*1.5;
-	margin: 0;
-	
-	img {
-		height: 3rem;
-		width: 2rem;
-		transform: rotate(90deg);
-	}
-	
-	&:hover,
-	&.focus-visible {
-		animation: go-back .4s ease-in-out;
-	}
-}

@@ -169,44 +169,6 @@
 }
 
 
-// Desktop First Media Queries
-
-@mixin desktop($width) {
-	
-	@if $width == xwide {
-		@media only screen and (max-width: $width-xwide) {
-			@content;
-		}
-	}
-	@if $width == wide {
-		@media only screen and (max-width: $width-wide) {
-			@content;
-		}
-	}
-	@else if $width == large {
-		@media only screen and (max-width: $width-large) {
-			@content;
-		}
-	}
-	@else if $width == medium {
-		@media only screen and (max-width: $width-medium) {
-			@content;
-		}
-	}
-	@else if $width == small {
-		@media only screen and (max-width: $width-small) {
-			@content;
-		}
-	}
-	@else {
-		@media only screen and (max-width: $width) {
-			@content;
-		}
-	}
-}
-
-
-
 // Animations
 
 @keyframes drop-in {
@@ -241,16 +203,16 @@
 
 @keyframes go-back {
 	0% {
-		transform: translateX(2.5rem);
+		margin-left: -1rem;
 	}
 	50% {
-		transform: translateX(1rem);
+		margin-left: -.5rem;
 	}
 	75% {
-		transform: translateX(1.5rem);
+		margin-left: -.75rem;
 	}
 	100% {
-		transform: translateX(1rem);
+		margin-left: -.5rem;
 	}
 }
 
