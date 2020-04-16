@@ -10,7 +10,7 @@
  * @version 1.0
  */
 ?>
-					<div class="post-container">
+					<div class="post-block-container">
 						
 						<article <?php post_class('post-block'); ?> id="post-<?php the_ID(); ?>" data-scroll>
 							

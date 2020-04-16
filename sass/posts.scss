@@ -106,7 +106,11 @@
 
 
 .post-container {
-	padding: $grid-padding;
+	padding: $grid-padding*2 $grid-padding;
+}
+
+.post-block-container {
+	padding: 0 $grid-padding $grid-padding*2 $grid-padding ;
 	
 	@include rwd(medium) {
 		
@@ -125,8 +129,8 @@
 			width: 33.3333%;
 		}
 	}
+	
 }
-
 
 
 /* ------------------------- */
