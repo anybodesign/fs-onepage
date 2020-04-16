@@ -20,7 +20,9 @@ if ( post_password_required() ) {
 				
 						<ol class="comment-list">
 							<?php
-								wp_list_comments();
+								wp_list_comments( array(
+								    'callback' => 'fs_custom_comments',
+								));
 							?>
 						</ol>
 						
@@ -35,14 +37,11 @@ if ( post_password_required() ) {
 					<?php endif; ?>
 					
 					<?php
-					$comments_args = array(
-				       	//'comment_notes_after' => 'fs-onepage',
-				        //'logged_in_as' => 'fs-onepage',
-				        'title_reply' => __('Do we talk about it?', 'fs-onepage'),
-				        'label_submit' => __('Add my comment!', 'fs-onepage')
-					);
-					
-					comment_form($comments_args);
+						$comments_args = array(
+					        'title_reply' => __('Do we talk about it?', 'fs-onepage'),
+					        'label_submit' => __('Add my comment!', 'fs-onepage')
+						);
+						comment_form($comments_args);
 					?>
 				
 					</div>
