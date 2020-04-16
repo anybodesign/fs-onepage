@@ -12,9 +12,11 @@
 }
 .footer-widget-container {
 	width: 100%;
+	padding: $grid-padding*2 0;
 	
 	@include rwd(large) {
 		display: flex;
+		padding: $grid-padding*3 0;
 	}
 	
 	.widget-container {
