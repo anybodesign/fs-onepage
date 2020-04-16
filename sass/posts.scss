@@ -272,7 +272,7 @@
 /* ------------------------- */
 
 .comment-respond,
-.post-comments {
+.comments-title {
 	margin-top: $grid-padding*3;
 	padding-top: $grid-padding*3;
 	border-top: $text-color 1px dashed;
@@ -339,6 +339,7 @@
 
 .comment-content {
 	position: relative;
+	width: 100%;
 	background-color: #fff;
 	padding: $grid-padding;
 	border-color: #fff;
