@@ -17,7 +17,7 @@ get_header(); ?>
 			if ( is_home() ) { // Case latest posts
 
 				get_template_part('template-parts/page', 'frontpage-banner');
-				get_template_part( 'template-parts/post', 'frontpage' );
+				get_template_part( 'template-parts/post', 'archive' );
 			
 			} else { // Case frontpage
 			

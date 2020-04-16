@@ -14,7 +14,7 @@ get_header(); ?>
 				<div class="page-wrap">
 				<?php 
 					get_template_part( 'template-parts/page', 'banner' ); 
-					get_template_part( 'template-parts/post', 'frontpage' ); 
+					get_template_part( 'template-parts/post', 'archive' ); 
 				?>
 				</div>
 								
