@@ -12,8 +12,8 @@
 ?>
 				<?php if ( is_active_sidebar( 'widgets_area1' ) ) { ?>
 				<aside class="post-sidebar" role="complementary" data-scroll>
-					
+					<div class="sidebar-content">
 					<?php dynamic_sidebar( 'widgets_area1' ); ?>
-					
+					</div>
 				</aside>
 				<?php } ?>

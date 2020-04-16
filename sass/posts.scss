@@ -115,9 +115,7 @@
 			flex-direction: column;
 			width: 50%;
 		}
-		.blog .the-regular-posts &,
-		.archive .the-regular-posts &,
-		.search .the-regular-posts & {
+		.has-sidebar .the-regular-posts & {
 			width: 50%;
 		}
 	}
@@ -166,7 +164,16 @@
 	padding: $grid-padding;
 	
 	@include rwd(large) {
-		padding: $grid-padding $grid-padding*2;
+		padding: $grid-padding*2;
+		
+		.sidebar-content {
+			position: sticky;
+			top: $grid-padding*2;
+			
+			.admin-bar & {
+				top: calc( 32px + #{$grid-padding*2} );
+			}
+		}
 	}
 	
 	&[data-scroll="in"] {
