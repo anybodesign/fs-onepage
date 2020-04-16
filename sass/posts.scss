@@ -271,6 +271,7 @@
 /* = Comments
 /* ------------------------- */
 
+.comment-respond,
 .post-comments {
 	margin-top: $grid-padding*3;
 	padding-top: $grid-padding*3;
@@ -279,9 +280,35 @@
 
 .comment-list {
 	padding-left: 0;
-	
-	.comment:nth-child(even) {
+}
 
+.comment {
+	margin: 0 0 $grid-padding 0;
+	
+	@include rwd(medium) {
+		display: flex;
+		flex-wrap: wrap;
+	}		
+	
+	.reply {
+		background-color: #fff;
+		width: 100%;
+		padding: $grid-padding;
+
+		a {
+			@include link-style();
+		}
+	}
+	.edit-link {
+		padding: $grid-padding;
+	}
+	.children {
+		padding-left: $grid-padding*3;
+		list-style: none;
+	}
+
+	&:nth-child(even) {
+	
 		.comment-author {
 			width: 100%;
 			@include rwd(medium) {
@@ -295,95 +322,71 @@
 			right: 3.8rem;
 		}
 	}
+}
+
+.comment-author {
+	margin-bottom: $grid-padding*1.5;
+
+	img {
+		display: block;
+		width: 9.6rem;
+		height: auto;
+		border-radius: 50%;
+		margin-top: $grid-padding/2;
+		background-color: #fff;
+	}
+}
+
+.comment-content {
+	position: relative;
+	background-color: #fff;
+	padding: $grid-padding;
+	border-color: #fff;
 	
-	.comment {
-		margin: 0 0 $grid-padding 0;
+	&::before {
+		@include pointer(bottom, 10px);
+		position: absolute;
+		top: -20px;
+		left: 3.8rem;
+	}
+	.pending {
+		display: block;
+		margin: $grid-padding 0;
+		background-color: $secondary-color;
+		padding: $grid-padding/2 $grid-padding;
+		color: #fff;
+	}
+}	 
+
+.comment-author-name {
+	font-family: $font-bold;
+	color: $primary-color;
+	font-size: 2.4rem;
+	
+	a {
+		text-decoration: none;
+		transition: color .2s ease-in-out;
 		
-		@include rwd(medium) {
-			display: flex;
-			flex-wrap: wrap;
-		}		
-
-		.comment-author {
-			margin-bottom: $grid-padding*1.5;
-
-			img {
-				display: block;
-				width: 9.6rem;
-				height: auto;
-				border-radius: 50%;
-				margin-top: $grid-padding/2;
-				background-color: #fff;
-			}
-		}
-
-		.comment-content {
-			position: relative;
-			background-color: #fff;
-			padding: $grid-padding;
-			border-color: #fff;
-			
-			&::before {
-				@include pointer(bottom, 10px);
-				position: absolute;
-				top: -20px;
-				left: 3.8rem;
-			}
-			 
-			.comment-author-name {
-				font-family: $font-bold;
-				color: $primary-color;
-				font-size: 2.4rem;
-
-				a {
-					text-decoration: none;
-					
-					&:hover,
-					&.focus-visible {
-						color: $text-color;
-					}
-				}
-			}
-			.comment-date {
-				time {
-					font-size: 1.6rem;
-				}
-				a {
-					text-decoration: none;
-				}
-			}
-			.pending {
-				display: block;
-				margin: $grid-padding 0;
-				background-color: $secondary-color;
-				padding: $grid-padding/2 $grid-padding;
-				color: #fff;
-			}
-			.comment-author-text {
-				margin-top: $grid-padding*2;
-			}
-		}
-		
-		.reply {
-			background-color: #fff;
-			width: 100%;
-			padding: $grid-padding;
-
-			a {
-				@include link-style();
-			}
-		}
-		.edit-link {
-			padding: $grid-padding;
-		}
-
-		
-		.children {
-			padding-left: $grid-padding*3;
-			list-style: none;
+		&:hover,
+		&.focus-visible {
+			color: $text-color;
 		}
 	}
 }
+
+.comment-date {
+	time {
+		font-size: 1.6rem;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+
+.comment-author-text {
+	margin-top: $grid-padding*2;
+}
+
 
 .bypostauthor {
 	display: block;

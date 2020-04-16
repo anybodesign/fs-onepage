@@ -285,7 +285,8 @@ function fs_colors() {
 		.onepage-menu > li > a.focus-visible,
 		.site-title a:hover,
 		.site-title a.focus-visible,
-		.has-text-color.has-primary-color-color {
+		.has-text-color.has-primary-color-color,
+		.comment-author-name {
 			color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
 		}
 		
@@ -306,7 +307,8 @@ function fs_colors() {
 		.wp-block-file a.wp-block-file__button:hover,
 		.wp-block-file a.wp-block-file__button.focus-visible,
 		.wp-block-button .wp-block-button__link:hover,
-		.wp-block-button .wp-block-button__link.focus-visible {
+		.wp-block-button .wp-block-button__link.focus-visible,
+		.comment-content .pending {
 			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
 		}
 		.has-secondary-color-background-color {
