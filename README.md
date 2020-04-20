@@ -48,11 +48,13 @@ There are two widgets area: one for the sidebar and one for the footer.
 
 ## Changelog
 
-### 1.8 - 2020.———
+### 1.8 - 2020.04...
 * Theme renamed: FS Onepage
 * Pridx removed
 * Custom jQuery version removed
 * Removed Onepage option
+* Customizer live previews
+* HTML and CSS updates
 * …
 
 ### 1.7.3 - 2019.06.09

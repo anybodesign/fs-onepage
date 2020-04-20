@@ -22,16 +22,12 @@
 	
 	.widget-container {
 		flex: 1 0 0;
-		padding-bottom: $grid-padding*2;
 		margin-bottom: $grid-padding*2;
-		border-bottom: $text-color 1px dashed;
 		
 		@include rwd(large) {
 			min-width: 33.3333%;
 			padding-left: $grid-padding*2;
 			margin-bottom: 0;
-			padding-bottom: 0;
-			border-bottom: 0;
 
 			&:nth-child(3n+1) {
 				padding-left: 0;
