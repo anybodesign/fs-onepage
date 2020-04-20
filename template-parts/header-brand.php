@@ -25,7 +25,7 @@
 				<?php 
 					$site_desc = get_bloginfo( 'description', 'display' );
 					if ( $site_desc || is_customize_preview() ) { ?>
-					<p class="site-desc"><?php echo $site_desc; ?></p>
+					<p class="site-desc <?php if(get_theme_mod('wp_baseline') == true) { echo 'screen-reader-text'; } ?>"><?php echo $site_desc; ?></p>
 				<?php } ?>
 							
 			</div>

@@ -35,7 +35,7 @@
 						} ?>
 						
 						<?php if(get_theme_mod('display_wp') == true) { ?>
-						<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'fs-onepage'); ?></a>
+						<a href="//wordpress.org" class="wp-love"><?php _e('Powered by WordPress!', 'fs-onepage'); ?></a>
 						<?php } ?>
 					</p>
 					

@@ -21,6 +21,10 @@
 .the-posts-link {
 	padding: $grid-padding*2 0;
 	text-align: center;
+	
+	.the-carousel-posts & {
+		margin-top: $grid-padding*4;
+	}
 }
 
 .post-block {
