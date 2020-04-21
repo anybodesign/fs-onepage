@@ -31,31 +31,23 @@ These page templates could be useful:
 
 ## Menus
 
-There are two navigation menu locations: _main menu_ in the header and _footer menu_ in the footer :)
-
-When the one-page option is set, the main menu location is used to display your pages.
+There are on navigation menu locations: _footer menu_ in the footer :)
 
 ## Widgets
 
 There are two widgets area: one for the sidebar and one for the footer.
 
-## To-Do
-
-* Comments styles
-* Widgets styles
-* CSS refactor
-* Gutenberg gallery css (prefix?)
-
 ## Changelog
 
-### 1.8 - 2020.04...
+### 1.8 - 2020.04.21
 * Theme renamed: FS Onepage
 * Pridx removed
 * Custom jQuery version removed
 * Removed Onepage option
 * Customizer live previews
 * HTML and CSS updates
-* …
+* Fancybox updated
+* Fancybox modals for posts
 
 ### 1.7.3 - 2019.06.09
 * Page colums width change
