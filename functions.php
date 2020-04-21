@@ -143,9 +143,25 @@ function fs_scripts_load() {
 			false, 
 			true
 		);
+
+	    if ( get_theme_mod('load_ias') == true ) {
+			wp_enqueue_script(
+			    	'ias', 
+			    	FS_THEME_URL . '/js/infinite-ajax-scroll.min.js',
+			    	array(), 
+			    	'3.0', 
+			    	true
+		    	);
+		    	wp_enqueue_script(
+			    	'ias-init', 
+			    	FS_THEME_URL . '/js/infinite-ajax-scroll-init.js',
+			    	array('ias'), 
+			    	false, 
+			    	true
+		    	);
+	    }
 		
 		if ( get_theme_mod('carousel_posts') == true ) {
-			
 			wp_enqueue_script(
 				'slick', 
 				FS_THEME_URL . '/js/slick.min.js', 
@@ -165,23 +181,25 @@ function fs_scripts_load() {
 		
 		// Fancybox
 		
-		wp_enqueue_script(
-			'fancybox', 
-			FS_THEME_URL . '/js/jquery.fancybox.min.js', 
-			array('jquery'), 
-			false, 
-			true
-		);
-		wp_enqueue_script(
-			'fancybox-init', 
-			FS_THEME_URL . '/js/fancybox-init.js', 
-			array('fancybox'), 
-			false, 
-			true
-		);
-
+		if ( get_theme_mod('fancy_open') == true || get_theme_mod('modals') == true ) {
+			wp_enqueue_script(
+				'fancybox', 
+				FS_THEME_URL . '/js/jquery.fancybox.min.js', 
+				array('jquery'), 
+				false, 
+				true
+			);
+		}
+		if ( get_theme_mod('fancy_open') == true ) {
+			wp_enqueue_script(
+				'fancybox-init', 
+				FS_THEME_URL . '/js/fancybox-init.js', 
+				array('fancybox'), 
+				false, 
+				true
+			);
+		}
 		if ( get_theme_mod('modals') == true ) {
-			
 			wp_enqueue_script(
 				'fancybox-modals', 
 				FS_THEME_URL . '/js/fancybox-modals.js', 
@@ -189,7 +207,6 @@ function fs_scripts_load() {
 				false, 
 				true
 			);
-
 		}		
 
 		
