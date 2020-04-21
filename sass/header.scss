@@ -17,7 +17,7 @@
 	.home.admin-bar & {
 		top: 46px;
 		
-		@include rwd(80rem) {
+		@include rwd($admin-bar) {
 			top: 32px;
 		}
 	}
@@ -27,7 +27,7 @@
 		animation: drop-in .6s ease-in-out;
 	}
 	
-	@include rwd(80rem) {	
+	@include rwd($admin-bar) {	
 		.home.fixed-nav.admin-bar & {
 			top: 32px;
 		}

@@ -24,8 +24,8 @@
 
 	.admin-bar & {
 		
-		@include rwd(80rem) {
-			padding: 10rem 0;
+		@include rwd(medium) {
+			padding-top: 10rem;
 		}
 			
 	}
@@ -155,52 +155,47 @@
 }
 
 .animated-image {
-
+	padding-bottom: 0;
+	
 	.animated-figure[data-scroll="in"] {
 		background-color: transparent;
+		padding: 0;
+		margin: 0;
 		animation: anim-from-below 1.5s ease-in-out;		
 	}
 	
 	@include rwd(large) {
 		flex-direction: row;
 		flex-wrap: wrap;
-		align-items: center;
-		
-		.page-title {
-			max-width: none;
-			padding-left: calc( (100% - #{$max-width}) /2 + #{$grid-padding} );
-		}
+		//align-items: center;
+
 		.page-content {
 			width: 60%;
-		}
-		.animated-figure {
-			width: 40%;
-		}
-		.page-content {
 			padding-left: calc( ( 100% - #{$max-width}) /2 );
 		}
 		.animated-figure {
-			padding: $grid-padding 0 $grid-padding $grid-padding;
+			width: 40%;
+			
+			img {
+				object-fit: cover;
+			}
 		}
 
 		// Reverse order
 		
 		&.reverse {
 			flex-direction: row-reverse;
-
+			
+			.page-title {
+				max-width: none;
+				padding-left: calc( 40% + #{$grid-padding*2} );
+			}
 			.page-content {
 				padding-left: $grid-padding;
 				padding-right: calc( ( 100% - #{$max-width}) /2 );
 			}
-			.animated-figure {
-				padding: $grid-padding $grid-padding $grid-padding 0;
-			}
-
 		}
-		
-		
 	}
-	
 }
 
 
