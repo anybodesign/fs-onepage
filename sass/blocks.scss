@@ -153,11 +153,79 @@
 
 hr,
 .wp-block-separator {
-	max-width: 20rem !important;
-	margin-top: 2rem !important;
 	border: 0;
 	border-top: #444 1px solid;
 }
+.wp-block-separator {
+	
+	.page-content > & {
+		max-width: 20rem;
+		margin-top: 2rem;
+
+		&.is-style-wide {
+			max-width: 50rem;
+		}		
+	}
+}
+
+// Latest posts & Categories
+
+.wp-block-archives-list,
+.wp-block-categories-list,
+.wp-block-latest-posts__list {
+	
+	li {
+		margin-left: 0;
+		border-bottom: $text-color 1px solid;
+		
+		&:first-child {
+			border-top: $text-color 1px solid;
+		}
+			
+		a {
+			padding: $grid-padding 0;
+			text-decoration: none;
+			transition: .2s ease-in-out;
+			
+			&:hover,
+			&.focus-visible {
+				padding-left: $grid-padding;
+				padding-right: $grid-padding;
+				background-color: $primary-color;
+				color: #fff;
+			}
+		}
+	}
+	
+	&.is-grid {
+		li {
+			margin-bottom: 0;
+			
+			&:first-child {
+				border-top: 0;
+			}
+		}
+	}
+}
+.wp-block-latest-posts__list {
+	li {
+		a {
+			display: block;
+		}
+	}
+}
+
+.wp-block-archives-list,
+.wp-block-categories-list {
+	list-style: none;
+	
+	li {
+		a {
+			display: inline-block;
+		}
+	}
+}
+
 
 // Quotes
 

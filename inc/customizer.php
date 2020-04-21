@@ -341,14 +341,15 @@ function fs_colors() {
 		.page-banner::after,
 		.wp-pagenavi a,
 		.nav-links a,
+		.wp-block-latest-posts__list li a:hover,
+		.wp-block-latest-posts__list li a.focus-visible,
+		.wp-block-archives-list li a:hover,
+		.wp-block-archives-list li a.focus-visible,
+		.wp-block-categories-list li a:hover,
+		.wp-block-categories-list li a.focus-visible,
 		.has-primary-color-background-color { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
-/*
-		.has-primary-color-background-color {
-			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?> !important; 			
-		}
-*/
 		
 		.wp-block-gallery .blocks-gallery-image figcaption, 
 		.wp-block-gallery .blocks-gallery-item figcaption { 
@@ -395,11 +396,6 @@ function fs_colors() {
 		.has-secondary-color-background-color {
 			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
 		}
-/*
-		.has-secondary-color-background-color {
-			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?> !important;
-		}
-*/
 
 		.formfield-checkbox input[type="checkbox"] + label::after,
 		.formfield-checkbox input[type="checkbox"] + span::after,
