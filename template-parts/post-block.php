@@ -15,9 +15,14 @@
 						<article <?php post_class('post-block'); ?> id="post-<?php the_ID(); ?>" data-scroll>
 							
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<?php if ( '' != get_the_post_thumbnail() ) { ?>
+
+								<?php if ( '' != get_the_post_thumbnail() ) {
+									$img_id = get_post_thumbnail_id();
+									$img_url = wp_get_attachment_image_src( $img_id, 'post-md' );
+									$img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
+								?>
 								<div class="post-figure">
-									<?php the_post_thumbnail('post-md'); ?>
+									<img src="<?php echo $img_url[0]; ?>" alt="<?php echo $img_alt; ?>">
 								</div>
 								<?php } ?>
 								

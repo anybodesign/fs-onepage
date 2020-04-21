@@ -136,7 +136,7 @@ function fs_scripts_load() {
 		
 		wp_enqueue_script( 'jquery' );
 
-	    if ( get_theme_mod('load_ias') == true ) {
+	    if ( get_theme_mod('load_ias') == true && is_home() || is_archive() || is_search() ) {
 			wp_enqueue_script(
 			    	'ias', 
 			    	FS_THEME_URL . '/js/infinite-ajax-scroll.min.js',

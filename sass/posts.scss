@@ -146,6 +146,11 @@
 }
 .spinner {
 	padding: $grid-padding*2 0;
+
+	img {
+		width: 4.4rem;
+		height: 4.4rem;	
+	}
 }
 .no-more {
 	display: none;
