@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Onepage\n"
-"POT-Creation-Date: 2020-04-20 18:49+0200\n"
-"PO-Revision-Date: 2020-04-20 18:49+0200\n"
+"POT-Creation-Date: 2020-04-21 12:15+0200\n"
+"PO-Revision-Date: 2020-04-21 12:15+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "It looks like nothing was found at this location."
 msgstr "Il semblerait que rien n’ait été trouvé à cette adresse."
 
-#: 404.php:22 header.php:46 template-parts/header-brand.php:19
+#: 404.php:22 header.php:43 template-parts/header-brand.php:19
 msgid "Go to Home Page"
 msgstr "Retour à la page d'accueil"
 
@@ -88,68 +88,68 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:297
+#: functions.php:306
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:318
+#: functions.php:327
 msgid "Continue reading"
 msgstr "Continuer la lecture"
 
-#: functions.php:372
+#: functions.php:381
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:373
+#: functions.php:382
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:374
+#: functions.php:383
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:375
+#: functions.php:384
 msgid "Post Medium"
 msgstr "Article Medium"
 
-#: functions.php:376
+#: functions.php:385
 msgid "Post High"
 msgstr "Article High"
 
-#: functions.php:384
+#: functions.php:393
 msgid "Categories Widgets Area"
 msgstr "Emplacement du widget catégories"
 
-#: functions.php:393
+#: functions.php:402
 msgid "Footer Widgets Area"
 msgstr "Emplacement des widgets du pied de page"
 
-#: functions.php:447
+#: functions.php:456
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:448
+#: functions.php:457
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:449
+#: functions.php:458
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:481
+#: functions.php:490
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:487
+#: functions.php:496
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:496
+#: functions.php:505
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:502
+#: functions.php:511
 msgid "Edit"
 msgstr "Modifier"
 
@@ -157,11 +157,7 @@ msgstr "Modifier"
 msgid "Go to main content"
 msgstr "Aller au contenu principal"
 
-#: header.php:36
-msgid "Go to main menu"
-msgstr "Aller au menu principal"
-
-#: header.php:53
+#: header.php:50
 msgid "Main menu"
 msgstr "Menu principal"
 
@@ -194,45 +190,52 @@ msgid "Display your posts like a carousel"
 msgstr "Affichez vos articles en carrousel"
 
 #: inc/customizer.php:161
-msgid "Open your posts with Fancybox (available in a future release)"
-msgstr ""
-"Ouvrez vos articles avec FancyBox (disponible dans une prochaine version)"
+msgid "Open your posts with Fancybox"
+msgstr "Ouvrez vos articles avec FancyBox"
 
-#: inc/customizer.php:177
+#: inc/customizer.php:174
+msgid "Load posts on scroll"
+msgstr "Charger les articles au scroll"
+
+#: inc/customizer.php:190
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:189
+#: inc/customizer.php:202
 msgid "Site White Logo"
 msgstr "Logo blanc du site"
 
-#: inc/customizer.php:190
+#: inc/customizer.php:203
 msgid "White version of your logo for the home page."
 msgstr "Version blanche de votre logo pour la page d'accueil."
 
-#: inc/customizer.php:205
+#: inc/customizer.php:218
 msgid "Hide the tagline (in an accessible way)"
 msgstr "Masquer le slogan (de manière accessible)"
 
-#: inc/customizer.php:218
-msgid "Custom footer text"
-msgstr "Texte de pied de page personnalisé"
+#: inc/customizer.php:231
+msgid "Enlarge pictures with Fancybox"
+msgstr "Agrandir les images avec Fancybox"
 
-#: inc/customizer.php:219
-msgid "Add a custom text instead of the year and blog name."
-msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
-
-#: inc/customizer.php:233
-msgid "Display WordPress Link"
-msgstr "Afficher le lien WordPress"
-
-#: inc/customizer.php:245
+#: inc/customizer.php:243
 msgid "Page for posts banner picture"
 msgstr "Image d’en-tête pour la page des articles"
 
-#: inc/customizer.php:257
+#: inc/customizer.php:255
 msgid "404 banner picture"
 msgstr "Image d’en-tête pour la page 404"
+
+#: inc/customizer.php:269
+msgid "Custom footer text"
+msgstr "Texte de pied de page personnalisé"
+
+#: inc/customizer.php:270
+msgid "Add a custom text instead of the year and blog name."
+msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
+
+#: inc/customizer.php:284
+msgid "Display WordPress Link"
+msgstr "Afficher le lien WordPress"
 
 #: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:395
 msgid "Check for updates"
@@ -318,6 +321,26 @@ msgstr "Défiler vers le bas"
 msgid "Show All Posts"
 msgstr "Tous les articles"
 
+#: template-parts/post-archive.php:47
+msgid "Load more"
+msgstr "Charger plus d’articles"
+
+#: template-parts/post-archive.php:51
+msgid "No more posts"
+msgstr "Pas d’autre article"
+
+#: template-parts/post-archive.php:61
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: template-parts/post-archive.php:62
+msgid "Next page"
+msgstr "Page suivante"
+
+#: template-parts/post-archive.php:63
+msgid "Page"
+msgstr "Page"
+
 #: template-parts/post-content.php:26
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
@@ -374,6 +397,9 @@ msgstr "Page avec image animée (à droite)"
 msgid "Standalone Page"
 msgstr "Page autonome"
 
+#~ msgid "Go to main menu"
+#~ msgstr "Aller au menu principal"
+
 #~ msgid "Main Menu"
 #~ msgstr "Menu principal"
 
@@ -394,15 +420,6 @@ msgstr "Page autonome"
 
 #~ msgid "M"
 #~ msgstr "M"
-
-#~ msgid "Previous page"
-#~ msgstr "Page précédente"
-
-#~ msgid "Next page"
-#~ msgstr "Page suivante"
-
-#~ msgid "Page"
-#~ msgstr "Page"
 
 #~ msgid "Read "
 #~ msgstr "Lire "
