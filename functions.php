@@ -136,14 +136,6 @@ function fs_scripts_load() {
 		
 		wp_enqueue_script( 'jquery' );
 
-		wp_enqueue_script(
-			'onepage-scroll', 
-			FS_THEME_URL . '/js/onepage-scroll.js', 
-			array(), 
-			false, 
-			true
-		);
-
 	    if ( get_theme_mod('load_ias') == true ) {
 			wp_enqueue_script(
 			    	'ias', 
