@@ -161,15 +161,27 @@
 		&::after {
 			opacity: .7;	
 		}
-	}	
+	}
 }
 
-/* ------------------------- */
-/* = Misc
-/* ------------------------- */
+.fancybox-close-small {
+	
+	&::after {
+		color: #fff;
+		background-color: $primary-color;
+	}
 
-.error-404 {}
+	&:hover,
+	&.focus-visible {
+		background-color: transparent;
+		
+		&::after {
+			color: $text-color;
+			background-color: transparent;
+		}
+	}
 
+}
 
 /* ------------------------- */
 /* = Helpers

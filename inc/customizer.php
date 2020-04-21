@@ -347,6 +347,7 @@ function fs_colors() {
 		.wp-block-archives-list li a.focus-visible,
 		.wp-block-categories-list li a:hover,
 		.wp-block-categories-list li a.focus-visible,
+		.fancybox-close-small::after,
 		.has-primary-color-background-color { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}

@@ -13,9 +13,13 @@
 					<div class="post-block-container">
 						
 						<article <?php post_class('post-block'); ?> id="post-<?php the_ID(); ?>" data-scroll>
-							
-							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 
+							<?php if ( get_theme_mod('modals') == true && is_front_page() ) { ?>
+							<a href="#" class="fancy-modal" data-fancybox data-type="ajax" data-src="<?php the_permalink(); ?>" data-filter=".hentry" data-title="<?php the_title(); ?>">
+							<?php } else { ?>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+							<?php } ?>
+							
 								<?php if ( '' != get_the_post_thumbnail() ) {
 									$img_id = get_post_thumbnail_id();
 									$img_url = wp_get_attachment_image_src( $img_id, 'post-md' );

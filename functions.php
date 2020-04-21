@@ -324,7 +324,12 @@ function fs_custom_excerpt( $length ) {
 add_filter( 'excerpt_length', 'fs_custom_excerpt', 999 );
 
 function fs_excerpt_more( $more ) {
-	return '… <br><a href="'. get_permalink( get_the_ID() ) . '">' . __('Continue reading', 'fs-onepage') . '</a>';
+	
+	if ( get_theme_mod( 'modals' ) && is_front_page() ) {
+		return '…';
+	} else {
+		return '… <br><a href="'. get_permalink( get_the_ID() ) . '">' . __('Continue reading', 'fs-onepage') . '</a>';
+	}
 }
 add_filter( 'excerpt_more', 'fs_excerpt_more' );
 
