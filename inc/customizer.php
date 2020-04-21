@@ -344,7 +344,8 @@ function fs_colors() {
 		.sub-menu > li.current-menu-item a,
 		.acf-block-gallery-figure .acf-block-gallery-caption,
 		.page-banner,
-		.page-banner::after { 
+		.page-banner::after,
+		.wp-pagenavi a { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
 		.has-primary-color-background-color {

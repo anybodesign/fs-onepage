@@ -135,6 +135,62 @@
 	
 }
 
+/* ------------------------- */
+/* = Pagination
+/* ------------------------- */
+
+// IAS 3
+
+.trigger {
+	margin-bottom: $grid-padding*3;
+}
+.spinner {
+	padding: $grid-padding*2 0;
+}
+.no-more {
+	display: none;
+}
+
+// Pagenavi
+
+.wp-pagenavi {
+	display: flex;
+	
+	span, a {
+		display: block;
+		width: 4.4rem;
+		height: 4.4rem;
+		margin-right: $grid-padding;
+		
+		background-color: $primary-color;
+		color: #fff;
+		border-radius: 50%;
+		
+		text-align: center;
+		line-height: 4.4rem;
+	}
+	a {
+		text-decoration: none;
+		transition: background .2s ease-in-out;
+		
+		&:hover,
+		&.focus-visible {
+			background-color: $text-color;
+		}
+	}
+	.current {
+		background-color: $text-color;
+	}
+	
+	.pages {
+		@include a11y-hidden();
+	}
+}
+
+
+// Else
+
+
 
 /* ------------------------- */
 /* = Single Posts
