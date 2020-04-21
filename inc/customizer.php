@@ -215,7 +215,7 @@ function fs_customize_register($fs_customize) {
 		
 		$fs_customize->add_control('wp_baseline', array(
 			'type'			=> 'checkbox',
-			'label'			=> __('Hide the tagline (in an accessible way)', 'fs-blog'),
+			'label'			=> __('Hide the tagline (in an accessible way)', 'fs-onepage'),
 			'section'		=> 'title_tagline',
 			'settings'		=> 'wp_baseline',
 		));
@@ -228,7 +228,7 @@ function fs_customize_register($fs_customize) {
 		));
 		$fs_customize->add_control('fancy_open', array(
 			'type'			=> 'checkbox',
-			'label'			=> __('Enlarge pictures with Fancybox', 'fs-blog'),
+			'label'			=> __('Enlarge pictures with Fancybox', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'fancy_open',
 		));
@@ -345,7 +345,8 @@ function fs_colors() {
 		.acf-block-gallery-figure .acf-block-gallery-caption,
 		.page-banner,
 		.page-banner::after,
-		.wp-pagenavi a { 
+		.wp-pagenavi a,
+		.nav-links a { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
 		.has-primary-color-background-color {

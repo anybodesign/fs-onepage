@@ -20,7 +20,7 @@
 	<?php endif; ?>
 	<?php wp_head(); ?>
 	<script>
-		var theme_path = '<?php echo get_template_directory_uri() ?>';
+		var theme_path = '<?php echo FS_THEME_URL; ?>';
 	</script>
 </head>
 
@@ -32,9 +32,6 @@
 	
 	<div class="skiplinks">
 		<a href="#site_content"><?php _e('Go to main content', 'fs-onepage'); ?></a>
-		<?php if ( has_nav_menu( 'main_menu' ) ) { ?>
-		<a href="#site_nav"><?php _e('Go to main menu', 'fs-onepage'); ?></a>
-		<?php } ?>
 	</div>
 	
 	
