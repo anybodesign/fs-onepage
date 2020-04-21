@@ -310,7 +310,7 @@
 		@include rwd(medium) {
 			max-width: 75%;
 		}
-		@include rwd(large) {
+		@include rwd($admin-bar) {
 			max-width: 50%;
 
 			.admin-bar & {

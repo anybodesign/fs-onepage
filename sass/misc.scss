@@ -138,33 +138,39 @@
 .fancybox-toolbar {
 	
 	.admin-bar & {
-		top: 32px;
+		top: 46px;
+		
+		@include rwd($admin-bar) {
+			top: 32px;
+		}
 	}	
 }
 
-.fancybox-arrow {
+.fancybox-button {
+	background-color: $primary-color;
 	
-	.fancybox-show-nav & {
-		opacity: 1;
+	.fancybox-navigation & {
+		border-radius: 50%;
+		height: 4.4rem;
+		width: 4.4rem;
+		padding: 0;
 	}
 	
-	&::after {
-		background-color: $primary-color;
-		transition: opacity .3s ease-in-out;	
-	}
-		
+	svg path { fill: #fff; }
+
 	&:hover,
-	&:focus,
 	&.focus-visible {
-		background-color: transparent;
+		background-color: #fff;
 		
-		&::after {
-			opacity: .7;	
-		}
+		svg path { fill: $text-color; }
 	}
 }
 
+
 .fancybox-close-small {
+	padding: $grid-padding*2;
+	width: 4.4rem;
+	height: 4.4rem;
 	transition: background .3s ease-in-out;
 	background-color: $primary-color;
 	border-radius: 50%;
@@ -175,7 +181,7 @@
 
 	&:hover,
 	&.focus-visible {
-		background-color: transparent;
+		background-color: #fff;
 		
 		svg path {
 			fill: $text-color;	
