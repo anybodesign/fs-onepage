@@ -15,7 +15,7 @@
 						<article <?php post_class('post-block'); ?> id="post-<?php the_ID(); ?>" data-scroll>
 
 							<?php if ( get_theme_mod('modals') == true && is_front_page() ) { ?>
-							<a href="#" class="fancy-modal" data-fancybox data-type="ajax" data-src="<?php the_permalink(); ?>" data-filter=".hentry" data-title="<?php the_title(); ?>">
+							<a href="<?php the_permalink(); ?>" class="fancy-modal" data-fancybox data-type="ajax" data-src="<?php the_permalink(); ?>" data-filter=".hentry" data-title="<?php the_title(); ?>">
 							<?php } else { ?>
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 							<?php } ?>
