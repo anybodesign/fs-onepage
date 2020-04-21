@@ -288,14 +288,11 @@
 		display: flex;
 		justify-content: flex-end;
 	}
-	
 	.fancybox-close-small {
-		.admin-bar & {
-			top: 4.8rem;
-		}
+		top: $grid-padding;
+		right: $grid-padding;
 	}
-	
-	
+
 	.hentry {
 		max-width: 95%;
 		margin-top: 0;
@@ -303,11 +300,19 @@
 		box-shadow: -20px 0px 20px rgba(0, 0, 0, 0.15);
 		animation: slideinright .6s;
 		
+		.admin-bar & {
+			top: 46px;
+		}
+		
 		@include rwd(medium) {
 			max-width: 75%;
 		}
 		@include rwd(large) {
 			max-width: 50%;
+
+			.admin-bar & {
+				top: 32px;
+			}
 		}
 		
 		.page-title {
