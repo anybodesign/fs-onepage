@@ -1,6 +1,7 @@
 <?php if ( !defined('ABSPATH') ) die();
 
 
+define( 'FS_THEME_VER', '1.8' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
@@ -24,6 +25,8 @@ function fs_setup() {
 	
 	
 	// Theme Support
+
+	add_editor_style( array('css/editor-style.css') );
 	
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
