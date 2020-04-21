@@ -151,12 +151,14 @@
 	display: none;
 }
 
-// Pagenavi
+// Pagenavi & Nav links
 
+.nav-links,
 .wp-pagenavi {
 	display: flex;
 	
-	span, a {
+	& > a,
+	& > span {
 		display: block;
 		width: 4.4rem;
 		height: 4.4rem;
@@ -186,10 +188,15 @@
 		@include a11y-hidden();
 	}
 }
-
-
-// Else
-
+.nav-links {
+	
+	a.next,
+	a.prev {
+		padding: 0 $grid-padding;
+		border-radius: 0;
+		width: auto;
+	}
+}
 
 
 /* ------------------------- */
