@@ -19,14 +19,6 @@
 		background-color: $secondary-color;
 		color: #fff;
 	}
-	&:visited {
-		color: $text-color;
-		border-bottom-color: $text-color;
-		border-bottom-width: 1px;
-	}
-	&:visited:focus {
-		color: #fff;
-	}
 	&:active {
 		color: $secondary-color;
 		border-bottom-color: transparent;
