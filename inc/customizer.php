@@ -337,21 +337,18 @@ function fs_colors() {
 		.slick-dots li button:hover,
 		.slick-dots li button.focus-visible,
 		.skiplinks a,
-		.wp-block-file a.wp-block-file__button,
-		.wp-block-button .wp-block-button__link,
-		.sub-menu > li a:hover, 
-		.sub-menu > li a.focus-visible,
-		.sub-menu > li.current-menu-item a,
-		.acf-block-gallery-figure .acf-block-gallery-caption,
 		.page-banner,
 		.page-banner::after,
 		.wp-pagenavi a,
-		.nav-links a { 
+		.nav-links a,
+		.has-primary-color-background-color { 
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
 		}
+/*
 		.has-primary-color-background-color {
 			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?> !important; 			
 		}
+*/
 		
 		.wp-block-gallery .blocks-gallery-image figcaption, 
 		.wp-block-gallery .blocks-gallery-item figcaption { 
@@ -371,8 +368,12 @@ function fs_colors() {
 		.onepage-menu > li > a.focus-visible,
 		.site-title a:hover,
 		.site-title a.focus-visible,
-		.has-text-color.has-primary-color-color,
-		.comment-author-name {
+		.comment-author-name,
+		.acf-block-list-item .list-featured,
+		.acf-block-post-title a:hover, 
+		.acf-block-post-title a:focus, 
+		.acf-block-post-title a.focus-visible,
+		.has-text-color.has-primary-color-color {
 			color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
 		}
 		
@@ -390,16 +391,15 @@ function fs_colors() {
 		.formfield-radio input[type="radio"] + label::after,
 		.formfield-radio input[type="radio"] + span::after,
 		body::after,
-		.wp-block-file a.wp-block-file__button:hover,
-		.wp-block-file a.wp-block-file__button.focus-visible,
-		.wp-block-button .wp-block-button__link:hover,
-		.wp-block-button .wp-block-button__link.focus-visible,
-		.comment-content .pending {
+		.comment-content .pending, 
+		.has-secondary-color-background-color {
 			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
 		}
+/*
 		.has-secondary-color-background-color {
 			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?> !important;
 		}
+*/
 
 		.formfield-checkbox input[type="checkbox"] + label::after,
 		.formfield-checkbox input[type="checkbox"] + span::after,
