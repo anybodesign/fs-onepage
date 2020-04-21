@@ -158,9 +158,22 @@ function fs_customize_register($fs_customize) {
 		));
 		$fs_customize->add_control('modals', array(
 			'type'			=> 'checkbox',
-			'label'			=> __('Open your posts with Fancybox (available in a future release)', 'fs-onepage'),
+			'label'			=> __('Open your posts with Fancybox', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'modals',
+		));	
+		
+		// Load posts on scroll
+		
+		$fs_customize->add_setting('load_ias', array(
+			'default'			=> false,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',				
+		));
+		$fs_customize->add_control('load_ias', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Load posts on scroll', 'fs-onepage'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'load_ias',
 		));	
 
 	
