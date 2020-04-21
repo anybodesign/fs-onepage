@@ -219,35 +219,20 @@ function fs_customize_register($fs_customize) {
 			'section'		=> 'title_tagline',
 			'settings'		=> 'wp_baseline',
 		));
-			
-		// Footer text
 		
-		$fs_customize->add_setting('footer_text', array(
-			'default'				=> '',
-			'transport'				=> 'postMessage',
-			'sanitize_callback'		=> 'sanitize_text_field'
-		));
-		$fs_customize->add_control('footer_text', array(
-			'label'			=> __('Custom footer text', 'fs-onepage'),
-			'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-onepage'),
-			'section'		=> 'fs_options_section',
-			'settings'		=> 'footer_text',
-		));	
+		// Fancybox
 		
-		// WP Credits
-		
-		$fs_customize->add_setting('display_wp', array(
+		$fs_customize->add_setting('fancy_open', array(
 			'default'			=> false,
-			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 		));
-		$fs_customize->add_control('display_wp', array(
+		$fs_customize->add_control('fancy_open', array(
 			'type'			=> 'checkbox',
-			'label'			=> __('Display WordPress Link', 'fs-onepage'),
+			'label'			=> __('Enlarge pictures with Fancybox', 'fs-blog'),
 			'section'		=> 'fs_options_section',
-			'settings'		=> 'display_wp',
+			'settings'		=> 'fancy_open',
 		));
-
+			
 		// Blog picture
 		
 		$fs_customize->add_setting('blog_picture', array(
@@ -270,7 +255,37 @@ function fs_customize_register($fs_customize) {
 			'label'			=> __('404 banner picture', 'fs-onepage'),
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'error_picture',
-		)));		 
+		)));	
+
+
+		// Footer text
+		
+		$fs_customize->add_setting('footer_text', array(
+			'default'				=> '',
+			'transport'				=> 'postMessage',
+			'sanitize_callback'		=> 'sanitize_text_field'
+		));
+		$fs_customize->add_control('footer_text', array(
+			'label'			=> __('Custom footer text', 'fs-onepage'),
+			'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-onepage'),
+			'section'		=> 'title_tagline',
+			'settings'		=> 'footer_text',
+		));	
+		
+		// WP Credits
+		
+		$fs_customize->add_setting('display_wp', array(
+			'default'			=> false,
+			'transport'			=> 'postMessage',
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+		));
+		$fs_customize->add_control('display_wp', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Display WordPress Link', 'fs-onepage'),
+			'section'		=> 'title_tagline',
+			'settings'		=> 'display_wp',
+		));
+			 
 }
 add_action('customize_register', 'fs_customize_register');
 
