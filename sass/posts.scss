@@ -288,6 +288,9 @@
 		display: flex;
 		justify-content: flex-end;
 	}
+	.fancybox-slide--html {
+		padding: 0;
+	}
 	.fancybox-close-small {
 		top: $grid-padding;
 		right: $grid-padding;

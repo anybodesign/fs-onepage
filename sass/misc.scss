@@ -165,19 +165,20 @@
 }
 
 .fancybox-close-small {
+	transition: background .3s ease-in-out;
+	background-color: $primary-color;
+	border-radius: 50%;
 	
-	&::after {
-		color: #fff;
-		background-color: $primary-color;
+	svg path {
+		fill: #fff;	
 	}
 
 	&:hover,
 	&.focus-visible {
 		background-color: transparent;
 		
-		&::after {
-			color: $text-color;
-			background-color: transparent;
+		svg path {
+			fill: $text-color;	
 		}
 	}
 
