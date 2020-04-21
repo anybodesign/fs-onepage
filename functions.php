@@ -327,7 +327,7 @@ function fs_bg_img() {
 	$img_blog = get_theme_mod('blog_picture');
 	$img_404 = get_theme_mod('error_picture');
 
-	if ( is_home() && $img_blog && ! is_front_page() ) {
+	if ( is_home() && $img_blog && ! is_front_page() || is_archive() && $img_blog ) {
 		$bg = ' style="background-image: url('.get_theme_mod('blog_picture', 'none').')"';
 	}
 	else if ( is_404() && $img_404 ) {
