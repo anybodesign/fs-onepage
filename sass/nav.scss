@@ -10,7 +10,7 @@
 		position: fixed; 
 		top: -65px;
 		padding: $grid-padding;
-		background-color: $primary-color;
+		background-color: var(--primary_color);
 		font-family: $font-bold;
 		color: #fff;
 		text-decoration: none;
@@ -81,17 +81,17 @@
 			transition: .3s ease-in-out;
 			
 			@include rwd(large) {
-				color: $text-color;
+				color: var(--text_color);
 				border-bottom-color: transparent;
 			}
 		}
 		& > a:hover, 
 		& > a.focus-visible {
-			color: $primary-color;
+			color: var(--primary_color);
 		}
 		
 		&.current-menu-item > a {
-			border-bottom-color: $primary-color;
+			border-bottom-color: var(--primary_color);
 		}
 
 	}

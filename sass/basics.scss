@@ -20,7 +20,7 @@ body {
 		position: fixed;
 		top: 0; 
 		left: 0;
-		background-color: $secondary-color;
+		background-color: var(--secondary_color);
 		opacity: .1;
 		z-index: -1;
 	}

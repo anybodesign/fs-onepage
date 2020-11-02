@@ -105,7 +105,7 @@
 			height: 14px;
 			margin: 0 8px;
 			border-radius: 14px;
-			border: $primary-color 2px solid;
+			border: var(--primary_color) 2px solid;
 			background-color: transparent;
 			outline: none !important;
 			
@@ -115,7 +115,7 @@
 			&:hover, 
 			&.focus-visible {
 				transform: scale(1.4);
-				background-color: $primary-color;
+				background-color: var(--primary_color);
 				border-color: transparent;
 				outline: none;
 			}
@@ -123,7 +123,7 @@
 		}
 		
 		&.slick-active button {
-			background-color: $text-color;
+			background-color: var(--text_color);
 			border-color: transparent;
 		}
 		&.slick-disabled {
@@ -147,7 +147,7 @@
 }
 
 .fancybox-button {
-	background-color: $primary-color;
+	background-color: var(--primary_color);
 	
 	.fancybox-navigation & {
 		border-radius: 50%;
@@ -162,7 +162,7 @@
 	&.focus-visible {
 		background-color: #fff;
 		
-		svg path { fill: $text-color; }
+		svg path { fill: var(--text_color); }
 	}
 }
 
@@ -172,7 +172,7 @@
 	width: 4.4rem;
 	height: 4.4rem;
 	transition: background .3s ease-in-out;
-	background-color: $primary-color;
+	background-color: var(--primary_color);
 	border-radius: 50%;
 	
 	svg path {
@@ -184,7 +184,7 @@
 		background-color: #fff;
 		
 		svg path {
-			fill: $text-color;	
+			fill: var(--text_color);	
 		}
 	}
 

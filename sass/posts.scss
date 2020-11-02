@@ -63,10 +63,10 @@
 	transition: color .3s ease-in-out;
 	
 	a:hover & {
-		color: $secondary-color;	
+		color: var(--secondary_color);	
 	}
 	a.focus-visible & {
-		background-color: $primary-color;
+		background-color: var(--primary_color);
 		color: #fff;
 	}
 	
@@ -170,7 +170,7 @@
 		height: 4.4rem;
 		margin-right: $grid-padding;
 		
-		background-color: $primary-color;
+		background-color: var(--primary_color);
 		color: #fff;
 		border-radius: 50%;
 		
@@ -183,11 +183,11 @@
 		
 		&:hover,
 		&.focus-visible {
-			background-color: $text-color;
+			background-color: var(--text_color);
 		}
 	}
 	.current {
-		background-color: $text-color;
+		background-color: var(--text_color);
 	}
 	
 	.pages {
@@ -363,7 +363,7 @@
 		
 		@include rwd(large) {
 			flex-direction: column;
-			border-top: $text-color 1px solid;
+			border-top: var(--text_color) 1px solid;
 		}
 		
 		li {
@@ -382,8 +382,8 @@
 				display: block;
 				width: 100%;
 				padding: $grid-padding;
-				border-bottom: $text-color 1px solid;
-				border-top: $text-color 1px solid; 
+				border-bottom: var(--text_color) 1px solid;
+				border-top: var(--text_color) 1px solid; 
 				text-decoration: none;
 				transition: .2s ease-in-out;
 				
@@ -395,7 +395,7 @@
 			&.current-cat a,
 			a:hover, 
 			a.focus-visible {
-				background-color: $primary-color;
+				background-color: var(--primary_color);
 				color: #fff;
 				padding-left: $grid-padding;
 			}
@@ -424,7 +424,7 @@
 .comments-title {
 	margin-top: $grid-padding*3;
 	padding-top: $grid-padding*3;
-	border-top: $text-color 1px dashed;
+	border-top: var(--text_color) 1px dashed;
 }
 
 .comment-list {
@@ -502,7 +502,7 @@
 	.pending {
 		display: block;
 		margin: $grid-padding 0;
-		background-color: $secondary-color;
+		background-color: var(--secondary_color);
 		padding: $grid-padding/2 $grid-padding;
 		color: #fff;
 	}
@@ -510,7 +510,7 @@
 
 .comment-author-name {
 	font-family: $font-bold;
-	color: $primary-color;
+	color: var(--primary_color);
 	font-size: 2.4rem;
 	
 	a {
@@ -519,7 +519,7 @@
 		
 		&:hover,
 		&.focus-visible {
-			color: $text-color;
+			color: var(--text_color);
 		}
 	}
 }

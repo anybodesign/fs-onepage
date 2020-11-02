@@ -6,35 +6,35 @@
 // Colors
 
 .has-primary-color-background-color {
-	background-color: $primary-color;
+	background-color: var(--primary_color);
 }
 .has-secondary-color-background-color {
-	background-color: $secondary-color;
+	background-color: var(--secondary_color);
 }
 .has-third-color-background-color {
-	background-color: $third-color;
+	background-color: var(--third_color);
 }
 .has-white-color-background-color {
 	background-color: #fff;
 }
 .has-black-color-background-color {
-	background-color: $text-color;
+	background-color: var(--text_color);
 }
 
 .has-text-color.has-primary-color-color {
-	color: $primary-color;
+	color: var(--primary_color);
 }
 .has-text-color.has-secondary-color-color {
-	color: $secondary-color;
+	color: var(--secondary_color);
 }
 .has-text-color.has-third-color-color {
-	color: $third-color;
+	color: var(--third_color);
 }
 .has-text-color.has-white-color-color {
 	color: #fff;
 }
 .has-text-color.has-black-color-color {
-	color: $text-color;
+	color: var(--text_color);
 }
 
 // Links / Button
@@ -54,15 +54,15 @@
 	a:first-child {
 		font-family: $font-regular;
 		text-decoration: none;
-		border-bottom: $secondary-color 2px solid;
+		border-bottom: var(--secondary_color) 2px solid;
 		transition: border .2s ease-in-out;
 		
 		&:hover {
 			border-bottom-width: 4px;
 		}
 		&.focus-visible {
-			background-color: $text-color;
-			border-bottom-color: $text-color;
+			background-color: var(--text_color);
+			border-bottom-color: var(--text_color);
 			color: #fff;
 		}
 	}
@@ -176,10 +176,10 @@ hr,
 	
 	li {
 		margin-left: 0;
-		border-bottom: $text-color 1px solid;
+		border-bottom: var(--text_color) 1px solid;
 		
 		&:first-child {
-			border-top: $text-color 1px solid;
+			border-top: var(--text_color) 1px solid;
 		}
 			
 		a {
@@ -191,7 +191,7 @@ hr,
 			&.focus-visible {
 				padding-left: $grid-padding;
 				padding-right: $grid-padding;
-				background-color: $primary-color;
+				background-color: var(--primary_color);
 				color: #fff;
 			}
 		}
@@ -226,15 +226,6 @@ hr,
 	}
 }
 
-
-// Quotes
-
-.wp-block-quote {
-	
-	cite {
-		
-	}
-}
 
 
 // Table
@@ -295,7 +286,7 @@ hr,
 .acf-block--gallery {}
 .acf-block-gallery-caption {
 	padding: $grid-padding/2 0;
-	border-bottom: $text-color 1px solid;
+	border-bottom: var(--text_color) 1px solid;
 }
 
 // CTA
@@ -352,7 +343,7 @@ hr,
 		
 		&:hover,
 		&:focus {
-			color: $primary-color;
+			color: var(--primary_color);
 		}
 	}
 }
@@ -368,7 +359,7 @@ hr,
 	margin-left: 0;
 	
 	.list-featured {
-		color: $primary-color;
+		color: var(--primary_color);
 	}
 }
 

@@ -15,7 +15,7 @@ body {
 	font-size: 1.6em; 				// base font-size is equivalent "14px"
     line-height: 1.5;
 	font-family: $font-regular;
-	color: $text-color;
+	color: var(--text_color);
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -29,7 +29,7 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
-	color: $text-color;
+	color: var(--text_color);
 	font-family: $font-title;
 	font-weight: normal;
 	margin: 0 0 $grid-padding 0;
@@ -246,8 +246,9 @@ figure {
 			width: 80px;
 			height: 80px;
 			border-radius: 80px;
-			background-color: transparentize( $text-color, .1 );
+			background-color: var(--text_color);
 			transition: .4s ease-in-out;
+			opacity: .9;
 		}
 		&::after {
 			width: 0; height: 0;
@@ -262,7 +263,7 @@ figure {
 		&.focus-visible::before, 
 		&:hover::before {
 			transform: translateX(-50%) translateY(-50%) scale(1.2);
-			background-color: $text-color;
+			background-color: var(--text_color);
 		}
 		& img {
 			transition: opacity .2s ease-in-out;
@@ -283,7 +284,7 @@ figcaption {
 	line-height: 1.1;
 	margin: 0;
 	padding: $grid-padding 0;
-	border-bottom: $text-color 1px solid;
+	border-bottom: var(--text_color) 1px solid;
 }
 
 
@@ -369,7 +370,7 @@ table {
     background-color: #fff;
 }
 thead {
-	background-color: $primary-color;
+	background-color: var(--primary_color);
 }
 th {
 	color: #fff;
@@ -380,7 +381,7 @@ td, th {
 	vertical-align: middle;
 	margin-bottom: 0;
 	padding: $grid-padding;
-	border: $text-color 1px solid;
+	border: var(--text_color) 1px solid;
 }
 
 
@@ -394,12 +395,12 @@ code, pre, samp, kbd {
 }
 kbd {
 	padding: 0 2px;
-	border: 1px solid $text-color;
+	border: 1px solid var(--text_color);
 	border-radius : 2px;
 }
 code, pre {
 	background-color: #eee;
-	color: $text-color;
+	color: var(--text_color);
 }
 code {
 	padding: $grid-padding/2;
@@ -411,7 +412,7 @@ code {
 pre {
 	padding: $grid-padding;
 	margin-bottom: $grid-padding !important;
-	border: $text-color 1px dashed;
+	border: var(--text_color) 1px dashed;
 	white-space: pre-line;
 }
 mark {
@@ -463,13 +464,13 @@ input[type=submit].action-btn {
 	font-family: $font-bold;
 	text-transform: uppercase;
 	text-decoration: none;
-	background-color: $primary-color;
+	background-color: var(--primary_color);
 	color: #fff;
 	transition: background .2s linear;
 	
 	&.focus-visible, 
 	&:hover {
-		background-color: $text-color;
+		background-color: var(--text_color);
 	}
 	&:focus {
 		outline: none;
@@ -484,11 +485,11 @@ input[type=submit].white-btn {
 	@extend .action-btn;
 	
 	background-color: #fff;
-	color: $text-color;
+	color: var(--text_color);
 
 	&.focus-visible, 
 	&:hover {
-		background-color: $text-color;
+		background-color: var(--text_color);
 		color: #fff;
 	}	
 }

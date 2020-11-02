@@ -8,19 +8,19 @@
 @mixin link-style() {
 
 	text-decoration: none;
-	color: $secondary-color;
-	border-bottom: $secondary-color 2px solid;
+	color: var(--secondary_color);
+	border-bottom: var(--secondary_color) 2px solid;
 	transition: .2s ease-in-out;
 	
 	&:hover {
 		border-bottom-width: 4px;
 	}
 	&.focus-visible {
-		background-color: $secondary-color;
+		background-color: var(--secondary_color);
 		color: #fff;
 	}
 	&:active {
-		color: $secondary-color;
+		color: var(--secondary_color);
 		border-bottom-color: transparent;
 	}	
 }

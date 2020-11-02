@@ -78,7 +78,7 @@
 		
 		&:hover,
 		&.focus-visible {
-			color: $primary-color;
+			color: var(--primary_color);
 		}	
 	}
 }
