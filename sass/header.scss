@@ -53,7 +53,6 @@
 		height: auto;
 		width: 100%;
 		transform: rotate(90deg);
-		//transition: .2s ease-in-out
 	}
 	
 	&:hover,
@@ -92,6 +91,9 @@
 	.home & {
 		max-height: 10rem;
 		margin-bottom: $grid-padding;
+	}
+	.header-v2 & {
+		max-height: none; 
 	}
 }
 

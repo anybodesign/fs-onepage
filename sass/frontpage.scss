@@ -7,13 +7,10 @@
 	height: 100vh; // IE 11
 	align-items: flex-start;
 }
-.front-page-content {
-	position: relative;
-	display: inline-block;
-	padding: 2rem;
-	background-color: transparent !important;
-	max-width: 80%;
 
+
+.front-page-content {
+	
 	&::after {
 		content: '';
 		display: block;
@@ -22,15 +19,7 @@
 		position: absolute;
 		top: 0; 
 		left: 0;
-		background-color: var(--primary_color);
-		opacity: .9;
 		z-index: 1;
-	}
-	
-	@include rwd(medium) {
-		$pad: calc( (100% - #{$max-width}) /2 );
-		padding: 3rem 3rem 3rem $pad;
-		max-width: none;
 	}
 	
 	.site-title,
@@ -41,11 +30,54 @@
 		line-height: 1.2;
 		z-index: 2;
 	}
-	
 	.site-desc {
 		font-size: 2.2rem;
 	}
+	
+	// Layouts
+	
+	.header-v1 & {
+		
+		position: relative;
+		display: inline-block;
+		padding: 2rem;
+		background-color: transparent !important;
+		max-width: 80%;
+	
+		&::after {
+			background-color: var(--primary_color);
+			opacity: .9;
+		}
+		
+		@include rwd(medium) {
+			$pad: calc( (100% - #{$max-width}) /2 );
+			padding: 3rem 3rem 3rem $pad;
+			max-width: none;
+		}
+	}
+	
+	.header-v2 & {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		
+		animation: none !important;
+		
+		&::after {
+			background-image: linear-gradient(to right, #000 0%, rgba(0,0,0,0) 100%);
+			opacity: .9;
+		}
+		
+		@include rwd(medium) {
+			$pad: calc( (75% - #{$max-width}) /2 );
+			padding: 3rem 3rem 3rem $pad;
+		}
+	}
+
 }
+
 .front-content {
 	padding: 0 $grid-padding;
 	
@@ -76,4 +108,4 @@
 	&:focus {
 		outline: none;
 	}
-}
+}	
