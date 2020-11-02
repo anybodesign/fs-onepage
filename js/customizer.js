@@ -23,7 +23,19 @@
             }
         });
     });
- 
+
+    // Colors
+	var rootCustomProperty = function( setting ) {
+		var bStyle = document.createElement( 'style' );
+		document.head.appendChild( bStyle );
+		setting.bind( function( newval ) {
+			bStyle.innerHTML = ':root { --' + setting.id + ': ' + newval + ' }';
+		} );
+	};
+    wp.customize( 'primary_color', rootCustomProperty );
+    wp.customize( 'secondary_color', rootCustomProperty );
+    wp.customize( 'third_color', rootCustomProperty );
+	 
 
     // WP Credits
     wp.customize('display_wp', function( value ) {

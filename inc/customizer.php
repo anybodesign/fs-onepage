@@ -68,7 +68,7 @@ function fs_customize_register($fs_customize) {
 			'sanitize_callback'	=> 'sanitize_hex_color',
 			'capability'		=> 'edit_theme_options',
 			'type'				=> 'theme_mod',
-			'transport'			=> 'refresh', 
+			'transport'			=> 'postMessage', 
 		));
 		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'primary_color', array(
 			'label'		=> __('Primary color', 'fs-onepage'),
@@ -83,7 +83,7 @@ function fs_customize_register($fs_customize) {
 			'sanitize_callback'	=> 'sanitize_hex_color',
 			'capability'		=> 'edit_theme_options',
 			'type'				=> 'theme_mod',
-			'transport'			=> 'refresh', 
+			'transport'			=> 'postMessage', 
 		));
 		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'secondary_color', array(
 			'label'		=> __('Secondary color', 'fs-onepage'),
@@ -98,7 +98,7 @@ function fs_customize_register($fs_customize) {
 			'sanitize_callback'	=> 'sanitize_hex_color',
 			'capability'		=> 'edit_theme_options',
 			'type'				=> 'theme_mod',
-			'transport'			=> 'refresh', 
+			'transport'			=> 'postMessage', 
 		));
 		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'third_color', array(
 			'label'		=> __('Contrast color', 'fs-onepage'),
@@ -309,119 +309,14 @@ function fs_customizer_sanitize_checkbox( $input ) {
 
 // Customizer Colors Output
 
-function fs_colors() {
-	?>
-	<style>
-		.front-page-content::after,
-		.fancybox-arrow::after,
-		input[type="submit"],
-		.action-btn,
-		button.action-btn,
-		input[type=submit].action-btn,
-		thead,
-		input[type="text"].focus-visible, 
-		input[type="email"].focus-visible, 
-		input[type="tel"].focus-visible, 
-		input[type="url"].focus-visible,
-		input[type="date"].focus-visible,
-		input[type="password"].focus-visible,
-		input[type="file"].focus-visible,
-		input[type="number"].focus-visible,
-		input[type="search"].focus-visible,
-		textarea.focus-visible, 
-		select.focus-visible,
-		a.focus-visible .post-title,
-		.widget-container ul li.current-cat a,
-		.widget-container ul li a:hover, 
-		.widget-container ul li a.focus-visible,
-		.slick-dots li button:hover,
-		.slick-dots li button.focus-visible,
-		.skiplinks a,
-		.page-banner,
-		.page-banner::after,
-		.wp-pagenavi a,
-		.nav-links a,
-		.wp-block-latest-posts__list li a:hover,
-		.wp-block-latest-posts__list li a.focus-visible,
-		.wp-block-archives-list li a:hover,
-		.wp-block-archives-list li a.focus-visible,
-		.wp-block-categories-list li a:hover,
-		.wp-block-categories-list li a.focus-visible,
-		.fancybox-close-small,
-		.fancybox-button,
-		.has-primary-color-background-color { 
-			background-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
-		}
-		
-		.wp-block-gallery .blocks-gallery-image figcaption, 
-		.wp-block-gallery .blocks-gallery-item figcaption { 
-			background: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
-		}
-		legend,
-		.formfield-radio input[type="radio"].focus-visible + span,
-		.formfield-radio input[type="checkbox"].focus-visible + span,
-		#menu-toggle span,
-		#menu-toggle span::before,
-		#menu-toggle span::after,
-		.onepage-menu > li.current-menu-item > a,
-		.slick-dots li button {
-			border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
-		}
-		.onepage-menu > li > a:hover,
-		.onepage-menu > li > a.focus-visible,
-		.site-title a:hover,
-		.site-title a.focus-visible,
-		.comment-author-name,
-		.acf-block-list-item .list-featured,
-		.acf-block-post-title a:hover, 
-		.acf-block-post-title a:focus, 
-		.acf-block-post-title a.focus-visible,
-		.has-text-color.has-primary-color-color {
-			color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
-		}
-		
-		@media only screen and (min-width: 45em) {
-			
-			.main-menu > li.current-menu-item > a {
-				border-color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
-			}
-			.main-menu > li > a:hover,
-			.main-menu > li > a.focus-visible {
-				color: <?php echo get_theme_mod('primary_color', '#303030'); ?>;
-			}
-		}
-		
-		.formfield-radio input[type="radio"] + label::after,
-		.formfield-radio input[type="radio"] + span::after,
-		body::after,
-		.comment-content .pending, 
-		.has-secondary-color-background-color {
-			background-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
-		}
+function fs_colors() { ?>
 
-		.formfield-checkbox input[type="checkbox"] + label::after,
-		.formfield-checkbox input[type="checkbox"] + span::after,
-		.content-area p a:not([class*="action-btn"]),
-		.content-area p a:not([class*="action-btn"]):active,
-		.has-text-color.has-secondary-color-color {
-			color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>
+	<style>
+		:root {
+			--primary_color: <?php echo get_theme_mod('primary_color', '#303030'); ?>; 
+			--secondary_color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
+			--third_color: <?php echo get_theme_mod('third_color', '#909090'); ?>;
 		}
-		.formfield-select--container {
-			border-top-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
-		}
-		legend,
-		.content-area p a:not([class*="action-btn"]) {
-			border-color: <?php echo get_theme_mod('secondary_color', '#4682B4'); ?>;
-		}
-		
-		.has-third-color-background-color {
-			background-color: <?php echo get_theme_mod('third_color', '#909090'); ?> !important; 			
-		}
-		.has-text-color.has-third-color-color {
-			color: <?php echo get_theme_mod('third_color', '#909090'); ?> !important; 			
-		}		
-		
 	</style>
-	<?php
-}
+<?php }
 add_action('wp_head','fs_colors');
