@@ -125,7 +125,12 @@ function fs_block_editor_styles() {
 }
 add_action( 'enqueue_block_editor_assets', 'fs_block_editor_styles' );
 
+//	Admin style and script
 
+add_action('admin_print_styles', 'fs_acf_admin_css', 11 );
+function fs_acf_admin_css() {
+	wp_enqueue_style( 'admin-css', FS_THEME_URL . '/css/admin.css' );
+}
 
 // ------------------------
 // Enqueue JS & CSS

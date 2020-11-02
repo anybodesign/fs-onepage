@@ -46,20 +46,35 @@ function fs_customize_register($fs_customize) {
 	 
 	// Create Some Sections
 	
-	$fs_customize->add_section('fs_options_section', array(
-		'title' 			=> __('Theme Options', 'fs-onepage'),
-		'description' 	=> __('Theme customisation', 'fs-onepage'),
-		'priority'		=> 30,
-	));
-	$fs_customize->add_section('fs_color_section', array(
-		'title' 			=> __('Theme Colors', 'fs-onepage'),
-		'description' 	=> __('Colors customisation', 'fs-onepage'),
-		'priority'		=> 40,
-	));
+	$fs_customize->add_section(
+		'fs_options_section', 
+		array(
+			'title' 			=> __('Theme Options', 'fs-onepage'),
+			'description' 	=> __('Theme customisation', 'fs-onepage'),
+			'priority'		=> 30,
+		)
+	);
+	$fs_customize->add_section(
+		'fs_color_section', 
+		array(
+			'title' 			=> __('Theme Colors', 'fs-onepage'),
+			'description' 	=> __('Colors customisation', 'fs-onepage'),
+			'priority'		=> 40,
+		)
+	);
+	$fs_customize->add_section(
+		'fs_layout_section', 
+		array(
+			'title' 		=> __('Layout Options', 'fs-onepage'),
+			'description' 	=> __('Choose the layout of the home page banner.', 'fs-onepage'),
+			'priority'		=> 40,
+		)
+	);
 	
 	
 	// Theme Colors
-	
+	// -
+	// + + + + + + + + + + 	
 	
 		// Primary color
 		
@@ -108,7 +123,9 @@ function fs_customize_register($fs_customize) {
 
 		
 	// Theme Options
-	
+	// -
+	// + + + + + + + + + + 
+		
 		// Number of posts
 		
 		$fs_customize->add_setting('posts_nb', array(
@@ -176,10 +193,40 @@ function fs_customize_register($fs_customize) {
 			'settings'		=> 'load_ias',
 		));	
 
-	
+
+	// Theme Layout
+	// -
+	// + + + + + + + + + + 
+
+		// Header & Main nav
+
+		$fs_customize->add_setting(
+			'layout_option', 
+			array(
+				'default' 			=> 'version1',
+				'transport'			=> 'postMessage',
+				'sanitize_callback' => 'fs_customizer_sanitize_radio_layout',
+			)
+		);
+		
+		$fs_customize->add_control(
+			'layout_option', 
+			array(
+				'type' => 'radio',
+				'label' => __( 'Layout version', 'fs-onepage' ),
+				'section' => 'fs_layout_section',
+				'choices' => array(
+					'version1' => __( 'Version 1', 'fs-onepage' ),
+					'version2' => __( 'Version 2', 'fs-onepage' ),
+				),
+			)
+		);
+		
+			
 	// Theme settings
-
-
+	// -
+	// + + + + + + + + + + 
+	
 		// Site logo
 		
 		$fs_customize->add_setting('site_logo', array(
@@ -298,7 +345,12 @@ function fs_customize_partial_blogname() {
 function fs_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
-
+function fs_customizer_sanitize_radio_layout( $input ) {
+    if( !in_array( $input, array( 'version1', 'version2' ) ) ) {
+        $input = 'version1';
+    }
+    return $input;
+}
 function fs_customizer_sanitize_checkbox( $input ) {
 	if ( $input === true || $input === '1' ) {
 		return '1';
