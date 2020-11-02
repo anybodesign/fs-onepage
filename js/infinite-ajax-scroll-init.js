@@ -24,7 +24,7 @@ let ias = new InfiniteAjaxScroll('#posts_list', {
 		hide: function(element) {
 		  element.style.display = 'none'; // default behaviour
 		}
-	},
+	}
 });
 
 ias.on('last', function() {

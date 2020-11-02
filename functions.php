@@ -61,12 +61,12 @@ function fs_setup() {
 	    array(
 	        'name' => esc_html__( 'Primary color', 'fs-onepage' ),
 	        'slug' => 'primary-color',
-	        'color' => get_theme_mod('primary_color', '#9c0'),
+	        'color' => get_theme_mod('primary_color', '#303030'),
 	    ),
 	    array(
 	        'name' => esc_html__( 'Secondary color', 'fs-onepage' ),
 	        'slug' => 'secondary-color',
-	        'color' => get_theme_mod('secondary_color', '#606060'),
+	        'color' => get_theme_mod('secondary_color', '#4682B4'),
 	    ),
 	    array(
 	        'name' => esc_html__( 'Contrast color', 'fs-onepage' ),
