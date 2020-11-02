@@ -26,11 +26,14 @@ $admin-bar: 48.875em;	 	// @note: 782px
 
 // Colors
 
-$primary-color: #303030;		
-$secondary-color: #4682B4; /* SteelBlue (web colors) */
-$third-color: #909090;
-$text-color: #303030;
+$text_color: #303030;
 
+:root {
+	--primary_color: #303030; 
+	--secondary_color: #4682B4;
+	--third_color: #909090;
+	--text_color: #303030;	
+}
 
 // Fonts
 
