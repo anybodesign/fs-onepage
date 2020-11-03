@@ -10,7 +10,7 @@
 	margin-left: -$grid-padding;
 	margin-right: -$grid-padding;
 		
-	@include rwd(medium) {
+	@include rwd(small) {
 			
 		.the-regular-posts & {
 			display: flex;
@@ -91,9 +91,9 @@
 	width: 100%;
 	@include center();
 
-	@include rwd(large) {
+	.posts-sidebar &.has-sidebar {
 		
-		&.has-sidebar {
+		@include rwd(large) {
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: row-reverse;
@@ -107,6 +107,11 @@
 		}
 	}
 
+	.posts-topbar &.has-sidebar {
+		display: flex;
+		flex-direction: column;
+	}	
+
 }
 
 .post-container {
@@ -116,7 +121,7 @@
 .post-block-container {
 	padding: 0 $grid-padding $grid-padding*2 $grid-padding ;
 	
-	@include rwd(medium) {
+	@include rwd(small) {
 		
 		.the-regular-posts & {
 			display: flex;
@@ -127,6 +132,11 @@
 			width: 50%;
 		}
 	}
+	@include rwd(medium) {
+		.posts-topbar .has-sidebar .the-regular-posts & {
+			width: 33.3333%;
+		}
+	}
 	@include rwd(large) {
 		
 		.the-regular-posts & {
@@ -135,6 +145,78 @@
 	}
 	
 }
+
+.post-sidebar {
+	padding: $grid-padding;
+	
+	@include rwd(large) {
+		padding: $grid-padding*2;
+		
+		.sidebar-content {
+			position: sticky;
+			top: $grid-padding*2;
+			
+			.admin-bar & {
+				top: calc( 32px + #{$grid-padding*2} );
+			}
+		}
+	}
+	
+	&[data-scroll="in"] {
+		animation: anim-opacity .5s ease-in-out;
+	}
+	
+	.posts-sidebar & .widget-container {
+		display: none;
+		
+		@include rwd(large) {
+			display: block;
+		}
+		&.widget_categories {
+			display: block;
+		}
+	}
+	
+	.posts-topbar & {
+		
+		
+		@include rwd(medium) {
+			padding: 0;
+			
+			.sidebar-content {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.widget-container {
+				width: 50%;
+				padding: $grid-padding;
+				
+				form,
+				form * {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+.widget_categories {
+	& > form {
+		@extend .formfield-select--container;
+	}
+}
+.posts-topbar .widget_search {
+	form {
+		position: relative;
+	}
+	#searchsubmit {
+		position: absolute;
+		top: .1rem;
+		right: .1rem;
+		height: calc( 100% - .2rem ); 	
+	}
+}
+
 
 /* ------------------------- */
 /* = Pagination
@@ -244,37 +326,7 @@
 	}
 }
 
-.post-sidebar {
-	padding: $grid-padding;
-	
-	@include rwd(large) {
-		padding: $grid-padding*2;
-		
-		.sidebar-content {
-			position: sticky;
-			top: $grid-padding*2;
-			
-			.admin-bar & {
-				top: calc( 32px + #{$grid-padding*2} );
-			}
-		}
-	}
-	
-	&[data-scroll="in"] {
-		animation: anim-opacity .5s ease-in-out;
-	}
-	
-	.widget-container {
-		display: none;
-		
-		@include rwd(large) {
-			display: block;
-		}
-		&.widget_categories {
-			display: block;
-		}
-	}
-}
+
 
 // Fancy modals
 
