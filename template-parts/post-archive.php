@@ -36,8 +36,12 @@
 								?>
 
 								</div>
-							
+								
 								<?php if ( get_theme_mod('load_ias') == true ) { ?>
+								<?php 
+									$pages = get_the_posts_pagination();
+									if (! empty( $pages) ) {
+								?>
 								<div class="spinner">
 									<img src="<?php echo FS_THEME_URL; ?>/img/spinner.svg" alt="">
 								</div>
@@ -49,6 +53,7 @@
 										<?php _e('No more posts', 'fs-onepage'); ?>
 									</p>
 								</div>
+								<?php } ?>
 								<?php } ?>
 							</div>
 							
