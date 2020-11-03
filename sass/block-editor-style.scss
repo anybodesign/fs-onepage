@@ -1,0 +1,112 @@
+/*
+Theme Name: FS Onepage
+Description: Have fun with Gutenberg style editor.
+*/
+
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'webfonts.scss';
+@import 'webfonts-admin.scss';
+
+
+// Global
+
+html.block-editor-editor-skeleton__html-container,
+html.interface-interface-skeleton__html-container {
+	font-size: 62.5%;
+
+	.block-editor-block-list__layout {
+		font-size: 1.6rem;
+		line-height: 1.5;
+		color: var(--text_color);
+	}
+}
+.edit-post-layout {
+
+	.interface-interface-skeleton__content {
+		background-color: transparent;		
+	}
+}
+
+// Layout 
+
+.wp-block {
+	max-width: 960px;
+}
+.edit-post-layout__metaboxes:not(:empty) {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	border-left: #ddd 1px solid;	
+	border-right: #ddd 1px solid;
+	
+	@include rwd(960px) {
+		margin-bottom: 40px;
+		border-bottom: #ddd 1px solid;
+	}	
+}
+
+// Typography
+
+	
+.editor-post-title .editor-post-title__input {
+	font-family: $font-title;
+	color: var(--primary_color);
+}
+
+.edit-post-visual-editor .wp-block,
+.block-editor-block-list__layout {
+	
+	// Import custom block styles in admin
+	@import 'buttons.scss';
+	@import 'posts.scss';	
+	@import 'blocks.scss';
+	@import 'forms-custom.scss';
+
+	h1, h2, h3, h4, h5, h6,
+	.h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
+		font-family: $font-title;
+		font-weight: normal;
+		color: var(--primary_color);
+	}
+	p, li, small, span {
+		font-family: $font-regular;
+		color: var(--text_color);
+	}
+	figure {
+		width: 100%;
+		
+		img {
+			max-width: 96% !important;
+			height: auto;
+		}
+	}	
+}
+
+
+// TinyMCE Custom
+	
+	
+p.text-intro {
+	font-size: 1.75em !important;
+	
+	.wp-block & {
+		font-size: 1.25em !important
+	}
+}
+p.text-mentions {
+	font-size: 0.8em !important;
+	
+	.wp-editor-container & {
+		font-size: 1em !important
+	}
+}
+a.action-btn {
+	background-color: var(--primary_color);
+	//color: #fff !important;
+	padding: 5px 15px;
+	text-decoration: none;
+}	
+.white-text * {
+	color: #fff;
+}
