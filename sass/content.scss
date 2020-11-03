@@ -59,6 +59,13 @@
 		@include center();
 	}
 	
+	& > .wpcf7,
+	& > [class*="wp-block-contact-form-7-"] {
+		@include rwd(large) {
+			padding-right: 15%;
+		}
+	}
+	
 	& > *.alignwide {
 		max-width: $max-width-large;
 	}
@@ -155,7 +162,7 @@
 }
 
 .animated-image {
-	padding-bottom: 0;
+	//padding-bottom: 0;
 	
 	.animated-figure[data-scroll="in"] {
 		background-color: transparent;
@@ -167,11 +174,15 @@
 	@include rwd(large) {
 		flex-direction: row;
 		flex-wrap: wrap;
-		//align-items: center;
-
+		
+		.page-title {
+			max-width: none;
+			padding-left: calc( ( 100% - #{$max-width} ) /2 + #{$grid-padding} );
+		}
 		.page-content {
 			width: 60%;
 			padding-left: calc( ( 100% - #{$max-width}) /2 );
+			padding-right: $grid-padding*3;
 		}
 		.animated-figure {
 			width: 40%;
@@ -187,12 +198,14 @@
 			flex-direction: row-reverse;
 			
 			.page-title {
-				max-width: none;
 				padding-left: calc( 40% + #{$grid-padding*2} );
 			}
 			.page-content {
 				padding-left: $grid-padding;
 				padding-right: calc( ( 100% - #{$max-width}) /2 );
+			}
+			.animated-figure {
+				padding-right: $grid-padding*3;
 			}
 		}
 	}
