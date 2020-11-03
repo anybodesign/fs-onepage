@@ -4,7 +4,8 @@
 
 #customize-control-site_logo,
 #customize-control-footer_text,
-#customize-control-site_icon {
+#customize-control-site_icon,
+#customize-control-layout_sidebar {
 	border-top: #777 1px dashed;
 	padding-top: 1.5em;
 	margin-top: 1em;
@@ -13,7 +14,8 @@
 	margin-bottom: 1.5em;
 }
 
-#customize-control-layout_option {
+#customize-control-layout_option,
+#customize-control-layout_sidebar {
 
 	.customize-inside-control-row {
 		position: relative;
@@ -48,11 +50,19 @@
 		width: 256px;
 		height: 144px;
 	}
+	
+	
 	#_customize-input-layout_option-radio-version1 + label::before {
 		background-image: url(../img/admin/version-1.jpg);
 	}
 	#_customize-input-layout_option-radio-version2 + label::before {
 		background-image: url(../img/admin/version-2.jpg);
+	}
+	#_customize-input-layout_sidebar-radio-sidebar + label::before {
+		background-image: url(../img/admin/version-sidebar.jpg);
+	}
+	#_customize-input-layout_sidebar-radio-topbar + label::before {
+		background-image: url(../img/admin/version-topbar.jpg);
 	}	
 }
 

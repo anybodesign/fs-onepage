@@ -48,6 +48,18 @@
                 	$( '#wrapper' ).addClass('header-v1');
             }
         });
+    });
+	wp.customize('layout_sidebar', function( value ){
+        value.bind( function( to ) {
+            if( to == 'topbar' ){
+	            $( '#wrapper' ).removeClass('posts-sidebar');
+                	$( '#wrapper' ).addClass('posts-topbar');
+            }
+            else {
+	            $( '#wrapper' ).removeClass('posts-topbar');
+                	$( '#wrapper' ).addClass('posts-sidebar');
+            }
+        });
     }); 
 
     // WP Credits

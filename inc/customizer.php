@@ -208,16 +208,36 @@ function fs_customize_register($fs_customize) {
 				'sanitize_callback' => 'fs_customizer_sanitize_radio_layout',
 			)
 		);
-		
 		$fs_customize->add_control(
 			'layout_option', 
 			array(
 				'type' => 'radio',
-				'label' => __( 'Layout version', 'fs-onepage' ),
+				'label' => __( 'Home page banner version', 'fs-onepage' ),
 				'section' => 'fs_layout_section',
 				'choices' => array(
 					'version1' => __( 'Version 1', 'fs-onepage' ),
 					'version2' => __( 'Version 2', 'fs-onepage' ),
+				),
+			)
+		);
+		
+		$fs_customize->add_setting(
+			'layout_sidebar', 
+			array(
+				'default' 			=> 'sidebar',
+				'transport'			=> 'postMessage',
+				'sanitize_callback' => 'fs_customizer_sanitize_radio_sidebar',
+			)
+		);
+		$fs_customize->add_control(
+			'layout_sidebar', 
+			array(
+				'type' => 'radio',
+				'label' => __( 'Posts Sidebar or Topbar', 'fs-onepage' ),
+				'section' => 'fs_layout_section',
+				'choices' => array(
+					'sidebar' => __( 'Sidebar', 'fs-onepage' ),
+					'topbar' => __( 'Topbar', 'fs-onepage' ),
 				),
 			)
 		);
@@ -348,6 +368,12 @@ function fs_customize_partial_blogdescription() {
 function fs_customizer_sanitize_radio_layout( $input ) {
     if( !in_array( $input, array( 'version1', 'version2' ) ) ) {
         $input = 'version1';
+    }
+    return $input;
+}
+function fs_customizer_sanitize_radio_sidebar( $input ) {
+    if( !in_array( $input, array( 'sidebar', 'topbar' ) ) ) {
+        $input = 'sidebar';
     }
     return $input;
 }

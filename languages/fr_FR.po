@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Onepage\n"
-"POT-Creation-Date: 2020-11-02 16:46+0100\n"
-"PO-Revision-Date: 2020-11-02 16:46+0100\n"
+"POT-Creation-Date: 2020-11-03 09:17+0100\n"
+"PO-Revision-Date: 2020-11-03 09:18+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -24,9 +24,9 @@ msgstr ""
 msgid "It looks like nothing was found at this location."
 msgstr "Il semblerait que rien n’ait été trouvé à cette adresse."
 
-#: 404.php:22 header.php:50 template-parts/header-brand.php:19
+#: 404.php:22 header.php:57 template-parts/header-brand.php:19
 msgid "Go to Home Page"
-msgstr "Retour à la page d'accueil"
+msgstr "Retour à la page d’accueil"
 
 #: comments.php:19
 msgid "They talk about it"
@@ -153,11 +153,11 @@ msgstr "Répondre"
 msgid "Edit"
 msgstr "Modifier"
 
-#: header.php:41
+#: header.php:48
 msgid "Go to main content"
 msgstr "Aller au contenu principal"
 
-#: header.php:57
+#: header.php:64
 msgid "Main menu"
 msgstr "Menu principal"
 
@@ -205,55 +205,67 @@ msgstr "Ouvrez vos articles avec FancyBox"
 msgid "Load posts on scroll"
 msgstr "Charger les articles au scroll"
 
-#: inc/customizer.php:216
-msgid "Layout version"
-msgstr "Version de mise en page"
+#: inc/customizer.php:215
+msgid "Home page banner version"
+msgstr "Version de bannière de la page d’accueil"
 
-#: inc/customizer.php:219
+#: inc/customizer.php:218
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:220
+#: inc/customizer.php:219
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:237
+#: inc/customizer.php:236
+msgid "Posts Sidebar or Topbar"
+msgstr "Barre latérale ou barre supérieure pour les articles"
+
+#: inc/customizer.php:239
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+#: inc/customizer.php:240
+msgid "Topbar"
+msgstr "Barre supérieure"
+
+#: inc/customizer.php:257
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:249
+#: inc/customizer.php:269
 msgid "Site White Logo"
 msgstr "Logo blanc du site"
 
-#: inc/customizer.php:250
+#: inc/customizer.php:270
 msgid "White version of your logo for the home page."
 msgstr "Version blanche de votre logo pour la page d'accueil."
 
-#: inc/customizer.php:265
+#: inc/customizer.php:285
 msgid "Hide the tagline (in an accessible way)"
 msgstr "Masquer le slogan (de manière accessible)"
 
-#: inc/customizer.php:278
+#: inc/customizer.php:298
 msgid "Enlarge pictures with Fancybox"
 msgstr "Agrandir les images avec Fancybox"
 
-#: inc/customizer.php:290
+#: inc/customizer.php:310
 msgid "Page for posts banner picture"
 msgstr "Image d’en-tête pour la page des articles"
 
-#: inc/customizer.php:302
+#: inc/customizer.php:322
 msgid "404 banner picture"
 msgstr "Image d’en-tête pour la page 404"
 
-#: inc/customizer.php:316
+#: inc/customizer.php:336
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:317
+#: inc/customizer.php:337
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:331
+#: inc/customizer.php:351
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
@@ -416,6 +428,9 @@ msgstr "Page avec image animée (à droite)"
 #. Template Name of the plugin/theme
 msgid "Standalone Page"
 msgstr "Page autonome"
+
+#~ msgid "Layout version"
+#~ msgstr "Version de mise en page"
 
 #~ msgid "Go to main menu"
 #~ msgstr "Aller au menu principal"

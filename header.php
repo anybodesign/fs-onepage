@@ -27,13 +27,20 @@
 	$head1 = get_theme_mod('layout_option') == 'version1';
 	$head2 = get_theme_mod('layout_option') == 'version2';
 	
+	$sidebar = get_theme_mod('layout_sidebar') == 'sidebar';
+	$topbar = get_theme_mod('layout_sidebar') == 'topbar';
+	
 	if ( $head1 ) { $header = 'header-v1'; }
 	else if ( $head2 ) { $header = 'header-v2'; }
 	else { $header = 'header-v1'; }
+	
+	if ( $sidebar ) { $aside = 'posts-sidebar'; }
+	else if ( $topbar ) { $aside = 'posts-topbar'; }
+	else { $aside = 'posts-sidebar'; }
 ?>
 <body <?php body_class(); ?>>
 
-<div id="wrapper" class="<?php echo $header; ?>">
+<div id="wrapper" class="<?php echo  $header.' '.$aside; ?>">
 
 	<?php // The Skiplinks ?>
 	
