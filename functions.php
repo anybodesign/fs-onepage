@@ -1,7 +1,7 @@
 <?php if ( !defined('ABSPATH') ) die();
 
 
-define( 'FS_THEME_VER', '1.8' );
+define( 'FS_THEME_VER', '1.9' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
