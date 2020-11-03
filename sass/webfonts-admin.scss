@@ -1,0 +1,41 @@
+// ------------------------------
+//
+// = Web fonts Admin (SASS)
+//
+// ------------------------------
+
+@font-face {
+	font-family: 'Regular';
+	src: $fontface-regular-admin;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Italic';
+	src: $fontface-italic-admin;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bold';
+	src: $fontface-bold-admin;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'BoldItalic';
+	src: $fontface-bolditalic-admin;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Title';
+	src: $fontface-title-admin;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

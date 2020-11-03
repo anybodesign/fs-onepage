@@ -24,6 +24,7 @@ $width-xwide: 90em;	 		// @note: 1440px
 
 $admin-bar: 48.875em;	 	// @note: 782px
 
+
 // Colors
 
 $text_color: #303030;
@@ -34,61 +35,3 @@ $text_color: #303030;
 	--third_color: #909090;
 	--text_color: #303030;	
 }
-
-// Fonts
-
-$fontface-regular: url('fonts/barlow-medium-webfont.woff2') format('woff2'), url('fonts/barlow-medium-webfont.woff') format('woff');
-@font-face {
-	font-family: 'Regular';
-	src: $fontface-regular;
-	font-weight: normal;
-	font-style: normal;
-}
-
-$fontface-italic: url('fonts/barlow-mediumitalic-webfont.woff2') format('woff2'), url('fonts/barlow-mediumitalic-webfont.woff') format('woff');	
-@font-face {
-	font-family: 'Italic';
-	src: $fontface-italic;
-	font-weight: normal;
-	font-style: normal;
-}
-
-$fontface-bold: url('fonts/barlow-bold-webfont.woff2') format('woff2'), url('fonts/barlow-bold-webfont.woff') format('woff');
-@font-face {
-	font-family: 'Bold';
-	src: $fontface-bold;
-	font-weight: normal;
-	font-style: normal;
-}
-
-$fontface-bolditalic: url('fonts/barlow-bolditalic-webfont.woff2') format('woff2'), url('fonts/barlow-bolditalic-webfont.woff') format('woff');
-@font-face {
-	font-family: 'BoldItalic';
-	src: $fontface-bolditalic;
-	font-weight: normal;
-	font-style: normal;
-}
-
-$fontface-title: url('fonts/barlowsemicondensed-bold-webfont.woff2') format('woff2'), url('fonts/barlowsemicondensed-bold-webfont.woff') format('woff');
-@font-face {
-	font-family: 'Title';
-	src: $fontface-title;
-	font-weight: normal;
-	font-style: normal;
-}
-
-
-// Customize your Font-Stack
-
-$font-stack: Helvetica, Arial, sans-serif;
-
-// The Fonts
-
-$font-title: 'Title', $font-stack;
-$font-regular: 'Regular', $font-stack;
-$font-italic: 'Italic', $font-stack;
-$font-bold: 'Bold', $font-stack;
-$font-bolditalic: 'BoldItalic', $font-stack;
-
-$font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
-
