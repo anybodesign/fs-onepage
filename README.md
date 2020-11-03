@@ -39,6 +39,12 @@ There are two widgets area: one for the sidebar and one for the footer.
 
 ## Changelog
 
+### 1.9 - 2020.11.03
+* Home banner layout option
+* Sidebar layout option
+* IAS pagination fix
+* Minor CSS updates
+
 ### 1.8 - 2020.04.21
 * Theme renamed: FS Onepage
 * Pridx removed
@@ -58,7 +64,6 @@ There are two widgets area: one for the sidebar and one for the footer.
 * Defined font sizes
 * Disable custom font sizes
 * Responsive embeds
-
 
 ### 1.7.1 - 2018.12.14
 * Loop fix for WP 5.0 (Thanks to Loïc Blascos)
