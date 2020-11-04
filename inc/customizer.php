@@ -120,7 +120,7 @@ function fs_customize_register($fs_customize) {
 			'section'	=> 'colors',
 			'settings'	=> 'third_color',
 		)));
-
+		
 		
 	// Theme Options
 	// -
@@ -192,8 +192,58 @@ function fs_customize_register($fs_customize) {
 			'section'		=> 'fs_options_section',
 			'settings'		=> 'load_ias',
 		));	
-
-
+		
+		// Fancybox
+		
+		$fs_customize->add_setting('fancy_open', array(
+			'default'			=> false,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+		));
+		$fs_customize->add_control('fancy_open', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Enlarge pictures with Fancybox', 'fs-onepage'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'fancy_open',
+		));
+		
+		// Toggle animations
+		
+		$fs_customize->add_setting('animations', array(
+			'default'			=> true,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+		));
+		$fs_customize->add_control('animations', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Toggle animations', 'fs-onepage'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'animations',
+		));
+		
+		// Blog picture
+		
+		$fs_customize->add_setting('blog_picture', array(
+			'default'				=> '',
+			'sanitize_callback'		=> 'esc_url_raw'
+		));
+		$fs_customize->add_control( new WP_Customize_Image_control($fs_customize, 'blog_picture', array(
+			'label'			=> __('Page for posts banner picture', 'fs-onepage'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'blog_picture',
+		)));
+		
+		// 404 picture
+		
+		$fs_customize->add_setting('error_picture', array(
+			'default'				=> '',
+			'sanitize_callback'		=> 'esc_url_raw'
+		));
+		$fs_customize->add_control( new WP_Customize_Image_control($fs_customize, 'error_picture', array(
+			'label'			=> __('404 banner picture', 'fs-onepage'),
+			'section'		=> 'fs_options_section',
+			'settings'		=> 'error_picture',
+		)));
+			
+		
 	// Theme Layout
 	// -
 	// + + + + + + + + + + 
@@ -243,7 +293,7 @@ function fs_customize_register($fs_customize) {
 		);
 		
 			
-	// Theme settings
+	// Site Identity
 	// -
 	// + + + + + + + + + + 
 	
@@ -287,44 +337,6 @@ function fs_customize_register($fs_customize) {
 			'settings'		=> 'wp_baseline',
 		));
 		
-		// Fancybox
-		
-		$fs_customize->add_setting('fancy_open', array(
-			'default'			=> false,
-			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
-		));
-		$fs_customize->add_control('fancy_open', array(
-			'type'			=> 'checkbox',
-			'label'			=> __('Enlarge pictures with Fancybox', 'fs-onepage'),
-			'section'		=> 'fs_options_section',
-			'settings'		=> 'fancy_open',
-		));
-			
-		// Blog picture
-		
-		$fs_customize->add_setting('blog_picture', array(
-			'default'				=> '',
-			'sanitize_callback'		=> 'esc_url_raw'
-		));
-		$fs_customize->add_control( new WP_Customize_Image_control($fs_customize, 'blog_picture', array(
-			'label'			=> __('Page for posts banner picture', 'fs-onepage'),
-			'section'		=> 'fs_options_section',
-			'settings'		=> 'blog_picture',
-		)));
-		
-		// 404 picture
-		
-		$fs_customize->add_setting('error_picture', array(
-			'default'				=> '',
-			'sanitize_callback'		=> 'esc_url_raw'
-		));
-		$fs_customize->add_control( new WP_Customize_Image_control($fs_customize, 'error_picture', array(
-			'label'			=> __('404 banner picture', 'fs-onepage'),
-			'section'		=> 'fs_options_section',
-			'settings'		=> 'error_picture',
-		)));	
-
-
 		// Footer text
 		
 		$fs_customize->add_setting('footer_text', array(

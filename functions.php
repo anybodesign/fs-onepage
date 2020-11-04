@@ -212,25 +212,26 @@ function fs_scripts_load() {
 		
 		// Scroll-Out
 		
-		wp_enqueue_script(
-			'scrollout', 
-			FS_THEME_URL . '/js/scroll-out.min.js', 
-			array(), 
-			'2.2.3', 
-			true
-		);
-
-		function fs_scrollout_js() {
-			print '
-			<script>
-				ScrollOut({
-				  
-				});
-			</script>
-			';
-		}
-		add_action('wp_footer', 'fs_scrollout_js', 100);
-				
+		if ( get_theme_mod('animations') != false ) {
+			wp_enqueue_script(
+				'scrollout', 
+				FS_THEME_URL . '/js/scroll-out.min.js', 
+				array(), 
+				'2.2.3', 
+				true
+			);
+	
+			function fs_scrollout_js() {
+				print '
+				<script>
+					ScrollOut({
+					  
+					});
+				</script>
+				';
+			}
+			add_action('wp_footer', 'fs_scrollout_js', 100);
+		}	
 		
 		// Main
 		
