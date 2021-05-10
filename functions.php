@@ -4,6 +4,7 @@
 define( 'FS_THEME_VER', '1.9' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
+define( 'FS_HOME', esc_url( home_url( '/' ) ) );
 
 
 // ------------------------

@@ -35,6 +35,7 @@
 
 	& > .inner {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
 	}
@@ -100,6 +101,11 @@
 .site-desc {
 	display: block;
 	margin: 0;
+	max-width: 22rem;
+	
+	@include rwd(medium) {
+		max-width: none;
+	}
 }
 
 .site-brand {
