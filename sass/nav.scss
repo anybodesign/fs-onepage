@@ -98,3 +98,25 @@
 	}
 	
 }
+
+.breadcrumbs-nav {
+	
+	.inner {
+		padding: $grid-padding;
+	}
+	
+	span {
+		font-size: 1.4rem;
+		
+		a {
+			text-decoration: none;
+			border-bottom: var(--secondary_color) 1px solid;
+			transition: border .3s ease-in-out;
+			
+			&:hover,
+			&.focus-visible {
+				border-bottom-color: transparent;	
+			}
+		}
+	}
+}
