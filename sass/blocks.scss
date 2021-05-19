@@ -363,5 +363,34 @@ hr,
 	}
 }
 
+// Testimonial
 
-
+.acf-block-testimonial-item {
+	
+	.testimonial-title {
+		@extend h3;
+	}
+	.testimonial-picture {
+		img {
+			border-radius: 50%;
+		}
+	}
+	.testimonial-caption {
+		padding-left: 6rem;
+		border-bottom: 0;
+		
+		.testimonial-author {
+			display: block;
+			font-family: $font-bolditalic;
+		}
+		.testimonial-desc {
+			display: block;
+			font-family: $font-italic;
+		}
+	}
+	blockquote {
+		margin: 0;
+		max-width: none;
+	}
+		
+}
