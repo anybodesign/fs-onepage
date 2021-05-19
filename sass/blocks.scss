@@ -45,6 +45,11 @@
 .wp-block-file__button {
 	@extend .action-btn;
 	border-radius: 0;
+	
+	&:hover,
+	&.focus-visible {
+		color: #fff !important;
+	}
 }
 
 // Files
