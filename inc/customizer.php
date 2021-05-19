@@ -63,6 +63,13 @@ function fs_customize_register($fs_customize) {
 		)
 	);
 	$fs_customize->add_section(
+		'fs_blog_section',
+		array(
+			'title'			=> __('Blog Options', 'fs-onepage'),
+			'priority'		=> 50,
+		)
+	);
+	$fs_customize->add_section(
 		'fs_layout_section', 
 		array(
 			'title' 		=> __('Layout Options', 'fs-onepage'),
@@ -243,7 +250,43 @@ function fs_customize_register($fs_customize) {
 			'settings'		=> 'error_picture',
 		)));
 			
+
+		// Post metas
 		
+		$fs_customize->add_setting(
+			'meta_author', 
+			array(
+				'default'			=> true,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'meta_author', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show the author in post meta', 'fs-onepage'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'meta_author',
+			)
+		);
+		$fs_customize->add_setting(
+			'meta_category', 
+			array(
+				'default'			=> true,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'meta_category', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show the category in post meta', 'fs-onepage'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'meta_category',
+			)
+		);
+		
+				
 	// Theme Layout
 	// -
 	// + + + + + + + + + + 

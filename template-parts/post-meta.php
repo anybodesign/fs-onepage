@@ -13,9 +13,13 @@
 
 							<div class="post-meta">
 								<p class="meta-infos">
-									<?php _e( 'Posted on&nbsp;', 'fs-onepage' ); ?><?php echo the_time( get_option('date_format') ); ?>
-									<?php _e( 'by&nbsp;', 'fs-onepage' ); ?><?php the_author(); ?>
-									<?php _e( 'in&nbsp;', 'fs-onepage' ); ?><?php the_category(', '); ?>
+									<?php esc_html_e( 'Posted on&nbsp;', 'fs-onepage' ); ?><?php echo the_time( get_option('date_format') ); ?>
+									<?php if ( get_theme_mod('meta_author') != false ) {
+										esc_html_e( 'by&nbsp;', 'fs-onepage' ); the_author(); 
+									} ?>
+									<?php if ( get_theme_mod('meta_category') != false ) {
+										esc_html_e( 'in&nbsp;', 'fs-onepage' ); the_category(', '); 
+									} ?>
 								</p>
 								
 								<?php if ( ! get_comments_number()==0 ) : ?>
