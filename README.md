@@ -39,6 +39,15 @@ There are two widgets area: one for the sidebar and one for the footer.
 
 ## Changelog
 
+### 2.0 - 2021.05.26
+* Customizer animation option
+* Customizer post meta options
+* Scrollout lib update
+* Display menu on all pages
+* Breadcrumbs support
+* Maintenance page template
+* CSS updates and new max-width
+
 ### 1.9 - 2020.11.03
 * Home banner layout option
 * Sidebar layout option
