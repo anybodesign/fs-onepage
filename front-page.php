@@ -37,9 +37,16 @@ get_header(); ?>
 					'meta_query'		=> array(
 						'relation' 		=> 'OR',
 						array(
-							'key'		=> '_wp_page_template',
-							'value'		=> 'pagecustom-standalone.php',
-							'compare'	=> '!=',
+							array(
+								'key'		=> '_wp_page_template',
+								'value'		=> 'pagecustom-standalone.php',
+								'compare'	=> '!=',
+							),
+							array(
+								'key'		=> '_wp_page_template',
+								'value'		=> 'pagecustom-maintenance.php',
+								'compare'	=> '!=',
+							),
 						),
 					    array(
 					        'key'       => '_wp_page_template',
@@ -48,16 +55,16 @@ get_header(); ?>
 					),
 				);
 				$onepage = new WP_Query($pageargs);
-		
+				
 				if ($onepage->have_posts()) :
+				
 				while ($onepage->have_posts()) : $onepage->the_post(); 
-			
 					get_template_part( 'template-parts/page', 'section' );
-
-				endwhile; 
+				endwhile;
+				
 				wp_reset_postdata(); 
 				endif;
 			
 			} ?>
-									
+			
 <?php get_footer(); ?>

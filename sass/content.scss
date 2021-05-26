@@ -141,7 +141,8 @@
 		z-index: 1;
 	}
 	.page-title,
-	.post-meta {
+	.post-meta,
+	p {
 		position: relative;
 		width: 100%;
 		z-index: 2;
@@ -150,6 +151,10 @@
 			width: $max-width;
 			margin: 0 auto;
 		}
+	}
+	p {
+		color: #fff;
+		padding: $grid-padding;
 	}
 	.page-title {
 		color: #fff;
@@ -211,6 +216,14 @@
 	}
 }
 
+// Maintenance
+
+.page-template-pagecustom-maintenance {
+	
+	.page-banner {
+		height: 100vh;
+	} 
+}
 
 
 // Animations

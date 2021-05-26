@@ -12,7 +12,7 @@
 ?>
 		</main> <?php // END content ?>
 		
-
+		<?php if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
 		<footer role="contentinfo" id="site_foot">
 			<div class="footer-wrap">
 				
@@ -56,6 +56,7 @@
 			</div>
 			
 		</footer>
+		<?php } ?>
 
 		
 </div> <?php // END wrapper ?>

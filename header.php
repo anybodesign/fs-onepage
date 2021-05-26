@@ -44,39 +44,52 @@
 
 	<?php // The Skiplinks ?>
 	
+	<?php if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
 	<div class="skiplinks">
 		<a href="#site_content"><?php _e('Go to main content', 'fs-onepage'); ?></a>
 	</div>
+	<?php } ?>
 	
 	<header role="banner" id="site_head">
 		<div class="inner">
-			
-		<?php if ( ! is_front_page() ) { ?>
-		<?php get_template_part('template-parts/header', 'brand'); ?>			
+
+		<?php if ( ! is_front_page() && ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
+		<?php get_template_part('template-parts/header', 'brand'); ?>
 		<a href="<?php echo FS_HOME; ?>" class="back-home" title="<?php _e('Go to Home Page', 'fs-onepage'); ?>">
 			<img src="<?php echo FS_THEME_URL; ?>/img/icon-arrow-black.svg" alt="">
 		</a>
 		<?php } ?>
-
+		
+		<?php if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
 		<nav class="site-nav onepage-nav" role="navigation" aria-label="<?php _e('Main menu', 'fs-onepage'); ?>">
-			<?php $frontpage = get_the_id();
+			<?php 
+				
+				$frontpage = get_the_id();
 				
 				$pageargs = array(
 					'posts_per_page' 	=> -1,
 					'post_type' 		=> 'page',
 					'post__not_in'		=> array($frontpage),
-					'meta_query'		=> array(
-						'relation' 		=> 'OR',
+					'meta_query'		=> 
 						array(
-							'key'		=> '_wp_page_template',
-							'value'		=> 'pagecustom-standalone.php',
-							'compare'	=> '!=',
+							'relation' 		=> 'OR',
+							array(
+								array(
+									'key'		=> '_wp_page_template',
+									'value'		=> 'pagecustom-standalone.php',
+									'compare'	=> '!=',
+								),
+								array(
+									'key'		=> '_wp_page_template',
+									'value'		=> 'pagecustom-maintenance.php',
+									'compare'	=> '!=',
+								),
+							),
+							array(
+						        'key'       => '_wp_page_template',
+						        'compare'   => 'NOT EXISTS',
+						    ),
 						),
-					    array(
-					        'key'       => '_wp_page_template',
-					        'compare'   => 'NOT EXISTS',
-					    ),
-					),
 				);
 				$onepage = new WP_Query($pageargs);
 				
@@ -90,6 +103,7 @@
 				
 				<?php endif; ?>
 		</nav>
+		<?php } ?>
 		
 		</div>		
 	</header>
