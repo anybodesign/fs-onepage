@@ -97,7 +97,13 @@
 				
 				<ul class="onepage-menu">
 				<?php while ($onepage->have_posts()) : $onepage->the_post(); ?>
-					<li><a href="<?php echo FS_HOME; ?>#<?php fs_slug(); ?>"><?php the_title(); ?></a></li>
+					<li>
+						<?php if ( ! is_front_page() ) { ?>
+						<a href="<?php echo FS_HOME; ?>#<?php fs_slug(); ?>"><?php the_title(); ?></a>
+						<?php } else { ?>
+						<a href="#<?php fs_slug(); ?>"><?php the_title(); ?></a>
+						<?php } ?>
+					</li>
 				<?php endwhile; wp_reset_postdata(); ?>
 				</ul>
 				
