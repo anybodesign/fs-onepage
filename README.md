@@ -39,6 +39,9 @@ There are two widgets area: one for the sidebar and one for the footer.
 
 ## Changelog
 
+### 2.1 - 2021.05.26
+* Menu nav fix
+
 ### 2.0 - 2021.05.26
 * Customizer animation option
 * Customizer post meta options
