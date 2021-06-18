@@ -82,6 +82,27 @@
 	}
 }
 
+.post-banner {
+	position: relative;
+	z-index: 1;
+	
+	.single & {
+		display: none;
+	}
+	
+	margin: -44px;
+	margin-bottom: $grid-padding;
+	
+	& + .post-header {
+		position: relative;
+		background-color: #fff;
+		margin-top: -$grid-padding*4;
+		margin-left: -$grid-padding*2;
+		padding-top: $grid-padding;
+		padding-left: $grid-padding*2;
+		z-index: 2;
+	}
+}
 
 /* ------------------------- */
 /* = Archives

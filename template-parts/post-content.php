@@ -16,12 +16,17 @@
 
 						<article <?php post_class(); ?> id="post-<?php the_ID(); ?>" data-scroll>
 							
+							<?php if ( '' != get_the_post_thumbnail() ) { ?>
+							<div class="post-banner">
+								<?php the_post_thumbnail( 'post-hd' ) ?>
+							</div>
+							<?php } ?>
+							
 							<?php if ( get_theme_mod('modals') == true ) { ?>
 							<header class="post-header">
 								<h1 class="page-title"><?php the_title(); ?></h1>
 								<?php get_template_part( 'template-parts/post', 'meta' ); ?>
 							</header>
-							
 							<?php } ?>
 							
 							<div class="post-content">
