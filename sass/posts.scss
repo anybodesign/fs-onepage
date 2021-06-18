@@ -84,7 +84,16 @@
 
 .post-banner {
 	position: relative;
+	max-height: 30rem;
+	overflow: hidden;
 	z-index: 1;
+	
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+		max-width: none;
+	}
 	
 	.single & {
 		display: none;
@@ -384,7 +393,7 @@
 			max-width: 75%;
 		}
 		@include rwd($admin-bar) {
-			max-width: 50%;
+			max-width: 80rem;
 
 			.admin-bar & {
 				top: 32px;
