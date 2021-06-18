@@ -138,6 +138,10 @@
 	& img {
 		max-width: none;
 	}
+	&.is-resized img {
+		max-width: 100%;
+		width: auto;
+	}
 	
 	&.alignfull {
 		width: 100%;
@@ -165,7 +169,8 @@ hr,
 	
 	.page-content > & {
 		max-width: 20rem;
-		margin-top: 2rem;
+		margin: 4rem auto;
+		padding: 0;
 
 		&.is-style-wide {
 			max-width: 50rem;
