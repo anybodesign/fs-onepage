@@ -64,7 +64,7 @@
 		<nav class="site-nav onepage-nav" role="navigation" aria-label="<?php _e('Main menu', 'fs-onepage'); ?>">
 			<?php 
 				
-				$frontpage = get_the_id();
+				$frontpage = get_option( 'page_on_front' );
 				
 				$pageargs = array(
 					'posts_per_page' 	=> -1,
