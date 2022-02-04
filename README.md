@@ -39,6 +39,9 @@ There are two widgets area: one for the sidebar and one for the footer.
 
 ## Changelog
 
+### 2.2.1 - 2022.02.04
+* Fancybox JS fix
+
 ### 2.2 - 2021.06.18
 * Fix: resized image blocks width
 * Fix: hide home page link in nav
