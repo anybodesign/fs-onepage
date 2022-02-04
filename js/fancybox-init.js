@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 	
-	$('.blocks-gallery-item a, .fancyzoom').fancybox({
+	$('.blocks-gallery-item a, .wp-block-image a, .fancyzoom').fancybox({
 		loop: true,
 		buttons : [
 			'close'
@@ -13,6 +13,6 @@ jQuery(document).ready(function($) {
 		}
 	});
 	
-	$('.blocks-gallery-item a').attr('data-fancybox','gallery');
+	$('.blocks-gallery-item a, .wp-block-image a').attr('data-fancybox','gallery');
 	
 });
