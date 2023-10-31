@@ -21,12 +21,14 @@
 	}
 ?>
 					<div class="page-section<?php echo $animated; ?>" id="<?php fs_slug(); ?>"<?php if (! $animated) { fs_bg_img(); } ?>>
-							
+						
+						<?php if ( $tpl != 'pagecustom-intro.php' ) { ?>	
 						<h2 class="page-title" data-scroll>
 							<?php the_title(); ?>
 						</h2>
-
-
+						<?php } ?>
+						
+						
 						<div class="page-content" data-scroll>
 							
 							<?php the_content(); ?>
@@ -51,7 +53,7 @@
 								);
 								$query = new WP_Query($args);
 							?>						
-					
+							
 							<?php if ($query->have_posts()) : ?>								
 							
 								<?php if ( get_theme_mod('carousel_posts') == true ) { 
@@ -68,11 +70,11 @@
 										get_template_part( 'template-parts/post', 'block' );
 									
 									endwhile; wp_reset_postdata(); ?>
-	
+									
 									</div>
-
+									
 									<?php if (get_theme_mod('show_all') != false) { ?>
-			
+									
 									<div class="the-posts-link">
 										<a href="<?php echo get_permalink($post = $id_news); ?>" class="action-btn">
 											<?php _e('Show All Posts', 'fs-onepage'); ?>
@@ -83,7 +85,7 @@
 								</div>
 							
 							<?php endif; ?>
-	
+							
 							<?php } ?>		
 							
 						</div>
@@ -95,5 +97,5 @@
 							</figure>
 							<?php } ?>
 						<?php } ?>
-
+						
 					</div>

@@ -84,6 +84,11 @@
 									'value'		=> 'pagecustom-maintenance.php',
 									'compare'	=> '!=',
 								),
+								array(
+									'key'		=> '_wp_page_template',
+									'value'		=> 'pagecustom-intro.php',
+									'compare'	=> '!=',
+								),
 							),
 							array(
 						        'key'       => '_wp_page_template',
