@@ -92,9 +92,10 @@
 	
 	img {
 		width: 100%;
-		height: auto;
+		height: 30rem;
 		display: block;
 		max-width: none;
+		object-fit: cover;
 	}
 	
 	.single & {
