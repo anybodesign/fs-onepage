@@ -147,7 +147,7 @@
 		width: 100%;
 		z-index: 2;
 		
-		@include rwd($max-width) {
+		@include rwd(large) {
 			width: $max-width;
 			margin: 0 auto;
 		}
