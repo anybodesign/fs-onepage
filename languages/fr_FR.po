@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Onepage\n"
-"POT-Creation-Date: 2021-05-19 11:51+0200\n"
-"PO-Revision-Date: 2021-05-19 11:51+0200\n"
+"POT-Creation-Date: 2023-11-02 10:23+0100\n"
+"PO-Revision-Date: 2023-11-02 10:23+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "It looks like nothing was found at this location."
 msgstr "Il semblerait que rien n’ait été trouvé à cette adresse."
 
-#: 404.php:22 header.php:56 template-parts/header-brand.php:19
+#: 404.php:22 header.php:58 template-parts/header-brand.php:19
 msgid "Go to Home Page"
 msgstr "Retour à la page d’accueil"
 
@@ -153,11 +153,11 @@ msgstr "Répondre"
 msgid "Edit"
 msgstr "Modifier"
 
-#: header.php:48
+#: header.php:49
 msgid "Go to main content"
 msgstr "Aller au contenu principal"
 
-#: header.php:61
+#: header.php:64
 msgid "Main menu"
 msgstr "Menu principal"
 
@@ -365,7 +365,7 @@ msgstr "Oops! Page introuvable"
 msgid "Scroll Down"
 msgstr "Défiler vers le bas"
 
-#: template-parts/page-section.php:78
+#: template-parts/page-section.php:80
 msgid "Show All Posts"
 msgstr "Tous les articles"
 
@@ -389,11 +389,11 @@ msgstr "Page suivante"
 msgid "Page"
 msgstr "Page"
 
-#: template-parts/post-content.php:34
+#: template-parts/post-content.php:39
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/post-content.php:41
+#: template-parts/post-content.php:46
 msgid "Pages:"
 msgstr "Pages :"
 
@@ -434,16 +434,24 @@ msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
 
 #. Template Name of the plugin/theme
-msgid "Page with animated picture (Left)"
-msgstr "Page avec image animée (à gauche)"
+msgid "Standalone Page"
+msgstr "Page autonome"
 
 #. Template Name of the plugin/theme
 msgid "Page with animated picture (Right)"
 msgstr "Page avec image animée (à droite)"
 
 #. Template Name of the plugin/theme
-msgid "Standalone Page"
-msgstr "Page autonome"
+msgid "Intro Section"
+msgstr "Section Intro"
+
+#. Template Name of the plugin/theme
+msgid "Maintenance"
+msgstr "Maintenance"
+
+#. Template Name of the plugin/theme
+msgid "Page with animated picture (Left)"
+msgstr "Page avec image animée (à gauche)"
 
 #~ msgid "Layout version"
 #~ msgstr "Version de mise en page"
