@@ -39,6 +39,9 @@ There are two widgets area: one for the sidebar and one for the footer.
 
 ## Changelog
 
+### 2.3.1 - 2023.11.02
+* Some css and a11y fix
+
 ### 2.3 - 2023.10.31
 * Intro section template, not in main menu
 
