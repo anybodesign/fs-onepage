@@ -138,13 +138,16 @@
 	& img {
 		max-width: none;
 	}
-	&.is-resized img {
-		max-width: 100%;
-		width: auto;
-	}
 	
 	&.alignfull {
 		width: 100%;
+	}
+	
+	// WP block fix
+	
+	&:not([class*="is-resized"]) img {
+		width: 100%; 
+		height: auto;
 	}	
 }
 
