@@ -79,7 +79,7 @@
 .formfield-radio input[type="radio"] + span::after {
 	width: 6px; 
 	height: 6px;
-	background-color: var(--secondary_color);
+	background-color: var(--primary_color);
 	top: 9px; 
 	left: 6px;
 	border-radius: 100%;
@@ -98,7 +98,7 @@
 	content: "L";
 	font-family: $font-bold;
 	font-size: 2.4rem;
-	color: var(--secondary_color); 
+	color: var(--primary_color); 
 	opacity: 0;
 	transform: scaleX(-1) rotate(-45deg);
 	transition: opacity .2s linear;
@@ -161,7 +161,7 @@ span.wpcf7-list-item {
 		width: 0; 
 		height: 0;
 		border-color: transparent;
-		border-top-color: var(--secondary_color); 
+		border-top-color: var(--primary_color); 
 		border-width: 6px;
 		border-style: solid;
 		pointer-events: none;
