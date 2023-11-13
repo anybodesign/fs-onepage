@@ -39,6 +39,9 @@ There are two widgets area: one for the sidebar and one for the footer.
 
 ## Changelog
 
+### 2.3.3 - 2023.11.12
+* Allow regular logo on front page banner
+
 ### 2.3.2 - 2023.11.02
 * Removed ACF admin styles
 * Editor colors, inline and bg
