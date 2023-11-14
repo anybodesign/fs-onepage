@@ -5,40 +5,40 @@
 
 // Colors
 
-.has-primary-background-color {
+.has-primary-color-background-color {
 	background-color: var(--primary_color);
 }
-.has-secondary-background-color {
+.has-secondary-color-background-color {
 	background-color: var(--secondary_color);
 }
-.has-third-background-color {
+.has-third-color-background-color {
 	background-color: var(--third_color);
 }
-.has-text-background-color {
+.has-black-color-background-color {
 	background-color: var(--text_color);
 }
-.has-white-background-color {
+.has-white-color-background-color {
 	background-color: #fff;
 }
 
-.has-inline-color.has-primary-color,
-.has-text-color.has-primary-color {
+.has-inline-color.has-primary-color-color,
+.has-text-color.has-primary-color-color {
 	color: var(--primary_color);
 }
-.has-inline-color.has-secondary-color,
-.has-text-color.has-secondary-color {
+.has-inline-color.has-secondary-color-color,
+.has-text-color.has-secondary-color-color {
 	color: var(--secondary_color);
 }
-.has-inline-color.has-third-color,
-.has-text-color.has-third-color {
+.has-inline-color.has-third-color-color,
+.has-text-color.has-third-color-color {
 	color: var(--third_color);
 }
-.has-inline-color.has-text-color,
-.has-text-color.has-text-color {
+.has-inline-color.has-black-color-color,
+.has-text-color.has-black-color-color {
 	color: var(--text_color);
 }
-.has-inline-color.has-white-color,
-.has-text-color.has-white-color {
+.has-inline-color.has-white-color-color,
+.has-text-color.has-white-color-color {
 	color: #fff;
 }
 
