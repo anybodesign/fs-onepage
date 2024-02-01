@@ -16,7 +16,7 @@ if ( post_password_required() ) {
 					<div class="post-comments" id="comments" data-scroll>
 
 					<?php if ( have_comments() ) : ?>
-						<h3 class="comments-title"><?php _e('They talk about it','fs-onepage'); ?></h3>
+						<h3 class="comments-title"><?php esc_html_e('They talk about it','fs-onepage'); ?></h3>
 				
 						<ol class="comment-list">
 							<?php
@@ -33,7 +33,7 @@ if ( post_password_required() ) {
 					<?php endif;?>
 				
 					<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-						<p class="no-comments"><?php _e( 'Comments are closed.', 'fs-onepage' ); ?></p>
+						<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'fs-onepage' ); ?></p>
 					<?php endif; ?>
 					
 					<?php

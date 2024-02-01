@@ -46,11 +46,11 @@
 									<img src="<?php echo FS_THEME_URL; ?>/img/spinner.svg" alt="">
 								</div>
 								<div class="trigger">
-									<button id="post_trigger" class="action-btn"><?php _e('Load more', 'fs-onepage'); ?></button>
+									<button id="post_trigger" class="action-btn"><?php esc_html_e('Load more', 'fs-onepage'); ?></button>
 								</div>
 								<div class="no-more">
 									<p class="text-intro">
-										<?php _e('No more posts', 'fs-onepage'); ?>
+										<?php esc_html_e('No more posts', 'fs-onepage'); ?>
 									</p>
 								</div>
 								<?php } ?>

@@ -46,7 +46,7 @@
 	
 	<?php if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
 	<div class="skiplinks">
-		<a href="#site_content"><?php _e('Go to main content', 'fs-onepage'); ?></a>
+		<a href="#site_content"><?php esc_html_e('Go to main content', 'fs-onepage'); ?></a>
 	</div>
 	<?php } ?>
 	
@@ -55,13 +55,13 @@
 
 		<?php if ( ! is_front_page() && ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
 		<?php get_template_part('template-parts/header', 'brand'); ?>
-		<a href="<?php echo FS_HOME; ?>" class="back-home" title="<?php _e('Go to Home Page', 'fs-onepage'); ?>">
+		<a href="<?php echo FS_HOME; ?>" class="back-home" title="<?php esc_attr_e('Go to Home Page', 'fs-onepage'); ?>">
 			<img src="<?php echo FS_THEME_URL; ?>/img/icon-arrow-black.svg" alt="">
 		</a>
 		<?php } ?>
 		
 		<?php if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
-		<nav class="site-nav onepage-nav" role="navigation" aria-label="<?php _e('Main menu', 'fs-onepage'); ?>">
+		<nav class="site-nav onepage-nav" role="navigation" aria-label="<?php esc_attr_e('Main menu', 'fs-onepage'); ?>">
 			<?php 
 				
 				$frontpage = get_option( 'page_on_front' );

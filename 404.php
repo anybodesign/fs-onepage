@@ -19,7 +19,7 @@ get_header(); ?>
 					<div class="page-content error-404 not-found">
 						<div class="page-content">
 							<p class="text-intro"><?php esc_html_e( 'It looks like nothing was found at this location.', 'fs-onepage' ); ?></p>
-							<p><a class="action-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e('Go to Home Page', 'fs-onepage'); ?></a></p>
+							<p><a class="action-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e('Go to Home Page', 'fs-onepage'); ?></a></p>
 						</div>		
 					</div>
 

@@ -36,7 +36,7 @@
 							<footer class="post-footer">
 								<?php $posttags = get_the_tags(); if ($posttags) { ?>
 								  	<div class="tag-links">
-										<p><?php _e( 'Tagged with:', 'fs-onepage' ); ?></p>
+										<p><?php esc_html_e( 'Tagged with:', 'fs-onepage' ); ?></p>
 										<?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
 								  	</div>
 								<?php } ?>					

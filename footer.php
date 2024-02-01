@@ -35,14 +35,14 @@
 						} ?>
 						
 						<?php if(get_theme_mod('display_wp') == true) { ?>
-						<a href="//wordpress.org" class="wp-love"><?php _e('Powered by WordPress!', 'fs-onepage'); ?></a>
+						<a href="//wordpress.org" class="wp-love"><?php esc_html_e('Powered by WordPress!', 'fs-onepage'); ?></a>
 						<?php } ?>
 					</p>
 					
 					<?php // The footer menu location ?>
 					
 					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
-					<nav class="footer-nav" aria-label="<?php _e('Footer menu', 'fs-onepage'); ?>">
+					<nav class="footer-nav" aria-label="<?php esc_attr_e('Footer menu', 'fs-onepage'); ?>">
 					<?php wp_nav_menu( array(
 							'theme_location'	=> 	'footer_menu',
 							'menu_class'		=>	'footer-menu',
