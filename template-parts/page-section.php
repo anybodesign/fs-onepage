@@ -13,14 +13,16 @@
 	$tpl = get_page_template_slug( $post->ID );
 	
 	if ( $tpl == 'pagecustom-image.php' ) {
-		$animated = ' animated-image';
+		$bg = ' animated-image';
 	} else if ( $tpl == 'pagecustom-image-reverse.php' ) {
-		$animated = ' animated-image reverse';
+		$bg = ' animated-image reverse';
+	} else if ( $tpl == 'pagecustom-nobg.php' ) {
+		$bg = ' no-bg';
 	} else {
-		$animated = null;
+		$bg = null;
 	}
 ?>
-					<div class="page-section<?php echo $animated; ?>" id="<?php fs_slug(); ?>"<?php if (! $animated) { fs_bg_img(); } ?>>
+					<div class="page-section<?php echo $bg; ?>" id="<?php fs_slug(); ?>"<?php if ( ! $bg ) { fs_bg_img(); } ?>>
 						
 						<?php if ( $tpl != 'pagecustom-intro.php' ) { ?>	
 						<h2 class="page-title" data-scroll>
@@ -77,7 +79,7 @@
 									
 									<div class="the-posts-link">
 										<a href="<?php echo get_permalink($post = $id_news); ?>" class="action-btn">
-											<?php _e('Show All Posts', 'fs-onepage'); ?>
+											<?php esc_html_e('Show All Posts', 'fs-onepage'); ?>
 										</a>
 									</div>
 									<?php } ?>
@@ -90,7 +92,7 @@
 							
 						</div>
 						
-						<?php if ($animated) { ?> 
+						<?php if ( $bg && $bg != ' no-bg' ) { ?> 
 							<?php if ( '' != get_the_post_thumbnail() ) { ?>
 							<figure class="animated-figure" data-scroll>
 								<?php the_post_thumbnail('large-hd'); ?>
