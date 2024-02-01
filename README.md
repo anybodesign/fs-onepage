@@ -39,6 +39,13 @@ There are two widgets area: one for the sidebar and one for the footer.
 
 ## Changelog
 
+### 2.5 - 2024.02.01
+* Slideshow Option for the main banner
+* Custom template to remove background image
+* Escaping _e functions
+* Register then Enqueue scripts and styles
+* Blocks custom admin CSS 
+
 ### 2.4 - 2023.11.14
 * Fix editor colors
 
