@@ -83,6 +83,61 @@ html.interface-interface-skeleton__html-container {
 	}	
 }
 
+// Blocks
+
+.wp-block-group,
+.wp-block-columns,
+.wp-block-column,
+.block-editor-block-list__block[data-type="core/spacer"] {
+	position: relative;
+	padding: 1.5rem;
+	border: #ccc 1px solid;
+	
+	&::before {
+		display: block;
+		height: auto;
+		width: auto;
+		position: absolute;
+		bottom: -1px;
+		left: -1px;
+		background: #ccc;
+		color: #666;
+		font-size: .85rem;
+		text-transform: uppercase;
+		padding: 0 .5rem;
+	}
+	
+	&:hover {
+		border-color: #515151;
+		
+		&::before {
+			background: #515151;
+			color: #fff;
+		}
+	}
+}
+.wp-block-columns {
+	padding-bottom: 3rem;
+}
+.wp-block-column {
+	border-style: dashed;
+}
+.block-editor-block-list__block[data-type="core/spacer"] {
+	border-style: dashed;
+}
+
+.wp-block-group::before {
+	content: 'Group';
+}
+.wp-block-columns::before {
+	content: 'Columns';
+}
+.wp-block-column::before {
+	content: 'Column';
+}
+.block-editor-block-list__block[data-type="core/spacer"]::before {
+	content: 'Space';
+}
 
 // TinyMCE Custom
 	
