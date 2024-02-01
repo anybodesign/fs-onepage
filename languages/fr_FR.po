@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Onepage\n"
-"POT-Creation-Date: 2023-11-02 10:23+0100\n"
-"PO-Revision-Date: 2023-11-02 10:23+0100\n"
+"POT-Creation-Date: 2024-02-01 09:44+0100\n"
+"PO-Revision-Date: 2024-02-01 09:45+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -88,68 +88,68 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:316
+#: functions.php:339
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:341
+#: functions.php:364
 msgid "Continue reading"
 msgstr "Continuer la lecture"
 
-#: functions.php:396
+#: functions.php:419
 msgid "Thumbnail High"
 msgstr "Miniature (x2)"
 
-#: functions.php:397
+#: functions.php:420
 msgid "Medium High"
 msgstr "Moyenne (x2)"
 
-#: functions.php:398
+#: functions.php:421
 msgid "Large High"
 msgstr "Grande (x2)"
 
-#: functions.php:399
+#: functions.php:422
 msgid "Post Medium"
 msgstr "Article Medium"
 
-#: functions.php:400
+#: functions.php:423
 msgid "Post High"
 msgstr "Article High"
 
-#: functions.php:408
+#: functions.php:431
 msgid "Categories Widgets Area"
 msgstr "Emplacement du widget catégories"
 
-#: functions.php:417
+#: functions.php:440
 msgid "Footer Widgets Area"
 msgstr "Emplacement des widgets du pied de page"
 
-#: functions.php:471
+#: functions.php:494
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:472
+#: functions.php:495
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:473
+#: functions.php:496
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:505
+#: functions.php:528
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:511
+#: functions.php:534
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:520
+#: functions.php:543
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:526
+#: functions.php:549
 msgid "Edit"
 msgstr "Modifier"
 
@@ -285,6 +285,30 @@ msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
+#: inc/home-slideshow-fields.php:9
+msgid "Slideshow"
+msgstr "Diaporama"
+
+#: inc/home-slideshow-fields.php:13
+msgid "Slides"
+msgstr "Slides"
+
+#: inc/home-slideshow-fields.php:17
+msgid "Banner slideshow instead of a single picture"
+msgstr "Diaporama en bannière au lieu d'une seule image"
+
+#: inc/home-slideshow-fields.php:41
+msgid "Slides duration"
+msgstr "Durée des slides"
+
+#: inc/home-slideshow-fields.php:62
+msgid "Slideshow speed"
+msgstr "Vitesse du diaporama"
+
+#: inc/home-slideshow-fields.php:83
+msgid "Loop"
+msgstr "En boucle"
+
 #: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:395
 msgid "Check for updates"
 msgstr "Vérifier les mises à jour"
@@ -361,11 +385,11 @@ msgstr "Résultats de la recherche pour : %s"
 msgid "Oops! That page can&rsquo;t be found"
 msgstr "Oops! Page introuvable"
 
-#: template-parts/page-frontpage-banner.php:18
+#: template-parts/page-frontpage-banner.php:61
 msgid "Scroll Down"
 msgstr "Défiler vers le bas"
 
-#: template-parts/page-section.php:80
+#: template-parts/page-section.php:82
 msgid "Show All Posts"
 msgstr "Tous les articles"
 
@@ -409,9 +433,12 @@ msgstr "par&nbsp;"
 msgid "in&nbsp;"
 msgstr "dans&nbsp;"
 
-#: template-parts/post-meta.php:27
-msgid "Comment(s)"
-msgstr "Commentaire(s)"
+#: template-parts/post-meta.php:28
+#, php-format
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] "%s commentaire"
+msgstr[1] "%s commentaires"
 
 #. Theme Name of the plugin/theme
 msgid "FS Onepage"
@@ -438,6 +465,10 @@ msgid "Standalone Page"
 msgstr "Page autonome"
 
 #. Template Name of the plugin/theme
+msgid "Page with no background image"
+msgstr "Page sans image de fond"
+
+#. Template Name of the plugin/theme
 msgid "Page with animated picture (Right)"
 msgstr "Page avec image animée (à droite)"
 
@@ -452,6 +483,9 @@ msgstr "Maintenance"
 #. Template Name of the plugin/theme
 msgid "Page with animated picture (Left)"
 msgstr "Page avec image animée (à gauche)"
+
+#~ msgid "Comment(s)"
+#~ msgstr "Commentaire(s)"
 
 #~ msgid "Layout version"
 #~ msgstr "Version de mise en page"
@@ -517,9 +551,6 @@ msgstr "Page avec image animée (à gauche)"
 
 #~ msgid "Update Creation"
 #~ msgstr "Mettre à jour la création"
-
-#~ msgid "View Creation"
-#~ msgstr "Voir la création"
 
 #~ msgid "Search Creation"
 #~ msgstr "Chercher une création"
