@@ -5,19 +5,23 @@
  * @since 1.0
  * @version 1.0
  */
-	$slides = get_field('home_slides');
-	$s_speed = get_field('slideshow_speed');
-	$s_autospeed = get_field('slideshow_autospeed');
-	$s_loop = get_field('slideshow_loop');
-	if ($s_loop == false) {
-		$infinite = 'false';
+ 	if (function_exists('acf_add_local_field_group')) {
+		$slides = get_field('home_slides');
+		$s_speed = get_field('slideshow_speed');
+		$s_autospeed = get_field('slideshow_autospeed');
+		$s_loop = get_field('slideshow_loop');
+		if ($s_loop == false) {
+			$infinite = 'false';
+		} else {
+			$infinite = 'true';
+		}
 	} else {
-		$infinite = 'true';
+		$slides = null;
 	}
 ?>
-					<div class="front-page-section"<?php if (! $slides) { fs_bg_img(); } ?> data-scroll>
+					<div class="front-page-section"<?php if (! $slides ) { fs_bg_img(); } ?> data-scroll>
 						
-						<?php if ( $slides ) { ?>
+						<?php if ( $slides && function_exists('acf_add_local_field_group') ) { ?>
 							<div class="banner-slideshow">
 							<?php foreach( $slides as $slide ): ?>
 								<div class="slick-item">
