@@ -35,7 +35,7 @@ select {
 	background-color: #fff;
 	font-size: 1.6rem;
 	line-height: 1.5;
-	font-family: $font-regular;
+	font-family: var(--font_regular);
 	border-radius: 0;
 	appearance: none;
 	transition: background .2s ease-in-out;
@@ -91,7 +91,7 @@ label {
 	margin-bottom: $grid-padding/2;
 }
 legend {
-	font-family: $font-bold;
+	font-family: var(--font_bold);
 	text-transform: uppercase;
 	border-bottom: var(--primary_color) 2px dotted;
 }
@@ -105,7 +105,7 @@ input[type="submit"] {
 	padding: $grid-padding $grid-padding*2;
 	border: 0;
 	width: auto; 
-	font-family: $font-regular;
+	font-family: var(--font_regular);
 	font-size: 1.6rem;
 	border-radius: 0;
 	appearance: none;
@@ -142,7 +142,7 @@ input[type="submit"].focus-visible {
 
 ::placeholder {
 	color: lighten($text_color, 20%);
-	font-family: $font-italic;
+	font-family: var(--font_italic);
 	font-size: 1.4rem;	
 }
 .focus-visible::placeholder {
@@ -230,7 +230,7 @@ input[type="submit"].gform_button {
 	color: #fff;
 	margin: $grid-padding 0 0 0 !important; 
 	padding: $grid-padding !important;
-	font-family: $font-regular;
+	font-family: var(--font_regular);
 	
 	.sent & {
 		background-color: var(--third_color);
@@ -249,7 +249,7 @@ input[type="submit"].gform_button {
 	margin-top: -2rem;
 	padding-top: .5rem;
 	border-top: #B3003C 4px solid;
-	font-family: $font-bold;
+	font-family: var(--font_bold);
 }
 input[type="submit"].wpcf7-submit {
 	@extend .action-btn;

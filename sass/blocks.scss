@@ -62,7 +62,7 @@
 .wp-block-file {
 	
 	a:first-child {
-		font-family: $font-regular;
+		font-family: var(--font_regular);
 		text-decoration: none;
 		border-bottom: var(--secondary_color) 2px solid;
 		transition: border .2s ease-in-out;
@@ -400,11 +400,11 @@ hr,
 		
 		.testimonial-author {
 			display: block;
-			font-family: $font-bolditalic;
+			font-family: var(--font_bold)italic;
 		}
 		.testimonial-desc {
 			display: block;
-			font-family: $font-italic;
+			font-family: var(--font_italic);
 		}
 	}
 	blockquote {

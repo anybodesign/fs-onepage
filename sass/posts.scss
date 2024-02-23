@@ -498,7 +498,7 @@
 	display: block;
 }
 .nav-links {
-	font-family: $font-regular;
+	font-family: var(--font_regular);
 }
 
 /* ------------------------- */
@@ -594,7 +594,7 @@
 }	 
 
 .comment-author-name {
-	font-family: $font-bold;
+	font-family: var(--font_bold);
 	color: var(--primary_color);
 	font-size: 2.4rem;
 	

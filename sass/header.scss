@@ -69,7 +69,7 @@
 	display: block;
 	margin: 0;
 	line-height: 1;
-	font-family: $font-bold;
+	font-family: var(--font_bold);
 	text-transform: uppercase;
 	
 	a {

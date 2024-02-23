@@ -12,7 +12,7 @@ input[type=submit].action-btn {
 	display: inline-block;
 	padding: $grid-padding $grid-padding*2;
 	font-size: 1.6rem;
-	font-family: $font-bold;
+	font-family: var(--font_bold);
 	text-transform: uppercase;
 	text-decoration: none;
 	background-color: var(--primary_color);

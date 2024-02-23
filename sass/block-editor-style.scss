@@ -5,7 +5,6 @@ Description: Have fun with Gutenberg style editor.
 
 @import 'variables.scss';
 @import 'mixins.scss';
-@import 'webfonts.scss';
 @import 'webfonts-admin.scss';
 
 
@@ -49,9 +48,10 @@ html.interface-interface-skeleton__html-container {
 // Typography
 
 	
-.editor-post-title .editor-post-title__input {
-	font-family: $font-title;
+.edit-post-visual-editor__post-title-wrapper .editor-post-title{
+	font-family: var(--font_title);
 	color: var(--primary_color);
+	font-weight: normal;
 }
 
 .edit-post-visual-editor .wp-block,
@@ -65,12 +65,12 @@ html.interface-interface-skeleton__html-container {
 
 	h1, h2, h3, h4, h5, h6,
 	.h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
-		font-family: $font-title;
+		font-family: var(--font_title);
 		font-weight: normal;
 		color: var(--primary_color);
 	}
 	p, li, small, span {
-		font-family: $font-regular;
+		font-family: var(--font_regular);
 		color: var(--text_color);
 	}
 	figure {

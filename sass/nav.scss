@@ -11,7 +11,7 @@
 		top: -65px;
 		padding: $grid-padding;
 		background-color: var(--primary_color);
-		font-family: $font-bold;
+		font-family: var(--font_bold);
 		color: #fff;
 		text-decoration: none;
 		transition: top .2s ease-in;
@@ -69,7 +69,7 @@
 		position: relative;
 		display: inline-block;
 		margin-right: $grid-padding;		
-		font-family: $font-bold;
+		font-family: var(--font_bold);
 		font-size: 1.4rem;
 		text-transform: uppercase;
 		
