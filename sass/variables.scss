@@ -30,8 +30,20 @@ $admin-bar: 48.875em;	 	// @note: 782px
 $text_color: #303030;
 
 :root {
+	
 	--primary_color: #303030; 
 	--secondary_color: #4682B4;
 	--third_color: #909090;
-	--text_color: #303030;	
+	--text_color: #303030;
+	
+	--font_stack: Helvetica, Arial, sans-serif;
+	
+	--font_title: 'Title', var(--font_stack);
+	--font_regular: 'Regular', var(--font_stack);
+	--font_italic: 'Italic', var(--font_stack);
+	--font_bold: 'Bold', var(--font_stack);
+	--font_bolditalic: 'BoldItalic', var(--font_stack);
+	
+	--font_mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;	
+	
 }

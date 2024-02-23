@@ -6,35 +6,35 @@
 
 @font-face {
 	font-family: 'Regular';
-	src: $fontface-regular-admin;
+	src: url('../fonts/barlow-medium-webfont.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Italic';
-	src: $fontface-italic-admin;
+	src: url('../fonts/barlow-mediumitalic-webfont.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Bold';
-	src: $fontface-bold-admin;
+	src: url('../fonts/barlow-bold-webfont.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'BoldItalic';
-	src: $fontface-bolditalic-admin;
+	src: url('../fonts/barlow-bolditalic-webfont.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Title';
-	src: $fontface-title-admin;
+	src: url('../fonts/barlowsemicondensed-bold-webfont.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
