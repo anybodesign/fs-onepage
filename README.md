@@ -39,6 +39,10 @@ There are two widgets area: one for the sidebar and one for the footer.
 
 ## Changelog
 
+### 2.6 - 2024.02.23
+* Check if ACF is activated (fix)
+* Webfonts CSS vars
+
 ### 2.5 - 2024.02.01
 * Slideshow Option for the main banner
 * Custom template to remove background image
